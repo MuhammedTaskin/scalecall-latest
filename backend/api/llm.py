@@ -10,9 +10,13 @@ from fastapi import APIRouter, HTTPException, Depends, Header
 from pydantic import BaseModel, Field
 from starlette.responses import StreamingResponse
 
-from backend.llm.index import default_provider as llm_provider
-from backend.lib.supabase_client import supabase_admin
-from backend.auth import get_current_user
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+
+from llm.index import default_provider as llm_provider
+from lib.supabase_client import supabase_admin
+from auth import get_current_user
 
 # Request/Response models
 class ChatMessage(BaseModel):
@@ -119,6 +123,12 @@ async def stream_llm_response(messages: List[Dict], user_id: str):
 
 async def store_message(user_id: str, role: str, content: str) -> str:
     """Store message in Supabase database."""
+    if not supabase_admin:
+        # Log warning if Supabase is not available
+        import logging
+        logging.warning("Supabase not available, message not stored")
+        return "mock-message-id"
+    
     try:
         result = supabase_admin.table("messages").insert({
             "user_id": user_id,
@@ -141,6 +151,9 @@ async def get_messages(
     """Get user's conversation history."""
     user_id = current_user["id"]
     
+    if not supabase_admin:
+        return {"messages": []}
+    
     try:
         result = supabase_admin.table("messages").select("*").eq("user_id", user_id).order("created_at", desc=True).limit(limit).execute()
         
@@ -154,6 +167,9 @@ async def clear_messages(
 ):
     """Clear user's conversation history."""
     user_id = current_user["id"]
+    
+    if not supabase_admin:
+        return {"deleted_count": 0}
     
     try:
         result = supabase_admin.table("messages").delete().eq("user_id", user_id).execute()

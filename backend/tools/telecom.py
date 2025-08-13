@@ -7,7 +7,11 @@ import logging
 from typing import Dict, Any
 from datetime import datetime, timedelta
 
-from backend.tools.types import OperationResult
+import sys
+import os
+sys.path.append(os.path.dirname(__file__))
+
+from .types import OperationResult
 
 logger = logging.getLogger(__name__)
 

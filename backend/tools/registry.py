@@ -5,9 +5,13 @@ import json
 import logging
 from typing import Dict, Any, List
 
-from backend.tools.types import OperationResult
-from backend.tools.telecom import TelecomTools
-from backend.tools.esim_extra import ESIMTools
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+
+from .types import OperationResult
+from .telecom import TelecomTools
+from .esim_extra import ESIMTools
 
 logger = logging.getLogger(__name__)
 

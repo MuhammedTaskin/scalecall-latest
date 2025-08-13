@@ -2,10 +2,13 @@
 Supabase authentication utilities for FastAPI.
 """
 import os
+import sys
 from typing import Dict, Optional
 import jwt
 from fastapi import HTTPException, Header, Depends
-from backend.lib.supabase_client import supabase_admin
+
+sys.path.append(os.path.dirname(__file__))
+from lib.supabase_client import supabase_admin
 
 async def get_current_user(authorization: str = Header(None)) -> Dict:
     """
@@ -37,11 +40,12 @@ async def get_current_user(authorization: str = Header(None)) -> Dict:
         if not user_id:
             raise HTTPException(status_code=401, detail="Invalid token: missing user ID")
         
-        # Optionally verify user exists in database
-        user_result = supabase_admin.table("profiles").select("*").eq("id", user_id).execute()
-        
-        if not user_result.data:
-            raise HTTPException(status_code=401, detail="User not found")
+        # Optionally verify user exists in database (if Supabase is available)
+        if supabase_admin:
+            user_result = supabase_admin.table("profiles").select("*").eq("id", user_id).execute()
+            
+            if not user_result.data:
+                raise HTTPException(status_code=401, detail="User not found")
         
         return {
             "id": user_id,

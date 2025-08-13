@@ -7,9 +7,13 @@ import re
 from typing import AsyncIterator, Dict, Any, List, Optional
 import logging
 
-from backend.llm.index import default_provider as llm_provider
-from backend.tools.registry import ToolRegistry
-from backend.prompts import get_system_prompt
+import sys
+import os
+sys.path.append(os.path.dirname(__file__))
+
+from llm.index import default_provider as llm_provider
+from tools.registry import ToolRegistry
+from prompts import get_system_prompt
 
 logger = logging.getLogger(__name__)
 

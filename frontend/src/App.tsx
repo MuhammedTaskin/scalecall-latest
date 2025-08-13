@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react'
-import { WSClient, WSMessage } from './lib/ws'
+import { WSClient } from './lib/ws'
+import type { WSMessage } from './lib/ws'
 import { AudioQueue, AudioRecorder } from './lib/audio'
 import Chat from './components/Chat'
 import EventFeed from './components/EventFeed'
@@ -134,6 +135,7 @@ function AppContent() {
   }, [audioQueue])
 
   const handleSTTTranscript = useCallback((text: string) => {
+    console.log('🎤 Received STT transcript:', text)
     setState(prev => ({
       ...prev,
       messages: [...prev.messages, {

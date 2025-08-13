@@ -25,7 +25,7 @@ class TTSService:
     def __init__(self):
         self.tts = None
         self._initialized = False
-        self.audio_cache_dir = Path("backend/audio_cache")
+        self.audio_cache_dir = Path("audio_cache")
         self.audio_cache_dir.mkdir(exist_ok=True)
         self.active_sessions: Dict[str, bool] = {}  # Track active playback sessions
         

@@ -12,11 +12,22 @@ from fastapi.staticfiles import StaticFiles
 import logging
 from dotenv import load_dotenv
 
-from backend.orchestrator import Orchestrator
-from backend.db import init_db, SessionLocal
-from backend.stt_service import STTService
-from backend.tts_service import TTSService
-from backend.api.llm import router as llm_router
+import sys
+sys.path.append(os.path.dirname(__file__))
+
+from orchestrator import Orchestrator
+from db import init_db, SessionLocal
+from stt_service import STTService
+from tts_service import TTSService
+
+# Import LLM router with error handling
+try:
+    from api.llm import router as llm_router
+    LLM_ROUTER_AVAILABLE = True
+except ImportError as e:
+    print(f"Warning: LLM router not available: {e}")
+    llm_router = None
+    LLM_ROUTER_AVAILABLE = False
 
 load_dotenv()
 
@@ -27,7 +38,11 @@ logger = logging.getLogger(__name__)
 app = FastAPI(title="Telco Agent", version="1.0.0")
 
 # Include API routers
-app.include_router(llm_router)
+if LLM_ROUTER_AVAILABLE and llm_router:
+    app.include_router(llm_router)
+    print("✅ LLM API router included")
+else:
+    print("⚠️ LLM API router not available - using WebSocket only")
 
 # CORS middleware
 app.add_middleware(
@@ -196,8 +211,12 @@ async def handle_user_text(client_id: str, text: str, session_state: dict):
 async def handle_audio_input(client_id: str, audio_chunks: List[str], session_state: dict):
     """Process audio input via STT."""
     try:
+        logger.info(f"🎤 Processing audio input for {client_id}, chunks: {len(audio_chunks)}")
+        
         # Convert audio chunks and transcribe
         transcript = await stt_service.transcribe_audio(audio_chunks)
+        
+        logger.info(f"🎤 Transcription result: '{transcript}'")
         
         if transcript:
             # Send transcript to client
@@ -206,11 +225,17 @@ async def handle_audio_input(client_id: str, audio_chunks: List[str], session_st
                 "text": transcript
             })
             
+            logger.info(f"🎤 Sent transcript to client: '{transcript}'")
+            
             # Process as text input
             await handle_user_text(client_id, transcript, session_state)
+        else:
+            logger.warning(f"🎤 Empty transcription for {client_id}")
             
     except Exception as e:
         logger.error(f"STT error: {e}")
+        import traceback
+        traceback.print_exc()
         await manager.send_message(client_id, {
             "type": "error",
             "message": "Ses tanıma başarısız oldu. Lütfen tekrar deneyin."
@@ -238,7 +263,7 @@ async def generate_tts(client_id: str, text: str):
 
 
 # Static file serving for TTS audio files
-app.mount("/audio", StaticFiles(directory="backend/audio_cache"), name="audio")
+app.mount("/audio", StaticFiles(directory="audio_cache"), name="audio")
 
 
 if __name__ == "__main__":
