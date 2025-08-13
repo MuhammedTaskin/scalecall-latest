@@ -19,19 +19,22 @@ A modern conversational AI system demonstrating:
 - **PII protection**: Automatic masking of sensitive data
 
 ### 🛠 **Technical Stack**
-- **Backend**: Python 3.11, FastAPI, WebSocket, SQLAlchemy (SQLite)
-- **LLM**: Gemma-3 4B Instruct (MLX, 4-bit quantization, streaming)
+- **Backend**: Python 3.11, FastAPI, WebSocket, Supabase (PostgreSQL)
+- **LLM**: Google Gemini 2.5 Flash (streaming, server-side only)
 - **Voice**: Whisper (faster-whisper), XTTS-v2 (sentence chunks)
 - **Frontend**: React + TypeScript (Vite), Tailwind CSS v4, Radix Primitives
+- **Database**: Supabase PostgreSQL with Row Level Security (RLS)
+- **Authentication**: Supabase Auth (email/password + magic links)
 - **Evaluation**: Automated KPI tracking with 100+ test cases
 
 ## 🚀 Quick Start
 
 ### Prerequisites
-- **macOS** (tested on M3 Pro)
+- **macOS/Linux/Windows** 
 - **Python 3.11+**
 - **Node.js 18+**
-- **MLX** compatible hardware
+- **Supabase Account** (free tier available)
+- **Google Gemini API Key** (free tier available)
 
 ### 1. Clone & Setup
 ```bash
@@ -39,19 +42,46 @@ git clone https://github.com/MuhammedTaskin/scalecall-latest.git
 cd scalecall-latest
 ```
 
-### 2. Backend Setup
+### 2. Environment Configuration
+```bash
+# Copy environment templates
+cp env.example .env
+cp frontend/env.example frontend/.env.local
+
+# Edit .env with your credentials:
+# - SUPABASE_URL, SUPABASE_ANON_KEY, SUPABASE_SERVICE_ROLE_KEY from your Supabase project
+# - SUPABASE_JWT_SECRET from Supabase Settings > API > JWT Secret
+# - GEMINI_API_KEY from Google AI Studio
+
+# Edit frontend/.env.local with:
+# - VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY (same as backend)
+```
+
+### 3. Database Setup (Supabase)
+```bash
+# Option 1: Using Supabase CLI (recommended)
+npx supabase init
+npx supabase link --project-ref your-project-ref
+npx supabase db push
+
+# Option 2: Manual SQL execution
+# Copy and run the SQL from supabase/migrations/20240112000001_init_profiles_and_messages.sql
+# in your Supabase SQL editor
+```
+
+### 4. Backend Setup
 ```bash
 # Install Python dependencies
 pip install -r requirements.txt
 
-# Initialize database
+# Initialize local database (if using SQLite fallback)
 python -c "from backend.db import init_db; init_db()"
 
 # Start backend server
 cd backend && python -m uvicorn app:app --host 0.0.0.0 --port 8000 --reload
 ```
 
-### 3. Frontend Setup
+### 5. Frontend Setup
 ```bash
 # Install Node.js dependencies
 cd frontend && npm install
@@ -60,10 +90,11 @@ cd frontend && npm install
 npm run dev
 ```
 
-### 4. Access the Application
+### 6. Access the Application
 - **Frontend UI**: http://localhost:5173
 - **Backend API**: http://localhost:8000
 - **API Documentation**: http://localhost:8000/docs
+- **Supabase Dashboard**: https://app.supabase.com
 
 ## 🎬 Demo Script (1 minute)
 
@@ -102,6 +133,39 @@ User Input → Orchestrator → LLM (Gemma-3) → Function Call/Handoff → Tool
 - **Package Management**: eSIM plans and pricing
 - **Order Processing**: LPA code generation
 - **eSIM Activation**: Status tracking
+
+## 🔒 Security & Authentication
+
+### **Supabase Integration**
+- **Row Level Security (RLS)**: All tables have RLS enabled
+- **User Isolation**: Users can only access their own data
+- **JWT Authentication**: Secure token-based auth with Supabase
+- **Server-side API Keys**: All sensitive keys kept on backend only
+
+### **API Security**
+- **Rate Limiting**: 10 requests per minute per user
+- **Input Validation**: Pydantic models for all endpoints
+- **Error Handling**: Safe error messages, detailed logs server-side
+
+## 🧪 Testing
+
+### **Run Tests**
+```bash
+# Backend tests
+cd backend && python -m pytest tests/ -v
+
+# Test specific components
+pytest tests/test_auth_and_llm.py::TestAuthentication -v
+pytest tests/test_auth_and_llm.py::TestLLMEndpoints -v
+pytest tests/test_auth_and_llm.py::TestRLSPolicies -v
+```
+
+### **Test Coverage**
+- ✅ Authentication middleware with JWT validation
+- ✅ Rate limiting enforcement  
+- ✅ RLS policy configuration
+- ✅ LLM endpoint security
+- ✅ User data isolation
 
 ## 📊 Evaluation System
 

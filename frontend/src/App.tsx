@@ -6,6 +6,9 @@ import EventFeed from './components/EventFeed'
 import PersonaBadge from './components/PersonaBadge'
 import MicButton from './components/MicButton'
 import Interrupt from './components/Interrupt'
+import { Auth } from './components/Auth'
+import { AuthProvider, useAuth } from './contexts/AuthContext'
+import type { User } from '@supabase/supabase-js'
 import './styles/tokens.css'
 
 interface AppState {
@@ -28,7 +31,8 @@ interface AppState {
   connectionError: string | null
 }
 
-function App() {
+function AppContent() {
+  const { user } = useAuth()
   const [state, setState] = useState<AppState>({
     isConnected: false,
     currentPersona: 'RouterAgent',
@@ -266,8 +270,14 @@ function App() {
         </div>
       )}
 
-      {/* Main content */}
-      <div className="flex-1 flex overflow-hidden">
+      {/* Authentication check */}
+      {!user ? (
+        <div className="flex-1 flex items-center justify-center bg-gray-50">
+          <Auth onAuthChange={() => {}} />
+        </div>
+      ) : (
+        /* Main content */
+        <div className="flex-1 flex overflow-hidden">
         {/* Chat area */}
         <div className="flex-1 flex flex-col">
           <Chat 
@@ -300,7 +310,17 @@ function App() {
           <EventFeed events={state.events} />
         </div>
       </div>
+      )}
     </div>
+  )
+}
+
+// Main App component with authentication provider
+function App() {
+  return (
+    <AuthProvider>
+      <AppContent />
+    </AuthProvider>
   )
 }
 

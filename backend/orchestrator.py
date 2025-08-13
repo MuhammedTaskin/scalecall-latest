@@ -7,7 +7,7 @@ import re
 from typing import AsyncIterator, Dict, Any, List, Optional
 import logging
 
-from backend.llm_abi import LLMProvider
+from backend.llm.index import default_provider as llm_provider
 from backend.tools.registry import ToolRegistry
 from backend.prompts import get_system_prompt
 
@@ -18,7 +18,7 @@ class Orchestrator:
     """Handles LLM streaming, function calling, and persona handoffs."""
     
     def __init__(self):
-        self.llm = LLMProvider()
+        self.llm = llm_provider
         self.tools = ToolRegistry()
         self.pending_tool_calls = {}
         

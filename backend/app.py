@@ -4,22 +4,30 @@ FastAPI app with WebSocket streaming for telco agent.
 import asyncio
 import json
 import uuid
+import os
 from typing import Dict, Any, List
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 import logging
+from dotenv import load_dotenv
 
 from backend.orchestrator import Orchestrator
 from backend.db import init_db, SessionLocal
 from backend.stt_service import STTService
 from backend.tts_service import TTSService
+from backend.api.llm import router as llm_router
+
+load_dotenv()
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 app = FastAPI(title="Telco Agent", version="1.0.0")
+
+# Include API routers
+app.include_router(llm_router)
 
 # CORS middleware
 app.add_middleware(
