@@ -33,7 +33,7 @@ SUPABASE_JWT_SECRET=${JWT_SECRET}
 
 # LLM Configuration - IMPORTANT: Using Gemini 2.5 Flash
 LLM_PROVIDER=gemini
-GEMINI_API_KEY=your-actual-gemini-api-key-here
+GEMINI_API_KEY="AIzaSyATHQOhKjQT0RweOQ-PF3lqT0uzlGKx0nc"
 
 # Database Configuration
 DATABASE_URL=postgresql://postgres:postgres@127.0.0.1:54322/postgres

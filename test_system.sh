@@ -29,7 +29,7 @@ echo "2️⃣  CHECKING CONFIGURATION"
 echo "--------------------------"
 
 # Check API key status
-if grep -q "your-actual-gemini-api-key-here" .env; then
+if grep -q "AIzaSyATHQOhKjQT0RweOQ-PF3lqT0uzlGKx0nc" .env; then
     echo "⚠️  Gemini API Key: Using placeholder - needs real key"
     echo "   🔧 Get key from: https://makersuite.google.com/"
     echo "   🔧 Update with: ./update_api_key.sh YOUR_KEY"

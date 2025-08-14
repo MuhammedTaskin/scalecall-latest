@@ -1,17 +1,18 @@
 """
-Telecom tool implementations with realistic mock logic.
+Telecom tool implementations with Supabase integration.
 """
 import json
 import uuid
 import logging
-from typing import Dict, Any
+from typing import Dict, Any, Optional
 from datetime import datetime, timedelta
 
 import sys
 import os
-sys.path.append(os.path.dirname(__file__))
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
 from .types import OperationResult
+from lib.supabase_client import create_supabase_admin
 
 logger = logging.getLogger(__name__)
 
@@ -20,31 +21,67 @@ class TelecomTools:
     """Implementation of core telecom tools with realistic mock data."""
     
     def __init__(self):
-        # Mock customer database
+        # Mock customer database - Enhanced with example dialog data
         self.customers = {
             "12345": {
                 "customer_id": "12345",
-                "name": "Ahmet Yılmaz",
-                "msisdn": "905551234567",
+                "name": "Ali Doğan",
+                "msisdn": "05551234567",
                 "maiden_name": "Kaya",
                 "package_id": "premium_10gb",
                 "contract_end": "2024-12-31",
                 "payment_status": "active",
-                "device_imei": "123456789012345",
+                "device_imei": "359111222333444",
                 "activation_status": "active",
                 "created_at": "2024-01-15"
             },
             "67890": {
                 "customer_id": "67890", 
                 "name": "Fatma Demir",
-                "msisdn": "905559876543",
-                "maiden_name": "Özkan",
+                "msisdn": "05556789012",
+                "maiden_name": "Demir",
                 "package_id": "basic_5gb",
                 "contract_end": "2024-11-30",
                 "payment_status": "active",
-                "device_imei": "987654321098765",
+                "device_imei": "357999123456789",
                 "activation_status": "pending",
                 "created_at": "2024-02-20"
+            },
+            "11223": {
+                "customer_id": "11223",
+                "name": "Elif Yıldız",
+                "msisdn": "05551122334",
+                "maiden_name": "Yıldız",
+                "package_id": "family_20gb",
+                "contract_end": "2024-12-31",
+                "payment_status": "active",
+                "device_imei": "359888777666555",
+                "activation_status": "active",
+                "created_at": "2024-01-10"
+            },
+            "44556": {
+                "customer_id": "44556",
+                "name": "Mehmet Kaya",
+                "msisdn": "05554455667",
+                "maiden_name": "Kaya",
+                "package_id": "basic_5gb",
+                "contract_end": "2024-11-30",
+                "payment_status": "active",
+                "device_imei": "357999123456789",
+                "activation_status": "failed",
+                "created_at": "2024-01-20"
+            },
+            "78901": {
+                "customer_id": "78901",
+                "name": "Zeynep Koç",
+                "msisdn": "05557890123",
+                "maiden_name": "Koç",
+                "package_id": "premium_10gb",
+                "contract_end": "2024-12-31",
+                "payment_status": "active",
+                "device_imei": "359123456789012",
+                "activation_status": "failed",
+                "created_at": "2024-01-25"
             }
         }
         

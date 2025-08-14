@@ -9,7 +9,7 @@ if [ "$1" != "" ]; then
     echo "✅ Using provided API key: ${API_KEY:0:10}..."
     
     # Update the .env file
-    sed -i.bak "s/GEMINI_API_KEY=your-actual-gemini-api-key-here/GEMINI_API_KEY=$API_KEY/" .env
+    sed -i.bak "s/GEMINI_API_KEY=AIzaSyATHQOhKjQT0RweOQ-PF3lqT0uzlGKx0nc/GEMINI_API_KEY=$API_KEY/" .env
     
     echo "✅ Updated .env file with your Gemini API key"
     echo ""

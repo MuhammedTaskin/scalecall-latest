@@ -10,7 +10,7 @@ import os
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
 from .types import OperationResult
-from .telecom import TelecomTools
+from .supabase_telecom import SupabaseTelecomTools
 from .esim_extra import ESIMTools
 
 logger = logging.getLogger(__name__)
@@ -20,7 +20,7 @@ class ToolRegistry:
     """Registry for all available tools with JSON schema validation."""
     
     def __init__(self):
-        self.telecom_tools = TelecomTools()
+        self.telecom_tools = SupabaseTelecomTools()
         self.esim_tools = ESIMTools()
         self._init_schemas()
     
