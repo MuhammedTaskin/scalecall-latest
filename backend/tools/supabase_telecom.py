@@ -22,6 +22,7 @@ class SupabaseTelecomTools:
     
     def __init__(self):
         self.supabase = create_supabase_admin()
+        self.ticket_counter = 1000  # Initialize ticket counter
         if not self.supabase:
             logger.warning("Supabase not available, using fallback mode")
             self._init_fallback_data()
