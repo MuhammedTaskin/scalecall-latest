@@ -1,0 +1,97 @@
+{
+  "conversation_id": "short_0046_plan_upgrade",
+  "metadata": {
+    "scenario": "plan_upgrade",
+    "handoff_pattern": [
+      "RouterAgent",
+      "PlanAgent"
+    ]
+  },
+  "customer_profile": {
+    "persona": "confused",
+    "phone": "0555 123 45 67"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Merhaba, internetim yavaşladı ve paketimi yükseltmek istiyorum ama nasıl yapacağımı pek anlayamadım.",
+      "emotion": "confused"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Evet, numaram doğru. İnternetimdeki yavaşlama da yeni başladı, sanırım paketim yetmiyor.",
+      "emotion": "confused"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Anladım, teşekkürler. Hangi paketler mevcut acaba?",
+      "emotion": "confused"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba, ben Telekom Çağrı Merkezi'nden RouterAgent. Kimliğinizi doğrulamak için lütfen telefon numaranızı veya müşteri numaranızı paylaşır mısınız?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkürler, kimliğiniz doğrulandı. Mevcut durumunuzu kontrol ettim ve internetinizde bir yavaşlama olduğunu görüyorum. Bu konuda size yardımcı olmak için PlanAgent'a yönlendireceğim. Kendisi paket yükseltme işlemlerinizde size destek olacaktır.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "handoff": {
+        "to": "PlanAgent"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "PlanAgent",
+      "text": "Merhaba, ben PlanAgent. İnternet paketinizle ilgili yardımcı olabilirim. Mevcut planınızı ve size uygun olabilecek yeni paketleri birlikte inceleyebiliriz. Güncel kampanyalarımız hakkında da bilgi verebilirim.",
+      "tools_triggered": [
+        "get_customer_plan",
+        "list_all_plans"
+      ],
+      "handoff": null
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "PlanAgent",
+      "reason": "plan_upgrade"
+    }
+  ],
+  "tool_calls": [
+    {
+      "turn_id": "turn_002",
+      "tool": "verify_user",
+      "arguments": {
+        "phone": "0555 123 45 67"
+      },
+      "result": {
+        "is_verified": true
+      }
+    },
+    {
+      "turn_id": "turn_004",
+      "tool": "route_to_agent",
+      "arguments": {
+        "agent_name": "PlanAgent",
+        "reason": "plan_upgrade"
+      },
+      "result": {
+        "success": true
+      }
+    }
+  ],
+  "generated_at": "2025-08-14T08:01:27.018581",
+  "index": 46
+}

@@ -1,0 +1,1586 @@
+[
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "E sim kurulumu yapamıyorum. Sürekli hata veriyor, ne yapmalıyım?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 123 45 67 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_D001_verify\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"ayşe\",\"msisdn\":\"905551234567\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"10001\",\"name\":\"Ayşe Yılmaz\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Ayşe Hanım, eSIM kurulumunda yaşadığınız hatayı anlıyorum. Cihazınızın modelini ve tam olarak hangi adımda hata aldığınızı öğrenebilir miyim?"
+          }
+        ]
+      }
+    ],
+    "id": "D001",
+    "scenario": "phone_confirmation|multi_step|error_handling",
+    "context": "SIM",
+    "noise": true,
+    "quality": "intermediate"
+  },
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "İsim aktivasyon kodu gelmiyor telefonuma, ne yapmam lazım?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 890 12 34 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_D002_verify\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"zeynep\",\"msisdn\":\"905558901234\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"10002\",\"name\":\"Caner Demir\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Caner Bey, aktivasyon kodunuzu yeniden gönderebilirim. Onayınız dahilinde işlemi başlatıyorum. Lütfen cihazınızın internet bağlantısını kontrol edin."
+          }
+        ]
+      }
+    ],
+    "id": "D002",
+    "scenario": "phone_confirmation|multi_step",
+    "context": "SIM",
+    "noise": true,
+    "quality": "foundation"
+  },
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "eSIM aktivasyonum beklemede görünüyor, ne zaman aktif olacak?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 234 56 78 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_D003_verify\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"elif\",\"msisdn\":\"905552345678\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"10003\",\"name\":\"Burak Kara\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Burak Bey, sistemde aktivasyonunuzun devam ettiğini görüyorum. Genellikle birkaç dakika içinde tamamlanır, dilerseniz aktivasyon durumunu anlık olarak kontrol edebilirim."
+          }
+        ]
+      }
+    ],
+    "id": "D003",
+    "scenario": "phone_confirmation|multi_step",
+    "context": "SIM",
+    "noise": false,
+    "quality": "intermediate"
+  },
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Yeni telefon aldım, e sim uyumsuz diyor. Ne yapmam gerekiyor şimdi?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 345 67 89 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_D004_verify\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"deniz\",\"msisdn\":\"905553456789\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"10004\",\"name\":\"Deniz Akın\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Deniz Hanım, cihaz uyumsuzluğu genellikle telefon modelinden kaynaklanır. Lütfen telefonunuzun modelini ve IMEI numarasını kontrol edebilir misiniz? Size yardımcı olmak için cihazınızın eSIM uyumluluğunu kontrol etmemiz gerekiyor."
+          }
+        ]
+      }
+    ],
+    "id": "D004",
+    "scenario": "phone_confirmation|error_handling",
+    "context": "SIM|DEVICE",
+    "noise": true,
+    "quality": "advanced"
+  },
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "E sim profilimi indiremedim, QR kodu okutmuyor."
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 456 78 90 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_D005_verify\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"fatma\",\"msisdn\":\"905554567890\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"10005\",\"name\":\"Emre Tunç\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Emre Bey, QR kodu okuma sorunları genellikle kamera ayarlarından veya yetersiz ışıktan kaynaklanabilir. Dilerseniz size adım adım kurulum adımlarını tekrar anlatabilirim."
+          }
+        ]
+      }
+    ],
+    "id": "D005",
+    "scenario": "phone_confirmation|multi_step",
+    "context": "SIM",
+    "noise": true,
+    "quality": "foundation"
+  },
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Eski fiziksel SIM kartımı eSIM'e çevirdim ama hattım hala kapalı görünüyor."
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 567 89 01 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_D006_verify\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"gül\",\"msisdn\":\"905555678901\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"10006\",\"name\":\"Gamze Erdem\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Gamze Hanım, hattınızın aktifleşmesi için kısa bir süre gerekebilir. Sistemde aktivasyon sürecini kontrol ediyorum. Ayrıca, eSIM kurulumunu tamamladığınıza emin misiniz?"
+          }
+        ]
+      }
+    ],
+    "id": "D006",
+    "scenario": "phone_confirmation|multi_step",
+    "context": "SIM|BILLING",
+    "noise": false,
+    "quality": "intermediate"
+  },
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Yurt dışına çıkacağım, E simimi orada kullanabilir miyim? Ek bir şey yapmam gerekiyor mu?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 678 90 12 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_D007_verify\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"halime\",\"msisdn\":\"905556789012\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"10007\",\"name\":\"Murat Can\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Murat Bey, evet eSIM'inizi yurt dışında kullanabilirsiniz. Yurt dışı paketlerimizden size uygun olanı seçerek sorunsuz iletişim kurabilirsiniz. Hangi ülkeye gideceğinizi öğrenebilir miyim?"
+          }
+        ]
+      }
+    ],
+    "id": "D007",
+    "scenario": "phone_confirmation|multi_step",
+    "context": "SIM|PLAN",
+    "noise": true,
+    "quality": "advanced"
+  },
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "eSIM'imi kurdum ama hala servis yok diyor, IMEI numarasını kontrol ettim bir sorun görünmüyor."
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 789 01 23 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_D008_verify\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"ipek\",\"msisdn\":\"905557890123\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"10008\",\"name\":\"Nazlı Soylu\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Nazlı Hanım, bu durum genellikle ağ ayarlarından veya bölgesel bir kesintiden kaynaklanabilir. Cihazınızın ağ ayarlarını sıfırlamayı denediniz mi? Ayrıca, bulunduğunuz bölgedeki kapsama durumunu kontrol edebiliriz."
+          }
+        ]
+      }
+    ],
+    "id": "D008",
+    "scenario": "phone_confirmation|error_handling",
+    "context": "SIM|DEVICE",
+    "noise": false,
+    "quality": "expert"
+  },
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Beş GB internet paketim var, on GB'a geçmek istiyorum. Nasıl yapabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 111 22 33 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_D009_verify\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"cemre\",\"msisdn\":\"905551112233\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"10009\",\"name\":\"Mert Kaya\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Mert Bey, 5GB'tan 10GB pakete geçişiniz için size uygun tarifeleri kontrol ediyorum. Mevcut taahhüdünüzü ve yeni paket ücretlerini hemen size ileteyim."
+          }
+        ]
+      }
+    ],
+    "id": "D009",
+    "scenario": "phone_confirmation|multi_step",
+    "context": "PLAN",
+    "noise": true,
+    "quality": "foundation"
+  },
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aile paketi hakkında bilgi almak istiyorum, hangi seçenekleriniz var?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 222 33 44 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_D010_verify\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"ömer\",\"msisdn\":\"905552223344\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"10010\",\"name\":\"Derya Çelik\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Derya Hanım, aile paketlerimiz farklı kota ve fiyat seçenekleriyle mevcut. Kaç kişilik bir aile için düşündüğünüzü ve ortalama internet kullanımınızı belirtirseniz size en uygun paketi önerebilirim."
+          }
+        ]
+      }
+    ],
+    "id": "D010",
+    "scenario": "phone_confirmation|multi_step",
+    "context": "PLAN",
+    "noise": false,
+    "quality": "intermediate"
+  },
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Yeni bir paket almak istiyorum, fiyat simülasyonu yapabilir misiniz?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 333 44 55 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_D011_verify\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"pınar\",\"msisdn\":\"905553334455\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"10011\",\"name\":\"Kerem Özkan\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Kerem Bey, tabii ki yardımcı olabilirim. Hangi tür bir paket arıyorsunuz, örneğin daha çok internet mi, dakika mı yoksa SMS mi ihtiyacınız var? Böylece size en uygun fiyatları sunabilirim."
+          }
+        ]
+      }
+    ],
+    "id": "D011",
+    "scenario": "phone_confirmation|multi_step",
+    "context": "PLAN|BILLING",
+    "noise": true,
+    "quality": "advanced"
+  },
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Mevcut paketimin detaylarını öğrenmek istiyorum. Ne kadar internetim kalmış?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 444 55 66 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_D012_verify\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"sema\",\"msisdn\":\"905554445566\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"10012\",\"name\":\"Aliye Sönmez\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aliye Hanım, paketinizin detaylarını ve kalan kullanım haklarınızı hemen kontrol ediyorum. Birazdan size bilgiyi aktaracağım."
+          }
+        ]
+      }
+    ],
+    "id": "D012",
+    "scenario": "phone_confirmation|multi_step",
+    "context": "PLAN",
+    "noise": false,
+    "quality": "intermediate"
+  },
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Paketimi değiştirmek istiyorum ama taahhütüm var mıydı? Ceza öder miyim?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 555 66 77 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_D013_verify\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"volkan\",\"msisdn\":\"905555556677\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"10013\",\"name\":\"Ece Polat\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Ece Hanım, taahhüt durumunuzu ve olası cayma bedelini kontrol etmemiz gerekiyor. Sisteme bakıyorum. Paket geçişlerinizde size özel avantajlar da sunabiliriz."
+          }
+        ]
+      }
+    ],
+    "id": "D013",
+    "scenario": "phone_confirmation|multi_step",
+    "context": "PLAN|BILLING",
+    "noise": true,
+    "quality": "expert"
+  },
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Yurt dışı için paket satın almak istiyorum, seçenekleriniz neler?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 666 77 88 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_D014_verify\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"uğur\",\"msisdn\":\"905556667788\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"10014\",\"name\":\"Barış Yılmaz\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Barış Bey, yurt dışı paketlerimiz seyahat ettiğiniz ülkeye ve kullanım sürenize göre farklılık gösteriyor. Hangi ülkeye gideceğinizi ve ne kadar süre kalacağınızı belirtirseniz size en uygun paketi önerebilirim."
+          }
+        ]
+      }
+    ],
+    "id": "D014",
+    "scenario": "phone_confirmation|multi_step",
+    "context": "PLAN",
+    "noise": false,
+    "quality": "advanced"
+  },
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Faturam çok yüksek gelmiş, neden bu kadar fazla geldi?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 777 88 99 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_D015_verify\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"aslı\",\"msisdn\":\"905557778899\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"10015\",\"name\":\"Sinan Demir\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Sinan Bey, faturanızdaki detayları kontrol edelim. Ek kullanım, yurt dışı kullanımı veya ek servis ücretleri olabilir. Fatura dökümünüzü inceleyerek size bilgi vereceğim."
+          }
+        ]
+      }
+    ],
+    "id": "D015",
+    "scenario": "phone_confirmation|error_handling",
+    "context": "BILLING",
+    "noise": true,
+    "quality": "intermediate"
+  },
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Faturamı ödemekte sorun yaşıyorum, kredi kartımdan geçmiyor."
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 888 99 00 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_D016_verify\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"burcu\",\"msisdn\":\"905558889900\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"10016\",\"name\":\"Gizem Can\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Gizem Hanım, ödeme sorununuz için üzgünüm. Kredi kartınızla ilgili bir problem mi var, yoksa sistemde genel bir hata mı mevcut kontrol edelim. Farklı ödeme yöntemleri konusunda da yardımcı olabilirim."
+          }
+        ]
+      }
+    ],
+    "id": "D016",
+    "scenario": "phone_confirmation|multi_step",
+    "context": "BILLING",
+    "noise": false,
+    "quality": "foundation"
+  },
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Fazla ödeme yapmışım sanırım, iade talebinde bulunmak istiyorum."
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 999 00 11 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_D017_verify\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"deniz\",\"msisdn\":\"905559990011\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"10017\",\"name\":\"Kaan Mert\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Kaan Bey, fazla ödeme durumunuzu ve iade sürecini kontrol ediyorum. İşleminizi başlatmak için onayınızı rica edeceğim."
+          }
+        ]
+      }
+    ],
+    "id": "D017",
+    "scenario": "phone_confirmation|multi_step",
+    "context": "BILLING",
+    "noise": true,
+    "quality": "advanced"
+  },
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Son ödeme tarihim ne zamandı? Gecikme faizi işler mi?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 123 00 00 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_D018_verify\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"esra\",\"msisdn\":\"905551230000\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"10018\",\"name\":\"Leyla Aksoy\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Leyla Hanım, son ödeme tarihinizi ve güncel borç bilginizi kontrol ediyorum. Gecikme faiziyle ilgili detayları da size aktaracağım."
+          }
+        ]
+      }
+    ],
+    "id": "D018",
+    "scenario": "phone_confirmation|multi_step",
+    "context": "BILLING",
+    "noise": false,
+    "quality": "intermediate"
+  },
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Detaylı fatura dökümü istiyorum, nasıl alabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 456 00 00 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_D019_verify\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"gamze\",\"msisdn\":\"905554560000\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"10019\",\"name\":\"Mete Yılmaz\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Mete Bey, detaylı fatura dökümünüzü e-posta adresinize veya Türk Telekom Online İşlemler uygulamasından nasıl alabileceğinizi size hemen anlatabilirim. Tercihiniz hangisi olur?"
+          }
+        ]
+      }
+    ],
+    "id": "D019",
+    "scenario": "phone_confirmation|multi_step",
+    "context": "BILLING",
+    "noise": true,
+    "quality": "foundation"
+  },
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Telefonumda sinyal çok zayıf çekiyor, özellikle evde hiç yok."
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 789 00 00 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_D020_verify\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"hasan\",\"msisdn\":\"905557890000\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"10020\",\"name\":\"Demet Arslan\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Demet Hanım, bulunduğunuz bölgedeki sinyal kalitesini kontrol ediyorum. Adres bilginizi teyit edebilir misiniz? Ayrıca cihazınızın ağ ayarlarını sıfırlamayı denedik mi?"
+          }
+        ]
+      }
+    ],
+    "id": "D020",
+    "scenario": "phone_confirmation|error_handling",
+    "context": "COVERAGE",
+    "noise": true,
+    "quality": "intermediate"
+  },
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Şehir dışına çıktığımda internetim çok yavaşlıyor, kapsama sorunu mu var?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 111 00 00 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_D021_verify\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"ismet\",\"msisdn\":\"905551110000\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"10021\",\"name\":\"Fatih Koç\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Fatih Bey, şehir dışı kapsama alanlarımızda zaman zaman yoğunluk yaşanabilir. Hangi şehir veya bölgede bu sorunu yaşadığınızı belirtirseniz detaylı kontrol sağlayabilirim."
+          }
+        ]
+      }
+    ],
+    "id": "D021",
+    "scenario": "phone_confirmation|multi_step",
+    "context": "COVERAGE",
+    "noise": false,
+    "quality": "foundation"
+  },
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "İnternetim sürekli kesiliyor, bazen hiç bağlanmıyor. Ağ bağlantı sorunu var sanırım."
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 222 00 00 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_D022_verify\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"jale\",\"msisdn\":\"905552220000\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"10022\",\"name\":\"Canan Yıldız\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Canan Hanım, ağ bağlantı sorunları birçok farklı sebepten kaynaklanabilir. Cihazınızda bir ayar problemi mi var, yoksa bölgenizde genel bir kesinti mi mevcut kontrol etmemiz gerekiyor. Teknik ekibimize bir arıza kaydı oluşturalım mı?"
+          }
+        ]
+      }
+    ],
+    "id": "D022",
+    "scenario": "phone_confirmation|error_handling",
+    "context": "COVERAGE|MIXED",
+    "noise": true,
+    "quality": "advanced"
+  }
+]

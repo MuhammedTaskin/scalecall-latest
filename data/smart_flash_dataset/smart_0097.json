@@ -1,0 +1,44 @@
+{
+  "id": "smart_0097",
+  "scenario": "device_check",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Bu cihaz uyumlu mu değil mi? Hızlı olun lütfen!",
+      "emotion": "impatient"
+    },
+    {
+      "turn": 3,
+      "text": "IMEI: 123456789012345"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Hesabınızı doğrulamam gerekiyor. Lütfen TC kimlik numaranızı paylaşır mısınız?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "TechAgent",
+      "text": "Cihazınızın IMEI'sini kontrol ediyorum... Evet, cihazınızla uyumludur. Başka bir sorunuz var mı?",
+      "tools": [
+        "check_device_imei",
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:57:24.877523",
+  "required_tools": [
+    "verify_user",
+    "check_device_imei",
+    "end_conversation"
+  ],
+  "agent_flow": [
+    "RouterAgent",
+    "TechAgent"
+  ]
+}

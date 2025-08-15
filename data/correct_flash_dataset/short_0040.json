@@ -1,0 +1,123 @@
+{
+  "conversation_id": "short_0040_esim_quick_fix",
+  "metadata": {
+    "scenario": "esim_quick_fix",
+    "handoff_pattern": [
+      "RouterAgent",
+      "TechAgent"
+    ]
+  },
+  "customer_profile": {
+    "persona": "polite",
+    "phone": "0555 123 45 67"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Merhaba, e-SIM'im çalışmıyor sanırım. Telefonumda bir uyarı alıyorum.",
+      "emotion": "polite"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Evet, numaram 0555 123 45 67.",
+      "emotion": "polite"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Anladım, teşekkürler. Umarım çözülür.",
+      "emotion": "polite"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba, Telekom Çağrı Merkezi'ne hoş geldiniz. Size yardımcı olmaktan memnuniyet duyarım. Lütfen kimliğimi doğrulamak için telefon numaranızı veya TC kimlik numaranızı paylaşır mısınız?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkür ederim, bilgileriniz doğrulandı. Kayıtlarınıza göre e-SIM kurulumunuzda bir sorun görünüyor. Bu durumu daha detaylı inceleyebilmemiz için sizi ilgili teknik ekibimize yönlendirmem gerekiyor. Lütfen bekleyiniz.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "handoff": {
+        "to": "TechAgent"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "TechAgent",
+      "text": "Merhaba, ben Teknik Destek'ten Ayşe. E-SIM sorununuzu anlıyorum. Cihazınızın IMEI numarasını ve e-SIM'inizin durumunu kontrol edeceğim. Lütfen cihazınızın IMEI numarasını paylaşır mısınız?",
+      "tools_triggered": [
+        "check_esim_status",
+        "check_device_imei"
+      ],
+      "handoff": null
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "TechAgent",
+      "reason": "e-SIM ile ilgili teknik sorunlar için yönlendirme"
+    }
+  ],
+  "tool_calls": [
+    {
+      "turn_id": "turn_002",
+      "tool": "verify_user",
+      "arguments": {
+        "phone_number": "05551234567"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_004",
+      "tool": "get_customer_status",
+      "arguments": {
+        "phone_number": "05551234567"
+      },
+      "result": {
+        "esim_status": "failed_setup"
+      }
+    },
+    {
+      "turn_id": "turn_004",
+      "tool": "route_to_agent",
+      "arguments": {
+        "target_agent": "TechAgent"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "check_esim_status",
+      "arguments": {
+        "phone_number": "05551234567"
+      },
+      "result": {
+        "esim_status": "pending_activation"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "check_device_imei",
+      "arguments": {
+        "phone_number": "05551234567",
+        "imei": "123456789012345"
+      },
+      "result": {
+        "device_compatibility": "compatible"
+      }
+    }
+  ],
+  "generated_at": "2025-08-14T08:01:22.957915",
+  "index": 40
+}

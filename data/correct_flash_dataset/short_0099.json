@@ -1,0 +1,118 @@
+{
+  "conversation_id": "short_0099_bill_question",
+  "metadata": {
+    "scenario": "bill_question",
+    "handoff_pattern": [
+      "RouterAgent",
+      "BillingAgent"
+    ]
+  },
+  "customer_profile": {
+    "persona": "normal",
+    "phone": "0555 123 45 67"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Merhaba, faturamla ilgili bir sorunum var. Bu ayki faturam beklediğimden daha yüksek geldi ve nedenini anlamıyorum.",
+      "emotion": "normal"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Evet, numaram 0555 123 45 67.",
+      "emotion": "normal"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Anladım, teşekkür ederim. O zaman faturamı detaylı inceleyebilecek birine bağlanmam gerekiyor sanırım.",
+      "emotion": "normal"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Türk Telekom'a hoş geldiniz. Kimlik bilgilerinizi doğrulamak için lütfen telefon numaranızı paylaşır mısınız?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkürler, bilgileriniz doğrulandı. Faturanızla ilgili sorununuzu çözmek için sizi ilgili departmanımıza yönlendireceğim. Lütfen bekleyiniz.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "handoff": {
+        "to": "BillingAgent"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "BillingAgent",
+      "text": "Merhaba, ben Fatura Departmanından Ayşe. Faturanızla ilgili detaylı inceleme yapabilirim. Son faturanızda beklenmedik bir artışın olmasının birkaç sebebi olabilir. Öncelikle internet kullanımınızda bir değişiklik oldu mu? Ya da herhangi bir ek hizmet tanımlanmış olabilir. Bu bilgileri sizinle paylaşarak durumu netleştirelim.",
+      "tools_triggered": [
+        "get_last_bill",
+        "end_conversation"
+      ],
+      "handoff": null
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "BillingAgent",
+      "reason": "bill_question"
+    }
+  ],
+  "tool_calls": [
+    {
+      "turn_id": "turn_002",
+      "tool": "verify_user",
+      "arguments": {
+        "phone_number": "0555 123 45 67"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_004",
+      "tool": "get_customer_status",
+      "arguments": {
+        "phone_number": "0555 123 45 67"
+      },
+      "result": {
+        "status": "active"
+      }
+    },
+    {
+      "turn_id": "turn_004",
+      "tool": "route_to_agent",
+      "arguments": {
+        "agent_name": "BillingAgent"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "get_last_bill",
+      "arguments": {
+        "phone_number": "0555 123 45 67"
+      },
+      "result": {
+        "bill_amount": 150,
+        "due_date": "2023-11-15",
+        "details": {
+          "base_plan": 100,
+          "internet_usage": 30,
+          "extra_services": 20
+        }
+      }
+    }
+  ],
+  "generated_at": "2025-08-14T08:02:03.668516",
+  "index": 99
+}

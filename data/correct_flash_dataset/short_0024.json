@@ -1,0 +1,112 @@
+{
+  "conversation_id": "short_0024_general_help",
+  "metadata": {
+    "scenario": "general_help",
+    "handoff_pattern": [
+      "RouterAgent",
+      "FAQAgent"
+    ]
+  },
+  "customer_profile": {
+    "persona": "confused",
+    "phone": "0555 123 45 67"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Merhaba, internetimde bir sorun yaşıyorum sanırım. Modemim yanıp sönüyor sürekli, ne yapmam gerektiğini hiç bilmiyorum.",
+      "emotion": "confused"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Evet, numaram 0555 123 45 67. Modemim de kırmızı ışık yanıyor sanırım.",
+      "emotion": "confused"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Anladım, teşekkürler. Umarım bu bilgiler sorunu çözmeme yardımcı olur.",
+      "emotion": "confused"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba, Telekom Çağrı Merkezi'ne hoş geldiniz. Kimliğinizi doğrulamak için lütfen telefon numaranızı veya TC kimlik numaranızı paylaşır mısınız?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkürler bilgilerinizi aldım. Modeminizdeki durum genel bir bağlantı sorunu olduğunu gösteriyor. Bu konuda size daha detaylı yardımcı olabilmek için ilgili birimimize yönlendireceğim. Beklemede kalın lütfen.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "handoff": {
+        "to": "FAQAgent"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "FAQAgent",
+      "text": "Merhaba, ben size yardımcı olacak FAQ Uzmanıyım. Modeminizdeki kırmızı ışık genellikle bağlantı hatası anlamına gelir. İnternet kablolarınızın doğru takılı olduğundan emin olun. Eğer sorun devam ederse, modeminizi yeniden başlatmayı deneyebilirsiniz. Bu adımlar genellikle sorunu çözer. Sorun devam ederse lütfen bize bildirin.",
+      "tools_triggered": [
+        "search_faq",
+        "send_help_sms"
+      ],
+      "handoff": null
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "FAQAgent",
+      "reason": "general_help"
+    }
+  ],
+  "tool_calls": [
+    {
+      "turn_id": "turn_002",
+      "tool": "verify_user",
+      "arguments": {
+        "phone_number": "0555 123 45 67"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_004",
+      "tool": "route_to_agent",
+      "arguments": {
+        "agent_name": "FAQAgent",
+        "reason": "general_help"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "search_faq",
+      "arguments": {
+        "query": "modem kırmızı ışık"
+      },
+      "result": {
+        "solution": "Kabloları kontrol edin, modemi yeniden başlatın."
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "send_help_sms",
+      "arguments": {
+        "phone_number": "0555 123 45 67",
+        "message": "Modeminizdeki kırmızı ışık için: Kabloları kontrol edin, modemi yeniden başlatın."
+      },
+      "result": true
+    }
+  ],
+  "generated_at": "2025-08-14T08:01:13.501773",
+  "index": 24
+}

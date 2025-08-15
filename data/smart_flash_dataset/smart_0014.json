@@ -1,0 +1,41 @@
+{
+  "id": "smart_0014",
+  "scenario": "escalate_angry",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Merhaba! İnternetim yine yok, ama bu sefer gerçekten sinirliyim! Hemen birini bağlayın!",
+      "emotion": "cheerful"
+    },
+    {
+      "turn": 3,
+      "text": "Evet, numaram 1234567890."
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Anlıyorum. Lütfen kimliğinizi doğrulamak için telefon numaranızı paylaşır mısınız?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "RouterAgent",
+      "text": "Anlıyorum, bu durumun sizi ne kadar rahatsız ettiğini biliyorum. Konuyu bir insan temsilciye aktarıyorum.",
+      "tools": [
+        "escalate_to_human"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:57:00.911716",
+  "required_tools": [
+    "verify_user",
+    "escalate_to_human"
+  ],
+  "agent_flow": [
+    "RouterAgent"
+  ]
+}

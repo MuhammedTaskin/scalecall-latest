@@ -1,0 +1,44 @@
+{
+  "id": "smart_0057",
+  "scenario": "plan_info",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Merhaba, hangi tarifedeyim tam olarak anlayamadım da?",
+      "emotion": "confused"
+    },
+    {
+      "turn": 3,
+      "text": "Evet, 1234567890."
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Merhaba, size yardımcı olmak için kimliğinizi doğrulayabilir miyim? Lütfen T.C. kimlik numaranızı paylaşır mısınız?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "PlanAgent",
+      "text": "T.C. kimlik numaranız 1234567890 olan müşterimizin mevcut tarifesi 'Her Yöne 500 Dakika' paketidir. Başka bir sorunuz yoksa, iyi günler dilerim.",
+      "tools": [
+        "get_customer_plan",
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:57:12.735091",
+  "required_tools": [
+    "verify_user",
+    "get_customer_plan",
+    "end_conversation"
+  ],
+  "agent_flow": [
+    "RouterAgent",
+    "PlanAgent"
+  ]
+}

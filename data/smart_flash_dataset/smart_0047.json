@@ -1,0 +1,46 @@
+{
+  "id": "smart_0047",
+  "scenario": "discount_apply",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Ya şu indirim kodunu bir uygulayın artık! Beklemekten sıkıldım!",
+      "emotion": "impatient"
+    },
+    {
+      "turn": 3,
+      "text": "Evet, 789012345."
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Merhaba, indirim kodunuzu uygulamak için kimliğinizi doğrulamanız gerekiyor. Lütfen TC kimlik numaranızın son 6 hanesini söyler misiniz?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "BillingAgent",
+      "text": "Teşekkürler, kimliğiniz doğrulandı. Son faturanızda 15 TL'lik bir indirim uygulandı. Başka yardımcı olabileceğim bir konu var mı?",
+      "tools": [
+        "get_last_bill",
+        "apply_campaign_discount",
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:57:10.089722",
+  "required_tools": [
+    "verify_user",
+    "get_last_bill",
+    "apply_campaign_discount",
+    "end_conversation"
+  ],
+  "agent_flow": [
+    "RouterAgent",
+    "BillingAgent"
+  ]
+}

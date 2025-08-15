@@ -1,0 +1,157 @@
+{
+  "id": "flash_heavy_0154",
+  "primary_issue": "billing_charges_international",
+  "secondary_issue": null,
+  "customer_profile": "frequent_traveler",
+  "region": "antalya",
+  "dialect_info": {
+    "dialect": "mediterranean",
+    "pace": "slow",
+    "formality": "low"
+  },
+  "conversation_dynamic": "negotiation",
+  "complexity": "medium",
+  "metadata": {
+    "context": "international roaming issues",
+    "traits": [
+      "experienced",
+      "specific_needs",
+      "impatient"
+    ],
+    "emotional_journey": [
+      "direct",
+      "frustrated",
+      "demanding",
+      "accepting"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo... Eee, buyrun? Heh, bakın şimdi, benim bir faturam geldi yine. Bu ne böyle abe ya? Geçen ay İtalya'daydım, tamam, kullandık ama bu kadar da olmaz ki. Fatura yine şişmiş, yine bir dünya para çıkmış roaming'den. Ne iş bu şimdi?",
+      "emotion": "direct",
+      "dialect_markers": [
+        "mediterranean",
+        "abe",
+        "yine şişmiş"
+      ],
+      "pace": "slow",
+      "background_context": "international roaming issues"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Heh, evet, benim telefon numaram... 053X XXX XX XX. Adım da Mustafa Yılmaz. Ya, her aradığımda aynı şeyi yapıyoruz, bıktım vallahi. Sürekli bu roaming faturaları yüzünden arıyorum. Ben işim gereği sürekli dışarıdayım, biliyorsunuz. Bu sorun bir türlü çözülmüyor.",
+      "emotion": "frustrated",
+      "dialect_markers": [
+        "mediterranean",
+        "bıktım vallahi",
+        "her aradığımda aynı şey"
+      ],
+      "pace": "slow",
+      "background_context": "international roaming issues, past issues"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Dinliyorum hanımefendi, ama bir çözüme ulaşmak istiyorum. Yani, bakın, ben bu faturayı ödemek istemiyorum bu haliyle. İtalya'da sadece iş için kullandım, öyle ahım şahım bir veri tüketimim olmadı. Gelmiş yine bin liranın üstünde fatura. Bu böyle olmaz. Ben sürekli seyahat eden biriyim, benim özel bir tarifeye, ya da en azından bu faturada bir indirim yapılmasına ihtiyacım var.",
+      "emotion": "demanding",
+      "dialect_markers": [
+        "mediterranean",
+        "bu böyle olmaz",
+        "ahım şahım",
+        "bin liranın üstünde"
+      ],
+      "pace": "slow",
+      "background_context": "high bill, specific needs as a frequent traveler"
+    },
+    {
+      "turn_id": "turn_007",
+      "text": "Kullanmadık mı yani? Şimdi mi anlaşıldı bu? Bakın ben ne diyorum, ben sürekli seyahat ediyorum, bu durum her seferinde başıma geliyor. Bana diyorlar ki 'şu paketi alın', alıyorum. Sonra yine ekstralar çıkıyor. Sizin şu anki teklifiniz nedir? Yani bu faturayı ne yapacaksınız, ya da bana nasıl bir çözüm sunacaksınız? Sadece açıklama istemiyorum, çözüm istiyorum. Ben bu parayı ödemeyeceğim bu şekilde.",
+      "emotion": "demanding",
+      "dialect_markers": [
+        "mediterranean",
+        "her seferinde başıma geliyor",
+        "sadece açıklama istemiyorum"
+      ],
+      "pace": "slow",
+      "background_context": "rejection of explanation, demand for concrete solution"
+    },
+    {
+      "turn_id": "turn_009",
+      "text": "Hım, %20... Yani tam tatmin etmiyor ama... En azından bir şey. Peki, bu yeni tarife ne olacak? Yani, o roaming paketi gerçekten işime yarayacak mı, yoksa yine ek fatura mı çıkacak? Ben taahhüt falan da istemiyorum, esnek bir şeyler lazım bana. Hadi bakalım, bu seferlik de sizin dediğiniz gibi olsun. Ama bir daha böyle bir şey olursa, sözleşmeyi falan dinlemem, iptal ederim hattımı.",
+      "emotion": "accepting",
+      "dialect_markers": [
+        "mediterranean",
+        "hım",
+        "tam tatmin etmiyor ama",
+        "hadi bakalım",
+        "bu seferlik de"
+      ],
+      "pace": "slow",
+      "background_context": "acceptance of compromise, still wary"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba Mustafa Bey, iyi günler. Hattınızla ilgili yaşadığınız aksaklık için üzgünüz. Size yardımcı olabilmemiz için öncelikle kimlik doğrulaması yapmamız gerekiyor. Telefon numaranızı ve adınızı soyadınızı teyit edebilir misiniz lütfen?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkür ederim Mustafa Bey, bilgileriniz doğru. Sistemimde görünüyor. Anladığım kadarıyla uluslararası dolaşım (roaming) kaynaklı fatura itirazınız var, doğru mudur? Bu konuda size daha detaylı yardımcı olabilmesi için fatura birimimize aktarmam gerekiyor. Hattınız aktif görünüyor bu arada. Lütfen kısa bir süre hatta kalınız, sizi hemen bağlıyorum.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "BillingAgent",
+      "text": "Merhaba Mustafa Bey, ben Faturalandırma Birimi'nden Ayşe. Konuşmanız yönlendirildi, uluslararası dolaşım faturanızla ilgili bir sıkıntı yaşadığınızı anlıyorum. Hemen son faturanızı kontrol ediyorum. Bir saniyenizi rica edeceğim...",
+      "tools_triggered": [
+        "get_last_bill"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_008",
+      "agent_persona": "BillingAgent",
+      "text": "Evet Mustafa Bey, faturanızı detaylı inceledim. Görünen o ki, İtalya seyahatinizde kullandığınız bazı servisler, mevcut yurt dışı paketinizin dışında kalmış veya paket aşımı olmuş. Özellikle yoğun veri kullanımı bir noktada paketiniz bittikten sonra aşım ücretleri olarak yansımış. Ancak, sadık bir müşterimiz olduğunuzu ve yurt dışı kullanımınızın sürekli olduğunu görüyorum. Bu faturanıza özel olarak %20'lik bir indirim tanımlayabiliriz. Ayrıca, gelecekte benzer sorunlar yaşamamanız için, size özel olarak daha kapsamlı ve esnek bir yurt dışı paketi önerim olacak. Şu anki tarifenizi ve size uygun diğer paketleri de inceleyebiliriz.",
+      "tools_triggered": [
+        "get_customer_plan",
+        "list_all_plans"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_010",
+      "agent_persona": "BillingAgent",
+      "text": "Anlıyorum Mustafa Bey, haklısınız. Yeni önereceğim tarife, sizin gibi sık seyahat eden müşterilerimiz için tasarlanmış, daha geniş kapsamlı ve esnek bir pakettir. Yurt dışında paketsiz kalma riskinizi minimize eder. Bu indirimi hemen faturanıza yansıtıyorum. Yeni tarife detayları için de size SMS ile bilgilendirme yapacağım, isterseniz dönüşte de tekrar konuşup geçiş yapabiliriz. Memnuniyetiniz bizim için önemli, bir daha böyle bir durum yaşamamanız adına elimizden geleni yapacağız. Başka bir konuda yardımcı olabilir miyim?",
+      "tools_triggered": [],
+      "formality_level": "low"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "BillingAgent",
+      "reason": "Customer's primary issue is international roaming billing dispute, requiring a specialized billing agent.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "Customer received a 20% discount on the disputed international roaming bill. The agent also offered to review and suggest a more suitable international roaming package for future travels, which the customer implicitly accepted to review later.",
+    "customer_satisfaction": "Accepting, but still slightly wary and demanding future performance. Overall, the immediate issue was partially resolved to their satisfaction.",
+    "follow_up_needed": true
+  },
+  "generated_at": "2025-08-14T09:25:27.791778",
+  "model": "flash",
+  "index": 154
+}

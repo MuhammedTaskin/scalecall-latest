@@ -1,0 +1,58 @@
+{
+  "conversation_id": "flash_heavy_0174",
+  "has_audio": true,
+  "turns": [
+    {
+      "turn": 1,
+      "role": "user",
+      "text": "Alo, merhaba. Acil bir durumum var. eSIM'im aktive olmuyor ve ben yurtdışında okuyorum, internetsiz kaldım. Derslerime yetişmem lazım, ne yapacağımı bilemiyorum. Çok endişeliyim şu an.",
+      "emotion": "worried",
+      "audio_file": "data/tts_audio_final/flash_heavy_0174_turn_1.mp3"
+    },
+    {
+      "turn": 2,
+      "role": "assistant",
+      "agent": "RouterAgent",
+      "system_prompt": "Sen bir Türk telekom müşteri yönlendirme uzmanısın.",
+      "text": "Merhaba Sayın Can Yılmaz. Hattınızla ilgili yaşadığınız aksaklık için üzgünüz. Size yardımcı olabilmem için öncelikle kimlik doğrulaması yapmamız gerekiyor. Lütfen T.C. kimlik numaranızı ve anne kızlık soyadınızın ilk iki harfini söyler misiniz?",
+      "tool_calls": [
+        {
+          "tool_name": "verify_user",
+          "parameters": {
+            "verification_method": "TC_ID_and_mothers_maiden_name_initials"
+          },
+          "results": null
+        }
+      ],
+      "handoff": {
+        "needed": false,
+        "to_agent": null,
+        "reason": null
+      },
+      "customer_sentiment": {
+        "current": "worried",
+        "predicted_next": "concerned"
+      },
+      "next_action": "wait_for_customer_response"
+    },
+    {
+      "turn": 3,
+      "role": "user",
+      "text": "Evet, evet… Tabii. Adım Can Yılmaz, T.C. kimlik numaram 12345678910. Lütfen çabuk olalım, sabahki dersimi kaçırıyorum. Saatlerdir uğraşıyorum, her şeyi denedim, olmuyor.",
+      "emotion": "anxious",
+      "audio_file": "data/tts_audio_final/flash_heavy_0174_turn_2.mp3"
+    },
+    {
+      "turn": 5,
+      "role": "user",
+      "text": "iPhone 14 Pro kullanıyorum. QR kodu tarattım, manuel denedim, hücresel ayarlardan defalarca sıfırladım, hatta telefonun ayarlarını bile sıfırladım. Yok, hiçbiri işe yaramadı. Sürekli 'eSIM etkinleştirilemiyor' hatası veriyor. Uzaktan derslerimi takip etmem gerekiyor, araştırma yapmalıyım… Bu internetsizlik beni çok zorluyor.",
+      "emotion": "concerned",
+      "audio_file": "data/tts_audio_final/flash_heavy_0174_turn_3.mp3"
+    }
+  ],
+  "agents_involved": [
+    "RouterAgent"
+  ],
+  "tools_used": [],
+  "handoffs": []
+}

@@ -1,0 +1,44 @@
+{
+  "id": "smart_0028",
+  "scenario": "plan_info",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Yeter artık! Şu faturalarımın detaylarını öğrenmek istiyorum! Sürekli aynı şeyler!",
+      "emotion": "frustrated"
+    },
+    {
+      "turn": 3,
+      "text": "Evet, kimlik numaram 1234567890."
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Anlıyorum, sorununuzu çözmek için öncelikle kimliğinizi doğrulamam gerekiyor. Lütfen kimlik numaranızı paylaşır mısınız?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "PlanAgent",
+      "text": "Teşekkürler, kimliğiniz doğrulandı. Mevcut paketinizde 10 GB internet, sınırsız konuşma ve SMS bulunuyor. Başka yardımcı olabileceğim bir konu var mı?",
+      "tools": [
+        "get_customer_plan",
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:57:04.620807",
+  "required_tools": [
+    "verify_user",
+    "get_customer_plan",
+    "end_conversation"
+  ],
+  "agent_flow": [
+    "RouterAgent",
+    "PlanAgent"
+  ]
+}

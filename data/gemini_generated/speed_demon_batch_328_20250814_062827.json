@@ -1,0 +1,1568 @@
+[
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba. E sim kurulumu yapamıyorum. Sürekli hata veriyor cihaz."
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 123 45 67 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_e1a2b3c4\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"system\",\"msisdn\":\"905551234567\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"12345\",\"name\":\"Ayşe Yılmaz\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Ayşe Hanım, anladım. Cihazınızın modelini alabilir miyim ve kurulumun hangi aşamasında hata alıyorsunuz?"
+          }
+        ]
+      }
+    ],
+    "id": "D001",
+    "scenario": "phone_confirmation|multi_step",
+    "context": "SIM",
+    "noise": true,
+    "quality": "intermediate"
+  },
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "eSIM aktivasyon kodum gelmiyor. Ne yapmalıyım?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 123 45 67 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_f5g6h7i8\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"system\",\"msisdn\":\"905551234567\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"12345\",\"name\":\"Mehmet Can\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Mehmet Bey, kontrol ediyorum. Sistemimizde kodunuzun gönderildiğini görüyorum. Lütfen e-posta veya SMS kutunuzu tekrar kontrol edebilir misiniz?"
+          }
+        ]
+      }
+    ],
+    "id": "D002",
+    "scenario": "phone_confirmation|multi_step",
+    "context": "SIM",
+    "noise": false,
+    "quality": "foundation"
+  },
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "İyi günler. İsim aktivasyonu beklemede görünüyor. Ne zaman aktif olur?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 123 45 67 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_j9k0l1m2\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"system\",\"msisdn\":\"905551234567\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"12345\",\"name\":\"Zeynep Demir\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_n3o4p5q6\",\"name\":\"get_activation_status\",\"arguments\":{\"customer_id\":\"12345\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"status\":\"pending_manual_review\",\"details\":\"Doküman eksikliği\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Zeynep Hanım, sistemde aktivasyonunuzun manuel incelemede olduğunu görüyorum. Eksik bir evrakınız var sanırım. Size yardımcı olmak için bir talep oluşturabilirim."
+          }
+        ]
+      }
+    ],
+    "id": "D003",
+    "scenario": "phone_confirmation|multi_step",
+    "context": "SIM",
+    "noise": true,
+    "quality": "advanced"
+  },
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Yeni aldığım telefonum eSIM uyumlu değilmiş, ne yapmalıyım?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 123 45 67 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_r7s8t9u0\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"system\",\"msisdn\":\"905551234567\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"12345\",\"name\":\"Emre Koç\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_v1w2x3y4\",\"name\":\"check_device_registration\",\"arguments\":{\"customer_id\":\"12345\",\"imei\":\"359123456789012\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":false,\"reason\":\"device_not_esim_compatible\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Emre Bey, cihazınızın eSIM uyumlu olmadığını teyit ettim. Bu durumda fiziksel SIM kart kullanmaya devam etmeniz gerekecek. Size en yakın Türk Telekom mağazasından yeni bir SIM kart temin edebilirsiniz."
+          }
+        ]
+      }
+    ],
+    "id": "D004",
+    "scenario": "phone_confirmation|multi_step",
+    "context": "SIM",
+    "noise": false,
+    "quality": "intermediate"
+  },
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Telefonumda isim kurulumu yapmaya çalışıyorum ama sürekli bir problem yaşıyorum. Başka bir telefonda denedim, onda da olmadı."
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 123 45 67 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_a1b2c3d4\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"system\",\"msisdn\":\"905551234567\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"12345\",\"name\":\"Fatma Gül\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_e5f6g7h8\",\"name\":\"reissue_activation_code\",\"arguments\":{\"customer_id\":\"12345\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"new_code_sent\":true}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Fatma Hanım, anladım. Size yeni bir aktivasyon kodu gönderdim. Lütfen cihazınızın ayarlarından 'Hücresel' veya 'Mobil Veri' bölümüne girerek yeni kodu manuel olarak eklemeyi deneyebilir misiniz?"
+          }
+        ]
+      }
+    ],
+    "id": "D005",
+    "scenario": "phone_confirmation|multi_step",
+    "context": "SIM",
+    "noise": true,
+    "quality": "expert"
+  },
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "eSIM aktivasyon kodu gelmediği için hattımı kullanamıyorum. Ne yapmalıyım?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 123 45 67 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_i9j0k1l2\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"system\",\"msisdn\":\"905551234567\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"12345\",\"name\":\"Mustafa Arı\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_m3n4o5p6\",\"name\":\"reissue_activation_code\",\"arguments\":{\"customer_id\":\"12345\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"new_code_sent\":true}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Mustafa Bey, size yeni bir aktivasyon kodu gönderimi sağladım. Lütfen 5 dakika içinde e-posta veya SMS kutunuzu kontrol ediniz. Eğer hala gelmezse tekrar iletişime geçebilirsiniz."
+          }
+        ]
+      }
+    ],
+    "id": "D006",
+    "scenario": "phone_confirmation|multi_step",
+    "context": "SIM",
+    "noise": false,
+    "quality": "foundation"
+  },
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "ESİM aktivasyonum çok uzun sürdü, hala beklemede. Acil hattımı kullanmam lazım."
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 123 45 67 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_q7r8s9t0\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"system\",\"msisdn\":\"905551234567\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"12345\",\"name\":\"Elif Kaya\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_u1v2w3x4\",\"name\":\"get_activation_status\",\"arguments\":{\"customer_id\":\"12345\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"status\":\"pending_approval\",\"details\":\"Yoğunluk nedeniyle gecikme\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Elif Hanım, yoğunluktan dolayı bir miktar gecikme yaşanmış. Talebinizi aciliyetli olarak işaretleyerek ilgili birime ilettim. En kısa sürede sonuçlanması için takip edeceğiz."
+          }
+        ]
+      }
+    ],
+    "id": "D007",
+    "scenario": "phone_confirmation|multi_step",
+    "context": "SIM",
+    "noise": true,
+    "quality": "advanced"
+  },
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "eSIM uyumlu olmayan bir cihaza geçiş yaptım, eski fiziksel SIM kartımı kullanmak istiyorum."
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 123 45 67 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_y5z6a7b8\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"system\",\"msisdn\":\"905551234567\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"12345\",\"name\":\"Okan Yılmaz\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Okan Bey, anladım. Eski fiziksel SIM kartınız hala aktif durumda ise onu kullanabilirsiniz. Eğer kayıp veya bozuksa, en yakın Türk Telekom mağazasından yeni bir SIM kart temin etmeniz gerekecektir."
+          }
+        ]
+      }
+    ],
+    "id": "D008",
+    "scenario": "phone_confirmation|multi_step",
+    "context": "SIM",
+    "noise": false,
+    "quality": "intermediate"
+  },
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, beş GB internet paketimi on GB'a yükseltmek istiyorum."
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 123 45 67 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_c9d0e1f2\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"system\",\"msisdn\":\"905551234567\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"12345\",\"name\":\"Pınar Aslan\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_g3h4i5j6\",\"name\":\"change_package\",\"arguments\":{\"customer_id\":\"12345\",\"package_id\":\"premium_10gb\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"new_package_name\":\"Süper 10GB\",\"monthly_fee\":79.90}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Pınar Hanım, talebinizi aldım. Paketiniz başarıyla Süper 10GB olarak güncellenmiştir. Aylık ücreti 79 lira 90 kuruştur. Bilgilendirme SMS'i gelecektir."
+          }
+        ]
+      }
+    ],
+    "id": "D009",
+    "scenario": "phone_confirmation|multi_step",
+    "context": "PLAN",
+    "noise": true,
+    "quality": "intermediate"
+  },
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aile paketi kampanyalarınız var mı? Tüm aile hattımızı taşımak istiyoruz."
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 123 45 67 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_k7l8m9n0\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"system\",\"msisdn\":\"905551234567\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"12345\",\"name\":\"Caner Öztürk\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_o1p2q3r4\",\"name\":\"get_available_packages\",\"arguments\":{\"customer_id\":\"12345\",\"category\":\"family\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"packages\":[{\"id\":\"family_plus\",\"name\":\"Aile Süper Paket\",\"details\":\"Ortak 30GB, sınırsız konuşma, 3 hat\",\"price\":199.90}]}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Caner Bey, evet, ailelere özel çeşitli paketlerimiz mevcut. Örneğin, Aile Süper Paketimiz ile 30 GB ortak internet, sınırsız konuşma ve 3 hat için aylık 199 lira 90 kuruşa sahip olabilirsiniz. Detaylı bilgi için size özel bir teklif hazırlayabiliriz."
+          }
+        ]
+      }
+    ],
+    "id": "D010",
+    "scenario": "phone_confirmation|multi_step",
+    "context": "PLAN",
+    "noise": false,
+    "quality": "advanced"
+  },
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Mevcut paketimi değiştirmek istiyorum. Fiyat simülasyonu yapabilir miyiz? Ne kadar fark eder?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 123 45 67 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_s5t6u7v8\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"system\",\"msisdn\":\"905551234567\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"12345\",\"name\":\"Deniz Akın\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_w9x0y1z2\",\"name\":\"get_available_packages\",\"arguments\":{\"customer_id\":\"12345\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"packages\":[{\"id\":\"current_package\",\"name\":\"Mevcut Paket\",\"price\":85.00},{\"id\":\"new_package_option1\",\"name\":\"Mega 20GB\",\"price\":110.00},{\"id\":\"new_package_option2\",\"name\":\"Extra 15GB\",\"price\":95.00}]}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Deniz Hanım, tabii ki yardımcı olayım. Şu anki paketiniz Mega 15GB, aylık 85 TL. Eğer Mega 20GB'a geçerseniz aylık 110 TL, Extra 15GB'a geçerseniz 95 TL olur. Hangisi size daha uygun olur?"
+          }
+        ]
+      }
+    ],
+    "id": "D011",
+    "scenario": "phone_confirmation|multi_step",
+    "context": "PLAN",
+    "noise": true,
+    "quality": "expert"
+  },
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Mevcut internet paketimin ne kadar kaldığını öğrenmek istiyorum."
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 123 45 67 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_a1b2c3d4_v2\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"system\",\"msisdn\":\"905551234567\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"12345\",\"name\":\"Tolga Demirci\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_e5f6g7h8_v2\",\"name\":\"get_user_info\",\"arguments\":{\"customer_id\":\"12345\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"package_info\":{\"remaining_data\":\"5.2 GB\"}}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Tolga Bey, mevcut paketinizden kalan internet kullanımınız 5.2 GB'tır. Bilgilendirme için SMS de gönderiyorum."
+          }
+        ]
+      }
+    ],
+    "id": "D012",
+    "scenario": "phone_confirmation|multi_step",
+    "context": "PLAN",
+    "noise": false,
+    "quality": "foundation"
+  },
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Daha uygun bir paket arıyorum. Mevcut faturam çok yüksek gelmeye başladı."
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 123 45 67 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_i9j0k1l2_v2\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"system\",\"msisdn\":\"905551234567\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"12345\",\"name\":\"Selin Yılmaz\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_m3n4o5p6_v2\",\"name\":\"get_available_packages\",\"arguments\":{\"customer_id\":\"12345\",\"price_range\":\"low\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"packages\":[{\"id\":\"ekonomik_10gb\",\"name\":\"Ekonomik 10GB\",\"price\":69.90},{\"id\":\"avantaj_8gb\",\"name\":\"Avantaj 8GB\",\"price\":59.90}]}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Selin Hanım, size özel daha uygun fiyatlı paketlerimizi kontrol ediyorum. Örneğin, Ekonomik 10GB paketi 69 lira 90 kuruş, Avantaj 8GB paketi ise 59 lira 90 kuruş. İhtiyaçlarınıza göre hangisi daha uygun olur?"
+          }
+        ]
+      }
+    ],
+    "id": "D013",
+    "scenario": "phone_confirmation|multi_step",
+    "context": "PLAN",
+    "noise": true,
+    "quality": "intermediate"
+  },
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Mevcut internet paketimin üzerine ek internet paketi almak istiyorum."
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 123 45 67 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_q7r8s9t0_v2\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"system\",\"msisdn\":\"905551234567\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"12345\",\"name\":\"Barış Aksoy\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_u1v2w3x4_v2\",\"name\":\"get_available_packages\",\"arguments\":{\"customer_id\":\"12345\",\"category\":\"addon\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"packages\":[{\"id\":\"ek_5gb\",\"name\":\"Ek 5GB\",\"price\":29.90},{\"id\":\"ek_10gb\",\"name\":\"Ek 10GB\",\"price\":49.90}]}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Barış Bey, tabii ki. Size özel ek internet paketlerimiz mevcut. 5 GB ek internet 29 lira 90 kuruş, 10 GB ek internet ise 49 lira 90 kuruş. Hangisini istersiniz?"
+          }
+        ]
+      }
+    ],
+    "id": "D014",
+    "scenario": "phone_confirmation|multi_step",
+    "context": "PLAN",
+    "noise": false,
+    "quality": "advanced"
+  },
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Bu ayki faturam çok yüksek geldi. Nedenini öğrenmek istiyorum, kontrol edebilir misiniz?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 123 45 67 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_y5z6a7b8_v2\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"system\",\"msisdn\":\"905551234567\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"12345\",\"name\":\"Gizem Tunç\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_c9d0e1f2_v2\",\"name\":\"get_user_info\",\"arguments\":{\"customer_id\":\"12345\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"billing_info\":{\"last_bill_amount\":185.50,\"details\":\"Yurtdışı kullanım 80TL, Paket aşımı 30TL\"}}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Gizem Hanım, faturanızda 80 liralık yurtdışı kullanım ve 30 liralık paket aşımı görüyorum. Bu nedenle fatura tutarınız yüksek gelmiş. Yurtdışında bulundunuz mu veya ek paket aşımı yaşadınız mı?"
+          }
+        ]
+      }
+    ],
+    "id": "D015",
+    "scenario": "phone_confirmation|multi_step",
+    "context": "BILLING",
+    "noise": true,
+    "quality": "advanced"
+  },
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Faturamı ödemekte zorlanıyorum, ödeme tarihi uzatılabilir mi?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 123 45 67 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_g3h4i5j6_v2\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"system\",\"msisdn\":\"905551234567\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"12345\",\"name\":\"Ali Doğan\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_k7l8m9n0_v2\",\"name\":\"create_support_ticket\",\"arguments\":{\"customer_id\":\"12345\",\"subject\":\"Ödeme Tarihi Uzatma Talebi\",\"description\":\"Müşteri ödeme tarihi uzatmak istiyor.\",\"priority\":\"normal\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"ticket_id\":\"TKT001\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Ali Bey, ödeme tarihiniz için bir talep oluşturdum. Talebiniz değerlendirildikten sonra tarafınıza SMS ile bilgi verilecektir."
+          }
+        ]
+      }
+    ],
+    "id": "D016",
+    "scenario": "phone_confirmation|multi_step",
+    "context": "BILLING",
+    "noise": false,
+    "quality": "foundation"
+  },
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Yanlışlıkla iki kere fatura ödedim, iade talebi oluşturmak istiyorum."
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 123 45 67 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_o1p2q3r4_v2\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"system\",\"msisdn\":\"905551234567\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"12345\",\"name\":\"Elif Şahin\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_s5t6u7v8_v2\",\"name\":\"create_support_ticket\",\"arguments\":{\"customer_id\":\"12345\",\"subject\":\"Fazla Ödeme İade Talebi\",\"description\":\"Müşteri faturayı iki kez ödediğini belirtiyor, iade talep ediyor.\",\"priority\":\"high\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"ticket_id\":\"TKT002\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Elif Hanım, anladım. Fazla ödeme iade talebinizi oluşturdum. İşlem bankanıza bağlı olarak 3-5 iş günü içinde hesabınıza yansıyacaktır. SMS ile bilgilendirme yapılacaktır."
+          }
+        ]
+      }
+    ],
+    "id": "D017",
+    "scenario": "phone_confirmation|multi_step",
+    "context": "BILLING",
+    "noise": true,
+    "quality": "expert"
+  },
+  {
+    "conversations": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, Türk Telekom eSIM hizmetleri, size nasıl yardımcı olabilirim?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Son faturamın detaylarını e-posta olarak alabilir miyim?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aradığınız numara 0 555 123 45 67 bu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Evet"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_w9x0y1z2_v2\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"system\",\"msisdn\":\"905551234567\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"customer_id\":\"12345\",\"name\":\"Murat Can\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"call_a1b2c3d4_v3\",\"name\":\"get_user_info\",\"arguments\":{\"customer_id\":\"12345\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\":true,\"email\":\"murat.can@example.com\"}</tool_result>"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Murat Bey, son faturanızın detaylarını kayıtlı e-posta adresinize gönderiyorum. 5 dakika içinde gelen kutunuzu kontrol edebilirsiniz."
+          }
+        ]
+      }
+    ],
+    "id": "D018",
+    "scenario": "phone_confirmation|multi_step",
+    "context": "BILLING",
+    "noise": false,
+    "quality": "intermediate"
+  }
+]

@@ -1,0 +1,200 @@
+{
+  "id": "flash_heavy_0165",
+  "primary_issue": "plans_types_prepaid",
+  "secondary_issue": "technical_services_caller_id",
+  "customer_profile": "tech_executive",
+  "region": "istanbul",
+  "dialect_info": {
+    "dialect": "neutral",
+    "pace": "fast",
+    "formality": "medium"
+  },
+  "conversation_dynamic": "negotiation",
+  "complexity": "complex",
+  "metadata": {
+    "context": "managing multiple business lines",
+    "traits": [
+      "demanding",
+      "knowledgeable",
+      "time_sensitive"
+    ],
+    "emotional_journey": [
+      "professional",
+      "impatient",
+      "frustrated",
+      "satisfied"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Merhaba, ben [Müşteri Adı Soyadı]. Bir iş hattı için yeni bir ön ödemeli hat almak istiyorum. Mevcut operasyonlarımda birden fazla hattı yönetiyorum ve bu yeni hat için en verimli, esnek çözümü arıyorum. Hızlıca halletmemiz gerekiyor.",
+      "emotion": "professional",
+      "dialect_markers": [
+        "neutral"
+      ],
+      "pace": "fast",
+      "background_context": "managing multiple business lines"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Tabii, T.C. kimlik numaramın son dört hanesi 1234. Lütfen hızlıca ilerleyelim, zamanım çok kısıtlı.",
+      "emotion": "impatient",
+      "dialect_markers": [
+        "neutral"
+      ],
+      "pace": "fast",
+      "background_context": "time_sensitive"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Merhaba, ben [Müşteri Adı Soyadı]. Az önce anlattığım gibi, şirketim için yeni bir ön ödemeli hat almam gerekiyor. Mevcut faturalı hatlarım var ama bu yeni hat için özellikle esnek, ön ödemeli bir çözüm arıyorum. En rekabetçi ve uygun tekliflerinizi duymak istiyorum. Hızlıca!",
+      "emotion": "impatient",
+      "dialect_markers": [
+        "neutral"
+      ],
+      "pace": "fast",
+      "background_context": "managing multiple business lines"
+    },
+    {
+      "turn_id": "turn_007",
+      "text": "Mevcut hatlarımın durumu şu an için önemli değil. Yeni bir hat için, tamamen bağımsız, esnek, faturalı olmayan bir çözüm lazım. Standart paketleri dinlemek istemiyorum, bana gerçekten işime yarayacak, şirketimin hacmine uygun, belki özel bir kurumsal ön ödemeli teklifiniz varsa onu söyleyin. Zamanım kısıtlı dedim!",
+      "emotion": "frustrated",
+      "dialect_markers": [
+        "neutral"
+      ],
+      "pace": "fast",
+      "background_context": "demanding, time_sensitive, knowledgeable"
+    },
+    {
+      "turn_id": "turn_009",
+      "text": "Bunlar da yine standart paketler gibi duruyor. Benim şirketim için daha esnek, daha uygun bir şey yok mu? Örneğin, ihtiyaca göre dakika ve GB ekleyebileceğimiz, belki daha uygun fiyatlı toplu yükleme seçenekleri... Ayrıca, bu yeni hat konusu dışında, mevcut bir hattımla ilgili çok acil bir sorunum var. Beni arayan numaralar bazen hiç görünmüyor, iş için kritik bir hat ve müşterilerim bana ulaşmakta zorlanıyor.",
+      "emotion": "frustrated",
+      "dialect_markers": [
+        "neutral"
+      ],
+      "pace": "fast",
+      "background_context": "managing multiple business lines, demanding"
+    },
+    {
+      "turn_id": "turn_011",
+      "text": "Tamam, şu anki paketlerden neyse en mantıklısı, 'Esnek İş Ön Ödemeli Paket'i hemen tanımlayalım. Ama bu arayan numaraların görünmeme meselesi daha acil. Müşterilerim ulaşamıyor, işlerim aksıyor. Beni hemen teknik birime bağlayın, bekleme yapmak istemiyorum.",
+      "emotion": "frustrated",
+      "dialect_markers": [
+        "neutral"
+      ],
+      "pace": "fast",
+      "background_context": "time_sensitive, demanding"
+    },
+    {
+      "turn_id": "turn_014",
+      "text": "Merhaba. Numaram 532*******. Evet, sorun tam olarak bu. Bazen arayan numara hiç görünmüyor, bazen de sadece 'gizli numara' yazıyor. Çok kritik, bu bir iş hattı ve müşterilerimle iletişimim kesintiye uğruyor. Neden oluyor bu, çözümü nedir?",
+      "emotion": "frustrated",
+      "dialect_markers": [
+        "neutral"
+      ],
+      "pace": "fast",
+      "background_context": "managing multiple business lines, time_sensitive"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba Sayın [Müşteri Adı Soyadı], hoş geldiniz. Size yardımcı olabilmemiz için öncelikle kimlik doğrulamanızı yapmamız gerekiyor. Lütfen T.C. kimlik numaranızın son dört hanesini veya müşteri numaranızı tuşlayabilir misiniz?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkürler, kimlik doğrulamanız başarıyla tamamlandı Sayın [Müşteri Adı Soyadı]. Yeni bir ön ödemeli hat talebinizi anladım. Bu konuda size en iyi şekilde yardımcı olabilecek Plan ve Tarife Uzmanımıza aktarıyorum. Lütfen kısa bir süre bekleyiniz.",
+      "tools_triggered": [
+        "route_to_agent"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "PlanAgent",
+      "text": "Merhaba Sayın [Müşteri Adı Soyadı], hattınıza hoş geldiniz. Talebinizi anladım. Mevcut diğer hatlarınızın durumunu kontrol edip size en uygun ön ödemeli tarifeleri listeleyebilirim. Özellikle hangi yönde bir kullanım beklentiniz var; daha çok data mı, konuşma mı?",
+      "tools_triggered": [
+        "get_customer_plan",
+        "list_all_plans"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_008",
+      "agent_persona": "PlanAgent",
+      "text": "Anlıyorum Sayın [Müşteri Adı Soyadı]. Talebiniz doğrultusunda, özellikle iş kullanıcıları için sunduğumuz 'Esnek İş Ön Ödemeli Paket' ve 'Mega Data Ön Ödemeli' gibi seçeneklerimiz mevcut. 'Esnek İş' paketi, aylık 20 GB internet, 1000 dakika her yöne konuşma ve 250 SMS sunarken, 'Mega Data' 40 GB internet ile daha çok veri odaklıdır. Bu paketler, taahhütsüz olup istediğiniz zaman yükleme yapabilirsiniz. Bunlardan biri beklentinizi karşılar mı?",
+      "tools_triggered": [
+        "list_all_plans"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_010",
+      "agent_persona": "PlanAgent",
+      "text": "Sayın [Müşteri Adı Soyadı], anlıyorum, haklısınız. Daha esnek kurumsal ön ödemeli seçenekler için özel bir departmanımız var, ancak şu anki sistemimde size anında sunabileceğim en uygun paketler bunlar. Eğer bu paketlerden biri sizin için uygunsa, hemen tanımlayabiliriz. Diğer sorununuz olan arayan numara görünmeme problemi ise kesinlikle teknik bir konu ve çok önemli. Hatırlatmanız iyi oldu. Eğer yeni hat konusunda bir karara varırsak, sizi hemen Teknik Destek birimimize aktarabilirim, onlar bu sorunu hızlıca çözüme kavuşturacaktır.",
+      "tools_triggered": [
+        "list_all_plans"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_012",
+      "agent_persona": "PlanAgent",
+      "text": "Anlaşıldı Sayın [Müşteri Adı Soyadı]. 'Esnek İş Ön Ödemeli Paket' yeni hattınıza tanımlanıyor. İşlem tamamlandığında SMS ile bilgilendirileceksiniz. Şimdi sizi hiç bekletmeden, arayan numara görünmeme sorununuz için Teknik Destek birimimize aktarıyorum. İyi günler dilerim.",
+      "tools_triggered": [
+        "change_customer_plan",
+        "route_to_agent"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_013",
+      "agent_persona": "TechAgent",
+      "text": "Merhaba Sayın [Müşteri Adı Soyadı], Teknik Destek birimine hoş geldiniz. Arayan numara görünmeme sorununuz olduğunu anlıyorum. Hattınızın servis durumunu kontrol etmem için, lütfen sorunu yaşadığınız hattın numarasını teyit edebilir misiniz?",
+      "tools_triggered": [
+        "get_customer_status"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_015",
+      "agent_persona": "TechAgent",
+      "text": "Anladım Sayın [Müşteri Adı Soyadı]. Hattınızın arayan kimliği servisinde kısa süreli bir kesinti veya provizyon hatası görünüyor. Hemen sistemden kontrol edip, servisi yeniden başlatıyorum ve hattınıza bir sinyal gönderiyorum. Bu işlem genellikle sorunu anında çözer. Yaklaşık 5 dakika içinde test etmenizi rica edeceğim. Eğer sorun devam ederse, lütfen beni tekrar arayın, daha detaylı bir inceleme için teknik ekip kaydı oluşturacağım. Şu an için bir sorun görünmüyor.",
+      "tools_triggered": [
+        "create_tech_ticket"
+      ],
+      "formality_level": "medium"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "PlanAgent",
+      "reason": "Customer's primary issue is related to finding and changing plans/types (prepaid line).",
+      "context_preserved": true
+    },
+    {
+      "at_turn": 12,
+      "from": "PlanAgent",
+      "to": "TechAgent",
+      "reason": "Customer raised a secondary technical issue (caller ID not showing) which requires technical support.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "The primary issue (new prepaid line) was resolved by the customer accepting the 'Esnek İş Ön Ödemeli Paket' for speed, despite not being fully satisfied with the flexibility. The secondary issue (caller ID not showing) was identified and addressed by the TechAgent, who re-provisioned the service and sent a signal to the line, with a follow-up option if needed.",
+    "customer_satisfaction": "The customer's emotional journey progresses from professional to impatient and frustrated, but concludes with a sense of satisfaction as both issues are addressed and steps are taken for resolution, even if the primary issue's resolution was a pragmatic choice rather than an ideal one.",
+    "follow_up_needed": false
+  },
+  "generated_at": "2025-08-14T09:26:29.514435",
+  "model": "flash",
+  "index": 165
+}

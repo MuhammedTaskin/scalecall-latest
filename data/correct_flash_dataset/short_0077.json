@@ -1,0 +1,93 @@
+{
+  "conversation_id": "short_0077_tech_problem",
+  "metadata": {
+    "scenario": "tech_problem",
+    "handoff_pattern": [
+      "RouterAgent",
+      "TechAgent"
+    ]
+  },
+  "customer_profile": {
+    "persona": "confused",
+    "phone": "0555 123 45 67"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Merhaba, internetim çalışmıyor. Işıklar yanıp sönüyor sadece.",
+      "emotion": "confused"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Evet, modemim çalışıyor gibi ama internete bağlanamıyorum.",
+      "emotion": "confused"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Anladım, teşekkürler. Umarım halledilir.",
+      "emotion": "confused"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba, Telekom çağrı merkezine hoş geldiniz. Kimliğinizi doğrulamak için lütfen TC kimlik numaranızı veya telefon numaranızı paylaşır mısınız?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Bilgileriniz doğrulandı. Anladığım kadarıyla internet bağlantınızda bir sorun yaşıyorsunuz. Bu durumu daha detaylı inceleyebilmemiz için sizi teknik ekibimize aktarıyorum. Lütfen bekleyin.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "handoff": {
+        "to": "TechAgent"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "TechAgent",
+      "text": "Merhaba, ben teknik destek ekibinden [AgentName]. İnternet sorununuzu anlıyorum. Modeminizde bir sıkıntı olabilir. Cihazınızın IMEI numarasını kontrol edebilir miyiz? Veya size bir aktivasyon kodu tekrar gönderebiliriz.",
+      "tools_triggered": [
+        "check_device_imei",
+        "reissue_activation_code"
+      ],
+      "handoff": null
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "TechAgent",
+      "reason": "tech_problem"
+    }
+  ],
+  "tool_calls": [
+    {
+      "turn_id": "turn_002",
+      "tool": "verify_user",
+      "arguments": {
+        "phone": "0555 123 45 67"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_004",
+      "tool": "route_to_agent",
+      "arguments": {
+        "agent_type": "TechAgent",
+        "reason": "tech_problem"
+      },
+      "result": true
+    }
+  ],
+  "generated_at": "2025-08-14T08:01:48.810447",
+  "index": 77
+}

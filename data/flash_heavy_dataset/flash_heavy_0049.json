@@ -1,0 +1,126 @@
+{
+  "id": "flash_heavy_0049",
+  "primary_issue": "plans_types_international",
+  "secondary_issue": null,
+  "customer_profile": "parent_teenager",
+  "region": "adana",
+  "dialect_info": {
+    "dialect": "southern",
+    "pace": "fast",
+    "formality": "low"
+  },
+  "conversation_dynamic": "escalating",
+  "complexity": "medium",
+  "metadata": {
+    "context": "managing family plan",
+    "traits": [
+      "concerned",
+      "protective",
+      "cost_aware"
+    ],
+    "emotional_journey": [
+      "worried",
+      "questioning",
+      "firm",
+      "relieved"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo, hayırlı işler! Ya bu bizim aile paketi var ya, çocuğun hattından bi fena fatura gelmiş. Yurt dışı falan diyorlar, ne iş la bu? Çok fena canım sıkıldı, vallahi billahi.",
+      "emotion": "worried",
+      "dialect_markers": [
+        "southern",
+        "fena",
+        "la"
+      ],
+      "pace": "fast",
+      "background_context": "managing family plan"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Hasan Yılmaz, baba adım da Mehmet. Eey, çabuk olun da, ne bu fatura böyle? Benim oğlanın hattından acayip bi yurt dışı kullanım olmuş, ben anlamadım bu işi, kafam almıyor! Nasıl engelleriz, ne ederiz?",
+      "emotion": "questioning",
+      "dialect_markers": [
+        "southern",
+        "eey",
+        "acayip"
+      ],
+      "pace": "fast",
+      "background_context": "managing family plan"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Hanımefendi, bak şimdi benim oğlan dersleri için interneti çok kullanıyor diye aile paketi yaptık. Ama bu yurt dışı olayı neyin nesi? Ben şimdi ne yapacam? O çocuk yanlışlıkla bir yere mi bastı, yoksa biz mi yanlış paket aldık? Böyle olmaz, anlıyor musun? Bi çözüm bulalım buna, böyle giderse hattı kapatırım!",
+      "emotion": "firm",
+      "dialect_markers": [
+        "southern",
+        "neyin nesi",
+        "böyle olmaz"
+      ],
+      "pace": "fast",
+      "background_context": "managing family plan"
+    },
+    {
+      "turn_id": "turn_007",
+      "text": "Oh be! Bak şimdi oldu işte. Eey, hadi bakalım, ne varsa en uygununu, bizi üzmeyecek bi paketi söyleyin de ona geçelim hemen. Çocuğum da rahat etsin, ben de rahat edeyim. Yeter ki bir daha böyle sürpriz fatura gelmesin.",
+      "emotion": "relieved",
+      "dialect_markers": [
+        "southern",
+        "oh be",
+        "eey",
+        "hadi bakalım"
+      ],
+      "pace": "fast",
+      "background_context": "managing family plan"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba efendim, X Telekom'a hoş geldiniz. Güvenliğiniz için öncelikle kimlik doğrulaması yapabilir miyiz? Adınız soyadınız ve baba adınız nedir lütfen?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkürler Hasan Bey, kimlik doğrulamanız yapıldı. Faturanızdaki yurt dışı kullanımıyla ilgili detaylı bilgi ve tarife değişikliği seçenekleri için sizi tarife uzmanımıza aktarıyorum. Kendisi size daha iyi yardımcı olacaktır. Kısa bir bekleme yaşayabilirsiniz.",
+      "tools_triggered": [
+        "route_to_agent"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "PlanAgent",
+      "text": "Merhaba Hasan Bey, durumunuzu anlıyorum. Hemen mevcut paketinizi ve oğlunuzun hattındaki yurt dışı kullanım detaylarını kontrol ediyorum. (Kısa bir duraklama) Görüyorum ki oğlunuzun hattında kısa süreli bir yurt dışı veri kullanımı olmuş ve mevcut paketinizde yurt dışı aşımı ücretli görünüyor. Size özel, yurt dışı konuşma ve interneti de kapsayan, hem ekonomik hem de ailenizin tüm ihtiyaçlarını karşılayacak yeni aile paketlerimizi sunabilirim. İsterseniz şimdi birlikte inceleyelim, bir daha böyle sürpriz yaşamayın.",
+      "tools_triggered": [
+        "get_customer_plan",
+        "list_all_plans"
+      ],
+      "formality_level": "low"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "PlanAgent",
+      "reason": "Customer's primary issue is about plan details, international usage, and potential plan change, which requires a PlanAgent.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "The PlanAgent identified the international data overage issue on the teenager's line within the family plan and offered suitable alternative family plans that include international usage, addressing the customer's cost concerns and protective nature.",
+    "customer_satisfaction": "Relieved and satisfied, as a viable solution was offered.",
+    "follow_up_needed": true
+  },
+  "generated_at": "2025-08-14T09:16:19.976505",
+  "model": "flash",
+  "index": 49
+}

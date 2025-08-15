@@ -1,0 +1,172 @@
+{
+  "id": "flash_heavy_0088",
+  "primary_issue": "billing_payments_arrangement",
+  "secondary_issue": "technical_device_dual_sim",
+  "customer_profile": "parent_teenager",
+  "region": "ankara",
+  "dialect_info": {
+    "dialect": "formal",
+    "pace": "moderate",
+    "formality": "high"
+  },
+  "conversation_dynamic": "escalating",
+  "complexity": "complex",
+  "metadata": {
+    "context": "managing family plan",
+    "traits": [
+      "concerned",
+      "protective",
+      "cost_aware"
+    ],
+    "emotional_journey": [
+      "worried",
+      "questioning",
+      "firm",
+      "relieved"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo, iyi günler. Ben Ayşe Yılmaz. Oğlumun hattına gelen son faturayı görünce çok endişelendim de. Aile paketindeyiz, kendisi zaten evde hep Wi-Fi kullanır, bu kadar yüksek bir fatura gelmesi... Normal değil sanki, değil mi?",
+      "emotion": "worried",
+      "dialect_markers": [
+        "formal"
+      ],
+      "pace": "moderate",
+      "background_context": "managing family plan"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Evet, tabii ki. Kimlik numaram 12345678900. Fatura 500 liradan fazla gelmiş efendim. Oğlum, Can Yılmaz'ın hattı bu. Daha geçen ay 80-90 lira civarı geliyordu. Bir anda bu kadar artış akla mantığa sığmıyor açıkçası. Bir hata olmalı diye düşünüyorum.",
+      "emotion": "questioning",
+      "dialect_markers": [
+        "formal"
+      ],
+      "pace": "moderate",
+      "background_context": "managing family plan"
+    },
+    {
+      "turn_id": "turn_006",
+      "text": "Ama nasıl olur? Can'ın telefonu sürekli Wi-Fi'ye bağlı. Evdeyiz, okulda da internetleri var. Dışarıda da ben yanında olmadığım sürece pek kullanmaz. Bu kadar yüksek mobil veri kullanımı mümkün değil. Geçen ayki faturası da gayet normaldi. Acaba sistemsel bir yanlışlık mı var?",
+      "emotion": "questioning",
+      "dialect_markers": [
+        "formal"
+      ],
+      "pace": "moderate",
+      "background_context": "managing family plan"
+    },
+    {
+      "turn_id": "turn_008",
+      "text": "Kesinlikle! Mümkün değil. Telefonunda hep Wi-Fi açıktır, bunu kontrol ediyorum düzenli olarak. Zaten internet paketi de çok kısıtlı. Belki yeni aldığı telefonda bir sorun mu var? O telefon çift hatlıydı galiba, biz ona sadece tek bir hat takmıştık ama... Ya da eSIM falan mı var içinde, bilemiyorum. Bu konuyu bir teknik ekibe sormak gerekir mi?",
+      "emotion": "firm",
+      "dialect_markers": [
+        "formal"
+      ],
+      "pace": "moderate",
+      "background_context": "managing family plan"
+    },
+    {
+      "turn_id": "turn_011",
+      "text": "Evet, evet! Yeni bir telefon aldı, onda çift hat özelliği var. Biz sadece kendi operatörümüzden olan, yani benim aile paketimdeki SIM kartı taktık. Ama dediğiniz gibi, belki ikinci bir hat ya da eSIM aktif oldu da haberimiz mi olmadı? Can'a da sorayım hemen... Gerçekten çok endişelendim bu durumdan. Ne yapabiliriz şimdi?",
+      "emotion": "relieved",
+      "dialect_markers": [
+        "formal"
+      ],
+      "pace": "moderate",
+      "background_context": "managing family plan"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "İyi günler Ayşe Hanım, hoş geldiniz. Endişenizi anlıyorum. Size yardımcı olabilmem için öncelikle kimlik doğrulaması yapmamız gerekmekte. T.C. Kimlik numaranızı veya abone numaranızı rica edebilir miyim?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkür ederim Ayşe Hanım. Kimlik doğrulamanız başarıyla tamamlanmıştır. Fatura bilginizi ve oğlunuzun hattını kontrol ediyorum. Evet, Can Yılmaz'ın hattında bir fatura detayı görünüyor. Fatura konusu olduğu için sizi fatura ve ödeme işlemlerimizden sorumlu ilgili birime aktarıyorum. Lütfen kısa bir süre hatta kalınız.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_005",
+      "agent_persona": "BillingAgent",
+      "text": "İyi günler Ayşe Hanım, hoş geldiniz. Ben Fatura ve Ödeme Destek Ekibi'nden Ahmet. Çağrınız az önce aktarıldı. Oğlunuzun hattına ait son faturadaki artışla ilgili endişeniz olduğunu anlıyorum. Hemen faturanın detaylarına bakıyorum sizin için. Bekletiyorum kısa bir süre.",
+      "tools_triggered": [
+        "get_last_bill"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_007",
+      "agent_persona": "BillingAgent",
+      "text": "Ayşe Hanım, faturanın detaylarını inceledim. Görünen o ki, fatura tutarındaki artışın ana nedeni, paket dışı yüksek mobil veri kullanımı. Özellikle ayın son haftasında ciddi bir veri tüketimi gerçekleşmiş. Paketinizdeki internet limitinin çok üzerinde bir kullanım söz konusu. Acaba Can'ın telefonunda bir değişiklik oldu mu ya da internet kullanım alışkanlığında farklı bir durum mu yaşandı?",
+      "tools_triggered": [
+        "get_last_bill"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_009",
+      "agent_persona": "BillingAgent",
+      "text": "Anlıyorum Ayşe Hanım, bu konuda haklı olabilirsiniz. Eğer mobil veri kullanımında böyle bir beklenmedik artış varsa ve kullanım alışkanlıklarınızda bir değişiklik yoksa, bu durum teknik bir aksaklıktan kaynaklanıyor olabilir. Özellikle çift hatlı veya eSIM özellikli telefonlarda bazen farkında olmadan farklı bir hattın veri kullanımı devreye girebiliyor. Bu durumu daha detaylı incelemesi için sizi Teknik Destek birimimize aktarıyorum. Onlar cihaz detaylarını kontrol edebilirler.",
+      "tools_triggered": [
+        "route_to_agent"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_010",
+      "agent_persona": "TechAgent",
+      "text": "İyi günler Ayşe Hanım, Teknik Destek'ten Elif ben. Çağrınız Fatura biriminden aktarıldı. Oğlunuzun hattındaki beklenmedik yüksek mobil veri kullanımı ve çift hat/eSIM ihtimali üzerine görüşeceğiz. Öncelikle, oğlunuzun kullandığı cihazın IMEI numarasını alabilir miyim lütfen? Böylece cihazın teknik özelliklerini ve hat durumunu kontrol edebiliriz. Ayrıca cihazda hem fiziksel SIM kart hem de eSIM mi kullanılıyor, bilginiz var mıydı?",
+      "tools_triggered": [
+        "check_device_imei",
+        "check_esim_status"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_012",
+      "agent_persona": "TechAgent",
+      "text": "Anladım Ayşe Hanım, endişelenmeyin lütfen, durumu netleştireceğiz. Cihazın IMEI numarasından ve sistemdeki hat bilgilerinden anladığım kadarıyla, oğlunuzun telefonunda aktif olan bir eSIM hattı da bulunmakta. Muhtemelen, sizin haberiniz olmadan veya yanlışlıkla, varsayılan veri hattı sizin operatörünüz yerine bu eSIM hattına geçmiş. Bu da yüksek kullanımın nedeni olabilir. Size yardımcı olmak için şu anda kullanmadığınız eSIM hattının veri kullanımını pasif hale getirebiliriz ya da dilerseniz o hattın aktivasyon kodunu yeniden düzenleyerek tamamen kontrol altına almanızı sağlayabiliriz. Ayrıca, bu durumdan kaynaklanan haksız fatura tutarı için bir itiraz kaydı oluşturup, inceleme başlatılmasını sağlayacağım. Böylece faturanızda gerekli düzenleme yapılacaktır.",
+      "tools_triggered": [
+        "reissue_activation_code",
+        "create_tech_ticket"
+      ],
+      "formality_level": "high"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "BillingAgent",
+      "reason": "Customer's primary issue is billing/payment arrangement related to an unexpectedly high bill.",
+      "context_preserved": true
+    },
+    {
+      "at_turn": 9,
+      "from": "BillingAgent",
+      "to": "TechAgent",
+      "reason": "The billing issue (high data usage) appears to stem from a technical problem related to device configuration (dual SIM/eSIM), requiring technical support.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "The high bill was identified as being caused by unexpected data usage from a secondary, likely unused eSIM or dual SIM line on the teenager's new phone. The TechAgent offered to help manage the eSIM/dual SIM settings, potentially reissuing an activation code or deactivating the problematic line's data. A tech ticket was created, and a bill adjustment was promised.",
+    "customer_satisfaction": "relieved",
+    "follow_up_needed": true
+  },
+  "generated_at": "2025-08-14T09:19:48.971360",
+  "model": "flash",
+  "index": 88
+}

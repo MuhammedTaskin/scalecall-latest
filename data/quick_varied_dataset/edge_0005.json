@@ -1,0 +1,93 @@
+{
+  "id": "edge_0005",
+  "edge_case": "promotional_stacking_error",
+  "situation": "driving_cant_stop",
+  "urgency": "normal",
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Merhaba, benim paketimdeki bir kampanya görünmüyor sanırım? Biraz acelem var da, yoldayım şu an.",
+      "emotion": "suspicious",
+      "context": "driving_cant_stop"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Evet, evet. Hattım Ayşe Yılmaz üzerine kayıtlı. Bu ayki ekstra internet hediyem vardı, faturamda göremedim onu.",
+      "emotion": "questioning",
+      "context": "driving_cant_stop"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Hmm, anladım. Yani iki kampanyayı birden kullanamıyor muyum? Ama geçen ay kullanabiliyordum sanki?",
+      "emotion": "questioning",
+      "context": "driving_cant_stop"
+    },
+    {
+      "turn_id": "turn_007",
+      "text": "Anlıyorum, anlıyorum. Yani bu yeni kampanya eskisiyle çakışıyormuş. Tamam, o zaman yeni kampanyayı aktif tutalım, sorun değil. Teşekkürler bilgilendirme için.",
+      "emotion": "convinced",
+      "context": "driving_cant_stop"
+    },
+    {
+      "turn_id": "turn_009",
+      "text": "Evet, düzelmiş görünüyor. Faturayı kontrol ettim. Çok teşekkür ederim yardımcı olduğunuz için, özellikle bu yoğun trafikte.",
+      "emotion": "satisfied",
+      "context": "driving_cant_stop"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba Ayşe Hanım, sesinizi duyabiliyorum. Anladığım kadarıyla paketinizle ilgili bir kampanya detayı hakkında bilgi almak istiyorsunuz. Yolda olduğunuzu da belirttiğiniz için, hızlıca yardımcı olmaya çalışalım. Öncelikle, hattınızın doğruluğunu teyit etmek için T.C. kimlik numaranızın son 4 hanesini alabilir miyim?",
+      "tools_triggered": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkürler Ayşe Hanım. Sisteme giriş yaptım. Evet, hattınızda bir önceki ay kullandığınız bir kampanyanın devam ettiğini ve bu ay aktifleşen yeni bir internet kampanyasının da olduğunu görüyorum. Bu durum bazen sistemde kısa süreli bir karışıklığa yol açabiliyor.",
+      "tools_triggered": []
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "BillingAgent",
+      "text": "Merhaba Ayşe Hanım, ben Fatura Departmanından Mehmet. RouterAgent arkadaşımız sizinle ilgili durumu paylaşmış. Anladığım kadarıyla, mevcut kullanılan bir kampanyanın, yeni tanımlanan bir kampanya ile aynı anda aktif olmaması gerekiyor ve bu durum sizin bonus internet hakkınızın faturanıza yansımamasına neden olmuş. Bu tür durumlarda, genellikle iki kampanyadan yalnızca biri geçerli olabiliyor.",
+      "tools_triggered": []
+    },
+    {
+      "turn_id": "turn_008",
+      "agent_persona": "PlanAgent",
+      "text": "Merhaba Ayşe Hanım, ben de Tarife ve Kampanyalar Departmanından Elif. Mehmet Bey size durumu açıklamış. Eğer isterseniz, şu an aktif olan yeni kampanyanızın internet faydasını koruyup, eski kampanyanızın durumu hakkında fatura departmanımızla görüşerek size bir iyileştirme yapabiliriz. Ya da sizin için hangisi daha avantajlı olacaksa onu ayarlayabiliriz. Ne dersiniz?",
+      "tools_triggered": []
+    },
+    {
+      "turn_id": "turn_010",
+      "agent_persona": "BillingAgent",
+      "text": "Harika Ayşe Hanım, memnun kalmanız en önemlisi. Gerekli düzenlemeler yapıldı ve fatura detaylarınızda bu ayki ekstra internet hakkınız görünecektir. Yoğun trafikte sabrınız ve anlayışınız için tekrar teşekkür ederiz. Başka bir sorunuz yoksa, iyi yolculuklar dilerim.",
+      "tools_triggered": []
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "BillingAgent",
+      "reason": "promotional_stacking_error"
+    },
+    {
+      "at_turn": 6,
+      "from": "BillingAgent",
+      "to": "PlanAgent",
+      "reason": "promotional_stacking_error"
+    },
+    {
+      "at_turn": 8,
+      "from": "PlanAgent",
+      "to": "BillingAgent",
+      "reason": "promotional_stacking_error"
+    }
+  ],
+  "generated_at": "2025-08-14T08:55:21.898184"
+}

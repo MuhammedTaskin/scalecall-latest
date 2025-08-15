@@ -1,0 +1,122 @@
+{
+  "id": "flash_heavy_0140",
+  "primary_issue": "billing_charges_roaming",
+  "secondary_issue": null,
+  "customer_profile": "gig_worker",
+  "region": "trabzon",
+  "dialect_info": {
+    "dialect": "blacksea",
+    "pace": "fast",
+    "formality": "medium"
+  },
+  "conversation_dynamic": "interrupted",
+  "complexity": "medium",
+  "metadata": {
+    "context": "needs reliable service for work",
+    "traits": [
+      "flexible",
+      "app_dependent",
+      "connectivity_critical"
+    ],
+    "emotional_journey": [
+      "stressed",
+      "urgent",
+      "persistent",
+      "grateful"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo, merhaba! Ben anlamadım ula bu ne fatura böyle? Geçen ay yurt dışına çıktım geldim, hani paketim vardı? Normalde 200 lirayı geçmez, şimdi bi bakıyorum 1200 lira! Haçan ben o parayı ne edeyim? Her gün işim telefonda, bağlantım kesilirse işim de biter. Çok acil bakmanız lazım!",
+      "emotion": "stressed",
+      "dialect_markers": [
+        "blacksea",
+        "ula",
+        "haçan",
+        "ne edeyim"
+      ],
+      "pace": "fast",
+      "background_context": "needs reliable service for work"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Adım Cemal Yılmaz, TC kimlik numaram 12345678901. Ama bakın hanımefendi, bu fatura işi çok acil. Ben mobil uygulamalar üzerinden iş yapıyorum, kuryelik yapıyorum, eğer internetim giderse, hattım kesilirse ekmek parası da gitmiş olur. Benim sürekli bağlı olmam lazım, anladınız mı? Bu 1200 lira neyin nesi, anlatın bana!",
+      "emotion": "urgent",
+      "dialect_markers": [
+        "blacksea",
+        "ama bakın hanımefendi",
+        "anladınız mı?"
+      ],
+      "pace": "fast",
+      "background_context": "needs reliable service for work"
+    },
+    {
+      "turn_id": "turn_006",
+      "text": "Evet, evet, anladım. Cemal Yılmaz. Tamam, dinliyorum sizi. Ama bakın, ben Dubai’deydim. Hani benim yurt dışı paketim vardı? Oraya özel aldığım bir paket vardı. Ben ona güvenerek kullandım interneti. Şimdi niye böyle bi fatura geldi? Benim bu kadar yüksek fatura ödeme durumum yok ki. Bir yanlışlık olmalı. Ne yapmamız lazım?",
+      "emotion": "persistent",
+      "dialect_markers": [
+        "blacksea",
+        "hani",
+        "var mıydı?",
+        "ki"
+      ],
+      "pace": "fast",
+      "background_context": "needs reliable service for work"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Hoş geldiniz Cemal Bey. Konuşmalarımız kalite standartları gereği kaydedilmektedir. Talebinizi anlıyorum ancak öncelikle sistem üzerinden kimlik doğrulaması yapmamız gerekmektedir. Adınız, soyadınız ve TC kimlik numaranızı rica edebilir miyim?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Bilgileri teyit ediyorum Cemal Bey. Sistemde kaydınızın Cemal Yılmaz olarak göründüğünü doğrularım. Faturalarınızla ilgili konularda size daha detaylı yardımcı olabilmek adına, görüşmenizi Faturalandırma Departmanımıza aktarmam gerekiyor. Hattınızda kalır mısınız lütfen?",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_005",
+      "agent_persona": "BillingAgent",
+      "text": "Merhaba Cemal Bey, ben Müşteri İlişkileri Faturalandırma Uzmanı Aslı. Görüşmeniz RouterAgent'ımızdan bana aktarıldı. Anladığım kadarıyla yurt dışı faturanızla ilgili bir sorun yaşıyorsunuz. Durumu netleştirmek adına, lütfen yaşadığınız sıkıntıyı bir kez daha detaylıca anlatır mısınız?",
+      "tools_triggered": [],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_007",
+      "agent_persona": "BillingAgent",
+      "text": "Cemal Bey, hemen fatura detaylarınıza bakıyorum. Evet, Dubai seyahatinizi ve yüksek bir dolaşım kullanımınız olduğunu görüyorum. Sistem kayıtlarımıza göre, Dubai için özel tanımlı bir yurt dışı paketiniz bulunmamaktaydı. Seyahatinizden hemen önce kullandığınız Avrupa paketi, Dubai'de geçerli olmadığı için kullanımlarınız standart dolaşım tarifesi üzerinden ücretlendirilmiş. Bu nedenle bu yüksek fatura oluşmuş. Ancak, durumunuzu anlıyorum, işleriniz için kesintisiz bağlantının önemini biliyoruz. Size özel, bir sonraki faturanıza yansıyacak şekilde 200 TL'lik bir indirim tanımlayabiliriz, böylece bu geçiş dönemi için bir kolaylık sağlamış oluruz. Ne dersiniz?",
+      "tools_triggered": [
+        "get_last_bill"
+      ],
+      "formality_level": "medium"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "BillingAgent",
+      "reason": "Customer's primary issue is related to billing/roaming charges, which requires a specialized agent from the Billing Department.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "The customer's high roaming bill was explained as due to the incorrect roaming package for the visited country (Dubai) and standard roaming rates applying. A goodwill discount of 200 TL was offered to mitigate the impact, acknowledging the customer's critical need for connectivity.",
+    "customer_satisfaction": "grateful",
+    "follow_up_needed": false
+  },
+  "generated_at": "2025-08-14T09:24:13.944224",
+  "model": "flash",
+  "index": 140
+}

@@ -1,0 +1,310 @@
+{
+  "conversation_id": "conv_20250814_074304_device_not_compatible_cheerful_optimistic",
+  "metadata": {
+    "scenario": "device_not_compatible",
+    "complexity": "simple",
+    "persona": "cheerful_optimistic",
+    "handoff_pattern": [
+      "RouterAgent",
+      "TechAgent"
+    ],
+    "interruption_type": "connection_issue",
+    "resolution": "ticket_created"
+  },
+  "customer_profile": {
+    "persona": "cheerful_optimistic",
+    "phone": "0556 908 20 39",
+    "maiden_name": "Ay",
+    "issue": "device_not_compatible",
+    "background": "Esnaf"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Merhaba merhaba! Harika bir gün diliyorum size! Yeni bir telefon aldım ama nedense bir türlü hattımı çalıştıramıyorum, bana yardımcı olabilir misiniz acaba?",
+      "emotion": "joyful",
+      "voice_notes": {
+        "tone": "energetic",
+        "speed": "medium-fast",
+        "emphasis": [
+          "harika",
+          "yardımcı"
+        ]
+      }
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Tabii ki! Ben Neşe Canpolat. Annemin kızlık soyadı da 'Ay' efendim.",
+      "emotion": "neutral_positive",
+      "voice_notes": {
+        "tone": "polite",
+        "speed": "medium",
+        "emphasis": [
+          "Neşe Canpolat",
+          "Ay"
+        ]
+      }
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Aynen öyle! Tam da o konuda. Yeni bir model aldım, çok da hevesliydim ama SIM kartı taktım, internet gelmiyor, arama yapamıyorum. 'SIM yok' gibi bir şeyler yazıyor bazen, bazen de sadece sinyal yok. Eski telefonumda tıkır tıkır çalışıyordu hattım.",
+      "emotion": "optimistic_frustration",
+      "voice_notes": {
+        "tone": "eager",
+        "speed": "medium-fast",
+        "emphasis": [
+          "yeni bir model",
+          "eski telefonumda tıkır tıkır"
+        ]
+      }
+    },
+    {
+      "turn_id": "turn_008",
+      "text": "Oo harika! Teşekkür ederim Deniz Bey. Telefonum... şey, adı... 'UltraMega 5000 Pro'. Son çıkanlardan, süper hızlıymış falan. IMEI numarası için hemen kutusuna bakıyorum, bir saniye lütfen... Evet, buldum! İşte bu: 357890123456789.",
+      "emotion": "excited",
+      "voice_notes": {
+        "tone": "eager",
+        "speed": "medium",
+        "emphasis": [
+          "UltraMega 5000 Pro",
+          "buldum"
+        ]
+      }
+    },
+    {
+      "turn_id": "turn_010",
+      "text": "Alo? Deniz Bey? Sesiniz gidip geliyor, sizi tam duyamadım. Ne dediniz UltraMega'yla ilgili?",
+      "emotion": "confused",
+      "voice_notes": {
+        "tone": "questioning",
+        "speed": "slow",
+        "emphasis": [
+          "Alo?",
+          "tam duyamadım"
+        ]
+      }
+    },
+    {
+      "turn_id": "turn_012",
+      "text": "Aaa, öyle mi? Vay canına, bunu hiç beklemiyordum! Mağazadaki arkadaş 'dünyanın her yerinde çalışır' demişti. Demek ki durum bu. Peki şimdi ne yapacağız? Yani hiç mi kullanamayacağım bu harika telefonu?",
+      "emotion": "disappointed_optimistic",
+      "voice_notes": {
+        "tone": "surprised",
+        "speed": "medium",
+        "emphasis": [
+          "hiç beklemiyordum",
+          "hiç mi kullanamayacağım"
+        ]
+      }
+    },
+    {
+      "turn_id": "turn_014",
+      "text": "Evet, evet kesinlikle! Ne kadar harika olur! Belki sihirli bir çözüm bulursunuz. Lütfen bir kayıt oluşturun. Umutluyum! Teşekkür ederim size şimdiden!",
+      "emotion": "hopeful",
+      "voice_notes": {
+        "tone": "enthusiastic",
+        "speed": "medium-fast",
+        "emphasis": [
+          "evet, evet kesinlikle!",
+          "sihirli bir çözüm",
+          "umutluyum"
+        ]
+      }
+    },
+    {
+      "turn_id": "turn_016",
+      "text": "Şimdilik yok Deniz Bey, çok teşekkür ederim nazik yardımınız için! Harika bir gün geçirin!",
+      "emotion": "grateful",
+      "voice_notes": {
+        "tone": "sincere",
+        "speed": "medium",
+        "emphasis": [
+          "çok teşekkür ederim",
+          "harika bir gün"
+        ]
+      }
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba, iyi günler dilerim. Telsim müşteri hizmetlerine hoş geldiniz. Ben Ada. Hattınızla ilgili yaşadığınız aksaklık için üzgünüm. Yardımcı olmaktan memnuniyet duyarım. Güvenliğiniz için öncelikle kimlik doğrulaması yapmamız gerekmektedir. Lütfen adınızı ve soyadınızı söyler misiniz?",
+      "tools_triggered": [],
+      "handoff": null,
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkürler Sayın Canpolat. Bilgilerinizi kontrol ediyorum. Evet, bilgileriniz doğru. Sistemimde hattınızın aktif göründüğünü ancak herhangi bir internet veya arama kaydı göremediğimi fark ediyorum. Cihazınızla ilgili bir uyumsuzluktan mı şüpheleniyorsunuz?",
+      "tools_triggered": [
+        "verify_user",
+        "get_customer_status"
+      ],
+      "handoff": null,
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "RouterAgent",
+      "text": "Anladım Sayın Canpolat. Bu durum cihazınızın şebekeye uyumsuzluğu veya SIM kartınızla ilgili teknik bir sorun olabilir. Bu konuda size en doğru bilgiyi ve çözümü Teknik Destek ekibimiz sağlayacaktır. İzninizle görüşmenizi Teknik Destek birimine aktarıyorum. Kısa bir bekleme süresi olabilir, anlayışınız için teşekkür ederiz.",
+      "tools_triggered": [
+        "route_to_agent"
+      ],
+      "handoff": "TechAgent",
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_007",
+      "agent_persona": "TechAgent",
+      "text": "Telsim Teknik Destek Hattı'na hoş geldiniz, ben Deniz. Neşe Hanım, görüşmeyi Ada Hanım'dan devraldım. Yeni cihazınızla ilgili bir bağlantı sorunu yaşadığınızı anlıyorum. Cihazınızın markası ve modeli nedir acaba? Bir de bana cihazınızın IMEI numarasını verebilir misiniz?",
+      "tools_triggered": [],
+      "handoff": null,
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_009",
+      "agent_persona": "TechAgent",
+      "text": "Teşekkürler Neşe Hanım. Hemen sistemden kontrol ediyorum. UltraMega 5000 Pro, anlıyorum. Sistemden IMEI numaranızı sorguluyorum ve... (ses kesilir) ...şebeke uyumluluğu... (tekrar kesilir) ...",
+      "tools_triggered": [
+        "check_device_imei"
+      ],
+      "handoff": null,
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_011",
+      "agent_persona": "TechAgent",
+      "text": "Ah, kusura bakmayın Neşe Hanım, bağlantıda kısa bir sorun oldu sanırım. Tekrar ediyorum: Sistemde yaptığım kontrol sonucunda UltraMega 5000 Pro model cihazınızın Türkiye şebeke altyapımızla tam uyumlu olmadığını görüyorum. Özellikle 4.5G/5G bantlarında bölgesel olarak kapsama ve sinyal sorunları yaşama potansiyeliniz yüksek görünüyor.",
+      "tools_triggered": [],
+      "handoff": null,
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_013",
+      "agent_persona": "TechAgent",
+      "text": "Maalesef Neşe Hanım, cihazın uluslararası uyumluluğu farklı olabilir. Mevcut durumunuzda, cihazınızın şebeke uyumsuzluğu nedeniyle kalıcı bir çözüm sunabilmemiz mümkün görünmüyor. Ancak, yaşadığınız bu durum için bir teknik destek talebi oluşturabiliriz. Böylece konuyla ilgili detaylı bir inceleme başlatılmış olur ve size ilerleyen süreçte yapılabilecek ekstra bir kontrol veya öneri olursa bilgi verilir. Bu işlem için bir kayıt açmamı ister misiniz?",
+      "tools_triggered": [
+        "create_tech_ticket"
+      ],
+      "handoff": null,
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_015",
+      "agent_persona": "TechAgent",
+      "text": "Peki Neşe Hanım, hemen talep kaydınızı oluşturuyorum. Kayıt numaranız: TT20240814-789012. Bu numara ile başvurunuzu takip edebilirsiniz. Genellikle 24-48 saat içinde konuyla ilgili size geri dönüş yapılacaktır. Başka bir konuda yardımcı olabileceğim bir şey var mıydı?",
+      "tools_triggered": [],
+      "handoff": null,
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_017",
+      "agent_persona": "TechAgent",
+      "text": "Rica ederim Neşe Hanım, ben teşekkür ederim. Size de iyi günler dilerim. Hoşça kalın.",
+      "tools_triggered": [
+        "end_conversation"
+      ],
+      "handoff": null,
+      "formality_level": "medium"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "turn_id": "turn_006",
+      "from_agent": "RouterAgent",
+      "to_agent": "TechAgent",
+      "reason": "Technical issue requiring specialized support (device compatibility)."
+    }
+  ],
+  "tool_calls": [
+    {
+      "turn_id": "turn_004",
+      "tool_name": "verify_user",
+      "parameters": {
+        "customer_name": "Neşe Canpolat",
+        "maiden_name": "Ay"
+      },
+      "result": {
+        "status": "success",
+        "message": "User verified."
+      }
+    },
+    {
+      "turn_id": "turn_004",
+      "tool_name": "get_customer_status",
+      "parameters": {
+        "phone_number": "0556 908 20 39"
+      },
+      "result": {
+        "status": "success",
+        "account_status": "active",
+        "last_usage_data": "no_recent_usage"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "tool_name": "route_to_agent",
+      "parameters": {
+        "target_agent": "TechAgent",
+        "reason": "device_compatibility_issue"
+      },
+      "result": {
+        "status": "success",
+        "message": "Call routed to TechAgent."
+      }
+    },
+    {
+      "turn_id": "turn_009",
+      "tool_name": "check_device_imei",
+      "parameters": {
+        "imei": "357890123456789"
+      },
+      "result": {
+        "status": "success",
+        "device_model": "UltraMega 5000 Pro",
+        "compatibility_status": "partially_compatible",
+        "details": "Potential signal/data issues on Turkish 4.5G/5G bands due to missing or unsupported frequency bands."
+      }
+    },
+    {
+      "turn_id": "turn_013",
+      "tool_name": "create_tech_ticket",
+      "parameters": {
+        "issue_type": "device_not_compatible",
+        "description": "Customer's UltraMega 5000 Pro (IMEI: 357890123456789) is not fully compatible with Turkish network infrastructure, experiencing signal/data issues. Requires further investigation for possible workarounds or official confirmation.",
+        "customer_impact": "no_service"
+      },
+      "result": {
+        "status": "success",
+        "ticket_number": "TT20240814-789012"
+      }
+    },
+    {
+      "turn_id": "turn_017",
+      "tool_name": "end_conversation",
+      "parameters": {},
+      "result": {
+        "status": "success",
+        "message": "Conversation ended by agent."
+      }
+    }
+  ],
+  "generation_id": "c4ea5674-c285-4e4e-9085-283eba6df1b5",
+  "generated_at": "2025-08-14T07:43:39.703782",
+  "index": 8,
+  "variation_params": {
+    "persona": "cheerful_optimistic",
+    "issue": "device_not_compatible",
+    "handoff_pattern": [
+      "RouterAgent",
+      "TechAgent"
+    ],
+    "complexity": "simple",
+    "interruption": "connection_issue",
+    "resolution": "ticket_created"
+  },
+  "id": "conv_20250814_074304_device_not_compatible_cheerful_optimistic",
+  "primary_issue": "general_support"
+}

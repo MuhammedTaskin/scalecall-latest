@@ -1,0 +1,104 @@
+{
+  "conversation_id": "short_0031_esim_quick_fix",
+  "metadata": {
+    "scenario": "esim_quick_fix",
+    "handoff_pattern": [
+      "RouterAgent",
+      "TechAgent"
+    ]
+  },
+  "customer_profile": {
+    "persona": "polite",
+    "phone": "0555 123 45 67"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Merhaba, e-SIM'im çalışmıyor, internete bağlanamıyorum.",
+      "emotion": "polite"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Evet, telefonumda e-SIM kullanıyorum ve yaklaşık bir saattir aktif değil.",
+      "emotion": "polite"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Anladım, teşekkürler. Umarım yeni bir aktivasyon kodu sorunu çözer.",
+      "emotion": "polite"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba, Telekom Çağrı Merkezi'ne hoş geldiniz. Kimliğinizi doğrulamak için lütfen telefon numaranızı veya T.C. kimlik numaranızı paylaşır mısınız?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Bilgileriniz doğrulandı. e-SIM sorununuzla ilgili olarak, daha detaylı inceleme yapabilmemiz için sizi teknik ekibimize yönlendiriyorum. Lütfen bekleyiniz.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "handoff": {
+        "to": "TechAgent"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "TechAgent",
+      "text": "Merhaba, ben TechAgent. e-SIM aktivasyonunuzda bir sorun olduğunu görüyorum. Cihazınızın IMEI'sini kontrol edip, yeni bir aktivasyon kodu oluşturacağım. Lütfen bekleyin.",
+      "tools_triggered": [
+        "check_esim_status",
+        "check_device_imei",
+        "reissue_activation_code"
+      ],
+      "handoff": null
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "TechAgent",
+      "reason": "esim_quick_fix"
+    }
+  ],
+  "tool_calls": [
+    {
+      "turn_id": "turn_002",
+      "tool": "verify_user",
+      "arguments": {
+        "phone_number": "0555 123 45 67"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_004",
+      "tool": "route_to_agent",
+      "arguments": {
+        "agent_type": "TechAgent"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "reissue_activation_code",
+      "arguments": {
+        "esim_id": "generated_esim_id"
+      },
+      "result": {
+        "success": true,
+        "activation_code": "NEW_CODE123"
+      }
+    }
+  ],
+  "generated_at": "2025-08-14T08:01:18.638179",
+  "index": 31
+}

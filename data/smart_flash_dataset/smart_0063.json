@@ -1,0 +1,46 @@
+{
+  "id": "smart_0063",
+  "scenario": "tech_issue_ticket",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Merhaba, internetim çalışmıyor. Modem ışıkları yanıp sönüyor, ne yapmalıyım?",
+      "emotion": "confused"
+    },
+    {
+      "turn": 3,
+      "text": "Evet, numaram 5551234567."
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Merhaba, öncelikle kimliğinizi doğrulamamız gerekiyor. Lütfen T.C. kimlik numaranızın son dört hanesini veya kayıtlı telefon numaranızı paylaşır mısınız?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "TechAgent",
+      "text": "Anlıyorum. T.C. kimlik numaranızın son dört hanesi 1234. Modeminizde bir sorun görünüyor, eSIM durumunuzu kontrol ediyorum. eSIM'inizde bir hata tespit edildi. Bu sorunu çözmek için bir teknik destek kaydı oluşturuyorum. Kaydınız oluşturuldu, en kısa sürede teknik ekibimiz sizinle iletişime geçecek.",
+      "tools": [
+        "check_esim_status",
+        "create_tech_ticket",
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:57:14.909623",
+  "required_tools": [
+    "verify_user",
+    "check_esim_status",
+    "create_tech_ticket",
+    "end_conversation"
+  ],
+  "agent_flow": [
+    "RouterAgent",
+    "TechAgent"
+  ]
+}

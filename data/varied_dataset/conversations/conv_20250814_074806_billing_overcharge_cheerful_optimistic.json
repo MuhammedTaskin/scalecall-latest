@@ -1,0 +1,256 @@
+{
+  "conversation_id": "conv_20250814_074806_billing_overcharge_cheerful_optimistic",
+  "metadata": {
+    "scenario": "billing_overcharge",
+    "complexity": "medium",
+    "persona": "cheerful_optimistic",
+    "handoff_pattern": [
+      "RouterAgent",
+      "BillingAgent"
+    ],
+    "interruption_type": "emotional_escalation",
+    "resolution": "partially_resolved"
+  },
+  "customer_profile": {
+    "persona": "cheerful_optimistic",
+    "phone": "0556 932 74 71",
+    "maiden_name": "Bulut",
+    "issue": "billing_overcharge",
+    "background": "Emekli"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo! Günaydınlar efendim, harika bir gün diliyorum! Ben Nurten Hanım, size bir fatura konusunda danışmak istemiştim. Umarım kolayca hallederiz.",
+      "emotion": "optimistic",
+      "voice_notes": {
+        "tone": "bright",
+        "speed": "normal",
+        "emphasis": [
+          "harika bir gün",
+          "kolayca hallederiz"
+        ]
+      }
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Tabii ki Elif Hanımcığım. T.C. kimlik numaram 12345678901. Annemin soyadı da Bulut'tur, hani ek bir bilgi gerekirse diye söylüyorum. Bakalım, umarım önemli bir şey değildir.",
+      "emotion": "optimistic",
+      "voice_notes": {
+        "tone": "friendly",
+        "speed": "slightly fast",
+        "emphasis": [
+          "Annemin soyadı da Bulut'tur",
+          "önemli bir şey değildir"
+        ]
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "text": "Ayşe Hanım merhaba! Hoş geldiniz. Şimdi şöyle, bu ayki faturam bir önceki aya göre bayağı yüksek gelmiş. Bir anda iki yüz lira fark görünce 'Acaba yanlışlık mı var?' dedim. Hani ben öyle çok internet kullanan biri de değilim, emekliyim evimdeyim. Bir de geçen ay bir kampanya vardı, o bitti mi acaba diye düşündüm. Gelen faturada 550 TL yazıyor, inanamadım!",
+      "emotion": "concerned_optimistic",
+      "voice_notes": {
+        "tone": "slightly puzzled",
+        "speed": "normal",
+        "emphasis": [
+          "bayağı yüksek gelmiş",
+          "yanlışlık mı var?",
+          "inanamadım!"
+        ]
+      }
+    },
+    {
+      "turn_id": "turn_008",
+      "text": "Tabii ki, ne demek. Ben de o arada geçen ayki faturamı kontrol ettim de, geçen ay 350 TL gelmişti. Demek ki o kampanya bitmiş, değil mi? Gerçi bitse bile 200 TL birden artması garip geldi.",
+      "emotion": "puzzled",
+      "voice_notes": {
+        "tone": "questioning",
+        "speed": "normal",
+        "emphasis": [
+          "o kampanya bitmiş, değil mi?",
+          "200 TL birden artması garip geldi"
+        ]
+      }
+    },
+    {
+      "turn_id": "turn_010",
+      "text": "NE! Dijital servis üyeliği mi? Hayatta öyle bir şey yapmadım, Ayşe Hanım! Ben interneti bile zor kullanırım, dizi bile izlemem doğru düzgün. Ne dijital servisi? Bu nasıl bir şey, kim başlattı bunu? Kampanya bitişi tamam da, üstüne bir de bu ne şimdi? Hani ben size güveniyorum ama bu olmaz ki! Ben bu 49 lirayı asla ödemem! Bu resmen haksızlık, kandırılmış gibi hissediyorum!",
+      "emotion": "angry_frustrated",
+      "voice_notes": {
+        "tone": "high-pitched",
+        "volume": "slightly louder",
+        "speed": "fast",
+        "emphasis": [
+          "NE!",
+          "Hayatta öyle bir şey yapmadım",
+          "kim başlattı bunu?",
+          "asla ödemem!",
+          "kandırılmış gibi hissediyorum!"
+        ]
+      }
+    },
+    {
+      "turn_id": "turn_012",
+      "text": "Peki, tamam. 49 lirayı düşmeniz güzel ama insan yine de hani bir anda gelen bu kadar yüksek faturayı sindiremiyor. Ne yapalım, bu da böyle olsun. En azından o saçma sapan dijital servisi iptal ettiğiniz için teşekkür ederim Ayşe Hanım. Bir daha öyle bir şey olursa direkt sizi ararım, baştan söyleyeyim!",
+      "emotion": "resigned_optimistic",
+      "voice_notes": {
+        "tone": "slightly weary but polite",
+        "speed": "normal",
+        "emphasis": [
+          "saçma sapan dijital servisi",
+          "bir daha öyle bir şey olursa direkt sizi ararım"
+        ]
+      }
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Günaydın Nurten Hanım, hoş geldiniz. Ben Elif, Turkcell Müşteri Hizmetleri'nden. Size nasıl yardımcı olabilirim? Öncelikle güvenlik doğrulaması için hattınızın bağlı olduğu T.C. kimlik numaranızı veya abone numaranızı alabilir miyim?",
+      "tools_triggered": [],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkürler Nurten Hanım, bilgileriniz kontrol ediliyor. Evet, Nurten Bulut olarak kaydınızı doğruladım. Fatura konusunda destek almak istediğinizi belirtmiştiniz. Bu konuda size en doğru bilgiyi verecek olan Fatura İşlemleri birimimizden bir arkadaşımıza aktarıyorum. Kısa bir bekleme yaşayabilirsiniz, hemen bağlıyorum.",
+      "tools_triggered": [
+        "verify_user",
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "handoff": "BillingAgent"
+    },
+    {
+      "turn_id": "turn_005",
+      "agent_persona": "BillingAgent",
+      "text": "Merhaba Nurten Hanım, ben Ayşe, Fatura İşlemleri Birimi'nden. Elif Hanım'dan aktarıldınız. Faturanızla ilgili konuda size yardımcı olmak için buradayım. Rica etsem, faturanızda sizi rahatsız eden veya merak ettiğiniz konuyu biraz daha detaylandırabilir misiniz?",
+      "tools_triggered": [],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_007",
+      "agent_persona": "BillingAgent",
+      "text": "Anladım Nurten Hanım, hemen kontrol ediyorum. Sistemden son faturanızı detaylıca incelemem için bana bir dakika müsaade eder misiniz?",
+      "tools_triggered": [
+        "get_last_bill"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_009",
+      "agent_persona": "BillingAgent",
+      "text": "Evet Nurten Hanım, inceledim. Gördüğüm kadarıyla, geçen ay faydalandığınız 'Emeklilere Özel Ek 5GB' kampanyanızın süresi bu fatura döneminde sona ermiş. Bu nedenle internet kullanımınız standart tarife üzerinden ücretlendirilmiş. Ayrıca, faturanıza yansıyan bir 'Dijital Servis Üyeliği' olduğunu görüyorum, bu da 49 TL'lik bir ek ücrete neden olmuş. Kampanyanın bitişi ve bu servis ücretiyle faturanız 550 TL'ye ulaşmış. Hani bu servisi siz mi başlattınız yoksa yanlışlıkla mı aktive oldu?",
+      "tools_triggered": [
+        "get_last_bill"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_011",
+      "agent_persona": "BillingAgent",
+      "text": "Nurten Hanım, sizi çok iyi anlıyorum. Yaşadığınız bu durumu ve hislerinizi tamamen anlıyorum. Bu servisler bazen farkında olmadan aktifleşebiliyor veya bir uygulama içinden onaylanmış olabiliyor. Endişelenmeyin, bu 49 TL'lik 'Dijital Servis Üyeliği' ücretini faturanızdan düşüyorum ve üyeliği hemen iptal ediyorum. Ancak kampanya bitişinden kaynaklanan artış standart tarife değişikliği olduğu için o kısımda bir indirim sağlayamıyorum. Bu durumda faturanız 501 TL olarak güncellenecek. Bu işlem için onayınızı rica edebilir miyim?",
+      "tools_triggered": [
+        "apply_campaign_discount",
+        "create_payment_note"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_013",
+      "agent_persona": "BillingAgent",
+      "text": "Anlıyorum Nurten Hanım. İşleminiz başarıyla tamamlandı, 49 TL'lik dijital servis ücreti faturanızdan düşüldü ve servis üyeliğiniz iptal edildi. Faturanız 501 TL olarak güncellenmiştir. Başka herhangi bir konuda size yardımcı olabileceğim bir şey var mıydı?",
+      "tools_triggered": [
+        "end_conversation"
+      ],
+      "handoff": null
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "from_agent_persona": "RouterAgent",
+      "to_agent_persona": "BillingAgent",
+      "turn_id": "turn_004",
+      "reason": "customer_billing_inquiry"
+    }
+  ],
+  "tool_calls": [
+    {
+      "turn_id": "turn_004",
+      "tool_name": "verify_user",
+      "parameters": {
+        "customer_id": "12345678901",
+        "maiden_name": "Bulut"
+      }
+    },
+    {
+      "turn_id": "turn_004",
+      "tool_name": "get_customer_status",
+      "parameters": {
+        "customer_id": "05569327471"
+      }
+    },
+    {
+      "turn_id": "turn_004",
+      "tool_name": "route_to_agent",
+      "parameters": {
+        "target_agent_persona": "BillingAgent",
+        "reason": "billing_inquiry"
+      }
+    },
+    {
+      "turn_id": "turn_007",
+      "tool_name": "get_last_bill",
+      "parameters": {
+        "customer_id": "05569327471"
+      }
+    },
+    {
+      "turn_id": "turn_009",
+      "tool_name": "get_last_bill",
+      "parameters": {
+        "customer_id": "05569327471"
+      }
+    },
+    {
+      "turn_id": "turn_011",
+      "tool_name": "apply_campaign_discount",
+      "parameters": {
+        "customer_id": "05569327471",
+        "discount_amount": 49.0,
+        "reason": "unwanted_digital_service_reversal"
+      }
+    },
+    {
+      "turn_id": "turn_011",
+      "tool_name": "create_payment_note",
+      "parameters": {
+        "customer_id": "05569327471",
+        "note_content": "49 TL digital service charge reversed, campaign end explained. Customer partially satisfied."
+      }
+    },
+    {
+      "turn_id": "turn_013",
+      "tool_name": "end_conversation",
+      "parameters": {
+        "reason": "issue_partially_resolved",
+        "customer_satisfaction": "medium"
+      }
+    }
+  ],
+  "generation_id": "148c4762-85ab-4e6e-815f-182c788a8c02",
+  "generated_at": "2025-08-14T07:48:41.717474",
+  "index": 15,
+  "variation_params": {
+    "persona": "cheerful_optimistic",
+    "issue": "billing_overcharge",
+    "handoff_pattern": [
+      "RouterAgent",
+      "BillingAgent"
+    ],
+    "complexity": "medium",
+    "interruption": "emotional_escalation",
+    "resolution": "partially_resolved"
+  }
+}

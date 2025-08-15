@@ -1,0 +1,44 @@
+{
+  "id": "smart_0005",
+  "scenario": "device_check",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Merhaba, bu telefonunuzun internet paketimle uyumlu olup olmadığını merak ediyorum. Tam emin değilim.",
+      "emotion": "confused"
+    },
+    {
+      "turn": 3,
+      "text": "Evet, numaram 1234567890."
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Elbette, yardımcı olabilirim. Lütfen kimliğinizi doğrulamak için telefon numaranızı paylaşır mısınız?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "TechAgent",
+      "text": "Teşekkürler. Cihazınızın IMEI numarasını öğrenebilir miyim? Bu, uyumluluğu kontrol etmemize yardımcı olacaktır.",
+      "tools": [
+        "check_device_imei",
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:56:58.358233",
+  "required_tools": [
+    "verify_user",
+    "check_device_imei",
+    "end_conversation"
+  ],
+  "agent_flow": [
+    "RouterAgent",
+    "TechAgent"
+  ]
+}

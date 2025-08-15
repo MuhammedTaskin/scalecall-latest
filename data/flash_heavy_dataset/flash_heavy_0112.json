@@ -1,0 +1,175 @@
+{
+  "id": "flash_heavy_0112",
+  "primary_issue": "technical_esim_qr_expired",
+  "secondary_issue": "technical_device_carrier_settings",
+  "customer_profile": "frequent_traveler",
+  "region": "erzurum",
+  "dialect_info": {
+    "dialect": "eastern",
+    "pace": "slow",
+    "formality": "high"
+  },
+  "conversation_dynamic": "escalating",
+  "complexity": "complex",
+  "metadata": {
+    "context": "international roaming issues",
+    "traits": [
+      "experienced",
+      "specific_needs",
+      "impatient"
+    ],
+    "emotional_journey": [
+      "direct",
+      "frustrated",
+      "demanding",
+      "accepting"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Selamünaleyküm. Ben şimdi yurt dışından geldim, telefonumun şebekesi yok. Hani geçenlerde eSIM'e geçmiştik ya, onunla alakalı bir sıkıntı var galiba.",
+      "emotion": "direct",
+      "dialect_markers": [
+        "eastern",
+        "hani",
+        "galiba"
+      ],
+      "pace": "slow",
+      "background_context": "international roaming issues"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Hımm, Hüseyin Beyoğlu. T.C. kimlik numaram da 12345678900. Acele etsek iyi olur, yurt dışından döneli iki saat oldu, hala internetim yok.",
+      "emotion": "direct",
+      "dialect_markers": [
+        "eastern"
+      ],
+      "pace": "slow",
+      "background_context": "international roaming issues"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "(Derin bir nefes alır) Yine mi aktarma? Neyse, dinleyin beni. Ben Amerika'daydım, orada telefonumun şebekesi gitti. Düşündüm ki, kesin bu eSIM'in QR kodu falan süresi dolmuştur. Eve geldim, yeni QR kodu attılar ama yine yok. Hiçbir yerde çekmiyor.",
+      "emotion": "frustrated",
+      "dialect_markers": [
+        "eastern",
+        "yine mi",
+        "falan"
+      ],
+      "pace": "slow",
+      "background_context": "international roaming issues"
+    },
+    {
+      "turn_id": "turn_007",
+      "text": "Hazır olmak ne demek, tabii ki hazırım! Yahu kaç senedir bu işi yapıyorum, her seyahatimde ya bu eSIM ya da başka bir şey... Gönderin çabuk. Telefonum Samsung S23 Ultra, biliyorsunuzdur ayarlarını.",
+      "emotion": "demanding",
+      "dialect_markers": [
+        "eastern",
+        "yahu"
+      ],
+      "pace": "slow",
+      "background_context": "international roaming issues"
+    },
+    {
+      "turn_id": "turn_009",
+      "text": "Allah Allah! IMEI numaram da, dur bakayım... *kısa bir duraksama* ... 357912345678901. O APN ayarları falan otomatik olmuyor mu ki? Her seferinde mi ben uğraşacağım?",
+      "emotion": "demanding",
+      "dialect_markers": [
+        "eastern",
+        "Allah Allah",
+        "falan"
+      ],
+      "pace": "slow",
+      "background_context": "international roaming issues"
+    },
+    {
+      "turn_id": "turn_011",
+      "text": "Tamamdır, yapıyorum şimdi. Yeni kod, APN ayarları... Hadi bakalım. *kısa bir sessizlik, tıklama sesleri* ... Telefonu açıp kapattım. Evet... Şebeke geldi galiba! Çekiyor şu an. Allah razı olsun.",
+      "emotion": "accepting",
+      "dialect_markers": [
+        "eastern",
+        "tamamdır",
+        "galiba",
+        "Allah razı olsun"
+      ],
+      "pace": "slow",
+      "background_context": "international roaming issues"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Aleykümselam efendim, Türk Telekom'a hoş geldiniz. Güvenliğiniz için öncelikle kimlik doğrulaması yapmamız gerekmektedir. Adınız, soyadınız ve T.C. kimlik numaranızı alabilir miyim?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Bilgileriniz için teşekkür ederim Sayın Beyoğlu. Sistemde eSIM'inizle ilgili bir aktifleşme sorunu görünüyor. Bu konuda size daha detaylı yardımcı olabilmesi için sizi teknik birimimize aktarıyorum. Lütfen kısa bir süre hatta kalınız.",
+      "tools_triggered": [
+        "get_customer_status",
+        "check_esim_status",
+        "route_to_agent"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "TechAgent",
+      "text": "Hoş geldiniz Sayın Beyoğlu, ben teknik destekten. Anlıyorum durumunuzu. eSIM aktivasyon kodunuzun süresinin dolmuş olabileceği ihtimali üzerinde duruyoruz. Sistemden kontrol ediyorum hemen. Evet, görünüyor ki son gönderilen aktivasyon kodu pasif durumda. Size yeni bir kod gönderebiliriz, bu sefer manuel olarak kurmanız gerekebilir. Hazır mısınız?",
+      "tools_triggered": [
+        "check_esim_status",
+        "reissue_activation_code"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_008",
+      "agent_persona": "TechAgent",
+      "text": "Anlaşıldı Sayın Beyoğlu, yeni eSIM aktivasyon kodunuz az önce SMS olarak gönderildi. Lütfen cihazınızın ayarlarından 'Mobil Ağlar' kısmına girerek manuel kurulumu deneyiniz. Ayrıca, telefonunuzun 'APN' ayarlarını da kontrol etmemiz gerekebilir. Bazen yurt dışı dönüşlerinde bu ayarlar otomatik güncellenmiyor. Cihazınızın IMEI numarasını alabilir miyim, bir de oradan kontrol edeyim?",
+      "tools_triggered": [
+        "reissue_activation_code",
+        "check_device_imei"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_010",
+      "agent_persona": "TechAgent",
+      "text": "Teşekkürler, IMEI numaranızı aldım. APN ayarlarınızda bir eksiklik görünüyor. Lütfen 'Ayarlar' > 'Bağlantılar' > 'Mobil Ağlar' > 'Erişim Noktası Adları' yolunu takip edin ve orada 'internet' veya 'mms' gibi bir seçenek yoksa, yeni bir APN ekleyerek 'APN' kısmına 'internet' yazıp kaydedin. Bu işlemden sonra telefonunuzu kapatıp açar mısınız?",
+      "tools_triggered": [
+        "check_device_imei"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_012",
+      "agent_persona": "TechAgent",
+      "text": "Çok sevindim Sayın Beyoğlu, sorun çözüldü. Başka bir konuda yardımcı olabileceğim bir husus var mıdır?",
+      "tools_triggered": [],
+      "formality_level": "high"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "TechAgent",
+      "reason": "eSIM activation issue requires technical assistance",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "Customer's eSIM was reactivated with a new QR code, and then secondary issue of incorrect APN settings was identified and corrected, leading to full network connectivity.",
+    "customer_satisfaction": "Customer was initially frustrated and demanding but ended up accepting and grateful for the resolution.",
+    "follow_up_needed": false
+  },
+  "generated_at": "2025-08-14T09:21:43.394218",
+  "model": "flash",
+  "index": 112
+}

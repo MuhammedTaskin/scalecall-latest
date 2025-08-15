@@ -1,0 +1,95 @@
+{
+  "conversation_id": "short_0079_tech_problem",
+  "metadata": {
+    "scenario": "tech_problem",
+    "handoff_pattern": [
+      "RouterAgent",
+      "TechAgent"
+    ]
+  },
+  "customer_profile": {
+    "persona": "normal",
+    "phone": "0555 123 45 67"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Merhaba, internetim çok yavaş çalışıyor, sürekli kopuyor.",
+      "emotion": "normal"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Evet, modem ışıkları yanıp sönüyor sürekli.",
+      "emotion": "normal"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Anladım, teşekkürler.",
+      "emotion": "normal"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba, size yardımcı olmak için buradayım. Kimliğinizi doğrulamak için lütfen TC kimlik numaranızı veya abone numaranızı paylaşır mısınız?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Hesabınız doğrulandı. Modem ışıklarınızda bir sorun olduğunu belirtiyorsunuz. Bu durum teknik bir arızadan kaynaklanıyor olabilir. Konuyu teknik ekibimize aktarıyorum.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "handoff": {
+        "to": "TechAgent"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "TechAgent",
+      "text": "Merhaba, ben teknik destekten bağlanıyorum. Modeminizdeki sorunu çözmek için cihazınızın MAC adresini kontrol edeceğim. Lütfen cihazınızın arkasında yazan MAC adresini benimle paylaşır mısınız?",
+      "tools_triggered": [
+        "check_device_imei"
+      ],
+      "handoff": null
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "TechAgent",
+      "reason": "tech_problem"
+    }
+  ],
+  "tool_calls": [
+    {
+      "turn_id": "turn_002",
+      "tool": "verify_user",
+      "arguments": {},
+      "result": true
+    },
+    {
+      "turn_id": "turn_004",
+      "tool": "route_to_agent",
+      "arguments": {
+        "reason": "tech_problem"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "check_device_imei",
+      "arguments": {},
+      "result": "MAC adresi alındı."
+    }
+  ],
+  "generated_at": "2025-08-14T08:01:48.245370",
+  "index": 79
+}

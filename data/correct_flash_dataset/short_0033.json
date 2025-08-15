@@ -1,0 +1,102 @@
+{
+  "conversation_id": "short_0033_bill_question",
+  "metadata": {
+    "scenario": "bill_question",
+    "handoff_pattern": [
+      "RouterAgent",
+      "BillingAgent"
+    ]
+  },
+  "customer_profile": {
+    "persona": "normal",
+    "phone": "0555 123 45 67"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Merhaba, faturamda bir yanlışlık olduğunu düşünüyorum. Ödemem gereken tutar normalden daha yüksek görünüyor.",
+      "emotion": "normal"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Evet, kimlik bilgilerim doğru. Telekom üyeliğimle ilgili bir fatura sorunu yaşıyorum.",
+      "emotion": "normal"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Anladım, teşekkürler. Faturamdaki bu yüksek tutarın nedenini öğrenmek istiyorum.",
+      "emotion": "normal"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba, Telekom'a hoş geldiniz. Kimliğinizi doğrulamak için lütfen TC kimlik numaranızı veya telefon numaranızı paylaşır mısınız?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkürler, bilgileriniz doğrulandı. Anladığım kadarıyla fatura ile ilgili bir sorununuz var. Bu konuyu görüşmek üzere sizi fatura departmanımıza yönlendiriyorum.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "handoff": {
+        "to": "BillingAgent"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "BillingAgent",
+      "text": "Merhaba, fatura departmanından ben. Faturanızdaki tutarın yüksek görünmesiyle ilgili size yardımcı olacağım. Son faturanızı görüntüleyebilir miyim?",
+      "tools_triggered": [
+        "get_last_bill"
+      ],
+      "handoff": null
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "BillingAgent",
+      "reason": "bill_question"
+    }
+  ],
+  "tool_calls": [
+    {
+      "turn_id": "turn_002",
+      "tool": "verify_user",
+      "arguments": {
+        "phone": "0555 123 45 67"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_004",
+      "tool": "route_to_agent",
+      "arguments": {
+        "agent": "BillingAgent",
+        "reason": "bill_question"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "get_last_bill",
+      "arguments": {},
+      "result": {
+        "bill_amount": 150,
+        "due_date": "2024-03-15",
+        "details": "Data usage exceeded"
+      }
+    }
+  ],
+  "generated_at": "2025-08-14T08:01:18.304660",
+  "index": 33
+}

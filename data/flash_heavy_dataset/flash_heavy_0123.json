@@ -1,0 +1,190 @@
+{
+  "id": "flash_heavy_0123",
+  "primary_issue": "plans_changes_removal",
+  "secondary_issue": "billing_issues_late_fee",
+  "customer_profile": "parent_teenager",
+  "region": "antalya",
+  "dialect_info": {
+    "dialect": "mediterranean",
+    "pace": "slow",
+    "formality": "low"
+  },
+  "conversation_dynamic": "multi_issue",
+  "complexity": "complex",
+  "metadata": {
+    "context": "managing family plan",
+    "traits": [
+      "concerned",
+      "protective",
+      "cost_aware"
+    ],
+    "emotional_journey": [
+      "worried",
+      "questioning",
+      "firm",
+      "relieved"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo, iyi günler. Ya benim bi derdim var, telefon faturası gene uçmuş, hele bi de bu veletin hattı yüzünden. Benimkisi aile paketiydi hani, nası oldu bu iş anlamadım gari. Çok zam geldi sanki, içime dert oldu.",
+      "emotion": "worried",
+      "dialect_markers": [
+        "mediterranean",
+        "gari",
+        "hele bi de",
+        "veletin",
+        "içime dert oldu"
+      ],
+      "pace": "slow",
+      "background_context": "managing family plan"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Adım Ayşe Yılmaz. Kimlik numaram da 12345678910. Ya şimdi benim oğlan var, 15 yaşında, adı Can. Onun hattını kullanıyo biliyonuz, bizim aile paketinin içinde. Sürekli internette, oyunda, videoda... Geçen ay faturaya baktım, bayağı bi fark var. Hattın paketini mi değiştirmem lazım, ne yapacaz bilemedim. Bu gidişle batacaz biz.",
+      "emotion": "worried",
+      "dialect_markers": [
+        "mediterranean",
+        "oğlan",
+        "biliyonuz",
+        "bayağı bi fark",
+        "batacaz biz"
+      ],
+      "pace": "slow",
+      "background_context": "managing family plan"
+    },
+    {
+      "turn_id": "turn_006",
+      "text": "Aynen öyle, o hep internette dolaşıyor, video izliyor. Valla, bizim aile paketi vardı, interneti sınırlı diye biliyordum ama demek ki yetmiyor. Can'ın hattının internetini mi kısıtlayacağız, yoksa onun için daha uygun, sınırsız falan bi paket mi var? Hani uygun fiyatlı olursa daha iyi olur, öğrenci hali sonuçta.",
+      "emotion": "questioning",
+      "dialect_markers": [
+        "mediterranean",
+        "aynen öyle",
+        "valla",
+        "hali sonuçta"
+      ],
+      "pace": "slow",
+      "background_context": "managing family plan"
+    },
+    {
+      "turn_id": "turn_008",
+      "text": "He, o iyiymiş o zaman, 20 GB yeter ona şimdilik. Tamam, değiştirelim o paketi. Peki, bu ayki faturada bi de bi gecikme zammı vardı, onu niye eklediniz? Ben hep düzenli öderim aslında, bi karışıklık mı oldu acaba? Şaşırdım ben o zammı görünce.",
+      "emotion": "firm",
+      "dialect_markers": [
+        "mediterranean",
+        "he",
+        "o iyiymiş o zaman",
+        "bi de bi",
+        "şimdi",
+        "şaşırdım ben o zammı görünce"
+      ],
+      "pace": "slow",
+      "background_context": "managing family plan"
+    },
+    {
+      "turn_id": "turn_011",
+      "text": "Hmm, anladım şimdi. Geçen ay iş seyahatindeydim, demek gözümden kaçmış. Çok sağolun bu kolaylık için. Yani şimdi Can'ın paketi değişiyor, gecikme zammı da iptal mi oldu? İki sorunu birden çözdük desene. Rahatladım vallahi.",
+      "emotion": "relieved",
+      "dialect_markers": [
+        "mediterranean",
+        "hmm",
+        "iş seyahatindeydim",
+        "gözümden kaçmış",
+        "çok sağolun",
+        "vallahi",
+        "desene"
+      ],
+      "pace": "slow",
+      "background_context": "managing family plan"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "İyi günler Ayşe Hanım. Hattınızla ilgili size yardımcı olabilmemiz için öncelikle kimlik doğrulaması yapmamız gerekiyor. Adınızı soyadınızı ve TC kimlik numaranızı alabilir miyim lütfen?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Anladım Ayşe Hanım. Oğlunuz Can'ın hattının internet kullanımıyla ilgili bir problem yaşadığınızı ve paket değişikliği düşündüğünüzü görüyorum. Bu konuda size en doğru bilgiyi Plan ve Tarife Uzmanı arkadaşlarımız verecektir. Sizi o departmana aktarıyorum, lütfen hattan ayrılmayın.",
+      "tools_triggered": [
+        "route_to_agent"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_005",
+      "agent_persona": "PlanAgent",
+      "text": "Merhaba Ayşe Hanım, ben Plan ve Tarife Uzmanı. Hattınızla ilgili talebinizi anladım. Sistemden kontrol ediyorum hemen. Evet, şu anki aile paketinizde Can'ın hattının 8 GB internet kotası bulunuyor. Yanlış anlamadıysam bu kullanım alışkanlığına yetmiyor, değil mi?",
+      "tools_triggered": [
+        "get_customer_plan"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_007",
+      "agent_persona": "PlanAgent",
+      "text": "Anladım Ayşe Hanım. Can'ın kullanım alışkanlıklarına ve sizin maliyet beklentinize uygun birkaç seçeneğimiz var. Özellikle gençlere yönelik hazırladığımız, bol internetli paketlerimiz mevcut. Örneğin, 20 GB interneti olan, sosyal medyada sınırsız kullanım sunan bir paketimiz var, aylık ücreti de şu anki paketinizden çok az farklı. Bu pakete geçiş yaparsak, oğlunuzun internet derdi kalmaz ve fatura sürprizi de yaşamazsınız. Ne dersiniz?",
+      "tools_triggered": [
+        "list_all_plans"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_009",
+      "agent_persona": "PlanAgent",
+      "text": "Tabii ki Ayşe Hanım, Can'ın hattının paketini hemen o 20 GB'lık pakete geçiriyorum. Bu değişiklik bir sonraki fatura döneminizde aktif olacaktır. Gecikme zammı konusuna gelince... Bu konuda size Fatura ve Ödeme Uzmanı arkadaşlarımız daha detaylı bilgi verebilir. Sizi o departmana aktarıyorum şimdi, lütfen bekleyin.",
+      "tools_triggered": [
+        "change_customer_plan",
+        "route_to_agent"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_010",
+      "agent_persona": "BillingAgent",
+      "text": "Merhaba Ayşe Hanım, ben Fatura ve Ödeme Uzmanı. Gecikme zammıyla ilgili talebinizi anladım. Hemen son faturanıza bakıyorum. Evet, 150 TL'lik bir gecikme zammı görünüyor. Bu, son ödeme tarihinden sonra yapılan ödemeler için otomatik olarak yansıyan bir tutar. Sanırım ödemeniz birkaç gün gecikmiş görünüyor. İlk defa böyle bir durum yaşadığınız için, bu gecikme zammını faturanızdan düşebiliriz, sizin için bir defaya mahsus bir jest yapalım.",
+      "tools_triggered": [
+        "get_last_bill"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_012",
+      "agent_persona": "BillingAgent",
+      "text": "Rica ederim Ayşe Hanım, ne demek. Evet, Can'ın hattının yeni 20 GB'lık paketi ay sonunda otomatik olarak aktifleşecek. Gecikme zammı da bu faturanızdan düşülecek, endişelenmeyin. Başka bir konuda yardımcı olabileceğim bir şey var mıydı?",
+      "tools_triggered": [],
+      "formality_level": "low"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "PlanAgent",
+      "reason": "Customer needs to change a plan due to high internet usage by a family member.",
+      "context_preserved": true
+    },
+    {
+      "at_turn": 9,
+      "from": "PlanAgent",
+      "to": "BillingAgent",
+      "reason": "Customer brought up a secondary issue regarding a late payment fee on their bill.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "The customer's teenager's data plan was upgraded to a 20GB package to accommodate high internet usage within the family plan. Additionally, a late payment fee on the last bill was waived as a one-time courtesy.",
+    "customer_satisfaction": "The customer's emotional journey successfully moved from worried to questioning, then firm, and finally relieved, indicating high satisfaction with the resolution of both issues.",
+    "follow_up_needed": false
+  },
+  "generated_at": "2025-08-14T09:22:44.602935",
+  "model": "flash",
+  "index": 123
+}

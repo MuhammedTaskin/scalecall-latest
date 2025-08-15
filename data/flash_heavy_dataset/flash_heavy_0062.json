@@ -1,0 +1,143 @@
+{
+  "id": "flash_heavy_0062",
+  "primary_issue": "technical_services_mms",
+  "secondary_issue": null,
+  "customer_profile": "frequent_traveler",
+  "region": "trabzon",
+  "dialect_info": {
+    "dialect": "blacksea",
+    "pace": "fast",
+    "formality": "medium"
+  },
+  "conversation_dynamic": "negotiation",
+  "complexity": "medium",
+  "metadata": {
+    "context": "international roaming issues",
+    "traits": [
+      "experienced",
+      "specific_needs",
+      "impatient"
+    ],
+    "emotional_journey": [
+      "direct",
+      "frustrated",
+      "demanding",
+      "accepting"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Ula! Ben yurtdışındayım, Almanya'dayım şu an. MMS'ler çalışmıyor, ne iş? Resim falan atamıyorum, alamıyorum. Sürekli gezerim ben, bu olmadı şimdi. Acil lazım bana bu.",
+      "emotion": "direct",
+      "dialect_markers": [
+        "blacksea",
+        "ula",
+        "ne iş"
+      ],
+      "pace": "fast",
+      "background_context": "international roaming issues"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Doğru verdim ya, TC kimlik numaramı. Çabuk olun biraz, acil lazım dedim. Uluslararası bir görüşme bu, dakika başı para yazıyor zaten.",
+      "emotion": "direct",
+      "dialect_markers": [
+        "blacksea",
+        "ya"
+      ],
+      "pace": "fast",
+      "background_context": "international roaming issues"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Yine mi aktarım? Kaçıncı oldu bu? Ben zaten acil durumdayım, o kadar yol geldim, işimi halletmeye çalışıyorum. Yetti da bu bekleme işi!",
+      "emotion": "frustrated",
+      "dialect_markers": [
+        "blacksea",
+        "yetti da"
+      ],
+      "pace": "fast",
+      "background_context": "international roaming issues"
+    },
+    {
+      "turn_id": "turn_007",
+      "text": "Ne IMEI'si ya? Her şey tıkırında, yeni telefon. Ben aylık binlerce lira ödüyorum size, sürekli seyahat eden biriyim. Bu sorun anında çözülmeli! Belki bir ayar falan mı yapmanız lazım uzaktan?",
+      "emotion": "demanding",
+      "dialect_markers": [
+        "blacksea",
+        "ne ... ya",
+        "tıkırında"
+      ],
+      "pace": "fast",
+      "background_context": "international roaming issues"
+    },
+    {
+      "turn_id": "turn_009",
+      "text": "Hadi bakalım, bir deneyin şu aktivasyonu. Ama hızlı olsun, benim işim var. Umarım bir daha böyle sorun yaşamam. Teşekkürler.",
+      "emotion": "accepting",
+      "dialect_markers": [
+        "blacksea",
+        "hadi bakalım",
+        "umarım"
+      ],
+      "pace": "fast",
+      "background_context": "international roaming issues"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba efendim, Türk Telekom'a hoş geldiniz. Size nasıl yardımcı olabilirim? Öncelikle güvenlik amaçlı kimlik doğrulaması yapmamız gerekmektedir. TC Kimlik numaranızı veya abone numaranızı alabilir miyim?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Bilgileri teyit ettim efendim. Anladığım kadarıyla yurtdışında MMS gönderimi ve alımında sorun yaşıyorsunuz. Bu durum teknik bir konu olduğu için sizi uzman ekibimize aktarmam gerekecek. Lütfen hatta kalın.",
+      "tools_triggered": [
+        "route_to_agent"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "TechAgent",
+      "text": "Merhaba efendim, ben Teknik Destek ekibinden Esra. Aktarım için kusura bakmayın. Durumu anlıyorum. MMS sorununuzu çözmek için bazı kontroller yapmamız gerekiyor. Cihazınızın IMEI numarasını kontrol edebilir miyiz acaba? Ya da hat takılı olan cihazınızın marka modelini alabilir miyim?",
+      "tools_triggered": [
+        "check_device_imei"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_008",
+      "agent_persona": "TechAgent",
+      "text": "Anlıyorum efendim hassasiyetinizi ve sık seyahat eden bir müşteri olduğunuzu göz önünde bulunduruyoruz. Cihazınızın güncel ve ayarlarının yerinde olduğunu varsayarsak, MMS servisinizin uzaktan yeniden aktivasyonunu denememiz en hızlı çözüm olabilir. Bu işlem genelde 5-10 dakika sürer ve MMS ayarlarınızı günceller. Eğer bu işe yaramazsa, hemen bir arıza kaydı oluşturup öncelikli olarak takip edeceğiz. Ne dersiniz, bu aktivasyonu deneyelim mi?",
+      "tools_triggered": [
+        "reissue_activation_code"
+      ],
+      "formality_level": "medium"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "TechAgent",
+      "reason": "Customer's issue (MMS in roaming) requires technical expertise beyond basic routing.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "The agent offered to reissue the MMS activation code as an immediate solution to fix the roaming MMS issue. A technical ticket was offered as a fallback if the activation failed. Customer accepted the immediate solution attempt.",
+    "customer_satisfaction": "Accepting, indicating a temporary resolution and a hope for permanent fix.",
+    "follow_up_needed": true
+  },
+  "generated_at": "2025-08-14T09:17:35.011724",
+  "model": "flash",
+  "index": 62
+}

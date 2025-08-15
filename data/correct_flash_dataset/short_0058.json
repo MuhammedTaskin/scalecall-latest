@@ -1,0 +1,101 @@
+{
+  "conversation_id": "short_0058_bill_question",
+  "metadata": {
+    "scenario": "bill_question",
+    "handoff_pattern": [
+      "RouterAgent",
+      "BillingAgent"
+    ]
+  },
+  "customer_profile": {
+    "persona": "polite",
+    "phone": "0555 123 45 67"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Merhaba, faturamla ilgili bir sorum olacaktı.",
+      "emotion": "polite"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Evet, numaram 0555 123 45 67.",
+      "emotion": "polite"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Anladım, teşekkür ederim. O zaman faturamı kontrol etmelerini rica edeceğim.",
+      "emotion": "polite"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Hoş geldiniz, kimliğinizi doğrulamak için lütfen telefon numaranızı paylaşır mısınız?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkürler, kimliğiniz doğrulandı. Faturanızla ilgili sorunuz için sizi ilgili birime yönlendiriyorum.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "handoff": {
+        "to": "BillingAgent"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "BillingAgent",
+      "text": "Merhaba, ben Fatma. Faturanızla ilgili yardımcı olabilirim. Son faturanızda bir tutarsızlık mı gördünüz?",
+      "tools_triggered": [
+        "get_last_bill"
+      ],
+      "handoff": null
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "BillingAgent",
+      "reason": "bill_question"
+    }
+  ],
+  "tool_calls": [
+    {
+      "turn_id": "turn_002",
+      "tool": "verify_user",
+      "arguments": {
+        "phone_number": "0555 123 45 67"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_004",
+      "tool": "route_to_agent",
+      "arguments": {
+        "agent_name": "BillingAgent"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "get_last_bill",
+      "arguments": {},
+      "result": {
+        "bill_amount": 150,
+        "due_date": "2023-12-15",
+        "details": "Internet kullanımı"
+      }
+    }
+  ],
+  "generated_at": "2025-08-14T08:01:34.169276",
+  "index": 58
+}

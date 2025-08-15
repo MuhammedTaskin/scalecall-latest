@@ -1,0 +1,121 @@
+{
+  "conversation_id": "short_0044_plan_upgrade",
+  "metadata": {
+    "scenario": "plan_upgrade",
+    "handoff_pattern": [
+      "RouterAgent",
+      "PlanAgent"
+    ]
+  },
+  "customer_profile": {
+    "persona": "normal",
+    "phone": "0555 123 45 67"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Merhaba, ben mevcut internet paketimi yükseltmek istiyorum.",
+      "emotion": "normal"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Evet, bilgilerim doğru.",
+      "emotion": "normal"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Anladım, teşekkür ederim. Yeni paketimle ilgili detayları alabilir miyim?",
+      "emotion": "normal"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba, ben Telekom Çağrı Merkezi'nden Ayşe. Kimliğinizi doğrulamak için lütfen telefon numaranızı veya T.C. kimlik numaranızı paylaşır mısınız?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkürler. Bilgileriniz doğrulandı. Mevcut paketinizle ilgili bir yükseltme talebiniz olduğunu anlıyorum. Bu konuda size yardımcı olması için Planlama Departmanımızdan bir temsilciye bağlanacağım.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "handoff": {
+        "to": "PlanAgent"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "PlanAgent",
+      "text": "Merhaba, ben Planlama Departmanı'ndan Mehmet. Mevcut paketiniz için size uygun birkaç yükseltme seçeneğimiz var. Hangi hızda bir paket düşünüyorsunuz?",
+      "tools_triggered": [
+        "get_customer_plan",
+        "list_all_plans"
+      ],
+      "handoff": null
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "PlanAgent",
+      "reason": "plan_upgrade"
+    }
+  ],
+  "tool_calls": [
+    {
+      "turn_id": "turn_002",
+      "tool": "verify_user",
+      "arguments": {
+        "phone_number": "0555 123 45 67"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_004",
+      "tool": "route_to_agent",
+      "arguments": {
+        "agent_name": "PlanAgent",
+        "reason": "plan_upgrade"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "get_customer_plan",
+      "arguments": {},
+      "result": {
+        "plan_name": "Temel Paket",
+        "speed": "25 Mbps"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "list_all_plans",
+      "arguments": {},
+      "result": [
+        {
+          "plan_name": "Temel Paket",
+          "speed": "25 Mbps"
+        },
+        {
+          "plan_name": "Hızlı Paket",
+          "speed": "50 Mbps"
+        },
+        {
+          "plan_name": "Süper Paket",
+          "speed": "100 Mbps"
+        }
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T08:01:26.067387",
+  "index": 44
+}

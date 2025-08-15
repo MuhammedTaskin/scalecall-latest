@@ -1,0 +1,46 @@
+{
+  "id": "smart_0044",
+  "scenario": "payment_note",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Ya yeter artık! Faturam neden hala ödenmemiş görünüyor? Tam bir rezalet!",
+      "emotion": "frustrated"
+    },
+    {
+      "turn": 3,
+      "text": "Evet, doğru. 123456789."
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Merhaba, yaşadığınız durum için üzgünüz. Lütfen kimliğinizi doğrulamak için TC kimlik numaranızı paylaşır mısınız?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "BillingAgent",
+      "text": "Teşekkürler. Borcunuzu 'gecikmiş ödeme' olarak not aldım ve ilgili birime ilettim. En kısa sürede kontrol edilecektir. Başka bir sorunuz var mıydı?",
+      "tools": [
+        "get_unpaid_amount",
+        "create_payment_note",
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:57:09.539841",
+  "required_tools": [
+    "verify_user",
+    "get_unpaid_amount",
+    "create_payment_note",
+    "end_conversation"
+  ],
+  "agent_flow": [
+    "RouterAgent",
+    "BillingAgent"
+  ]
+}

@@ -1,0 +1,214 @@
+{
+  "id": "flash_heavy_0131",
+  "primary_issue": "account_security_unauthorized_access",
+  "secondary_issue": "plans_types_prepaid",
+  "customer_profile": "small_business_owner",
+  "region": "adana",
+  "dialect_info": {
+    "dialect": "southern",
+    "pace": "fast",
+    "formality": "low"
+  },
+  "conversation_dynamic": "straightforward",
+  "complexity": "complex",
+  "metadata": {
+    "context": "managing employee lines",
+    "traits": [
+      "practical",
+      "cost_focused",
+      "busy"
+    ],
+    "emotional_journey": [
+      "businesslike",
+      "questioning",
+      "negotiating",
+      "satisfied"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo, merhaba gardaşım. Bi hattımda garip işler oluyor da, bi bak hele. Sanki biri girmiş, ne iş?",
+      "emotion": "businesslike",
+      "dialect_markers": [
+        "southern",
+        "gardaşım",
+        "ne iş",
+        "bi bak hele"
+      ],
+      "pace": "fast",
+      "background_context": "managing employee lines"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Hele dur, şu numara... 532 555 12 34. Bu bizim elemanın hattıydı. Bi an önce halledin, vaktim yok benim.",
+      "emotion": "businesslike",
+      "dialect_markers": [
+        "southern",
+        "hele dur"
+      ],
+      "pace": "fast",
+      "background_context": "managing employee lines"
+    },
+    {
+      "turn_id": "turn_006",
+      "text": "Yav, bu numaradan dün gece durduk yere arama gitmiş, üstüne paket bitmiş hemen. Benim haberim yok, eleman da uyuyo. Biri mi girmiş ne? Şaşırdım kaldım.",
+      "emotion": "questioning",
+      "dialect_markers": [
+        "southern",
+        "yav",
+        "ne"
+      ],
+      "pace": "fast",
+      "background_context": "managing employee lines"
+    },
+    {
+      "turn_id": "turn_008",
+      "text": "Heh, iyi ettiniz. Şifre falan yollayın, hattı bi güzel güvenceye alın. O iş halloldu mu şimdi? Paket falan da boşuna gitmiş, o ne olacak?",
+      "emotion": "businesslike",
+      "dialect_markers": [
+        "southern",
+        "heh",
+        "falan",
+        "ne olacak"
+      ],
+      "pace": "fast",
+      "background_context": "managing employee lines"
+    },
+    {
+      "turn_id": "turn_010",
+      "text": "Yok yav, hepsi faturalıydı da, şimdi bu olaydan sonra düşündüm, faturalı paketler bizim işe gelmiyor bazen. Elemanlar az kullanıyor, boşuna para gidiyor. Hazır kartlara geçsek daha mı iyi olur acaba? Var mı öyle paketleriniz, esnafa özel falan?",
+      "emotion": "questioning",
+      "dialect_markers": [
+        "southern",
+        "yav",
+        "falan"
+      ],
+      "pace": "fast",
+      "background_context": "managing employee lines"
+    },
+    {
+      "turn_id": "turn_013",
+      "text": "Üç hat var şimdilik. Öyle çok konuşma internet yok. En ucuz, en cıncık gibi paketi istiyorum. Esnaf adamız, para kolay kazanılmıyor. Bi de bu hatları ben yönetiyom, sıkıntı çıkarmasın sonra.",
+      "emotion": "negotiating",
+      "dialect_markers": [
+        "southern",
+        "cıncık gibi",
+        "bi de"
+      ],
+      "pace": "fast",
+      "background_context": "managing employee lines"
+    },
+    {
+      "turn_id": "turn_015",
+      "text": "Oh, valla iyi olur. Hemen yapın o zaman. Yeter ki başımız ağrımasın, para da boşa gitmesin. Hadi Allah razı olsun, kolay gelsin.",
+      "emotion": "satisfied",
+      "dialect_markers": [
+        "southern",
+        "oh",
+        "valla",
+        "hadi"
+      ],
+      "pace": "fast",
+      "background_context": "managing employee lines"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Hoş geldiniz efendim. Güvenliğiniz için öncelikle numaranızı teyit edebilir miyiz?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Anladım efendim. Hesabınızdaki güvenlik endişesi için sizi ilgili birimdeki uzman arkadaşıma bağlıyorum. Lütfen hattan ayrılmayın.",
+      "tools_triggered": [
+        "route_to_agent"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_005",
+      "agent_persona": "FAQAgent",
+      "text": "Merhaba efendim, aktarıldınız. Hattınızda ne gibi bir sorun yaşadığınızı alabilir miyim?",
+      "tools_triggered": [
+        "get_customer_status"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_007",
+      "agent_persona": "FAQAgent",
+      "text": "Anladım efendim, hemen kontrol ediyorum. Evet, sistemde bu hatta yetkisiz erişim denemeleri görünüyor. Erişimi hemen kısıtladık. Güvenliğiniz için hattınıza yeni bir aktivasyon şifresi tanımlayıp göndermemi ister misiniz?",
+      "tools_triggered": [
+        "create_tech_ticket",
+        "reissue_activation_code"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_009",
+      "agent_persona": "FAQAgent",
+      "text": "Evet efendim, şifrenizi az önce SMS olarak gönderdik. Hattınız şu an güvende. Kullanımınızla ilgili de inceleme başlatıldı. Başka bir konu var mıydı acaba? Diğer çalışanlarınızın hatları da mı faturalıydı?",
+      "tools_triggered": [],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_011",
+      "agent_persona": "RouterAgent",
+      "text": "Anladım efendim. Hatlarınızı hazır karta geçirme ve esnafa özel paketler konusunda size en doğru bilgiyi Plan ve Tarife uzmanımız verebilir. Hemen bağlıyorum sizi, bir saniye lütfen.",
+      "tools_triggered": [
+        "route_to_agent"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_012",
+      "agent_persona": "PlanAgent",
+      "text": "Merhaba efendim, hazır kart paketlerimizle ilgili yardımcı olayım. Kaç hattınız için düşünüyorsunuz bu geçişi? Ve çalışanlarınız genelde ne kadar kullanıyorlar?",
+      "tools_triggered": [
+        "get_customer_plan"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_014",
+      "agent_persona": "PlanAgent",
+      "text": "Çok iyi anladım efendim. Tam size göre esnafımıza özel avantajlı hazır kart paketlerimiz mevcut. Örneğin, 3 GB internet, 750 dakika ve 250 SMS içeren, aylık sadece 69 TL'lik bir paketimiz var. Tüm vergiler dahil. Bu paket hattınıza tanımlandığında, yüklediğiniz kadar harcarsınız, sürpriz fatura çıkmaz. Üç hattınız için de hemen geçişi sağlayabiliriz. Ne dersiniz?",
+      "tools_triggered": [
+        "list_all_plans",
+        "change_customer_plan"
+      ],
+      "formality_level": "low"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "FAQAgent",
+      "reason": "Account security issue requires specialized assistance.",
+      "context_preserved": true
+    },
+    {
+      "at_turn": 11,
+      "from": "RouterAgent",
+      "to": "PlanAgent",
+      "reason": "Customer inquired about changing plan types (prepaid) and suitable packages.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "The primary issue of unauthorized access was resolved by restricting access and reissuing a new activation code. The secondary issue of changing plan types for employee lines was resolved by offering and implementing a suitable prepaid plan for three lines.",
+    "customer_satisfaction": "The customer ended the call satisfied, having both their security concern addressed and finding a cost-effective solution for their employee lines.",
+    "follow_up_needed": false
+  },
+  "generated_at": "2025-08-14T09:23:32.255788",
+  "model": "flash",
+  "index": 131
+}

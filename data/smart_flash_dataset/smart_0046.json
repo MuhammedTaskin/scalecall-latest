@@ -1,0 +1,46 @@
+{
+  "id": "smart_0047",
+  "scenario": "tech_issue_ticket",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "İnternetim çalışmıyor, ne yapmam gerekiyor?! Hemen ilgilenin!",
+      "emotion": "impatient"
+    },
+    {
+      "turn": 3,
+      "text": "Evet, numaram 555 123 4567."
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Anlıyorum, sorununuzu çözmek için öncelikle kimliğinizi doğrulamam gerekiyor. Lütfen telefon numaranızı paylaşır mısınız?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "TechAgent",
+      "text": "Numaranızı doğruladım. eSIM durumunuzda bir sorun görünüyor. Bu durumu çözmek için teknik bir kayıt oluşturacağım. Kaydınız oluşturuldu, size en kısa sürede dönüş yapacağız. İyi günler.",
+      "tools": [
+        "check_esim_status",
+        "create_tech_ticket",
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:57:10.024872",
+  "required_tools": [
+    "verify_user",
+    "check_esim_status",
+    "create_tech_ticket",
+    "end_conversation"
+  ],
+  "agent_flow": [
+    "RouterAgent",
+    "TechAgent"
+  ]
+}

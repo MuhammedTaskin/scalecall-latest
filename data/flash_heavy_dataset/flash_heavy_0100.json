@@ -1,0 +1,169 @@
+{
+  "id": "flash_heavy_0100",
+  "primary_issue": "technical_services_voicemail",
+  "secondary_issue": null,
+  "customer_profile": "tech_executive",
+  "region": "adana",
+  "dialect_info": {
+    "dialect": "southern",
+    "pace": "fast",
+    "formality": "low"
+  },
+  "conversation_dynamic": "straightforward",
+  "complexity": "medium",
+  "metadata": {
+    "context": "managing multiple business lines",
+    "traits": [
+      "demanding",
+      "knowledgeable",
+      "time_sensitive"
+    ],
+    "emotional_journey": [
+      "professional",
+      "impatient",
+      "frustrated",
+      "satisfied"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo, iyi günler. Ben Ömer Demirtaş, Global Teknoloji'den arıyorum. Benim sesli mesaj kutumda bir sıkıntı var, ulaşamıyorum.",
+      "emotion": "professional",
+      "dialect_markers": [
+        "southern",
+        "directness"
+      ],
+      "pace": "fast",
+      "background_context": "managing multiple business lines"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Tabii, hemen. TC kimlik numaram 12345678900. Doğum tarihim 15.06.1980. Çabuk halletmemiz lazım, işlerim aksıyor, sürekli müşterilerden geri dönüş alamıyorum.",
+      "emotion": "impatient",
+      "dialect_markers": [
+        "southern",
+        "fast_pace",
+        "directness"
+      ],
+      "pace": "fast",
+      "background_context": "managing multiple business lines"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Evet, buyurun dinliyorum. Aynı konu gardaş, sesli mesaj kutuma giremiyorum. Ne arayan ulaşabiliyor ne ben dinleyebiliyorum. Dün akşama kadar sorun yoktu, sabah kalktım çalışmıyor. Ne oldu durup dururken?",
+      "emotion": "impatient",
+      "dialect_markers": [
+        "southern",
+        "gardaş",
+        "directness"
+      ],
+      "pace": "fast",
+      "background_context": "managing multiple business lines"
+    },
+    {
+      "turn_id": "turn_007",
+      "text": "Hayır, hiçbir hata mesajı almıyorum, direkt bağlanmıyor. Hattı arıyorum, 'aradığınız kişiye ulaşılamıyor' diyor. Sesli mesaj kutumu arıyorum, 'hizmetinize ulaşılamıyor' diyor. Çok kritik bu benim için. Birden fazla iş hattım var, sürekli not bırakılıyor, yetişemiyorum bu yüzden. Bilgisayar başındayım şu an, internetim falan çalışıyor, ama bu sesli mesaj yüzünden işler durdu. Bir an önce çözmemiz lazım.",
+      "emotion": "frustrated",
+      "dialect_markers": [
+        "southern",
+        "emphasis",
+        "directness"
+      ],
+      "pace": "fast",
+      "background_context": "managing multiple business lines"
+    },
+    {
+      "turn_id": "turn_009",
+      "text": "Yahu bekleyemem! Tekrar başlatmakla çözülecek bir şey değil bu, denedim. Telefonu kapatıp açtım, şebekeyi sıfırladım. Bana şimdi acil çözüm lazım, ticket falan olmaz. Benim işim var, sürekli aramalar geliyor, bırakılan notları anında görmem lazım. Müşterilerim arıyor, ulaşamıyor, sonra beni başka hattan arayıp 'Ömer bey, size ulaşamıyoruz' diyorlar. Bu benim için ciddi bir iş kaybı.",
+      "emotion": "frustrated",
+      "dialect_markers": [
+        "southern",
+        "yahu",
+        "demanding"
+      ],
+      "pace": "fast",
+      "background_context": "managing multiple business lines"
+    },
+    {
+      "turn_id": "turn_011",
+      "text": "Peki, tamam. Mecbur bekleyeceğiz anlaşılan. Ama bak, en geç bir saat içinde geri dönüş bekliyorum. Bu sorun benim tüm iş akışımı etkiliyor. Ticket numarasını da alayım, takip ederim ben onu. Sizin çözmeniz gereken bir şey bu, benim değil.",
+      "emotion": "resigned",
+      "dialect_markers": [
+        "southern",
+        "demanding",
+        "directness"
+      ],
+      "pace": "fast",
+      "background_context": "managing multiple business lines"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Hoş geldiniz Ömer Bey. Yardımcı olabilmem için öncelikle kimlik doğrulaması yapmam gerekiyor. TC kimlik numaranız ve doğum tarihinizle yardımcı olabilir misiniz?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkür ederim Ömer Bey. Kimlik doğrulamanız başarıyla tamamlandı. Sesli mesaj kutusuyla ilgili teknik bir sorun olduğunu anlıyorum. Sizi hemen ilgili teknik destek birimimize aktarıyorum. Konunuzu aktaracağım, yeniden anlatmanıza gerek kalmayacak.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "TechAgent",
+      "text": "Ömer Bey, merhaba. Teknik destek biriminden arıyorum. Sesli mesaj kutunuza erişimde sorun yaşadığınızı anladım. Bu sorun ne zamandan beri devam ediyor ve herhangi bir hata mesajı alıyor musunuz?",
+      "tools_triggered": [],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_008",
+      "agent_persona": "TechAgent",
+      "text": "Anladım Ömer Bey, durumun aciliyetini biliyorum. İlk olarak, cihazınızı bir kez kapatıp açmayı denediniz mi? Ayrıca, biz de sistemden hattınızı ve sesli mesaj hizmetinizi sıfırlayabiliriz. Eğer bu da işe yaramazsa, daha detaylı bir inceleme için teknik bir arıza kaydı oluşturmamız gerekecek.",
+      "tools_triggered": [],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_010",
+      "agent_persona": "TechAgent",
+      "text": "Ömer Bey, sizi çok iyi anlıyorum. Ancak bu tür sistem kaynaklı sorunlar, bazen uzaktan müdahaleyle hemen çözülemeyebiliyor. Şu an sistemde anlık bir hata görünmüyor, bu da daha derinlemesine bir inceleme gerektirdiği anlamına geliyor. Sizin için acil koduyla bir arıza kaydı oluşturacağım ve ekiplerimiz en kısa sürede, en geç 1 saat içinde sizinle iletişime geçip çözümü sağlayacaklar. Müşteri memnuniyetiniz bizim için önemli.",
+      "tools_triggered": [
+        "create_tech_ticket"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_012",
+      "agent_persona": "TechAgent",
+      "text": "Kesinlikle Ömer Bey. Arıza kaydınız oluşturuldu. Takip numaranız: 78912345. Ekiplerimiz en geç bir saat içinde sizinle iletişime geçip sorunu çözecekler. Anlayışınız için teşekkür eder, iyi günler dileriz.",
+      "tools_triggered": [],
+      "formality_level": "low"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "TechAgent",
+      "reason": "Customer's issue (voicemail problem) requires technical support expertise.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "The immediate issue could not be resolved on the call; a high-priority technical ticket was created for the voicemail service, with a commitment for resolution within one hour.",
+    "customer_satisfaction": "The customer is ultimately satisfied because a clear path to resolution (high-priority ticket with a specific timeframe) was established, even though the immediate fix wasn't possible.",
+    "follow_up_needed": true
+  },
+  "generated_at": "2025-08-14T09:20:42.093077",
+  "model": "flash",
+  "index": 100
+}

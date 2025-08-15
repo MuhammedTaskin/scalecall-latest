@@ -1,0 +1,81 @@
+{
+  "id": "edge_0011",
+  "edge_case": "5g_intermittent_drops",
+  "situation": "switching_from_competitor",
+  "urgency": "normal",
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Merhaba, ben yeni abonelik başvurusu yapıyordum ama kafamda birkaç soru işareti var. Eskiden kullandığım operatörde 5G'de sürekli kopmalar yaşıyordum. Sizin bu konuda bir sıkıntınız var mı?",
+      "emotion": "suspicious",
+      "context": "switching_from_competitor"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Anladım, peki bu genelleme mi yoksa belirli bölgelerde mi oluyor? Çünkü ben sürekli hareket halindeyim, hem evde hem iş yerinde iyi çekmesi lazım.",
+      "emotion": "questioning",
+      "context": "router_diagnostics_incomplete"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Yani diyorsunuz ki sizin ağınız daha stabil, değil mi? Eskiden yaşadığım o sürekli '5G'den 4G'ye düşüyor' durumu olmayacak yani?",
+      "emotion": "questioning",
+      "context": "tech_explanation_incomplete"
+    },
+    {
+      "turn_id": "turn_007",
+      "text": "Tamam, bu kulağa hoş geliyor. Bir de şu paketlerden bahseder misiniz? Benim kullanımım biraz yoğun, bolca video izlerim ve online görüşmeler yaparım.",
+      "emotion": "convinced",
+      "context": "network_stability_confirmed"
+    },
+    {
+      "turn_id": "turn_009",
+      "text": "Güzel, o zaman bu avantajlı görünüyor. Sanırım kararımı verdim. Başvuruyu onaylayalım lütfen.",
+      "emotion": "satisfied",
+      "context": "plan_details_satisfactory"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba, başvurunuz için teşekkür ederiz. Eski operatörünüzdeki 5G kopma sorununu anlıyorum. Genellikle bu tür durumlar baz istasyon yoğunluğu veya cihaz uyumluluğu ile ilgili olabilir. Sistemlerimizde genel bir 5G sorunu görünmüyor, ancak sizin bulunduğunuz bölgeler için bir kontrol yapabiliriz. Kullanıcı bilgilerinizle bir ön tarama yapmam gerekiyor, numaranızı öğrenebilir miyim?",
+      "tools_triggered": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Anlıyorum, hassasiyetinizi ve hareketli yaşam tarzınızı göz önünde bulunduruyorum. Genel olarak 5G ağımız, özellikle büyük şehirlerde ve ana arterlerde oldukça stabildir. Ancak, her operatörde olduğu gibi, baz istasyon kapsama alanının zayıf olduğu veya yoğunluğun çok yüksek olduğu belirli noktalarda geçici dalgalanmalar yaşanabilir. Teknik ekibimiz bu tür durumları sürekli olarak izleyip iyileştirme çalışmaları yapıyor. Bu yüzden sizi doğrudan teknik ekibimize yönlendireceğim, onlar daha detaylı bilgi verebilirler.",
+      "tools_triggered": []
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "TechAgent",
+      "text": "Merhaba, ben Teknik Destek ekibinden [TechAgentName]. RouterAgent'tan konuyu devraldım. Eski operatörünüzdeki 5G kopma deneyiminizin tekrar yaşanmaması için elimizden geleni yapıyoruz. Bizim ağımızda 5G hizmeti için özel optimize edilmiş altyapımız var ve kesintisiz bir deneyim sunmayı hedefliyoruz. Mevcut ağ durumumuz ve teknolojik yatırımlarımızla, geçmişte yaşadığınız tipte kronik kopmaların büyük ölçüde önüne geçildiğini söyleyebilirim. Elbette ekstrem durumlar her zaman olabilir ama bu sizin için belirgin bir sorun teşkil etmeyecektir. Şimdi size uygun tarifelerimiz hakkında bilgi vermesi için PlanAgent'a aktarıyorum.",
+      "tools_triggered": []
+    },
+    {
+      "turn_id": "turn_008",
+      "agent_persona": "PlanAgent",
+      "text": "Merhaba, ben Planlama uzmanı [PlanAgentName]. Teknik ekibimizin de belirttiği gibi, kesintisiz bir 5G deneyimi sunmak önceliğimiz. Sizin yoğun kullanımınıza uygun olarak, bol internet paketi ve sınırsız konuşma içeren, ayrıca yüksek hızlı 5G erişimi sağlayan 'Ultra Hız Paketi'mizi öneririm. Bu paketimizde ayrıca ilk ay %20 indirim ve ücretsiz geçiş imkanı da mevcut. Video izleme ve online görüşmeleriniz için yeterli olacaktır.",
+      "tools_triggered": []
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "TechAgent",
+      "reason": "5g_intermittent_drops"
+    },
+    {
+      "at_turn": 6,
+      "from": "TechAgent",
+      "to": "PlanAgent",
+      "reason": "plan_selection"
+    }
+  ],
+  "generated_at": "2025-08-14T08:55:27.983689"
+}

@@ -1,0 +1,118 @@
+{
+  "id": "flash_heavy_0172",
+  "primary_issue": "plans_types_prepaid",
+  "secondary_issue": null,
+  "customer_profile": "rural_customer",
+  "region": "istanbul",
+  "dialect_info": {
+    "dialect": "neutral",
+    "pace": "fast",
+    "formality": "medium"
+  },
+  "conversation_dynamic": "discovery",
+  "complexity": "medium",
+  "metadata": {
+    "context": "limited service options",
+    "traits": [
+      "practical",
+      "coverage_focused",
+      "loyal"
+    ],
+    "emotional_journey": [
+      "patient",
+      "explaining",
+      "hopeful",
+      "understanding"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo, iyi günler. Ben mevcut paketimi bir sormak istiyordum, belki de değiştiririm diye düşündüm. Hani şu bizim buralarda çekim falan malum...",
+      "emotion": "patient",
+      "dialect_markers": [
+        "neutral"
+      ],
+      "pace": "fast",
+      "background_context": "limited service options"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Tabii, tabii. Adım Ali Yılmaz, T.C. kimliğim de 12345678901. Son faturamı da eşim ödemişti, galiba 78.50 lira gibi bir şeydi. Ya şimdi benim köydeyim ben, hani bu mevcut paketimle internet falan doğru düzgün çekmiyor, konuşma da bazen kesiliyor. Hani öyle çok seçenek de yok buralarda, o yüzden en uygunu ne olur diye bakıyordum. Köyden merkeze gidip gelmek de zor oluyor, o yüzden buradan halletsek iyi olur.",
+      "emotion": "explaining",
+      "dialect_markers": [
+        "neutral"
+      ],
+      "pace": "fast",
+      "background_context": "limited service options"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Alo, merhaba. Ben Ali Yılmaz. Az önce arkadaşla konuşmuştuk, köydeyim ben, hani bu internet çekmiyor, konuşma kesiliyor falan. Mevcut paketimle yetmiyor artık. Buralarda zaten öyle her operatör çekmiyor, benim için önemli olan hem uygun olsun hem de çekimi iyi olsun. Var mıdır bana özel bir şeyler? Belki daha sağlam bir paket vardır, hani uzun süre kullanabileceğim, sürekli uğraşmayacağım.",
+      "emotion": "hopeful",
+      "dialect_markers": [
+        "neutral"
+      ],
+      "pace": "fast",
+      "background_context": "limited service options"
+    },
+    {
+      "turn_id": "turn_007",
+      "text": "Hım, anladım... Bereketli Köy Paketi diyorsunuz yani. 15GB fena değilmiş, dakikası da yeter. Peki bu Bereketli Köy Paketi'yle hani hakikaten köyde internet sorunum çözülür mü? Yani çeker mi gerçekten, yoksa yine aynı sorunları yaşar mıyım? Fiyatı da uygun aslında, uzun süre kullanırım o zaman.",
+      "emotion": "understanding",
+      "dialect_markers": [
+        "neutral"
+      ],
+      "pace": "fast",
+      "background_context": "limited service options"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "İyi günler efendim. Talebinizi anladım. Güvenliğiniz için öncelikle kimlik doğrulaması yapmamız gerekiyor. Adınız, soyadınız ve T.C. kimlik numaranızla birlikte, son faturanızdan bir tutar ya da kayıtlı bir yakın bilginizi rica edebilir miyim?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkürler Ali Bey, bilgileriniz doğrulandı. Mevcut paketinizle ilgili yaşadığınız internet ve çekim sorununu anladım. Bu durum, özellikle kırsal bölgelerdeki kullanım alışkanlıklarınız ve şebeke optimizasyonuyla ilgili olabileceğinden, sizi doğrudan Tarife ve Paket Uzmanımıza aktarıyorum. Lütfen hattan ayrılmayın, hemen bağlıyorum.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "PlanAgent",
+      "text": "Merhaba Ali Bey, hoş geldiniz. Durumunuzu anladım. Kırsal bölgede yaşadığınız için çekim kalitesi ve kesintisiz iletişim ihtiyacınızın ne kadar önemli olduğunu biliyoruz. Mevcut paketiniz \"Köyden Kente 5GB\" olarak görünüyor. Sizin için hem bol internet ve dakika içeren, hem de bulunduğunuz bölgedeki kapsama alanımızı en verimli kullanmanızı sağlayacak \"Bereketli Köy Paketi\" ve \"Çiftçi Dostu Ekstra\" paketlerimizi önerebilirim. Bereketli Köy Paketi'nde 15GB internet, 1000 dakika ve sınırsız SMS var, fiyatı 120 TL. Çiftçi Dostu Ekstra'da ise 20GB internet, 2000 dakika ve sınırsız SMS var, fiyatı 150 TL. Özellikle \"Bereketli Köy Paketi\" kırsal bölgelerdeki kullanıcılarımızdan çok olumlu geri dönüşler alıyor. Bölgenizdeki şebeke optimizasyonumuz bu paketlerle daha iyi çalışır.",
+      "tools_triggered": [
+        "get_customer_plan",
+        "list_all_plans"
+      ],
+      "formality_level": "medium"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "PlanAgent",
+      "reason": "Customer's issue (prepaid plan unsuitability, coverage concern) requires specialist knowledge of tariffs and regional network optimization.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "The PlanAgent offered two suitable prepaid plans ('Bereketli Köy Paketi' and 'Çiftçi Dostu Ekstra') specifically designed for rural areas, addressing the customer's coverage and data needs. The customer showed understanding and interest in 'Bereketli Köy Paketi'.",
+    "customer_satisfaction": "hopeful, moving towards understanding and potential satisfaction",
+    "follow_up_needed": true
+  },
+  "generated_at": "2025-08-14T09:26:58.770180",
+  "model": "flash",
+  "index": 172
+}

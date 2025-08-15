@@ -1,0 +1,107 @@
+{
+  "conversation_id": "short_0027_esim_quick_fix",
+  "metadata": {
+    "scenario": "esim_quick_fix",
+    "handoff_pattern": [
+      "RouterAgent",
+      "TechAgent"
+    ]
+  },
+  "customer_profile": {
+    "persona": "angry",
+    "phone": "0555 123 45 67"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Bu ne rezalet ya! İki gündür e-SIM'im çalışmıyor. Sürekli bir hata veriyor. Hemen çözün bunu!",
+      "emotion": "angry"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Evet, doğru. E-SIM aktivasyon kodunu tekrar denedim ama yine aynı uyarıyı alıyorum. Bir çözümünüz yok mu?",
+      "emotion": "angry"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Anladım, teşekkürler. Umarım bu sefer düzelir.",
+      "emotion": "neutral"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba, ben Telekom Çağrı Merkezi'nden RouterAgent. Kimliğinizi doğrulamak için lütfen TC kimlik numaranızın son 4 hanesini paylaşır mısınız?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Bilgileriniz teyit edildi. Anladığım kadarıyla e-SIM aktivasyonunuzda bir sorun yaşıyorsunuz. Bu konuyla daha detaylı ilgilenebilmesi için sizi teknik destek ekibimize yönlendiriyorum. Birkaç dakika beklemeniz rica olunur.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "handoff": {
+        "to": "TechAgent"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "TechAgent",
+      "text": "Merhaba, ben Telekom Teknik Destek'ten TechAgent. E-SIM aktivasyon kodunuzu kontrol ettim ve yeniden oluşturuyorum. Lütfen telefonunuzu yeniden başlatıp yeni kodu girerek tekrar deneyin. Eğer sorun devam ederse, size özel bir ticket oluşturacağım.",
+      "tools_triggered": [
+        "check_esim_status",
+        "reissue_activation_code",
+        "end_conversation"
+      ],
+      "handoff": null
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "TechAgent",
+      "reason": "esim_quick_fix"
+    }
+  ],
+  "tool_calls": [
+    {
+      "turn_id": "turn_002",
+      "tool": "verify_user",
+      "arguments": {},
+      "result": true
+    },
+    {
+      "turn_id": "turn_004",
+      "tool": "route_to_agent",
+      "arguments": {
+        "target_agent": "TechAgent"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "check_esim_status",
+      "arguments": {},
+      "result": {
+        "status": "inactive"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "reissue_activation_code",
+      "arguments": {},
+      "result": {
+        "new_code": "NEW_SIM_CODE_12345"
+      }
+    }
+  ],
+  "generated_at": "2025-08-14T08:01:14.157848",
+  "index": 27
+}

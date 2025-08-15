@@ -1,0 +1,103 @@
+{
+  "conversation_id": "short_0023_esim_quick_fix",
+  "metadata": {
+    "scenario": "esim_quick_fix",
+    "handoff_pattern": [
+      "RouterAgent",
+      "TechAgent"
+    ]
+  },
+  "customer_profile": {
+    "persona": "polite",
+    "phone": "0555 123 45 67"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Merhaba, e-SIM'im çalışmıyor, telefonuma bir türlü kuramadım. Yardımcı olabilir misiniz?",
+      "emotion": "polite"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Evet, telefonumun modelini biliyorum.",
+      "emotion": "polite"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Anladım, teşekkürler. Umarım yeni temsilci yardımcı olabilir.",
+      "emotion": "polite"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba, size yardımcı olmak için buradayım. Lütfen kimliğinizi doğrulamak için telefon numaranızı veya TC kimlik numaranızı paylaşır mısınız?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkürler, kimliğiniz doğrulandı. E-SIM kurulumunda yaşadığınız sorunu anlıyorum. Bu durum için özel olarak ilgilenmesi gereken teknik birimimiz var. Sizi hemen ilgili birimimize aktarıyorum.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "handoff": {
+        "to": "TechAgent"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "TechAgent",
+      "text": "Merhaba, ben TechAgent. E-SIM kurulumuyla ilgili yaşadığınız sorunu çözmek için buradayım. Telefonunuzun IMEI numarasını paylaşabilir misiniz? Bu bilgi ile e-SIM durumunuzu kontrol edebiliriz.",
+      "tools_triggered": [
+        "check_esim_status",
+        "check_device_imei"
+      ],
+      "handoff": null
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "TechAgent",
+      "reason": "esim_quick_fix"
+    }
+  ],
+  "tool_calls": [
+    {
+      "turn_id": "turn_002",
+      "tool": "verify_user",
+      "arguments": {
+        "phone_number": "0555 123 45 67"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_004",
+      "tool": "route_to_agent",
+      "arguments": {
+        "agent_type": "TechAgent"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "check_device_imei",
+      "arguments": {
+        "imei": "123456789012345"
+      },
+      "result": {
+        "esim_status": "inactive",
+        "device_model": "iPhone 14"
+      }
+    }
+  ],
+  "generated_at": "2025-08-14T08:01:12.101362",
+  "index": 23
+}

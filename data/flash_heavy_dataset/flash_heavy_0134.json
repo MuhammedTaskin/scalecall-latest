@@ -1,0 +1,134 @@
+{
+  "id": "flash_heavy_0134",
+  "primary_issue": "technical_services_sms",
+  "secondary_issue": null,
+  "customer_profile": "student_abroad",
+  "region": "antalya",
+  "dialect_info": {
+    "dialect": "mediterranean",
+    "pace": "slow",
+    "formality": "low"
+  },
+  "conversation_dynamic": "multi_issue",
+  "complexity": "medium",
+  "metadata": {
+    "context": "studying overseas",
+    "traits": [
+      "anxious",
+      "budget_conscious",
+      "tech_savvy"
+    ],
+    "emotional_journey": [
+      "worried",
+      "concerned",
+      "relieved",
+      "thankful"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo, kolay gelsin... Ben öğrenciyim de yurt dışından arıyorum. Şey, benim numaramdan SMS gelmiyor da, yani bankadan falan şifre gelmiyor. Üniversiteye girmem lazım, çok önemli.",
+      "emotion": "worried",
+      "dialect_markers": [
+        "mediterranean",
+        "informal_greetings",
+        "filler_words"
+      ],
+      "pace": "slow",
+      "background_context": "studying overseas"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Tabii ki... adım Ayşe Yılmaz, TC kimlik numaram da [TC Kimlik No]. Ya bakın ben çok uğraştım, telefonu açtım kapattım, uçak moduna aldım çıkardım ama yok, olmuyor. Burda öğrenciyim, her şeyim SMS'e bağlı, banka işlemleri, okul şifreleri... Ne yapacağım ben şimdi?",
+      "emotion": "worried",
+      "dialect_markers": [
+        "mediterranean",
+        "colloquialisms",
+        "filler_words"
+      ],
+      "pace": "slow",
+      "background_context": "studying overseas"
+    },
+    {
+      "turn_id": "turn_006",
+      "text": "Emre Bey merhaba... Telefonum iPhone 13 Pro. Şey, fiziksel SIM kullanıyorum ben, eSIM değil. Yani genelde sorun olmuyordu aslında, birkaç gündür böyle. Özellikle banka uygulamalarından gelen o tek kullanımlık şifreler gelmiyor, ders kayıtları falan için lazım oluyor. Çok zor durumda kaldım.",
+      "emotion": "concerned",
+      "dialect_markers": [
+        "mediterranean",
+        "filler_words"
+      ],
+      "pace": "slow",
+      "background_context": "studying overseas"
+    },
+    {
+      "turn_id": "turn_008",
+      "text": "Ay evet! Geldi, geldi! Harika! Bankadan da geldi, üniversiteden de! Oh be, çok sağ olun Emre Bey ya! Gerçekten büyük dertten kurtardınız beni. Çok teşekkür ederim, kolay gelsin size.",
+      "emotion": "thankful",
+      "dialect_markers": [
+        "mediterranean",
+        "colloquialisms",
+        "exclamations"
+      ],
+      "pace": "slow",
+      "background_context": "studying overseas"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Hoş geldiniz efendim. Numaranızdan SMS alamadığınızı anladım. Güvenliğiniz için öncelikle kimlik doğrulaması yapmamız gerekiyor. Adınız, soyadınız ve kimlik numaranızı alabilir miyim?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Ayşe Hanım, bilgileriniz doğrulandı. Anladığım kadarıyla SMS gönderiminde genel bir sorun yaşıyorsunuz, değil mi? Bu durum yurt dışı operasyonlarınızı da etkiliyor. Bu teknik bir konu olduğu için sizi teknik destek birimimize aktarıyorum. Hattınızdayım, lütfen bekleyin.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_005",
+      "agent_persona": "TechAgent",
+      "text": "Merhaba Ayşe Hanım, teknik destekten Emre ben. Az önce SMS sorununuzla ilgili bilgi aldım. Yurt dışı kullanımınızda SMS alamadığınızı anlıyorum. Cihazınızın markası ve modeli nedir acaba? Bir de eSIM mi kullanıyorsunuz, fiziksel SIM mi?",
+      "tools_triggered": [
+        "check_esim_status",
+        "check_device_imei"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_007",
+      "agent_persona": "TechAgent",
+      "text": "Anladım Ayşe Hanım. Kontrollerimi yapıyorum hemen... Hımm, sistemde hattınızla ilgili bir SMS yönlendirme hatası görüyorum. Sanırım yurt dışı dolaşım ayarlarınızda küçük bir aksaklık olmuş. Ben şimdi hattınıza bir SMS aktivasyon kodu yeniden gönderiyorum, bu genellikle bu tür sorunları çözer. Birkaç dakika içinde gelmesi lazım. Lütfen bir kontrol eder misiniz?",
+      "tools_triggered": [
+        "reissue_activation_code"
+      ],
+      "formality_level": "low"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "TechAgent",
+      "reason": "Customer's issue (SMS delivery failure) requires technical troubleshooting beyond the RouterAgent's scope.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "The customer's inability to receive SMS messages, particularly activation codes for banking and university, was resolved by the TechAgent identifying and correcting a backend SMS routing error, then reissuing an SMS activation.",
+    "customer_satisfaction": "The customer ended the call feeling relieved and highly thankful for the quick and effective resolution.",
+    "follow_up_needed": false
+  },
+  "generated_at": "2025-08-14T09:23:48.260567",
+  "model": "flash",
+  "index": 134
+}

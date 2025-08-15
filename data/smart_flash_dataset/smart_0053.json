@@ -1,0 +1,46 @@
+{
+  "id": "smart_0053",
+  "scenario": "discount_apply",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Merhaba, bende bir indirim kodu var ama nasıl kullanacağımı anlayamadım.",
+      "emotion": "confused"
+    },
+    {
+      "turn": 3,
+      "text": "Evet, numaram 555 123 45 67."
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Elbette, yardımcı olayım. Hesabınızı doğrulamak için lütfen telefon numaranızı paylaşır mısınız?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "BillingAgent",
+      "text": "Teşekkürler. Son faturanızı aldım ve indirim kodunuzu uygulamak için hazırım. Lütfen indirim kodunuzu belirtin.",
+      "tools": [
+        "get_last_bill",
+        "apply_campaign_discount",
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:57:11.602546",
+  "required_tools": [
+    "verify_user",
+    "get_last_bill",
+    "apply_campaign_discount",
+    "end_conversation"
+  ],
+  "agent_flow": [
+    "RouterAgent",
+    "BillingAgent"
+  ]
+}

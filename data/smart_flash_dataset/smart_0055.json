@@ -1,0 +1,46 @@
+{
+  "id": "smart_0055",
+  "scenario": "esim_reissue",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Bu eSIM ne zaman çalışacak artık?! Sürekli hata veriyor!",
+      "emotion": "angry"
+    },
+    {
+      "turn": 3,
+      "text": "1234567890"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Merhaba, kimliğinizi doğrulamak için lütfen T.C. kimlik numaranızı paylaşır mısınız?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "TechAgent",
+      "text": "Anlıyorum. Numaranızın eSIM durumunu kontrol ediyorum... Mevcut eSIM'inizde bir sorun görünüyor. Yeni bir aktivasyon kodu oluşturuyorum. Lütfen telefonunuzdan yeni QR kodunu taratın. İşleminiz tamamlandı. Başka bir konuda yardımcı olabilir miyim?",
+      "tools": [
+        "check_esim_status",
+        "reissue_activation_code",
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:57:12.453975",
+  "required_tools": [
+    "verify_user",
+    "check_esim_status",
+    "reissue_activation_code",
+    "end_conversation"
+  ],
+  "agent_flow": [
+    "RouterAgent",
+    "TechAgent"
+  ]
+}

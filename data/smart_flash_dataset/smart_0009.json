@@ -1,0 +1,46 @@
+{
+  "id": "smart_0009",
+  "scenario": "payment_note",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Merhaba! Faturalarım biraz gecikti ama merak etmeyin, ödemeyi yapacağım. Sadece küçük bir hatırlatma rica edeceğim.",
+      "emotion": "cheerful"
+    },
+    {
+      "turn": 3,
+      "text": "Evet, numaram 555 123 4567."
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Elbette, yardımcı olayım. Lütfen kimliğinizi doğrulamak için telefon numaranızı paylaşır mısınız?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "BillingAgent",
+      "text": "Teşekkürler, 555 123 4567 numaralı hat için güncel ödenmemiş tutarı kontrol ediyorum. Görüyorum ki 75 TL borcunuz var. Bu bilgiyi sisteme not aldım. Ödemenizi en kısa sürede yapmanız durumunda herhangi bir sorun yaşanmayacaktır. Başka bir konuda yardımcı olabilir miyim?",
+      "tools": [
+        "get_unpaid_amount",
+        "create_payment_note",
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:56:59.521697",
+  "required_tools": [
+    "verify_user",
+    "get_unpaid_amount",
+    "create_payment_note",
+    "end_conversation"
+  ],
+  "agent_flow": [
+    "RouterAgent",
+    "BillingAgent"
+  ]
+}

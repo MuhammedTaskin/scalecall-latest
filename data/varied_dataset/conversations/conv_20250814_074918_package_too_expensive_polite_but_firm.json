@@ -1,0 +1,358 @@
+{
+  "conversation_id": "conv_20250814_074918_package_too_expensive_polite_but_firm",
+  "metadata": {
+    "scenario": "package_too_expensive",
+    "complexity": "chaos",
+    "persona": "polite_but_firm",
+    "handoff_pattern": [
+      "RouterAgent",
+      "TechAgent",
+      "PlanAgent",
+      "BillingAgent_Implicit_Transfer"
+    ],
+    "interruption_type": "background_noise",
+    "resolution": "transferred_department"
+  },
+  "customer_profile": {
+    "persona": "polite_but_firm",
+    "phone": "0556 902 29 58",
+    "maiden_name": "Orman",
+    "issue": "package_too_expensive",
+    "background": "Öğretmen"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Merhaba, iyi günler dilerim. Ben 0556 902 29 58 numaralı hattın sahibiyim. Mevcut paketimin maliyeti biraz yüksek gelmeye başladı, acaba daha uygun seçenekleriniz var mıdır, bu konuda bilgi alabilir miyim?",
+      "emotion": "neutral",
+      "voice_notes": {
+        "tone": "professional_calm",
+        "speed": "moderate",
+        "emphasis": [
+          "paketimin maliyeti",
+          "yüksek",
+          "uygun seçenekler"
+        ]
+      }
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Tabii ki. Adım Elif Yılmaz, baba adım Mehmet. Annelik soyadım Orman, 'Or' şeklinde. Umarım yeterlidir.",
+      "emotion": "patient",
+      "voice_notes": {
+        "tone": "calm",
+        "speed": "moderate",
+        "emphasis": [
+          "Elif Yılmaz",
+          "Orman"
+        ]
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "text": "Merhaba Mert Bey. Aslında teknik bir sorunum yok. Paketimin interneti, araması gayet güzel çalışıyor. Ben paketimin fiyatıyla ilgili bir konuda aramıştım, yani mevcut paketime ödediğim ücret yüksek gelmeye başladı. Daha uygun fiyatlı seçenekleriniz var mı diye soracaktım.",
+      "emotion": "slightly_exasperated_but_polite",
+      "voice_notes": {
+        "tone": "clear_slightly_firm",
+        "speed": "deliberate",
+        "emphasis": [
+          "teknik bir sorunum yok",
+          "fiyatıyla ilgili",
+          "yüksek gelmeye başladı",
+          "uygun fiyatlı seçenekler"
+        ]
+      }
+    },
+    {
+      "turn_id": "turn_008",
+      "text": "Hayır efendim, ne eSIM geçişi ne de cihaz değişikliği yaptım. Hattım ve cihazım aynı. Ben sadece mevcut paketimin fiyatından memnun değilim, yeni ve daha uygun bir tarife arıyorum. Bu teknik bir konu değil, sanırım yanlış birime aktarıldım.",
+      "emotion": "firm_slightly_impatient",
+      "voice_notes": {
+        "tone": "direct_concise",
+        "speed": "normal",
+        "emphasis": [
+          "Hayır efendim",
+          "sadece mevcut paketimin fiyatından memnun değilim",
+          "yanlış birime aktarıldım"
+        ]
+      }
+    },
+    {
+      "turn_id": "turn_012",
+      "text": "Hmm, anladım. 'Esnek Tarife' kulağa fena gelmiyor, 25 GB benim için yeterli olur. O paketin taahhüt süresi ne kadar? Ve herhangi bir ek aktivasyon veya geçiş ücreti var mı? Bir de şu anki paketimdeki 'Öğretmenlere Özel' avantajlar, bu yeni pakette de devam eder mi, yoksa tamamen farklı bir tarife mi olacak? Şu anki paketime 3 ay daha taahhüdüm var sanırım, o nasıl etkilenecek?",
+      "emotion": "thoughtful_evaluative",
+      "voice_notes": {
+        "tone": "inquisitive",
+        "speed": "moderate",
+        "emphasis": [
+          "taahhüt süresi",
+          "ek aktivasyon",
+          "Öğretmenlere Özel avantajlar",
+          "taahhüdüm var"
+        ]
+      }
+    },
+    {
+      "turn_id": "turn_014",
+      "text": "Anladım, peki o zaman. Bu biraz uzadı ama, tekrar aktarılmam gerekiyorsa rica edeceğim. Umarım bu son aktarım olur ve net bir bilgi alabilirim. Teşekkür ederim Pınar Hanım.",
+      "emotion": "resigned_slightly_frustrated",
+      "voice_notes": {
+        "tone": "resigned_polite",
+        "speed": "slightly_slower",
+        "emphasis": [
+          "tekrar aktarılmam gerekiyorsa",
+          "son aktarım olur"
+        ]
+      }
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba Sayın Müşterimiz, A.B.C. Telekom'a hoş geldiniz. Size yardımcı olabilmemiz için öncelikle kimlik doğrulaması yapmamız gerekmektedir. Adınız, soyadınız ve baba adınızın ilk iki harfini alabilir miyim lütfen? Ya da annelik soyadınızın ilk iki harfi de olabilir.",
+      "tools_triggered": [],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Bilgilerinizi teyit ettim Sayın Yılmaz. Sistemde görünüyor. Mevcut paketinizle ilgili bir sorun yaşadığınızı belirtmiştiniz. Bu genellikle teknik birimimizin kontrolünde olan bir durumdur. Sizi hemen ilgili birime, Teknik Destek Uzmanımıza aktarıyorum. Kısa bir bekleme süresi olabilir, hattımdan ayrılmayın lütfen.",
+      "tools_triggered": [],
+      "handoff": {
+        "to_agent_persona": "TechAgent",
+        "reason": "Müşterinin paket ile ilgili yaşadığı sorun teknik birim tarafından incelenmeli.",
+        "context": "Mevcut paket maliyeti yüksek gelmesi, uygun seçenek arayışı."
+      }
+    },
+    {
+      "turn_id": "turn_005",
+      "agent_persona": "TechAgent",
+      "text": "Merhaba Sayın Yılmaz, ben Teknik Destek Uzmanı Mert. RouterAgent'tan aktarıldınız. Paketinizle ilgili bir sorun yaşıyormuşsunuz. Acaba internet bağlantınızda mı bir yavaşlama var, yoksa SMS veya arama özelliklerinde mi bir problem yaşıyorsunuz?",
+      "tools_triggered": [],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_007",
+      "agent_persona": "TechAgent",
+      "text": "(Hafif bir duraksama) Anladım, yani teknik bir aksaklık yok. Sadece paketinizin fiyatı yüksek geldiğini mi belirtiyorsunuz? Hımm... acaba hattınızda yeni bir eSIM geçişi mi olmuştu, ya da cihazınızda bir değişiklik mi yaptınız? Bazen bu durumlar, paket fiyatlandırmasında farklılık yaratabiliyor. Sistemden bir kontrol edeyim.",
+      "tools_triggered": [],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_009",
+      "agent_persona": "TechAgent",
+      "text": "Haklısınız Sayın Yılmaz, yanlış anlaşılma için özür dilerim. Bu durumda size Tarifeler ve Kampanyalar Departmanı yardımcı olacaktır. Onlar mevcut paketiniz ve size özel yeni indirimli teklifler hakkında detaylı bilgi verebilirler. Sizi hemen oraya aktarıyorum, lütfen hattan ayrılmayın.",
+      "tools_triggered": [],
+      "handoff": {
+        "to_agent_persona": "PlanAgent",
+        "reason": "Müşteri paket değişikliği ve daha uygun fiyatlı tarife arayışı.",
+        "context": "Teknik bir sorun yok, mevcut paket maliyeti yüksek gelmesi."
+      }
+    },
+    {
+      "turn_id": "turn_010",
+      "agent_persona": "PlanAgent",
+      "text": "Merhaba Sayın Yılmaz, ben Tarifeler ve Kampanyalar Uzmanı Pınar. Teknik ekipten aktarıldınız. Paketinizin maliyetinin yüksek geldiği ve daha uygun seçenekler aradığınız bilgisini aldım. Kontrol ediyorum hemen.",
+      "tools_triggered": [],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_011",
+      "agent_persona": "PlanAgent",
+      "text": "Evet, sistemde 'Öğretmenlere Özel Premium' paketinizin olduğunu görüyorum, aylık 199 TL. Size özel olarak şu an güncelde olan ve daha uygun olabilecek bazı kampanyalarımız var. Örneğin, 15 GB internet, 3000 SMS ve 1000 dakika içeren 'Ekonomik Paket' 129 TL; veya 25 GB internet, sınırsız SMS ve dakika içeren ama daha uygun fiyatlı 'Esnek Tarife' 179 TL gibi seçeneklerimiz mevcut. Hangisi size daha uygun olabilir, detaylı inceleyelim mi?",
+      "tools_triggered": [],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_013",
+      "agent_persona": "PlanAgent",
+      "text": "Hemen kontrol ediyorum Sayın Yılmaz. 'Esnek Tarife' 12 ay taahhütlü bir pakettir ve geçişlerde herhangi bir aktivasyon veya geçiş ücreti bulunmamaktadır. Mevcut 'Öğretmenlere Özel' avantajlarınızın yeni tarifede devam edip etmeyeceği konusunu ve taahhüt bozum bedelini sistemden detaylıca sorgulamam gerekiyor. Maalesef bu, doğrudan tarife geçişlerinde benim yetkimde olan bir durum değil, genellikle 'Özel Müşteri Hizmetleri' veya 'Fatura ve Kampanya Destek Birimi' bu tip özel durumları değerlendiriyor. Sizi doğru birime aktarabilirim.",
+      "tools_triggered": [],
+      "handoff": {
+        "to_agent_persona": "BillingAgent",
+        "reason": "Özel kampanya avantajlarının devamlılığı ve taahhüt bozum bedeli sorgulaması.",
+        "context": "Müşteri 'Esnek Tarife'ye geçişi düşünüyor ancak mevcut öğretmen avantajları ve taahhüt durumu hakkında bilgiye ihtiyacı var."
+      }
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "handoff_id": "handoff_001",
+      "from_agent_persona": "RouterAgent",
+      "to_agent_persona": "TechAgent",
+      "reason": "Müşterinin paket ile ilgili yaşadığı sorun teknik birim tarafından incelenmeli.",
+      "timestamp": "simulated_timestamp_1"
+    },
+    {
+      "handoff_id": "handoff_002",
+      "from_agent_persona": "TechAgent",
+      "to_agent_persona": "PlanAgent",
+      "reason": "Müşteri paket değişikliği ve daha uygun fiyatlı tarife arayışı.",
+      "timestamp": "simulated_timestamp_2"
+    },
+    {
+      "handoff_id": "handoff_003",
+      "from_agent_persona": "PlanAgent",
+      "to_agent_persona": "BillingAgent",
+      "reason": "Özel kampanya avantajlarının devamlılığı ve taahhüt bozum bedeli sorgulaması.",
+      "timestamp": "simulated_timestamp_3"
+    }
+  ],
+  "tool_calls": [
+    {
+      "tool_call_id": "tool_call_001",
+      "agent_persona": "RouterAgent",
+      "tool_name": "verify_user",
+      "parameters": {
+        "phone": "05569022958",
+        "name": "Elif Yılmaz",
+        "maiden_name_prefix": "Or"
+      },
+      "result": {
+        "status": "success",
+        "user_id": "USR12345"
+      }
+    },
+    {
+      "tool_call_id": "tool_call_002",
+      "agent_persona": "RouterAgent",
+      "tool_name": "get_customer_status",
+      "parameters": {
+        "user_id": "USR12345"
+      },
+      "result": {
+        "status": "active",
+        "plan_id": "PLAN_PREMIUM_20GB",
+        "last_bill_status": "paid"
+      }
+    },
+    {
+      "tool_call_id": "tool_call_003",
+      "agent_persona": "RouterAgent",
+      "tool_name": "route_to_agent",
+      "parameters": {
+        "user_id": "USR12345",
+        "target_agent_persona": "TechAgent",
+        "reason": "Paket sorunu"
+      },
+      "result": {
+        "status": "success",
+        "routing_id": "RTG456"
+      }
+    },
+    {
+      "tool_call_id": "tool_call_004",
+      "agent_persona": "TechAgent",
+      "tool_name": "check_esim_status",
+      "parameters": {
+        "user_id": "USR12345"
+      },
+      "result": {
+        "status": "success",
+        "esim_active": "false",
+        "last_change_date": null
+      }
+    },
+    {
+      "tool_call_id": "tool_call_005",
+      "agent_persona": "TechAgent",
+      "tool_name": "escalate_to_human",
+      "parameters": {
+        "user_id": "USR12345",
+        "target_agent_persona": "PlanAgent",
+        "reason": "Mevcut paket maliyeti yüksek, yeni tarife arayışı."
+      },
+      "result": {
+        "status": "success",
+        "transfer_id": "TRN789"
+      }
+    },
+    {
+      "tool_call_id": "tool_call_006",
+      "agent_persona": "PlanAgent",
+      "tool_name": "get_customer_plan",
+      "parameters": {
+        "user_id": "USR12345"
+      },
+      "result": {
+        "status": "success",
+        "plan_details": {
+          "name": "Öğretmenlere Özel Premium",
+          "data": "20GB",
+          "sms": "5000",
+          "minutes": "limitsiz",
+          "price": "199 TL",
+          "contract_end_date": "2025-03-15"
+        }
+      }
+    },
+    {
+      "tool_call_id": "tool_call_007",
+      "agent_persona": "PlanAgent",
+      "tool_name": "list_all_plans",
+      "parameters": {},
+      "result": {
+        "status": "success",
+        "available_plans": [
+          {
+            "name": "Ekonomik Paket",
+            "data": "15GB",
+            "price": "129 TL"
+          },
+          {
+            "name": "Esnek Tarife",
+            "data": "25GB",
+            "price": "179 TL"
+          }
+        ]
+      }
+    },
+    {
+      "tool_call_id": "tool_call_008",
+      "agent_persona": "PlanAgent",
+      "tool_name": "check_plan_compatibility",
+      "parameters": {
+        "user_id": "USR12345",
+        "target_plan_id": "PLAN_ESNEK_TARIFE",
+        "check_type": [
+          "contract_impact",
+          "special_benefits_transfer"
+        ]
+      },
+      "result": {
+        "status": "requires_manual_review",
+        "details": "Öğretmen indiriminin yeni pakete aktarılabilirliği ve mevcut taahhüt bozum bedelinin detaylı hesaplanması için Fatura ve Kampanya Destek Birimi'nin onayı gerekmektedir."
+      }
+    },
+    {
+      "tool_call_id": "tool_call_009",
+      "agent_persona": "PlanAgent",
+      "tool_name": "escalate_to_human",
+      "parameters": {
+        "user_id": "USR12345",
+        "target_agent_persona": "BillingAgent",
+        "reason": "Özel kampanya avantajlarının devamlılığı ve taahhüt bozum bedeli sorgulaması."
+      },
+      "result": {
+        "status": "success",
+        "transfer_id": "TRN790"
+      }
+    }
+  ],
+  "generation_id": "48be1217-2fb7-4cb4-9b6f-b65efaf17b1c",
+  "generated_at": "2025-08-14T07:50:11.673600",
+  "index": 17,
+  "variation_params": {
+    "persona": "polite_but_firm",
+    "issue": "package_too_expensive",
+    "handoff_pattern": [
+      "RouterAgent",
+      "TechAgent",
+      "PlanAgent"
+    ],
+    "complexity": "chaos",
+    "interruption": "background_noise",
+    "resolution": "transferred_department"
+  }
+}

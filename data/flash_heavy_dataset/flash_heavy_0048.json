@@ -1,0 +1,117 @@
+{
+  "id": "flash_heavy_0048",
+  "primary_issue": "plans_migrations_consumer_to_business",
+  "secondary_issue": null,
+  "customer_profile": "tech_executive",
+  "region": "adana",
+  "dialect_info": {
+    "dialect": "southern",
+    "pace": "fast",
+    "formality": "low"
+  },
+  "conversation_dynamic": "escalating",
+  "complexity": "medium",
+  "metadata": {
+    "context": "managing multiple business lines",
+    "traits": [
+      "demanding",
+      "knowledgeable",
+      "time_sensitive"
+    ],
+    "emotional_journey": [
+      "professional",
+      "impatient",
+      "frustrated",
+      "satisfied"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo, selamın aleyküm gardaşım. Ben Volkan Demir. Şirketlerimin hatlarını düzenlemem lazım. Elimizdeki bireysel hatları kurumsala geçireceğiz, hem de hemen. Çok vaktim yok, halletmem gereken başka stratejik işlerim var. Bu migrasyon sürecini ne kadar hızlandırabiliriz, hele bi ona bakalım.",
+      "emotion": "professional",
+      "dialect_markers": [
+        "southern",
+        "gardaşım",
+        "hele bi"
+      ],
+      "pace": "fast",
+      "background_context": "managing multiple business lines"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Hele bi çabuk olalım canım. T.C. kimlik numaram 12345678900. Bekleyemem ben. Dediğim gibi, beş farklı şirketim için yirmiye yakın bireysel hattı kurumsal tarifelere taşımamız gerekiyor. Her bir şirketimin farklı ihtiyaçları var, anladın mı? Hızlı bir çözüm lazım bana, veri paketlerinden sabit hat entegrasyonuna kadar her şeyi kapsayacak.",
+      "emotion": "impatient",
+      "dialect_markers": [
+        "southern",
+        "hele bi çabuk olalım",
+        "canım",
+        "hadi gardaşım",
+        "bekleyemem"
+      ],
+      "pace": "fast",
+      "background_context": "managing multiple business lines"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Yine mi baştan ya? Bakın, ben Volkan Demir. Kimlik numaramı verdim, derdimi anlattım. Benim zamanım yok, stratejik işlerim var diyorum. Beş farklı şirketime ait yirmi tane bireysel hattı kurumsal çözümlere taşıyacağız. Bu işin KPI'ları var, bana 'aktarıyorum' falan demeyin. Net bir çözüm, net bir plan istiyorum. Bende mi anlatamadım gardaşım? Oyalama beni, direk çözüme geçelim.",
+      "emotion": "frustrated",
+      "dialect_markers": [
+        "southern",
+        "yine mi baştan ya",
+        "gardaşım",
+        "oyalama beni"
+      ],
+      "pace": "fast",
+      "background_context": "managing multiple business lines"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba Volkan Bey, talebinizi anladım. Öncelikle güvenliğiniz için kimlik doğrulaması yapmamız gerekiyor. T.C. kimlik numaranızı veya abone numaranızı rica edebilir miyim?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkürler Volkan Bey, kimlik doğrulamanız yapıldı. Anlıyorum, talebiniz kurumsal hatlara geçişle ilgili ve birden fazla şirket hattını kapsıyor. Bu konuda size daha detaylı yardımcı olabilmek adına, görüşmenizi 'Kurumsal Çözümler' birimimizdeki uzman bir arkadaşımıza aktarıyorum. Kendisi size en uygun paketleri ve geçiş sürecini detaylandıracaktır. Lütfen hattan ayrılmayın.",
+      "tools_triggered": [
+        "route_to_agent"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "PlanAgent",
+      "text": "Volkan Bey, merhaba. Aktarım için kusura bakmayın. Konuyu anladım. Mevcut hatlarınızın durumunu ve şirketlerinizin ihtiyaçlarını hızla belirleyip size özel bir kurumsal geçiş planı sunacağım. Öncelikle ana hattınızın şu anki paketini kontrol ediyorum. (Sistemde kısa bir bekleme) Görüyorum. Şimdi, elimizdeki kurumsal tarifeleri ve toplu geçiş avantajlarını listeliyorum. (Kısa bekleme) Evet, Volkan Bey, size özel üç farklı kurumsal çözüm paketi öneriyorum. Bu paketler, farklı şirketlerinizin veri ve iletişim yoğunluğuna göre ölçeklenebilir durumda. Hızlıca onayınızla tüm bu hatları tek bir fatura altında toplayıp, ilgili paketlere geçişinizi hemen başlatabiliriz. Nasıl ilerleyelim?",
+      "tools_triggered": [
+        "get_customer_plan",
+        "list_all_plans",
+        "change_customer_plan"
+      ],
+      "formality_level": "low"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "PlanAgent",
+      "reason": "Customer's complex request (multiple business lines, consumer-to-business migration) requires specialized expertise.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "The PlanAgent quickly assessed the customer's multi-company, multi-line migration need and proposed specific, scalable business solution packages for immediate transition, addressing the time-sensitive nature.",
+    "customer_satisfaction": "satisfied",
+    "follow_up_needed": false
+  },
+  "generated_at": "2025-08-14T09:16:13.252858",
+  "model": "flash",
+  "index": 48
+}

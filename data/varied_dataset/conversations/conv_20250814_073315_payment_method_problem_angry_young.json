@@ -1,0 +1,404 @@
+{
+  "conversation_id": "conv_20250814_073315_payment_method_problem_angry_young",
+  "metadata": {
+    "scenario": "payment_method_problem",
+    "complexity": "complex",
+    "persona": "angry_young",
+    "handoff_pattern": [
+      "RouterAgent",
+      "BillingAgent",
+      "TechAgent",
+      "PlanAgent"
+    ],
+    "interruption_type": "none",
+    "resolution": "transferred_department"
+  },
+  "customer_profile": {
+    "persona": "angry_young",
+    "phone": "0558 457 51 50",
+    "maiden_name": "Orman",
+    "issue": "payment_method_problem",
+    "background": "Memur"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo! Ya bu ne saçmalık? Fatura ödemeye çalışıyorum, kartımı kabul etmiyor sisteminiz. Ne biçim iş bu?",
+      "emotion": "anger",
+      "voice_notes": {
+        "tone": "sharp",
+        "speed": "fast",
+        "emphasis": [
+          "saçmalık",
+          "kabul etmiyor",
+          "ne biçim iş"
+        ]
+      }
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Tabii ki! Adım Can Yılmaz. Annemin kızlık soyadı Orman. Numaram da zaten bu aradığım numara, 0558 457 51 50. Şimdi söyleyin bakalım, bu kart neden geçmiyor?",
+      "emotion": "frustration",
+      "voice_notes": {
+        "tone": "impatient",
+        "speed": "normal",
+        "emphasis": [
+          "Can Yılmaz",
+          "Orman",
+          "0558 457 51 50",
+          "neden geçmiyor"
+        ]
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "text": "Ya işte onu anlatıyorum! Mobil uygulamadan ödeme yapmaya çalışıyorum, kart bilgilerini giriyorum, 'Ödeme yöntemi geçerli değil' diye bir hata veriyor sürekli. Başka bankanın kartını denedim, o da aynı. Hem de her ay kullandığım kartlar bunlar! Ne alaka?",
+      "emotion": "annoyance",
+      "voice_notes": {
+        "tone": "exasperated",
+        "speed": "normal",
+        "emphasis": [
+          "ödeme yöntemi geçerli değil",
+          "her ay kullandığım kartlar",
+          "ne alaka"
+        ]
+      }
+    },
+    {
+      "turn_id": "turn_010",
+      "text": "Hata kodu mu? Ne bileyim ben hata kodu! Ekranda kocaman 'Ödeme yöntemi geçersiz, lütfen başka bir yöntem deneyin' yazıyor. Bir de altında küçük harflerle 'Teknik bir aksaklık oluştu, daha sonra tekrar deneyin' falan yazıyor. Ne teknik aksaklığı ya, kaç saattir deniyorum!",
+      "emotion": "irritation",
+      "voice_notes": {
+        "tone": "sarcastic",
+        "speed": "fast",
+        "emphasis": [
+          "hata kodu mu",
+          "ödeme yöntemi geçersiz",
+          "teknik bir aksaklık",
+          "kaç saattir deniyorum"
+        ]
+      }
+    },
+    {
+      "turn_id": "turn_013",
+      "text": "Dalga mı geçiyorsunuz benle ya? Bir oraya aktarıyorsunuz, bir buraya. Şimdi de plan mı oldu sorun? Ben sadece faturamı ödemek istiyorum! Ne planı ne uyumluluğu? Bende standart bir tarife var zaten, ne değişti ki? Bir saattir buradayım, kimse net bir şey söylemiyor!",
+      "emotion": "outrage",
+      "voice_notes": {
+        "tone": "loud",
+        "speed": "fast",
+        "emphasis": [
+          "dalga mı geçiyorsunuz",
+          "plan mı oldu sorun",
+          "standart bir tarife",
+          "kimse net bir şey söylemiyor"
+        ]
+      }
+    },
+    {
+      "turn_id": "turn_016",
+      "text": "İyi madem, son kez bekleyeyim. Ama eğer bu sefer de çözülmezse, sizinle de, hattınızla da ilişiğimi kesiyorum haberiniz olsun!",
+      "emotion": "resignation",
+      "voice_notes": {
+        "tone": "threatening",
+        "speed": "normal",
+        "emphasis": [
+          "son kez",
+          "ilişiğimi kesiyorum"
+        ]
+      }
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba Can Bey, Türk Telekom çağrı merkezine hoş geldiniz. Fatura ödeme işleminizde bir sorun yaşadığınızı anlıyorum. Güvenliğiniz için öncelikle kimlik doğrulamanızı yapabilir miyiz? Adınızı, soyadınızı ve annenizin kızlık soyadını alabilir miyim lütfen?",
+      "tools_triggered": [],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkürler Can Bey, kimlik doğrulamanız başarıyla tamamlanmıştır. Durumunuzu kontrol ediyorum. Ödeme yönteminizle ilgili yaşadığınız problem için sizi fatura ve ödeme işlemlerinden sorumlu arkadaşımıza aktarıyorum. Kendisi size daha detaylı yardımcı olacaktır. Kısa bir bekleme yaşayabilirsiniz, hattınızdan ayrılmayın lütfen.",
+      "tools_triggered": [
+        {
+          "tool_name": "verify_user",
+          "parameters": {
+            "customer_name": "Can Yılmaz",
+            "maiden_name": "Orman",
+            "phone_number": "05584575150"
+          }
+        },
+        {
+          "tool_name": "get_customer_status",
+          "parameters": {
+            "phone_number": "05584575150"
+          }
+        },
+        {
+          "tool_name": "route_to_agent",
+          "parameters": {
+            "agent_type": "BillingAgent"
+          }
+        }
+      ],
+      "handoff": {
+        "from": "RouterAgent",
+        "to": "BillingAgent"
+      }
+    },
+    {
+      "turn_id": "turn_005",
+      "agent_persona": "BillingAgent",
+      "text": "Merhaba Can Bey, ben Fatura ve Ödeme Ekibi'nden Ayşe. Az önce RouterAgent'tan aktarıldınız. Ödeme yönteminizle ilgili bir sorun yaşadığınızı anlıyorum. Tam olarak ne tür bir hata mesajı alıyorsunuz veya sorun nasıl kendini gösteriyor, detaylandırabilir misiniz?",
+      "tools_triggered": [],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_007",
+      "agent_persona": "BillingAgent",
+      "text": "Anladım Can Bey, 'Ödeme yöntemi geçerli değil' uyarısı aldığınızı belirtiyorsunuz. Sistemdeki son ödeme bilgilerinizi ve fatura durumunuzu kontrol ediyorum. Şu anda aktif bir gecikmiş borcunuz görünmüyor. Kartınızın bilgilerini sistemimizde kayıtlı bir hata veya bloke durumu olup olmadığını kontrol edeceğim. Bir saniye lütfen.",
+      "tools_triggered": [
+        {
+          "tool_name": "get_unpaid_amount",
+          "parameters": {
+            "customer_id": "Can Yılmaz_05584575150"
+          }
+        }
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_008",
+      "agent_persona": "BillingAgent",
+      "text": "Can Bey, yaptığım kontrollerde sizin adınıza bir borç veya kartınızla ilgili sistemimizde kayıtlı bir hata göremiyorum. Bu durum, ödeme sistemimizde anlık bir teknik aksaklıktan veya belki de kullandığınız tarifeyle ilgili bir uyumsuzluktan kaynaklanıyor olabilir. Bu tür sistem kaynaklı hataları ve olası tarife uyumluluklarını kontrol edebilmemiz için sizi teknik birimimize aktarmam gerekecek. İzninizle hattınızı Teknik Destek Ekibi'ne bağlıyorum.",
+      "tools_triggered": [
+        {
+          "tool_name": "create_payment_note",
+          "parameters": {
+            "customer_id": "Can Yılmaz_05584575150",
+            "note": "Müşteri ödeme yöntemi hatası alıyor. 'Ödeme yöntemi geçerli değil' uyarısı. Gecikmiş borç veya kart blokesi bulunamadı. Teknik veya tarife uyumluluğu kaynaklı olabilir."
+          }
+        },
+        {
+          "tool_name": "route_to_agent",
+          "parameters": {
+            "agent_type": "TechAgent"
+          }
+        }
+      ],
+      "handoff": {
+        "from": "BillingAgent",
+        "to": "TechAgent"
+      }
+    },
+    {
+      "turn_id": "turn_009",
+      "agent_persona": "TechAgent",
+      "text": "Merhaba Can Bey, Türk Telekom Teknik Destek Ekibi'nden Onur ben. BillingAgent'tan aktarıldınız. Ödeme işleminizde teknik bir hata aldığınızı anlıyorum. Bu 'Ödeme yöntemi geçerli değil' uyarısı genelde farklı nedenlerden kaynaklanabilir. Hata kodu veya ekranda gördüğünüz başka bir detay var mıydı?",
+      "tools_triggered": [],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_011",
+      "agent_persona": "TechAgent",
+      "text": "Anladım Can Bey, hata kodunun spesifik olmadığını ancak 'Teknik bir aksaklık' ibaresini içerdiğini not aldım. Cihazınızda veya hattınızla ilgili bir sorun olup olmadığını kontrol etmem gerekiyor. Ancak belirtiğiniz gibi 'ödeme yöntemi geçerli değil' ibaresi daha çok ödeme sisteminin veya hatta tarifenizin ödeme kuralıyla ilgili bir durumu işaret ediyor. Bu durum, tarifenizle veya mevcut planınızla ödeme yönteminin uyumsuzluğundan kaynaklanıyor olabilir. Bu durumu netleştirmek için sizi tarife ve paketler uzmanı arkadaşımıza aktarmam daha doğru olacaktır. Müsait bir arkadaşımıza bağlıyorum, lütfen bekleyin.",
+      "tools_triggered": [
+        {
+          "tool_name": "create_tech_ticket",
+          "parameters": {
+            "customer_id": "Can Yılmaz_05584575150",
+            "issue_type": "Payment Method Rejection",
+            "description": "Müşteri 'Ödeme yöntemi geçerli değil' hatası alıyor. Teknik aksaklık ibaresi var ancak cihaz/hat kaynaklı görünmüyor. Tarife/plan uyumsuzluğu şüphesiyle PlanAgent'a aktarılıyor."
+          }
+        },
+        {
+          "tool_name": "route_to_agent",
+          "parameters": {
+            "agent_type": "PlanAgent"
+          }
+        }
+      ],
+      "handoff": {
+        "from": "TechAgent",
+        "to": "PlanAgent"
+      }
+    },
+    {
+      "turn_id": "turn_012",
+      "agent_persona": "PlanAgent",
+      "text": "Merhaba Can Bey, Tarife ve Plan Destek Ekibi'nden Elif ben. Teknik ekipten aktarıldınız. Ödeme yönteminizin kabul edilmemesi sorunuyla ilgili size yardımcı olacağım. Mevcut tarifenizin veya varsa yeni geçiş yaptığınız bir planın, kullanmak istediğiniz ödeme yöntemiyle bir uyumsuzluğu olup olmadığını kontrol edeceğim. Yakın zamanda tarife değişikliği yaptınız mı veya farklı bir pakete geçiş denemeniz oldu mu?",
+      "tools_triggered": [],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_014",
+      "agent_persona": "PlanAgent",
+      "text": "Anlıyorum Can Bey, haklı serzenişiniz için üzgünüm. Mevcut tarifenizi ve ödeme yönteminizin uyumluluğunu kontrol ediyorum. Sistemde 'Standart İnternetli Paket' tarifesinde olduğunuz görünüyor. Bu tarifenin genel olarak tüm banka kartlarını desteklemesi gerekiyor. Ancak derinlemesine yaptığım kontrolde, mobil ödeme altyapımızla ilgili kısa süreli bir güncelleme olduğunu ve bu durumun bazı eski paketlerde ödeme yöntemi algılamasında geçici bir anormalliğe yol açtığını görüyorum. Bu teknik bir detay olduğu için, sizi bu konuda daha yetkili ve detaylı bilgi sağlayabilecek bir üst birime aktarmamız gerekiyor.",
+      "tools_triggered": [
+        {
+          "tool_name": "get_customer_plan",
+          "parameters": {
+            "customer_id": "Can Yılmaz_05584575150"
+          }
+        },
+        {
+          "tool_name": "check_plan_compatibility",
+          "parameters": {
+            "customer_id": "Can Yılmaz_05584575150",
+            "payment_method_type": "Credit/Debit Card",
+            "plan_details": "Standart İnternetli Paket"
+          }
+        }
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_015",
+      "agent_persona": "PlanAgent",
+      "text": "Anlıyorum Can Bey, yaşadığınız durum için tekrar özür dileriz. Bu özel durum, tarife ve ödeme sistemi arasındaki güncel bir yazılımsal uyuşmazlıktan kaynaklanıyor. Bu konuyu doğrudan üst düzey teknik birimimize, uzman bir temsilcimize aktararak çözebiliriz. Onlar bu tür karmaşık sistem etkileşimlerini doğrudan yönetebiliyorlar. Sizi hemen oraya bağlıyorum, hatta öncelikli olarak aktarılacaksınız. Lütfen hatta kalın, teşekkürler.",
+      "tools_triggered": [
+        {
+          "tool_name": "escalate_to_human",
+          "parameters": {
+            "reason": "Complex payment method incompatibility due to recent system update impacting specific legacy plan interactions.",
+            "priority": "high"
+          }
+        }
+      ],
+      "handoff": {
+        "from": "PlanAgent",
+        "to": "Human Supervisor/Specialized Team"
+      }
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "timestamp": "TBD",
+      "from_agent_persona": "RouterAgent",
+      "to_agent_persona": "BillingAgent",
+      "reason": "Initial routing for payment-related issue."
+    },
+    {
+      "timestamp": "TBD",
+      "from_agent_persona": "BillingAgent",
+      "to_agent_persona": "TechAgent",
+      "reason": "Payment issue appears to be a technical system error rather than a billing error."
+    },
+    {
+      "timestamp": "TBD",
+      "from_agent_persona": "TechAgent",
+      "to_agent_persona": "PlanAgent",
+      "reason": "Technical issue points to a payment method compatibility with the customer's plan."
+    },
+    {
+      "timestamp": "TBD",
+      "from_agent_persona": "PlanAgent",
+      "to_agent_persona": "Human Supervisor/Specialized Team",
+      "reason": "Complex system/plan incompatibility requiring specialized human intervention for resolution."
+    }
+  ],
+  "tool_calls": [
+    {
+      "turn_id": "turn_004",
+      "tool_name": "verify_user",
+      "parameters": {
+        "customer_name": "Can Yılmaz",
+        "maiden_name": "Orman",
+        "phone_number": "05584575150"
+      }
+    },
+    {
+      "turn_id": "turn_004",
+      "tool_name": "get_customer_status",
+      "parameters": {
+        "phone_number": "05584575150"
+      }
+    },
+    {
+      "turn_id": "turn_004",
+      "tool_name": "route_to_agent",
+      "parameters": {
+        "agent_type": "BillingAgent"
+      }
+    },
+    {
+      "turn_id": "turn_007",
+      "tool_name": "get_unpaid_amount",
+      "parameters": {
+        "customer_id": "Can Yılmaz_05584575150"
+      }
+    },
+    {
+      "turn_id": "turn_008",
+      "tool_name": "create_payment_note",
+      "parameters": {
+        "customer_id": "Can Yılmaz_05584575150",
+        "note": "Müşteri ödeme yöntemi hatası alıyor. 'Ödeme yöntemi geçerli değil' uyarısı. Gecikmiş borç veya kart blokesi bulunamadı. Teknik veya tarife uyumluluğu kaynaklı olabilir."
+      }
+    },
+    {
+      "turn_id": "turn_008",
+      "tool_name": "route_to_agent",
+      "parameters": {
+        "agent_type": "TechAgent"
+      }
+    },
+    {
+      "turn_id": "turn_011",
+      "tool_name": "create_tech_ticket",
+      "parameters": {
+        "customer_id": "Can Yılmaz_05584575150",
+        "issue_type": "Payment Method Rejection",
+        "description": "Müşteri 'Ödeme yöntemi geçerli değil' hatası alıyor. Teknik aksaklık ibaresi var ancak cihaz/hat kaynaklı görünmüyor. Tarife/plan uyumsuzluğu şüphesiyle PlanAgent'a aktarılıyor."
+      }
+    },
+    {
+      "turn_id": "turn_011",
+      "tool_name": "route_to_agent",
+      "parameters": {
+        "agent_type": "PlanAgent"
+      }
+    },
+    {
+      "turn_id": "turn_014",
+      "tool_name": "get_customer_plan",
+      "parameters": {
+        "customer_id": "Can Yılmaz_05584575150"
+      }
+    },
+    {
+      "turn_id": "turn_014",
+      "tool_name": "check_plan_compatibility",
+      "parameters": {
+        "customer_id": "Can Yılmaz_05584575150",
+        "payment_method_type": "Credit/Debit Card",
+        "plan_details": "Standart İnternetli Paket"
+      }
+    },
+    {
+      "turn_id": "turn_015",
+      "tool_name": "escalate_to_human",
+      "parameters": {
+        "reason": "Complex payment method incompatibility due to recent system update impacting specific legacy plan interactions.",
+        "priority": "high"
+      }
+    }
+  ],
+  "generation_id": "4a8b8ef5-e0ce-4cf7-851d-c25b583ebb54",
+  "generated_at": "2025-08-14T07:33:48.152434",
+  "index": 3,
+  "variation_params": {
+    "persona": "angry_young",
+    "issue": "payment_method_problem",
+    "handoff_pattern": [
+      "RouterAgent",
+      "BillingAgent",
+      "TechAgent",
+      "PlanAgent"
+    ],
+    "complexity": "complex",
+    "interruption": "none",
+    "resolution": "transferred_department"
+  }
+}

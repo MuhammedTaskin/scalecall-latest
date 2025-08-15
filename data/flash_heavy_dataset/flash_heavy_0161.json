@@ -1,0 +1,86 @@
+{
+  "id": "flash_heavy_0161",
+  "primary_issue": "billing_charges_unexpected",
+  "secondary_issue": null,
+  "customer_profile": "parent_teenager",
+  "region": "erzurum",
+  "dialect_info": {
+    "dialect": "eastern",
+    "pace": "slow",
+    "formality": "high"
+  },
+  "conversation_dynamic": "circular",
+  "complexity": "medium",
+  "metadata": {
+    "context": "managing family plan",
+    "traits": [
+      "concerned",
+      "protective",
+      "cost_aware"
+    ],
+    "emotional_journey": [
+      "worried",
+      "questioning",
+      "firm",
+      "relieved"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_006",
+      "text": "İyi günler X Hanım/Bey. Evet, aynen öyle. Benim oğlanın numarası, 05xx 123 45 67. Şimdi bakın, bu çocuk 15 yaşında, akıllı uslu bir çocuktur. Ben ona 'Sakın paketini aşma, interneti boşa harcama' diye çok sıkı tembih ederim. Paketinde 10 GB internet, 1000 dakika konuşma var. Normalde bunun yarısını bile kullanmaz. Faturada 200 küsur lira yazıyor, bu nasıl olur? Mümkün değil yani. Ya bir yanlışlık var sistemde, ya da bize bildirilmeden bir şey açılmış. Ben bu parayı ödeyemem ki, aile bütçemiz belli. Rica ederim, hele bir bakın, neyin nesidir bu?",
+      "emotion": "firm",
+      "dialect_markers": [
+        "eastern",
+        "oğlanın numarası",
+        "akıllı uslu bir çocuktur",
+        "sıkı tembih ederim",
+        "paketi",
+        "konuşma",
+        "yarısını bile kullanmaz",
+        "küsur lira",
+        "nasıl olur",
+        "mümkün değil yani",
+        "yanlışlık var sistemde",
+        "bildirilmeden bir şey açılmış",
+        "ödeyemem ki",
+        "aile bütçemiz belli",
+        "rica ederim",
+        "hele bir bakın",
+        "neyin nesidir bu"
+      ],
+      "pace": "slow",
+      "background_context": "managing family plan"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_007": {
+        "agent_persona": "BillingAgent",
+        "text": "Ahmet Bey, 05xx 123 45 67 numaralı hattın son fatura detaylarını inceliyorum hemen. Haklısınız, belirttiğiniz kullanım alışkanlıklarına göre bu miktar oldukça yüksek görünüyor. Bir saniye lütfen... Evet, sanırım durumu tespit ettim. Geçen ay, hattınızda tanımlı olan bir 'Gençlik Kampanyası' süresi dolmuş ve paketiniz otomatik olarak standart tarifeye geçmiş. Bu durum size SMS ile bildirilmiş ancak gözden kaçmış olabilir. Bu geçiş nedeniyle kullanılan internet aşımları ve konuşma dakikaları paket dışı ücretlendirilmiştir. Ancak endişelenmeyin, bu durumun sizin için beklenmedik olduğunu anlıyorum. Bu geçişten kaynaklı ek ücretlendirmelerin bir kısmını telafi edebiliriz. Ayrıca, dilerseniz hattınızı tekrar uygun bir aile paketine veya mevcut kullanım alışkanlıklarınıza uygun, daha avantajlı bir kampanyaya taşıyabiliriz. Ne dersiniz?",
+        "tools_triggered": [
+          "get_last_bill",
+          "get_customer_plan"
+        ],
+        "formality_level": "high"
+      }
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "BillingAgent",
+      "reason": "Customer's primary issue is an unexpected high bill which requires detailed billing information and investigation.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "The high bill was due to an expired 'Youth Campaign' causing the line to revert to a standard, more expensive tariff, leading to out-of-bundle charges. The agent identified this by checking the last bill and customer plan history. A partial compensation/credit was offered for the unexpected charges, and a new suitable family plan or campaign was suggested to prevent future occurrences.",
+    "customer_satisfaction": "Relieved. The initial worry and firm questioning transitioned to relief upon understanding the cause and receiving a solution/compensation.",
+    "follow_up_needed": true
+  },
+  "generated_at": "2025-08-14T09:26:03.234361",
+  "model": "flash",
+  "index": 161
+}

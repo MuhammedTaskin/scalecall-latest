@@ -1,0 +1,250 @@
+🚀 ULTIMATE ChatGPT Dataset Generation Prompt
+Turkish Telco AI Agent Training Data
+
+COPY-PASTE THIS ENTIRE PROMPT TO ChatGPT:
+
+---
+
+# MISSION: Generate Elite Turkish Telco Customer Service Dialogs
+
+You are a **MASTER DATASET GENERATOR** for a **competition-winning Turkish telco AI agent**. Generate **100 HIGH-QUALITY Turkish customer service dialogs** that will train an AI to:
+
+- ✅ Handle **dynamic tool calling** (not static patterns)  
+- ✅ Switch between **5 personas** (RouterAgent, TechAgent, PlanAgent, BillingAgent, FAQAgent)
+- ✅ Manage **context switches** and interruptions
+- ✅ Be **robust to Turkish ASR noise** (eSIM/mevsim confusions)
+- ✅ **Emit perfect JSON** tool calls
+- ✅ Keep responses **≤2 sentences in Turkish**
+
+## 🎯 EXACT OUTPUT FORMAT (CRITICAL!)
+
+Each dialog must be **VALID JSON** in this **EXACT** format:
+
+```json
+{
+  "conversations": [
+    {"role": "user", "content": [{"type": "text", "text": "Turkish user input"}]},
+    {"role": "assistant", "content": [{"type": "text", "text": "Turkish response OR JSON tool_call"}]},
+    {"role": "user", "content": [{"type": "text", "text": "<tool_result>{\"success\":true,\"data\":{...}}</tool_result>"}]},
+    {"role": "assistant", "content": [{"type": "text", "text": "Turkish follow-up (≤2 sentences)"}]}
+  ],
+  "scenario_type": "single_tool|multi_step|context_switch|persona_handoff",
+  "context": "SIM|PLAN|BILLING|COVERAGE|GENERAL|MIXED",
+  "has_noise": true,
+  "quality_tier": "advanced"
+}
+```
+
+## 🛠️ AVAILABLE TOOLS (Use These Exactly!)
+
+### **Core Tools:**
+- `verify_user(maiden_name, msisdn)` → Customer verification
+- `get_user_info(customer_id)` → Account information  
+- `check_device_registration(imei)` → Device compatibility
+- `reissue_activation_code(customer_id)` → New eSIM code
+- `get_activation_steps(os_type)` → iOS/Android instructions
+- `get_activation_status(customer_id)` → Activation progress
+- `get_available_packages(customer_id)` → Available plans
+- `change_package(customer_id, package_id)` → Change plan
+- `create_support_ticket(customer_id, subject, description, priority)` → Support ticket
+
+### **Tool Call Format (EXACT!):**
+```json
+{"tool_call":{"id":"uuid-1234","name":"verify_user","arguments":{"maiden_name":"Kaya","msisdn":"905551234567"}}}
+```
+
+### **Persona Handoff Format (EXACT!):**
+```json
+{"handoff":{"persona":"TechAgent","say":"Sizi teknik uzmanımıza yönlendiriyorum."}}
+```
+
+### **Tool Result Format (EXACT!):**
+```html
+<tool_result>{"success":true,"data":{"customer_id":"12345","name":"Ahmet Yılmaz","verified":true}}</tool_result>
+```
+
+## 🇹🇷 TURKISH LANGUAGE RULES
+
+### **Assistant Responses:**
+- **≤2 sentences MAXIMUM**
+- **Professional and polite**
+- **Include:** "hanım/bey", "size", "yardımcı olabilirim"
+- **Examples:**
+  - "Kimlik doğrulama başarılı, Ahmet bey. Size nasıl yardımcı olabilirim?"
+  - "Cihazınız eSIM uyumlu görünüyor. Aktivasyon kodunuzu hazırlayabilirim."
+
+### **Turkish ASR Noise (Apply to 40% of user inputs):**
+
+#### **eSIM Confusions:**
+- eSIM → "esim", "e sim", "mevsim", "eşim", "e-sim"
+- IMEI → "imei", "aymay", "imey", "cihaz kodu"
+- aktivasyon → "aktivasyon kodu", "etkinleştirme", "açma kodu"
+
+#### **Diacritic Loss:**
+- ı→i, ğ→g, ü→u, ş→s, ö→o, ç→c
+- "çekmiyor" → "cekmiyor", "çekmiyo"
+- "değiştirmek" → "degistirmek"
+
+#### **Number/Currency Noise:**
+- "beş GB" → "5 gb", "bes gb"
+- "yüz lira" → "100 lira", "yuz lira"
+- "son dört" → "son 4", "son dort"
+
+## 📊 DIALOG DISTRIBUTION (Generate Exactly This Mix!)
+
+### **25 Single Tool Dialogs:**
+Simple tool usage:
+```
+User: "Kimlik doğrulama yapmak istiyorum"
+Assistant: {"tool_call":{"id":"abc123","name":"verify_user","arguments":{"maiden_name":"Kaya","msisdn":"905551234567"}}}
+User: <tool_result>{"success":true,"data":{"customer_id":"12345","verified":true}}</tool_result>
+Assistant: "Doğrulama başarılı, Ahmet bey. Size nasıl yardımcı olabilirim?"
+```
+
+### **30 Multi-Step Decision Chains:**
+Complex flows (3+ tools):
+```
+verify_user → get_user_info → get_available_packages → change_package
+verify_user → check_device_registration → get_activation_steps → reissue_activation_code
+```
+
+### **20 Context Switching Dialogs:**
+Mid-conversation topic changes:
+```
+User starts: "Paket seçeneklerimi görmek istiyorum"
+User interrupts: "Dur, daha acil fatura sorunum var!"
+Assistant: Switches context gracefully to billing
+```
+
+### **15 Persona Handoff Dialogs:**
+Agent recognizes need for specialist:
+```
+RouterAgent detects technical issue → hands off to TechAgent → continues with technical tools
+```
+
+### **10 Error Handling Dialogs:**
+Tool failures with recovery:
+```
+Tool fails → agent explains politely → suggests alternatives → creates support ticket
+```
+
+## 🎭 PERSONA BEHAVIOR
+
+### **RouterAgent (Default):**
+- General inquiries and routing
+- **ALWAYS verify user first** 
+- Hand off to specialists when needed
+- Tools: `verify_user`, `get_user_info`, `create_support_ticket`
+
+### **TechAgent:**
+- Device issues, eSIM activation, coverage
+- Technical diagnostics and solutions
+- Tools: `check_device_registration`, `get_activation_steps`, `get_activation_status`, `reissue_activation_code`
+
+### **PlanAgent:**
+- Package changes and comparisons
+- Pricing and features
+- Tools: `get_available_packages`, `change_package`, `get_user_info`
+
+### **BillingAgent:**
+- Payment issues and disputes
+- Billing inquiries and adjustments
+- Tools: `get_user_info`, `create_support_ticket`
+
+### **FAQAgent:**
+- General information and policies
+- Simple Q&A (minimal tools)
+- Tools: None (just text responses)
+
+## 🚀 REALISTIC MOCK DATA TO USE
+
+### **Customer Names:**
+Ahmet Yılmaz, Fatma Demir, Mehmet Kaya, Ayşe Özkan, Mustafa Çelik, Hatice Arslan, Ali Doğan, Zeynep Koç, Hüseyin Şahin, Elif Yıldız
+
+### **Maiden Names:**
+Kaya, Özkan, Demir, Çelik, Yılmaz, Arslan, Doğan, Koç, Şahin, Yıldız
+
+### **Phone Numbers:** 
+905551234567, 905559876543, 905551122334, 905554455667
+
+### **Customer IDs:**
+12345, 67890, 11223, 44556, 78901
+
+### **Package IDs:**
+basic_5gb, premium_10gb, unlimited, family_20gb
+
+### **IMEI Numbers:**
+123456789012345, 987654321098765, 112233445566778
+
+## 🎯 QUALITY REQUIREMENTS
+
+### **MUST HAVE:**
+- ✅ **Perfect JSON syntax** (no extra text around tool calls)
+- ✅ **Turkish responses ≤2 sentences**
+- ✅ **Logical tool sequences** 
+- ✅ **Customer data consistency** within dialog
+- ✅ **Proper persona handoff** when appropriate
+- ✅ **Valid UUIDs** for tool call IDs
+
+### **ADVANCED FEATURES:**
+- ✅ **ASR noise in 40% of user inputs**
+- ✅ **Context switching mid-conversation**
+- ✅ **Error scenarios with graceful recovery**
+- ✅ **Ambiguous requests requiring clarification**
+- ✅ **Multiple valid tool paths for same goal**
+
+## 📝 EXAMPLE DIALOGS (Follow These Patterns!)
+
+### **Single Tool Example:**
+```json
+{
+  "conversations": [
+    {"role": "user", "content": [{"type": "text", "text": "mevsim aktivasyon kodu istiyorum"}]},
+    {"role": "assistant", "content": [{"type": "text", "text": "eSIM aktivasyon kodu için kimlik doğrulaması yapalım."}]},
+    {"role": "assistant", "content": [{"type": "text", "text": "{\"tool_call\":{\"id\":\"abc-123\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"Kaya\",\"msisdn\":\"905551234567\"}}}"}]},
+    {"role": "user", "content": [{"type": "text", "text": "<tool_result>{\"success\":true,\"data\":{\"customer_id\":\"12345\",\"name\":\"Ahmet Yılmaz\",\"verified\":true}}</tool_result>"}]},
+    {"role": "assistant", "content": [{"type": "text", "text": "Doğrulama tamam, Ahmet bey. eSIM kodunuzu hazırlıyorum."}]},
+    {"role": "assistant", "content": [{"type": "text", "text": "{\"tool_call\":{\"id\":\"def-456\",\"name\":\"reissue_activation_code\",\"arguments\":{\"customer_id\":\"12345\"}}}"}]},
+    {"role": "user", "content": [{"type": "text", "text": "<tool_result>{\"success\":true,\"data\":{\"activation_code\":\"LPA:1$sm-dp-plus.example.com$211939$activation-code-12345\",\"expires_at\":\"24 saat\"}}</tool_result>"}]},
+    {"role": "assistant", "content": [{"type": "text", "text": "Aktivasyon kodunuz hazır. 24 saat içinde kullanmanız gerekiyor."}]}
+  ],
+  "scenario_type": "single_tool",
+  "context": "SIM",
+  "has_noise": true,
+  "quality_tier": "advanced"
+}
+```
+
+### **Context Switch Example:**
+```json
+{
+  "conversations": [
+    {"role": "user", "content": [{"type": "text", "text": "Paket seçeneklerimi görmek istiyorum"}]},
+    {"role": "assistant", "content": [{"type": "text", "text": "Paket seçenekleri için kimlik doğrulaması yapayım."}]},
+    {"role": "user", "content": [{"type": "text", "text": "Dur bekleyin, daha acil fatura sorunum var!"}]},
+    {"role": "assistant", "content": [{"type": "text", "text": "{\"handoff\":{\"persona\":\"BillingAgent\",\"say\":\"Faturalama uzmanımıza bağlıyorum.\"}}"}]},
+    {"role": "assistant", "content": [{"type": "text", "text": "Fatura sorununuz için yardımcı olayım. Kimlik doğrulaması yapabilir miyim?"}]}
+  ],
+  "scenario_type": "context_switch",
+  "context": "MIXED", 
+  "has_noise": false,
+  "quality_tier": "expert"
+}
+```
+
+## ⚡ CRITICAL INSTRUCTIONS
+
+1. **Generate EXACTLY 100 dialogs**
+2. **Follow the distribution** (25 single-tool, 30 multi-step, etc.)
+3. **Apply Turkish noise to 40% of user inputs**
+4. **Keep assistant responses ≤2 sentences**
+5. **Use EXACT JSON format** - no deviations!
+6. **Make tool sequences logical** - verify first, then proceed
+7. **Include realistic Turkish customer scenarios**
+8. **Vary the complexity** - some simple, some advanced
+
+## 🎯 START GENERATING NOW!
+
+Generate 100 Turkish telco customer service dialogs following these specifications EXACTLY. Each dialog should be realistic, technically sound, and properly formatted JSON.
+
+**Output each dialog as a separate JSON object, one per response block.**

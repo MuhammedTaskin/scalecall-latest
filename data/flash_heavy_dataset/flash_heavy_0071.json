@@ -1,0 +1,156 @@
+{
+  "id": "flash_heavy_0071",
+  "primary_issue": "technical_esim_qr_expired",
+  "secondary_issue": null,
+  "customer_profile": "frequent_traveler",
+  "region": "antalya",
+  "dialect_info": {
+    "dialect": "mediterranean",
+    "pace": "slow",
+    "formality": "low"
+  },
+  "conversation_dynamic": "interrupted",
+  "complexity": "medium",
+  "metadata": {
+    "context": "international roaming issues",
+    "traits": [
+      "experienced",
+      "specific_needs",
+      "impatient"
+    ],
+    "emotional_journey": [
+      "direct",
+      "frustrated",
+      "demanding",
+      "accepting"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo... yav, ben yurt dışındayım şimdi, numaram çalışmıyor. Bu eSIM işi var ya, bi' sıkıntı var galiba.",
+      "emotion": "direct",
+      "dialect_markers": [
+        "mediterranean",
+        "yav",
+        "galiba"
+      ],
+      "pace": "slow",
+      "background_context": "international roaming issues"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Evet, evet... Canım, numara 0532*******. İsim Ayşe Yılmaz. Ama ben şimdi acilen halletmem lazım bunu, uçuyorum sürekli, bu işler böyle olmaz ki gari! Bi' bakıverin hele.",
+      "emotion": "impatient",
+      "dialect_markers": [
+        "mediterranean",
+        "gari",
+        "hele",
+        "bi' bakıverin"
+      ],
+      "pace": "slow",
+      "background_context": "international roaming issues"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Dinleyin şimdi, bak ben anlatayım baştan. Ben Ayşe Yılmaz, yurt dışındayım. Bu yeni aldığım eSIM'in QR kodu vardı ya, o çalışmıyor. Hata veriyor sürekli. Ben zaten sürekli seyahat eden biriyim, bu internet işi benim için nefes almak gibi. Bir an önce çözmemiz lazım bunu, yoksa işim gücüm aksayacak.",
+      "emotion": "frustrated",
+      "dialect_markers": [
+        "mediterranean",
+        "bak ben anlatayım",
+        "nefes almak gibi",
+        "bir an önce"
+      ],
+      "pace": "slow",
+      "background_context": "international roaming issues"
+    },
+    {
+      "turn_id": "turn_007",
+      "text": "Evet, evet, anladım. Hızlıca halledelim gari. Cihazımın IMEI'si mi? Dur bakayım... *biraz bekler* ...Şu an kullandığım telefonun IMEI'si bu: 35XXXXXXXXXXXXXXX. Zaten bu eSIM'i de yeni almıştım, daha neyin ne olduğunu biliyorum, direkt yeni QR kod gönderin bana, o eskisi bozuk galiba.",
+      "emotion": "demanding",
+      "dialect_markers": [
+        "mediterranean",
+        "gari",
+        "dur bakayım",
+        "galiba"
+      ],
+      "pace": "slow",
+      "background_context": "international roaming issues"
+    },
+    {
+      "turn_id": "turn_009",
+      "text": "Tamam, neyse... gönderin o zaman. E-posta adresime gelsin, olur mu? Ayşe.yılmaz@example.com. Ne kadar sürer bu gelmesi? Ben şimdi burda internetsiz kalmayayım, işlerim var.",
+      "emotion": "accepting",
+      "dialect_markers": [
+        "mediterranean",
+        "neyse",
+        "gelmesin"
+      ],
+      "pace": "slow",
+      "background_context": "international roaming issues"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba Ayşe Hanım, hattınızla ilgili bir sorun yaşadığınızı anlıyorum. Size yardımcı olabilmek için öncelikle kimliğinizi doğrulamam gerekiyor. T.C. kimlik numaranızın son dört hanesini veya müşteri numaranızı alabilir miyim lütfen?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Anladım Ayşe Hanım, numaranızı ve isim bilginizi teyit ettim. Bu durum bir teknik destek gerektiriyor sanırım. Sizi şimdi teknik ekibimize aktarıyorum, onlar eSIM'inizle ilgili daha detaylı yardımcı olacaklardır. Lütfen hattan ayrılmayın.",
+      "tools_triggered": [
+        "route_to_agent"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "TechAgent",
+      "text": "Merhaba Ayşe Hanım, ben teknik destekten. Az önceki görüşmeniz aktarıldı, eSIM QR kodunuzda bir sorun olduğunu anlıyorum. Üzgünüm bu durum için. Hemen kontrol edelim. Kullandığınız cihazın marka ve modelini alabilir miyim? Bir de cihazınızın IMEI numarasını kontrol edebilir misiniz lütfen? Bu bilgilerle eSIM'inizin durumunu daha net görebiliriz.",
+      "tools_triggered": [
+        "check_esim_status",
+        "check_device_imei"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_008",
+      "agent_persona": "TechAgent",
+      "text": "Teşekkürler Ayşe Hanım. Kontrol ettim, evet, mevcut eSIM aktivasyon kodunuzun süresi dolmuş görünüyor. Bu yüzden hata alıyorsunuz. Sorun değil, hemen size yeni bir QR kodu ve aktivasyon linki oluşturup gönderebiliriz. Bunu e-posta adresinize veya SMS olarak mı tercih edersiniz?",
+      "tools_triggered": [
+        "reissue_activation_code"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_010",
+      "agent_persona": "TechAgent",
+      "text": "Tabii ki Ayşe Hanım, e-posta adresinize hemen iletiyorum. Yeni QR kodunuz ve kurulum talimatlarınız en geç 5 dakika içinde e-postanızda olacaktır. Lütfen spam klasörünüzü de kontrol etmeyi unutmayın. Başka yardımcı olabileceğim bir konu var mıydı?",
+      "tools_triggered": [],
+      "formality_level": "low"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "TechAgent",
+      "reason": "Customer's issue (eSIM QR code expired) requires technical expertise beyond routing agent's scope.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "Customer's expired eSIM QR code issue was resolved by reissuing a new activation code/QR code, sent to their email.",
+    "customer_satisfaction": "Customer moved from frustration and demanding to an accepting state, indicating satisfaction with the proposed solution and its swift delivery.",
+    "follow_up_needed": false
+  },
+  "generated_at": "2025-08-14T09:18:15.579635",
+  "model": "flash",
+  "index": 71
+}

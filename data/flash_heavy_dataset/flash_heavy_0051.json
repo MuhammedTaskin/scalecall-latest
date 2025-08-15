@@ -1,0 +1,132 @@
+{
+  "id": "flash_heavy_0051",
+  "primary_issue": "plans_features_data_rollover",
+  "secondary_issue": null,
+  "customer_profile": "small_business_owner",
+  "region": "trabzon",
+  "dialect_info": {
+    "dialect": "blacksea",
+    "pace": "fast",
+    "formality": "medium"
+  },
+  "conversation_dynamic": "multi_issue",
+  "complexity": "medium",
+  "metadata": {
+    "context": "managing employee lines",
+    "traits": [
+      "practical",
+      "cost_focused",
+      "busy"
+    ],
+    "emotional_journey": [
+      "businesslike",
+      "questioning",
+      "negotiating",
+      "satisfied"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo buyrun. Ben şu bizim işyerinin hatlarıyla ilgili konuşacaktım. Elemanların interneti hep bitiyi, sonra ekstra paket almaktan canımız çıkıyo. Bu veri aktarımı meselesi ne oldi? Eski paketler ne oldi?",
+      "emotion": "businesslike",
+      "dialect_markers": [
+        "bitiyi",
+        "çıkıyo",
+        "oldi",
+        "elemanların"
+      ],
+      "pace": "fast",
+      "background_context": "managing employee lines"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "He tamam, alın. Adım Hasan Yılmaz, T.C. numaram da 12345678900. Ama acele edin ha, dükkanda işlerim var. Bu internetin boşuna gitmesi, bi sonraki aya aktarılmaması hep cebimizden çıkıyo, anladın mı beni? Geçen ay iki hat boşuna gitti kaç GB.",
+      "emotion": "questioning",
+      "dialect_markers": [
+        "he tamam",
+        "acele edin ha",
+        "anladın mı beni",
+        "çıkıyo"
+      ],
+      "pace": "fast",
+      "background_context": "managing employee lines"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Hah, iyi oldu. Merhaba, az önce anlattım ama yine anlatayım; bizim çalışanların interneti ay sonu bitmeyince boşa gidiyi, diğer aya aktarılan bi sistem yok mudur? Ya da şöyle, hani paketlerde kalan interneti diğer aya devreden paketler vardı, bizde niye yok? Maliyetleri düşürmek lazım, bu böyle olmaz.",
+      "emotion": "negotiating",
+      "dialect_markers": [
+        "gidiye",
+        "yok mudur",
+        "hani",
+        "niye yok"
+      ],
+      "pace": "fast",
+      "background_context": "managing employee lines"
+    },
+    {
+      "turn_id": "turn_007",
+      "text": "Vay, devreden paket mi? E iyiymiş o zaman. 10 lira farkla 5 GB fazla internet, üstüne de devir... Oh, başımız rahatlar valla. Tamam tamam, hemen geçirin o zaman. Kaç GB boşuna gitti şimdiye kadar düşünmek bile istemiyom. Sağ olun, var olun.",
+      "emotion": "satisfied",
+      "dialect_markers": [
+        "vay",
+        "e iyiymiş",
+        "oh",
+        "valla",
+        "istemiyom",
+        "sağ olun, var olun"
+      ],
+      "pace": "fast",
+      "background_context": "managing employee lines"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba efendim, Türk Telekom'a hoş geldiniz. Hatlarınızla ilgili yardımcı olayım. Güvenliğiniz için önce bir kimlik doğrulaması yapmamız gerekiyor. Adınız, soyadınız ve T.C. kimlik numaranızı alabilir miyim?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Bilgilerinizi teyit ettim Hasan Bey. Anladım, iş hatlarınızın internetiyle ilgili bir aktarım veya paket optimizasyonu talebiniz var. Bu konuda size daha detaylı yardımcı olabilmesi için sizi tarife ve paket uzmanımıza bağlıyorum. Lütfen kısa bir süre hatta kalınız.",
+      "tools_triggered": [
+        "route_to_agent"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "PlanAgent",
+      "text": "Hasan Bey, merhaba, aktarılan hatta hoş geldiniz. Talebinizi anladım. Şirket hatlarınızdaki internet paketlerinin ay sonunda kalan kısmının bir sonraki aya devretmesi için 'Devreden İşletme Paketleri'miz bulunuyor. Mevcut paketlerinizi kontrol ettim, evet, onlarda devir özelliği bulunmuyor. Ancak size özel bir teklif sunabilirim. Mevcut 3 hattınızı da, ayda kalan interneti devreden ve ek olarak 5 GB daha fazla internet sunan 'Akıllı İşletme 20 GB' paketine geçirebiliriz. Bu paketin aylık ücreti, mevcut paketlerinize göre sadece 10 TL farkla geliyor ve uzun vadede size büyük tasarruf sağlayacaktır. İsterseniz hemen geçiş işlemlerini başlatabiliriz.",
+      "tools_triggered": [
+        "get_customer_plan",
+        "list_all_plans",
+        "change_customer_plan"
+      ],
+      "formality_level": "medium"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "PlanAgent",
+      "reason": "Customer needs assistance with plan optimization and data rollover features for business lines.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "Customer's business lines were switched to 'Akıllı İşletme 20 GB' plan, which includes data rollover, addressing the primary issue of wasted data and high costs for employee lines.",
+    "customer_satisfaction": "satisfied",
+    "follow_up_needed": false
+  },
+  "generated_at": "2025-08-14T09:16:32.953347",
+  "model": "flash",
+  "index": 51
+}

@@ -1,0 +1,304 @@
+{
+  "conversation_id": "conv_20250814_074844_contract_termination_request_overly_chatty",
+  "metadata": {
+    "scenario": "contract_termination_request",
+    "complexity": "simple",
+    "persona": "overly_chatty",
+    "handoff_pattern": [
+      "RouterAgent",
+      "TechAgent",
+      "BillingAgent"
+    ],
+    "interruption_type": "topic_change",
+    "resolution": "fully_resolved"
+  },
+  "customer_profile": {
+    "persona": "overly_chatty",
+    "phone": "0559 335 56 15",
+    "maiden_name": "Çelik",
+    "issue": "contract_termination_request",
+    "background": "Ev hanımı"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alooo, merhabalar! Nasılsınız? Ben Ayşe Hanım. Ya benim bir konu vardı da, şu benim sözleşmeyi bi' bakıverseydiniz, böyle bir şey vardı hani, ne deniyordu ona... Fesih miydi neydi, öyle bir şey işte. Çok kafamı şişirdi bu faturalar!",
+      "emotion": "joyful",
+      "voice_notes": {
+        "tone": "friendly",
+        "speed": "moderate",
+        "emphasis": [
+          "Alooo",
+          "merhabalar",
+          "Ayşe Hanım",
+          "fesih",
+          "kafamı şişirdi"
+        ]
+      }
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Tabii ki kızım, 0559 335 56 15. Annemin soyadı da Çelik'ti. Ay vallahi bu yazlıkta internet çekmiyor, canım sıkıldı. Geçen gün komşunun torunu geldi de, o bile dedi ki ‘Ayşe Teyze, senin internet niye böyle yavaş?’ diye. Ne yapacağım ben şimdi?",
+      "emotion": "neutral",
+      "voice_notes": {
+        "tone": "conversational",
+        "speed": "moderate",
+        "emphasis": [
+          "Tabii ki",
+          "Çelik",
+          "internet çekmiyor",
+          "canım sıkıldı",
+          "niye böyle yavaş"
+        ]
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "text": "Evet evet, 0559 335 56 15. Ama benim esas sorunum o internet değil ki kızım. Yani o da var da, asıl mesele şu faturalar beni bitirdi! Ben bu sözleşmeyi iptal etmek istiyorum. Bıktım artık!",
+      "emotion": "frustrated",
+      "voice_notes": {
+        "tone": "impatient",
+        "speed": "normal",
+        "emphasis": [
+          "esas sorunum",
+          "faturalar",
+          "iptal etmek istiyorum",
+          "Bıktım artık!"
+        ]
+      }
+    },
+    {
+      "turn_id": "turn_009",
+      "text": "Ohh sonunda! Bakalım bakalım, ne çıkacak bu faturadan Allah aşkına? Her ay artıyor bu meret. Geçen ay komşu söyledi, onun faturası yarı fiyatına gelmiş, nasıl oluyor bu işler anlamıyorum!",
+      "emotion": "exasperated",
+      "voice_notes": {
+        "tone": "complaining",
+        "speed": "normal",
+        "emphasis": [
+          "Ohh sonunda!",
+          "Allah aşkına?",
+          "her ay artıyor",
+          "yarı fiyatına gelmiş"
+        ]
+      }
+    },
+    {
+      "turn_id": "turn_011",
+      "text": "Ne? Beş yüz lira mı? Ay tövbe tövbe! O kadar param yok benim. Dondurma falan dedin, o nasıl oluyor? Veya başka bir tarife var mıydı gerçekten? Hani komşunun torununun da tarifesi çok uygunmuş, belki bana da uyar.",
+      "emotion": "shocked",
+      "voice_notes": {
+        "tone": "urgent",
+        "speed": "fast",
+        "emphasis": [
+          "Beş yüz lira mı?",
+          "O kadar param yok",
+          "Dondurma falan",
+          "başka bir tarife"
+        ]
+      }
+    },
+    {
+      "turn_id": "turn_013",
+      "text": "Ayyy, on iki ay! Pardon, yüz yirmi lira mı? Süpermiş bu! Vallahi komşunun torununun dediğinden bile ucuz sanki. Tamam tamam, bunu yapalım o zaman. Çok teşekkür ederim kızım, Allah razı olsun. O kadar dert ettim kendime, o kadar uykularım kaçtıydı.",
+      "emotion": "relieved",
+      "voice_notes": {
+        "tone": "grateful",
+        "speed": "normal",
+        "emphasis": [
+          "Yüz yirmi lira mı?",
+          "Süpermiş bu!",
+          "tamam tamam",
+          "çok teşekkür ederim"
+        ]
+      }
+    },
+    {
+      "turn_id": "turn_015",
+      "text": "Yok yok, çok yardımcı oldunuz. Allah razı olsun. İyi ki aramışım, öbür türlü o kadar para ödeyecektim. Çok sağ olun. Hayırlı günler size!",
+      "emotion": "grateful",
+      "voice_notes": {
+        "tone": "friendly",
+        "speed": "slow",
+        "emphasis": [
+          "çok yardımcı oldunuz",
+          "Allah razı olsun",
+          "iyi ki aramışım",
+          "çok sağ olun"
+        ]
+      }
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba Ayşe Hanım, hoş geldiniz. Ben RouterAgent. İşlem yapmak istediğiniz hattınızın numarasını ve annenizin evlenmeden önceki soyadını alabilir miyim lütfen?",
+      "tools_triggered": [],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkürler Ayşe Hanım, bilgileriniz doğrulandı. İnternet sorununuzla ilgili yorumunuzu anladım. Ancak esas talebiniz hattınızın sözleşmesini feshetmek yönünde olduğu için, bu konuda size daha detaylı yardımcı olabilecek meslektaşım TechAgent'a aktarıyorum. Kısa bir bekleme yaşayabilirsiniz.",
+      "tools_triggered": [
+        {
+          "tool_name": "verify_user",
+          "parameters": {
+            "phone_number": "0559 335 56 15",
+            "maiden_name": "Çelik"
+          }
+        },
+        {
+          "tool_name": "get_customer_status",
+          "parameters": {
+            "phone_number": "0559 335 56 15"
+          }
+        }
+      ],
+      "handoff": "TechAgent"
+    },
+    {
+      "turn_id": "turn_005",
+      "agent_persona": "TechAgent",
+      "text": "Merhaba Ayşe Hanım, ben TechAgent. Hattınızla ilgili internet sorunları yaşadığınızı anlıyorum. Numaranızı teyit edebilir miyim lütfen?",
+      "tools_triggered": [],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_007",
+      "agent_persona": "TechAgent",
+      "text": "Anladım Ayşe Hanım. Kusura bakmayın, önceki görüşmeden edindiğim bilgi internet sorunu yönündeydi. Fatura ve sözleşme fesih talebiniz için size en doğru bilgiyi sağlayacak olan BillingAgent meslektaşıma aktarıyorum. Bu konuda kendisi yardımcı olacaktır.",
+      "tools_triggered": [],
+      "handoff": "BillingAgent"
+    },
+    {
+      "turn_id": "turn_008",
+      "agent_persona": "BillingAgent",
+      "text": "Merhaba Ayşe Hanım, ben BillingAgent. Hattınızın sözleşmesini feshetme talebinizle ilgili yardımcı olmak için buradayım. Öncesinde, son dönem faturanıza birlikte bakmak ister misiniz?",
+      "tools_triggered": [],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_010",
+      "agent_persona": "BillingAgent",
+      "text": "Ayşe Hanım, anlıyorum haklısınız. Sistemimizden kontrol ettiğimde son dönem faturanızın 250 TL olduğunu görüyorum. Hattınızın taahhüt bitiş tarihi 10 ay sonra. Eğer taahhüdünüzü bozup fesih işlemi yaparsanız, erken fesih bedeli olarak yaklaşık 500 TL yansıyacaktır. Bunun yerine, size özel daha uygun tarifelerimizi inceleyebilir veya cayma bedeli ödemeden aboneliğinizi dondurma seçeneğini değerlendirebiliriz. Ne dersiniz?",
+      "tools_triggered": [
+        {
+          "tool_name": "get_last_bill",
+          "parameters": {
+            "phone_number": "0559 335 56 15"
+          }
+        }
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_012",
+      "agent_persona": "BillingAgent",
+      "text": "Evet Ayşe Hanım, taahhüt bozma bedeli yansımaması için aboneliğinizi belirli bir süre dondurabiliriz. Ancak ben size daha avantajlı olabilecek yeni bir teklif sunmak isterim. Mevcut internet kullanımınıza ve konuşma alışkanlığınıza uygun, aylık sadece 120 TL'ye kullanabileceğiniz bir 'Ekonomik Ev Hanımı Paketi' mevcut. Bu pakete geçiş yaparak hem taahhüt bozma bedeli ödemezsiniz hem de aylık faturanız yarı yarıya düşer. Ne dersiniz, bu pakete geçişinizi sağlayalım mı?",
+      "tools_triggered": [
+        {
+          "tool_name": "list_all_plans",
+          "parameters": {}
+        }
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_014",
+      "agent_persona": "BillingAgent",
+      "text": "Harika Ayşe Hanım! Hemen 'Ekonomik Ev Hanımı Paketi'ne geçişinizi sağlıyorum. İşlem tamamlandığında SMS ile bilgilendirileceksiniz. Yeni faturanız bu pakete göre düzenlenecek. Başka bir konuda yardımcı olabileceğim bir şey var mıydı?",
+      "tools_triggered": [
+        {
+          "tool_name": "change_customer_plan",
+          "parameters": {
+            "phone_number": "0559 335 56 15",
+            "new_plan_name": "Ekonomik Ev Hanımı Paketi"
+          }
+        }
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_016",
+      "agent_persona": "BillingAgent",
+      "text": "Rica ederim Ayşe Hanım, ne demek. Biz de size yardımcı olabildiğimize sevindik. İyi günler dileriz.",
+      "tools_triggered": [
+        {
+          "tool_name": "end_conversation",
+          "parameters": {}
+        }
+      ],
+      "handoff": null
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "from_agent": "RouterAgent",
+      "to_agent": "TechAgent",
+      "reason": "Müşterinin internet sorunundan bahsetmesi, ilk yönlendirmenin teknik ekibe yapılmasına neden oldu."
+    },
+    {
+      "from_agent": "TechAgent",
+      "to_agent": "BillingAgent",
+      "reason": "Müşterinin asıl sorununun fatura ve sözleşme fesih talebi olduğunun anlaşılması üzerine, ilgili departmana yönlendirme."
+    }
+  ],
+  "tool_calls": [
+    {
+      "tool_name": "verify_user",
+      "parameters": {
+        "phone_number": "0559 335 56 15",
+        "maiden_name": "Çelik"
+      },
+      "turn_id": "turn_004"
+    },
+    {
+      "tool_name": "get_customer_status",
+      "parameters": {
+        "phone_number": "0559 335 56 15"
+      },
+      "turn_id": "turn_004"
+    },
+    {
+      "tool_name": "get_last_bill",
+      "parameters": {
+        "phone_number": "0559 335 56 15"
+      },
+      "turn_id": "turn_010"
+    },
+    {
+      "tool_name": "list_all_plans",
+      "parameters": {},
+      "turn_id": "turn_012"
+    },
+    {
+      "tool_name": "change_customer_plan",
+      "parameters": {
+        "phone_number": "0559 335 56 15",
+        "new_plan_name": "Ekonomik Ev Hanımı Paketi"
+      },
+      "turn_id": "turn_014"
+    },
+    {
+      "tool_name": "end_conversation",
+      "parameters": {},
+      "turn_id": "turn_016"
+    }
+  ],
+  "generation_id": "25055a72-5016-408b-81e9-fe889fa2ec4e",
+  "generated_at": "2025-08-14T07:49:15.528135",
+  "index": 16,
+  "variation_params": {
+    "persona": "overly_chatty",
+    "issue": "contract_termination_request",
+    "handoff_pattern": [
+      "RouterAgent",
+      "TechAgent",
+      "BillingAgent"
+    ],
+    "complexity": "simple",
+    "interruption": "topic_change",
+    "resolution": "fully_resolved"
+  }
+}

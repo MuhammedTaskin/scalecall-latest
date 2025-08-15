@@ -1,0 +1,134 @@
+{
+  "id": "flash_heavy_0076",
+  "primary_issue": "technical_device_dual_sim",
+  "secondary_issue": null,
+  "customer_profile": "frequent_traveler",
+  "region": "diyarbakir",
+  "dialect_info": {
+    "dialect": "southeastern",
+    "pace": "moderate",
+    "formality": "medium"
+  },
+  "conversation_dynamic": "circular",
+  "complexity": "medium",
+  "metadata": {
+    "context": "international roaming issues",
+    "traits": [
+      "experienced",
+      "specific_needs",
+      "impatient"
+    ],
+    "emotional_journey": [
+      "direct",
+      "frustrated",
+      "demanding",
+      "accepting"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Selamünaleyküm gardaş. Almanya'dayım, benim telefonun çift SIM'i var, biri sizin hattınız, diğeri de buranın hattı. Sizin hat roaming'de çalışmıyor, çekmiyor hiç! İnternet desen yok, arama desen yok. Şu işe bir bakıverin hele.",
+      "emotion": "direct",
+      "dialect_markers": [
+        "southeastern",
+        "gardaş",
+        "bakıverin hele"
+      ],
+      "pace": "moderate",
+      "background_context": "international roaming issues"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Hele bakın, ben bu durumu daha önce de yaşadım. Numaramı şimdi verdim işte, 0532 XXXXXXX. Adım da Ahmet Yılmaz. Daha neyi teyit edeceksiniz ki? Zaten sisteminizde görünmüyor mu? N'olacak şimdi, ben burada internetsiz mi kalacağım?",
+      "emotion": "frustrated",
+      "dialect_markers": [
+        "southeastern",
+        "hele",
+        "n'olacak şimdi"
+      ],
+      "pace": "moderate",
+      "background_context": "international roaming issues"
+    },
+    {
+      "turn_id": "turn_006",
+      "text": "Yahu kaç kere söyleyeceğim? Benim ana hattım, yani sizin hattınız, fiziksel SIM. Diğer hat, Almanya hattı, o da eSIM. Sorun benim Türkiye hattımda! Roaming'de olmasına rağmen bağlanmıyor. Diyorum ya, ben sürekli gezen, yurt dışına çıkan bir adamım. Berlin'deydim, Paris'teydim, hiç böyle sorun yaşamadım. Şimdi Düsseldorf'a geldim, pat diye kesildi. Bana çözüm lazım, daha fazla soru değil!",
+      "emotion": "demanding",
+      "dialect_markers": [
+        "southeastern",
+        "yahu",
+        "diyorum ya",
+        "pat diye"
+      ],
+      "pace": "moderate",
+      "background_context": "international roaming issues"
+    },
+    {
+      "turn_id": "turn_008",
+      "text": "Peki madem, vallah ne yapalım. Başka çare yoksa, açın o teknik kaydı. Ama çabuk olsun, ben burada işlerimi halletmem lazım. Dönüşte de bu konuyu tekrar konuşuruz, böyle olmaz.",
+      "emotion": "accepting",
+      "dialect_markers": [
+        "southeastern",
+        "vallah",
+        "bari o olsun"
+      ],
+      "pace": "moderate",
+      "background_context": "international roaming issues"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba Ahmet Bey. Talebinizi anladım. Güvenliğiniz için öncelikle kimlik teyidi yapmamız gerekiyor. Lütfen hattınızın kayıtlı olduğu TC kimlik numaranızı veya son dört hanesini ve doğum tarihinizi söyler misiniz?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Ahmet Bey, bilgileriniz teyit edildi. Durumunuzu anlıyorum. Bu durum teknik bir sorun olduğu için sizi uzman ekibimize aktarıyorum. Onlar size daha detaylı yardımcı olacaktır. Kısa bir bekleme yaşayabilirsiniz, lütfen hattan ayrılmayın.",
+      "tools_triggered": [
+        "route_to_agent"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_005",
+      "agent_persona": "TechAgent",
+      "text": "Merhaba Ahmet Bey, ben Teknik Destek Uzmanı Deniz. Sorununuzla ilgili Router ekibimizden bilgi aldım. Almanya'da roaming'de çift SIM kartınızdan birinin çalışmadığını belirtmişsiniz. Rica etsem, hangi hattınızın fiziksel SIM, hangi hattınızın eSIM olduğunu ve sorun yaşadığınız hattın tam olarak hangisi olduğunu teyit edebilir misiniz?",
+      "tools_triggered": [],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_007",
+      "agent_persona": "TechAgent",
+      "text": "Anlıyorum Ahmet Bey, verdiğiniz bilgiler için teşekkür ederim. Hemen sistem üzerinden hattınızın roaming durumunu ve cihazınızın IMEI bilgilerini kontrol ediyorum. (Kısa bir sessizlik...) Görüyorum ki hattınızın roaming özelliği açık ve aktif görünüyor. Cihazınızda da bir uyumsuzluk görünmüyor. Bu durumda detaylı bir teknik inceleme için bir arıza kaydı oluşturmamız gerekiyor. Bu kayıtla birlikte uzaktan cihazınızın detaylı loglarını kontrol edip sorunun kaynağını araştırmamız daha sağlıklı olacaktır. Size SMS ile bir takip numarası ileteceğiz.",
+      "tools_triggered": [
+        "check_esim_status",
+        "check_device_imei",
+        "create_tech_ticket"
+      ],
+      "formality_level": "medium"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "TechAgent",
+      "reason": "Technical issue requiring specialized support for dual SIM and roaming problems.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "A technical ticket was created for remote diagnosis and further investigation as the initial checks yielded no immediate solution. Customer reluctantly accepted this resolution.",
+    "customer_satisfaction": "accepting (reluctantly)",
+    "follow_up_needed": true
+  },
+  "generated_at": "2025-08-14T09:18:38.293449",
+  "model": "flash",
+  "index": 76
+}

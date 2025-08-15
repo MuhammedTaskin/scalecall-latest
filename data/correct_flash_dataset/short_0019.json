@@ -1,0 +1,105 @@
+{
+  "conversation_id": "short_0019_plan_upgrade",
+  "metadata": {
+    "scenario": "plan_upgrade",
+    "handoff_pattern": [
+      "RouterAgent",
+      "PlanAgent"
+    ]
+  },
+  "customer_profile": {
+    "persona": "angry",
+    "phone": "0555 123 45 67"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Ya yeter ya! İnternetim yine yavaş! Sürekli aynı sorun! Bu kaçıncı oldu anlamıyorum! Hemen ilgilenin!",
+      "emotion": "angry"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Evet, doğru numara bu. Ama bu hızla ne yapacağım ben? Üst pakete geçmek istiyorum artık, bu böyle gitmez!",
+      "emotion": "angry"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Tamam, peki o zaman. Umarım yeni paketim bu sorunları çözer.",
+      "emotion": "frustrated"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba, Türk Telekom çağrı merkezine hoş geldiniz. Kimliğinizi doğrulamak için lütfen T.C. kimlik numaranızı veya müşteri numaranızı paylaşır mısınız?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "T.C. kimlik numaranızı aldım. Sistemlerimizi kontrol ettiğimde, mevcut internet hızınızda bir düşüş görünüyor. Bu durumla ilgili size daha iyi yardımcı olabilmek adına, tarife ve paket işlemlerinden sorumlu ilgili birimimize aktarım yapacağım.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "handoff": {
+        "to": "PlanAgent"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "PlanAgent",
+      "text": "Anladım, internet hızınızdan memnun değilsiniz ve daha üst bir pakete geçmek istiyorsunuz. Size en uygun olan paketleri inceleyelim. Mevcut kampanyalarımızla birlikte size özel bir teklif sunabilirim.  Yeni paketinizle ilgili tüm detayları ve kurulum işlemlerini sizin için halledeceğim.",
+      "tools_triggered": [
+        "list_all_plans",
+        "change_customer_plan",
+        "end_conversation"
+      ],
+      "handoff": null
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "PlanAgent",
+      "reason": "plan_upgrade"
+    }
+  ],
+  "tool_calls": [
+    {
+      "turn_id": "turn_002",
+      "tool": "verify_user",
+      "arguments": {},
+      "result": true
+    },
+    {
+      "turn_id": "turn_004",
+      "tool": "route_to_agent",
+      "arguments": {
+        "target_agent": "PlanAgent",
+        "reason": "Plan upgrade required due to customer dissatisfaction with current speed."
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "change_customer_plan",
+      "arguments": {
+        "new_plan_name": "SuperHizliPaket",
+        "discount_applied": true
+      },
+      "result": {
+        "success": true,
+        "new_plan": "SuperHizliPaket",
+        "discount_percentage": 10
+      }
+    }
+  ],
+  "generated_at": "2025-08-14T08:01:09.571573",
+  "index": 19
+}

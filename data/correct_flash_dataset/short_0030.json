@@ -1,0 +1,93 @@
+{
+  "conversation_id": "short_0030_esim_quick_fix",
+  "metadata": {
+    "scenario": "esim_quick_fix",
+    "handoff_pattern": [
+      "RouterAgent",
+      "TechAgent"
+    ]
+  },
+  "customer_profile": {
+    "persona": "polite",
+    "phone": "0555 123 45 67"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Merhaba, e-SIM'im bir süredir çalışmıyor. Yardımcı olabilir misiniz?",
+      "emotion": "polite"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Evet, telefonum yeni ve e-SIM'i aktif etmeye çalıştım ama başarılı olamadım.",
+      "emotion": "polite"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Anladım, teşekkürler. Umarım yeni temsilci yardımcı olabilir.",
+      "emotion": "polite"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba, Telekom Çağrı Merkezi'ne hoş geldiniz. Kimliğinizi doğrulamak için lütfen adınız soyadınız ve T.C. kimlik numaranızın son 4 hanesini alabilir miyim?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkürler, bilgileriniz doğrulandı. E-SIM ile ilgili yaşadığınız sorunu anladım. Bu durumun çözümü için sizi teknik ekibimize yönlendirmem gerekiyor. Lütfen bekleyiniz.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "handoff": {
+        "to": "TechAgent"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "TechAgent",
+      "text": "Merhaba, ben Telekom Teknik Destek ekibinden [AgentAdı]. E-SIM sorununuzla ilgili size yardımcı olacağım. Cihazınızın IMEI numarasını paylaşabilir misiniz?",
+      "tools_triggered": [
+        "check_esim_status",
+        "check_device_imei"
+      ],
+      "handoff": null
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "TechAgent",
+      "reason": "esim_quick_fix"
+    }
+  ],
+  "tool_calls": [
+    {
+      "turn_id": "turn_002",
+      "tool": "verify_user",
+      "arguments": {
+        "name": "Müşteri Adı Soyadı",
+        "last_four_id": "1234"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_004",
+      "tool": "route_to_agent",
+      "arguments": {
+        "agent_type": "TechAgent"
+      },
+      "result": true
+    }
+  ],
+  "generated_at": "2025-08-14T08:01:16.189736",
+  "index": 30
+}

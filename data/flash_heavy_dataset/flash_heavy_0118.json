@@ -1,0 +1,144 @@
+{
+  "id": "flash_heavy_0118",
+  "primary_issue": "account_porting_number_out",
+  "secondary_issue": "billing_payments_failed",
+  "customer_profile": "frequent_traveler",
+  "region": "bursa",
+  "dialect_info": {
+    "dialect": "marmara",
+    "pace": "moderate",
+    "formality": "medium"
+  },
+  "conversation_dynamic": "interrupted",
+  "complexity": "complex",
+  "metadata": {
+    "context": "international roaming issues",
+    "traits": [
+      "experienced",
+      "specific_needs",
+      "impatient"
+    ],
+    "emotional_journey": [
+      "direct",
+      "frustrated",
+      "demanding",
+      "accepting"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo? Ben [Müşteri Adı Soyadı]. Numara taşıma başvurum vardı, ne oldu ona? Yurt dışındayım, internetim falan yok doğru düzgün, çok acil!",
+      "emotion": "direct",
+      "dialect_markers": [
+        "marmara"
+      ],
+      "pace": "moderate",
+      "background_context": "international roaming issues"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Of, acele edin lütfen. [T.C. Kimlik son 4 hane], annemin kızlık soyadı [Soyadı]. Ne oldu şimdi benim taşıma işlemime? Yurt dışından arıyorum biliyorsunuz değil mi? Dakikam gidiyor boşuna.",
+      "emotion": "direct",
+      "dialect_markers": [
+        "marmara"
+      ],
+      "pace": "moderate",
+      "background_context": "international roaming issues"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "İnceleme mi? Ne incelemesi ya? Benim zaten taahhüdüm bitti, her şeyim hazır. Ben yurt dışına çıkmadan önce halledin dedim, ne oldu şimdi bu? İnternetim de açılmıyor düzgün, hattım zaten gidecek. Ben bu durumda ne yapacağım şimdi?",
+      "emotion": "frustrated",
+      "dialect_markers": [
+        "marmara"
+      ],
+      "pace": "moderate",
+      "background_context": "international roaming issues"
+    },
+    {
+      "turn_id": "turn_007",
+      "text": "Ne olursunuz çabuk olun. Ben burada iş yapmaya çalışıyorum. Hattım kilitlenirse ne yapacağım? Zaten şu an zor bağlanıyorum. Bir de benim son faturam ödendi mi ya da ne oldu ona?",
+      "emotion": "demanding",
+      "dialect_markers": [
+        "marmara"
+      ],
+      "pace": "moderate",
+      "background_context": "international roaming issues"
+    },
+    {
+      "turn_id": "turn_009",
+      "text": "Ne? Fatura mı ödenmedi? Ama ben otomatik ödeme talimatı vermiştim! Nasıl olur bu? Ben yurt dışında bu ödemeyi nasıl yapacağım şimdi? Yani bütün bu aksaklık o yüzden mi? Ne yapmam lazım şimdi benim?",
+      "emotion": "demanding",
+      "dialect_markers": [
+        "marmara"
+      ],
+      "pace": "moderate",
+      "background_context": "international roaming issues"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba Sayın [Müşteri Adı]. Müşteri temsilcimize hoş geldiniz. İşlemlerinize devam edebilmemiz için kimlik doğrulamanızı rica edebilir miyim? T.C. Kimlik numaranızın son dört hanesini ve annenizin evlenmeden önceki soyadını alabilir miyim?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Bilgilerinizi teyit ettim Sayın [Müşteri Adı]. Hesabınızda aktif bir numara taşıma talebi görüyorum. İşleminiz şu an inceleme aşamasında görünüyor. Genellikle bu tip süreçlerde...",
+      "tools_triggered": [
+        "get_customer_status"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "BillingAgent",
+      "text": "Anlıyorum Sayın [Müşteri Adı], yaşadığınız aksaklık için özür dileriz. Aktarımınız yapıldı. Ben [Agent Adı], size yardımcı olmak için buradayım. Numara taşıma talebinizle ilgili bir kontrol sağlıyorum hemen. Sistemde bir yandan da genel hesap durumunuza baktığımda...",
+      "tools_triggered": [
+        "get_customer_status"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_008",
+      "agent_persona": "BillingAgent",
+      "text": "Kontrol ediyorum hemen Sayın [Müşteri Adı]. Evet, numara taşıma talebiniz aktif görünüyor ancak sistemde geçen ayki faturanızda bir ödeme hatası gözüküyor. Bu durum, taşıma sürecinizi etkilemiş olabilir. Maalesef, faturanız ödenmediği için taşıma işlemi askıya alınmış durumda.",
+      "tools_triggered": [
+        "get_last_bill"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_010",
+      "agent_persona": "BillingAgent",
+      "text": "Anladım, otomatik ödeme talimatınızda bir sorun yaşanmış olabilir, bankanızla kontrol etmenizi öneririm. Ancak şu anki durumu çözmek için, faturanızı online olarak mobil uygulamamızdan veya web sitemizden kredi kartınızla ödeyebilirsiniz. Ödeme yapıldıktan hemen sonra taşıma işleminizi tekrar hızlandırabiliriz. Yurt dışındayken internet erişiminiz kısıtlıysa, size geçici bir internet paketi tanımlayabilirim, böylece ödeme işleminizi rahatça yaparsınız. Ne dersiniz?",
+      "tools_triggered": [
+        "change_customer_plan"
+      ],
+      "formality_level": "medium"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "BillingAgent",
+      "reason": "Customer's primary issue (porting) requires a specialist, and the agent needs to check full account status which could lead to billing issues.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "The customer's number porting was on hold due to a failed bill payment. The agent identified the secondary issue (billing) and explained its impact on the primary issue (porting). The agent provided solutions for both: online payment options for the bill and offered a temporary internet package to facilitate the payment process while abroad. The porting process can resume once the bill is settled.",
+    "customer_satisfaction": "accepting",
+    "follow_up_needed": true
+  },
+  "generated_at": "2025-08-14T09:22:12.644085",
+  "model": "flash",
+  "index": 118
+}

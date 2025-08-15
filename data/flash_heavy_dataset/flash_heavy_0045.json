@@ -1,0 +1,152 @@
+{
+  "id": "flash_heavy_0045",
+  "primary_issue": "account_security_sim_swap",
+  "secondary_issue": null,
+  "customer_profile": "student_abroad",
+  "region": "izmir",
+  "dialect_info": {
+    "dialect": "aegean",
+    "pace": "relaxed",
+    "formality": "low"
+  },
+  "conversation_dynamic": "circular",
+  "complexity": "medium",
+  "metadata": {
+    "context": "studying overseas",
+    "traits": [
+      "anxious",
+      "budget_conscious",
+      "tech_savvy"
+    ],
+    "emotional_journey": [
+      "worried",
+      "concerned",
+      "relieved",
+      "thankful"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo? Alo! Kimse var mı? Aman Allah'ım… Hattım gitti gari, çekmiyor hiç. Ben yurt dışındayım, İzmir'den geldim, okuyorum burada. Ne yapacağım şimdi? Annemi arayamıyorum, hocalarla konuşamıyorum… Eyvah!",
+      "emotion": "worried",
+      "dialect_markers": [
+        "aegean",
+        "gari",
+        "eyvah"
+      ],
+      "pace": "fast",
+      "background_context": "studying overseas"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Tabii, tabii... Adım Emre Yılmaz, T.C. kimlik numaram da 12345678910. Lütfen çabuk olun, ya! Sabah uyandım, telefonumda şebeke yok. Başka bir numara mı kullanılmış benim adıma? Sanki öyle bir mesaj gördüm… Allah kahretmesin, ne biçim iş bu? Burada parasız ve hatssız kalmak demek bu benim için, anlıyor musunuz?",
+      "emotion": "worried",
+      "dialect_markers": [
+        "aegean",
+        "ya",
+        "Allah kahretmesin"
+      ],
+      "pace": "normal",
+      "background_context": "studying overseas"
+    },
+    {
+      "turn_005": "Valla öyle bir his var içimde, abi. Sanki hattım kopyalanmış gibi. Dün gece geç yattım proje yüzünden, sabah bir kalktım… Telefon bomboş. Ne mesaj atabiliyorum, ne arama yapabiliyorum. Burası da bambaşka bir ülke, ailemle konuşmam lazım, dersler var, hocalar arayabilir... Çok sıkıntıda kaldım ya, İzmir'den geldim buraya okumak için, şimdi bir de bu çıktı başıma. Ne yapacağım ben?",
+      "emotion": "concerned",
+      "dialect_markers": [
+        "aegean",
+        "abi",
+        "valla",
+        "ya"
+      ],
+      "pace": "normal",
+      "background_context": "studying overseas"
+    },
+    {
+      "turn_007": "Oh be, sonunda… Yani şimdi tam olarak ne olacak? Hangi numara mı? Benim numaram aynı kalacak mı? Bu işlem ne kadar sürer, bir de ücreti falan olur mu? Öğrenciyim ben, bütçe malum… Bir de yurt dışındayız, yeni bir SIM karta nasıl ulaşacağım? Çok teşekkür ederim şimdiden, içime su serptiniz biraz.",
+      "emotion": "relieved",
+      "dialect_markers": [
+        "aegean",
+        "oh be",
+        "yani",
+        "malum"
+      ],
+      "pace": "normal",
+      "background_context": "studying overseas"
+    },
+    {
+      "turn_009": "Tamamdır, anladım şimdi. E-posta adresime gelecek yani… Süper oldu bu! Çok sağ olun, gerçekten büyük dertten kurtardınız beni. Yoksa ne yapardım bilmiyorum burada tek başıma. Çok teşekkür ederim, Allah razı olsun. İyi çalışmalar size de.",
+      "emotion": "thankful",
+      "dialect_markers": [
+        "aegean",
+        "yani",
+        "saldırın",
+        "Allah razı olsun"
+      ],
+      "pace": "relaxed",
+      "background_context": "studying overseas"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Hoş geldiniz, efendim. Sesinizden biraz telaşlı olduğunuzu anlıyorum. Size yardımcı olabilmem için, öncelikle güvenliğiniz için kimliğinizi teyit etmemiz gerekiyor. Adınızı ve T.C. kimlik numaranızı alabilir miyim lütfen?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Emre Bey, bilgileriniz teyit edildi. Durumunuzu kontrol ediyorum hemen... Anladığım kadarıyla hattınızda bir güvenlik sorunu yaşıyorsunuz ve yurt dışındasınız. Bu biraz hassas bir konu. Sizi doğrudan bu konuda uzmanlaşmış bir arkadaşıma aktarıyorum. Kendisi size daha detaylı yardımcı olacaktır. Kısa bir bekleme olabilir, lütfen hattan ayrılmayın.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "FAQAgent",
+      "text": "Merhaba Emre Bey, ben Can, size yardımcı olmak için buradayım. Router ekibimizden aktarıldınız. Hattınızda bir güvenlik ihlali, özellikle SIM kart kopyalama ya da 'SIM swap' durumu olabileceği yönünde bir bilgi aldım. Yurt dışında olmanız durumu daha da önemli kılıyor, endişenizi anlıyorum. Son hattınızın ne zaman çalıştığını hatırlıyor musunuz? Ya da şüpheli bir SMS, arama fark ettiniz mi?",
+      "tools_triggered": [
+        "get_customer_status"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_008": "Emre Bey, kesinlikle sizi anlıyorum. Merak etmeyin, bu tür durumlar için buradayız. Öncelikle, evet, anlattıklarınız bir SIM swap durumuna işaret ediyor. Eski SIM kartınız anında bloke edildi, hattınızın kötüye kullanımını engelledik. Şimdi sizin için hemen bir teknik destek kaydı oluşturuyorum ki, detaylıca incelensin ve gelecekte benzer durumlar yaşanmasın. Ayrıca, size yeni bir aktivasyon kodu göndereceğim. Bu kodla, bulunduğunuz yerdeki herhangi bir Türk Telekom bayisinden veya e-sim destekli telefonunuz varsa uzaktan yeni bir e-sim hattı tanımlayabilirsiniz. Bu işlem için sizden ek bir ücret talep edilmeyecek, tamamen bizim sorumluluğumuzda olan bir durum bu. İçiniz rahat olsun.",
+      "tools_triggered": [
+        "create_tech_ticket",
+        "reissue_activation_code"
+      ],
+      "formality_level": "low",
+      "agent_persona": "RouterAgent"
+    },
+    {
+      "turn_010": "Rica ederim Emre Bey, ne demek. Görevimiz bu. Yeni aktivasyon kodunuz belirttiğiniz e-posta adresinize birkaç dakika içinde ulaşacak. E-postanızı kontrol edebilirsiniz. Herhangi başka bir sorunuz olursa veya yardıma ihtiyacınız olursa çekinmeden tekrar arayabilirsiniz. Yurt dışındaki eğitim hayatınızda başarılar dilerim. İyi günler.",
+      "tools_triggered": [],
+      "formality_level": "low",
+      "agent_persona": "RouterAgent"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "FAQAgent",
+      "reason": "Müşterinin hattında güvenlik ihlali (SIM swap) şüphesi ve yurt dışında olması nedeniyle daha uzman bir birime aktarma ihtiyacı.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "Customer's old SIM was blocked due to a suspected SIM swap. A technical support ticket was created for further investigation, and a new activation code was reissued to the customer's email for a new physical SIM or eSIM activation abroad, with no extra charge.",
+    "customer_satisfaction": "thankful",
+    "follow_up_needed": false
+  },
+  "generated_at": "2025-08-14T09:16:07.632088",
+  "model": "flash",
+  "index": 45
+}

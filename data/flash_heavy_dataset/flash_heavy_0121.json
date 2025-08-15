@@ -1,0 +1,171 @@
+{
+  "id": "flash_heavy_0121",
+  "primary_issue": "account_porting_port_protection",
+  "secondary_issue": "technical_network_slow_speed",
+  "customer_profile": "parent_teenager",
+  "region": "trabzon",
+  "dialect_info": {
+    "dialect": "blacksea",
+    "pace": "fast",
+    "formality": "medium"
+  },
+  "conversation_dynamic": "negotiation",
+  "complexity": "complex",
+  "metadata": {
+    "context": "managing family plan",
+    "traits": [
+      "concerned",
+      "protective",
+      "cost_aware"
+    ],
+    "emotional_journey": [
+      "worried",
+      "questioning",
+      "firm",
+      "relieved"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo! Beyefendi, hemen bakın bi hele. Bana bir mesaj geldi, bizim küçük oğlanın hattını başka yere taşımak istiyorlarmış! Bizim haberimiz yoğ, böyle şey olur mu? Aklım çıktı vallaha!",
+      "emotion": "worried",
+      "dialect_markers": [
+        "blacksea"
+      ],
+      "pace": "fast",
+      "background_context": "managing family plan"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Ben [Müşteri Adı Soyadı], kimlik numaram da [Kimlik Numarası]. Telefon numarası da [Telefon Numarası]. Çabuk olun da bi bakın, kim o numara için başvurdu? Bizim haberimiz yoğ, ne iş?",
+      "emotion": "questioning",
+      "dialect_markers": [
+        "blacksea"
+      ],
+      "pace": "fast",
+      "background_context": "managing family plan"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Alo, hanımefendi? Dinliyor musunuz beni? O evladımın hattı o! Nasıl olur da izinsiz başvuru olur? Koruma yok midur sizde? Bi de son zamanlarda internet çok yavaş, hep şikayetçi bizimkiler, bu da üstüne geldi! Ne iş bu şimdi?",
+      "emotion": "questioning",
+      "dialect_markers": [
+        "blacksea"
+      ],
+      "pace": "fast",
+      "background_context": "managing family plan"
+    },
+    {
+      "turn_id": "turn_007",
+      "text": "Ne demek görünüyor? Bizden onay almadan nasıl olur? Böyle saçmalık olmaz! Bu işin peşini bırakmam! İnternet de düzelmeli, evdeki herkes şikayetçi, çocuklar dersten geri kalıyor. İki işi birden halledin!",
+      "emotion": "firm",
+      "dialect_markers": [
+        "blacksea"
+      ],
+      "pace": "fast",
+      "background_context": "managing family plan"
+    },
+    {
+      "turn_id": "turn_009",
+      "text": "Oğlanın numarası için yapın, [Oğlanın Telefon Numarası]. Tamam o zaman, o korumayı hemen koyun, izinsiz kimse işlem yapamasın. Çok önemli bu. Bir de bu internet işi ne olacak? Haçan çocuklar derslerini yapamıyor, eğlenemiyorlar. Bir an önce çözülsün.",
+      "emotion": "firm",
+      "dialect_markers": [
+        "blacksea"
+      ],
+      "pace": "fast",
+      "background_context": "managing family plan"
+    },
+    {
+      "turn_id": "turn_011",
+      "text": "Çok şükür, Allah razı olsun. O zaman bekliyorum dönüşünüzü. İnternet düzelirse çok sevinirim. Sağ olasın.",
+      "emotion": "relieved",
+      "dialect_markers": [
+        "blacksea"
+      ],
+      "pace": "fast",
+      "background_context": "managing family plan"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba efendim, hoş geldiniz. Güvenliğiniz için öncelikle kimlik doğrulaması yapmamız gerekiyor. Lütfen adınızı, soyadınızı ve sistemde kayıtlı kimlik numaranızı veya telefon numaranızı belirtir misiniz?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkürler [Müşteri Adı], kimlik doğrulamanız başarıyla tamamlandı. Sisteme baktığımda, belirttiğiniz numara için bir taşıma talebi gözüküyor. Bu konu hassas olduğu için sizi hat taşıma ve güvenlik birimimize aktarıyorum. Onlar size daha detaylı bilgi verecek ve yardımcı olacaklardır.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "FAQAgent",
+      "text": "Merhaba [Müşteri Adı], ben [FAQAgent Adı], hat taşıma ve güvenlik biriminden. Endişenizi anlıyorum. Sistemde evet, bahsettiğiniz numara için bir taşıma talebi görünüyor ancak numaralarınızda izinsiz taşıma olmaması için gerekli korumalarımız mevcut. Öncelikle bu talebin detaylarını kontrol edip size bilgi vereceğim. Diğer yandan, internet yavaşlığı şikayetiniz için teknik birime aktarmam daha doğru olacaktır. İzninizle sizi o birime aktarıyorum.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_008",
+      "agent_persona": "TechAgent",
+      "text": "Merhaba [Müşteri Adı], ben [TechAgent Adı], teknik destek biriminden. Hem taşıma talebiniz hem de internet yavaşlığı konusunda yardımcı olacağım. Öncelikle taşıma talebiyle ilgili, hattınıza port koruması uygulayabiliriz ve mevcut talebi detaylı inceleyip sizi bilgilendirebiliriz. Genellikle bu talepler sizin onayınız olmadan ilerlemez. İnternet yavaşlığı için ise, hattınızda detaylı bir kontrol yapıp, gerekirse bölgenizdeki teknik ekibimize bir arıza kaydı oluşturabiliriz. Hangi numara için işlem yapalım?",
+      "tools_triggered": [
+        "get_customer_status",
+        "create_tech_ticket"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_010",
+      "agent_persona": "TechAgent",
+      "text": "Anladım [Müşteri Adı]. [Oğlanın Telefon Numarası] hattınıza gerekli port korumasını aktif ettim, artık izinsiz bir taşıma talebi işleme alınmayacaktır. Mevcut talebi de incelemeye aldık, bir yanlışlık varsa düzeltilecektir. İnternet yavaşlığı için ise, [Oğlanın Telefon Numarası] hattınız ve adresiniz için teknik bir arıza kaydı oluşturdum. Takip numaranız: TRBK20240726. Ekiplerimiz en geç 24 saat içinde size dönüş yapacaktır. Gerekli kontrolleri uzaktan yapacaklar, gerekirse adresinize ekip yönlendirecekler.",
+      "tools_triggered": [
+        "create_tech_ticket"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_012",
+      "agent_persona": "TechAgent",
+      "text": "Rica ederim [Müşteri Adı]. Başka bir konuda yardımcı olabileceğim bir şey var mıdır?",
+      "tools_triggered": [],
+      "formality_level": "medium"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "FAQAgent",
+      "reason": "Customer's primary issue (account porting/port protection) requires specialized assistance from the porting and security unit.",
+      "context_preserved": true
+    },
+    {
+      "at_turn": 6,
+      "from": "FAQAgent",
+      "to": "TechAgent",
+      "reason": "The customer has a secondary issue (technical network slow speed) which requires technical support, and the porting issue might also need deeper technical investigation or resolution.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "The primary issue of unauthorized porting was addressed by activating port protection on the son's line and initiating an investigation into the existing porting request. The secondary issue of slow internet speed was resolved by creating a technical fault ticket for the customer's line and address, with a promise of follow-up from the technical team within 24 hours.",
+    "customer_satisfaction": "The customer moved from a state of worry and frustration to relief, feeling that both their primary and secondary concerns were being adequately addressed and managed.",
+    "follow_up_needed": true
+  },
+  "generated_at": "2025-08-14T09:22:49.591920",
+  "model": "flash",
+  "index": 121
+}

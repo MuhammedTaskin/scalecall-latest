@@ -1,0 +1,135 @@
+{
+  "id": "flash_heavy_0193",
+  "primary_issue": "billing_issues_wrong_plan",
+  "secondary_issue": null,
+  "customer_profile": "small_business_owner",
+  "region": "ankara",
+  "dialect_info": {
+    "dialect": "formal",
+    "pace": "moderate",
+    "formality": "high"
+  },
+  "conversation_dynamic": "negotiation",
+  "complexity": "medium",
+  "metadata": {
+    "context": "managing employee lines",
+    "traits": [
+      "practical",
+      "cost_focused",
+      "busy"
+    ],
+    "emotional_journey": [
+      "businesslike",
+      "questioning",
+      "negotiating",
+      "satisfied"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo, iyi günler. Ben Yılmaz İnşaat'tan Ahmet Bey. Fatura detaylarıma baktığımda, çalışan hatlarımızdan birinde, sanırım 053X XXX XX XX numaralı hatta, taahhüt ettiğimizden farklı ve daha yüksek maliyetli bir paketin tanımlı olduğunu fark ettim. Bu durumu düzeltmek istiyorum, mümkün müdür?",
+      "emotion": "businesslike",
+      "dialect_markers": [
+        "formal"
+      ],
+      "pace": "moderate",
+      "background_context": "managing employee lines"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Elbette. Adım Ahmet Yılmaz. T.C. kimlik numaramın son dört hanesi 1234. Bu durum bizim için önemli, zira aylık bütçemizi doğrudan etkiliyor ve çalışan hatlarında bu tür sapmalar olmaması gerekiyor.",
+      "emotion": "businesslike",
+      "dialect_markers": [
+        "formal"
+      ],
+      "pace": "moderate",
+      "background_context": "managing employee lines"
+    },
+    {
+      "turn_id": "turn_006",
+      "text": "Ayşe Hanım, iyi günler. Teşekkür ederim. Şöyle ki, biz bu hattı açarken özellikle çalışanlarımız için belirli bir data ve konuşma paketi üzerinde anlaşmıştık. Ancak son faturada gördüğüm kadarıyla, bu hatta çok daha pahalı, bizim hiç talep etmediğimiz ve ihtiyaç duymadığımız bir 'premium' paket tanımlanmış. Bu durum nasıl oluştu ve neden bizim bilgimiz dışında böyle bir değişiklik yapıldı? Diğer çalışan hatlarımızda bu sorun yokken, neden sadece bu hatta böyle bir yanlışlık var, anlayamadım.",
+      "emotion": "questioning",
+      "dialect_markers": [
+        "formal"
+      ],
+      "pace": "moderate",
+      "background_context": "managing employee lines"
+    },
+    {
+      "turn_id": "turn_008",
+      "text": "Ayşe Hanım, 'KOBİ Destek 20 GB' paketiniz de bizim için yeterli değil. Bizim çalışanlarımız için aylık en az 30-35 GB data ve sınırsız konuşma içeren, ama maliyeti 'Mega Plus' kadar yüksek olmayan bir pakete ihtiyacımız var. Ayrıca, biz sizinle uzun süredir çalışan ve altı ayrı hattı olan kurumsal bir müşteriyiz. Bu otomatik geçişin tarafımızdan onaylanmaması, bir yanlışlık olduğunu gösteriyor. Bu hat için geriye dönük bir düzeltme ya da bize özel daha avantajlı bir kurumsal tarife sunmanız mümkün müdür? İşletme giderlerimizi optimize etmeye çalışıyoruz.",
+      "emotion": "negotiating",
+      "dialect_markers": [
+        "formal"
+      ],
+      "pace": "moderate",
+      "background_context": "managing employee lines"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "İyi günler Ahmet Bey. Destek hattımıza hoş geldiniz. Konuyla ilgili yardımcı olabilmemiz adına öncelikle güvenliğiniz için kimlik doğrulaması yapmamız gerekmektedir. Adınız, soyadınız ve T.C. Kimlik numaranızın son dört hanesini rica edebilir miyim, efendim?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkür ederim Ahmet Bey. Bilgileriniz doğrulandı. Talebiniz anlaşıldı. Fatura ve tarife değişikliği konularında size daha detaylı yardımcı olabilecek Fatura ve Tarife Departmanımıza aktarıyorum. Kısa bir bekleme süresi olabilir, hattımdan ayrılmayın lütfen.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_005",
+      "agent_persona": "BillingAgent",
+      "text": "Ahmet Bey, iyi günler. Ben Ayşe, Fatura ve Tarife Departmanı'ndan. Router ekibimizden aktarıldınız. 053X XXX XX XX numaralı hattınızdaki tarife ve faturalama sorununu incelemek üzere devraldım. Lütfen tam olarak ne gibi bir sorun yaşadığınızı tekrar detaylandırabilir misiniz?",
+      "tools_triggered": [
+        "get_customer_plan"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_007",
+      "agent_persona": "BillingAgent",
+      "text": "Anlıyorum Ahmet Bey. Sistemsel kayıtlarımızı inceliyorum. Görüyorum ki, bahsettiğiniz hat, eski bir promosyonel tarife döneminden sonra otomatik olarak standart bir üst pakete geçiş yapmış. Bu geçiş, o dönemdeki kullanım alışkanlıklarına göre en uygun olduğu düşünülen bir pakete yönlendirilmiş. Mevcut tarifeniz 'Mega Plus 50 GB' olarak görünüyor. Kullanımınıza ve işletmenizin ihtiyaçlarına göre bu paketin maliyetli olduğunu anlıyorum. Standart iş paketlerimize baktığımda, 'KOBİ Destek 20 GB' paketimiz mevcut, aylık ücreti daha uygun.",
+      "tools_triggered": [
+        "list_all_plans"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_009",
+      "agent_persona": "BillingAgent",
+      "text": "Ahmet Bey, haklısınız. Uzun süreli ve çoklu hat kullanan değerli bir kurumsal müşterimizsiniz. Durumunuzu ve taleplerinizi anlıyorum. Sistemimizde sizin gibi kurumsal müşterilerimize özel tanımlanmış, henüz herkese açık olmayan bir 'İşletme Pro 35 GB' paketi mevcut. Bu paket, 35 GB data, sınırsız konuşma ve 2500 SMS içermekte olup, 'KOBİ Destek 20 GB' paketinden biraz daha yüksek ama mevcut 'Mega Plus' paketinizden çok daha uygun bir maliyetle sunulmaktadır. Ayrıca, bu hata sebebiyle son faturanızdaki fazla ücretlendirme için 50 TL'lik bir indirim tanımlayabiliriz. Bu paket ve indirim sizin için uygun mudur? Onayınız durumunda hemen geçişinizi sağlayabilirim.",
+      "tools_triggered": [
+        "change_customer_plan"
+      ],
+      "formality_level": "high"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "BillingAgent",
+      "reason": "Customer's query requires detailed billing and plan management, which falls under the Billing and Tariffs Department's expertise.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "The customer's employee line was on an incorrect, higher-cost plan due to an automatic system transition. The Billing Agent, after negotiation, offered a special 'İşletme Pro 35 GB' package tailored for corporate clients, which better fits the customer's needs for data/talk time at a more suitable cost. Additionally, a 50 TL discount was offered for the previous overcharge.",
+    "customer_satisfaction": "satisfied",
+    "follow_up_needed": false
+  },
+  "generated_at": "2025-08-14T09:28:51.396539",
+  "model": "flash",
+  "index": 193
+}

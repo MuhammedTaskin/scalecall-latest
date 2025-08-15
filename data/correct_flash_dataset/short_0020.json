@@ -1,0 +1,101 @@
+{
+  "conversation_id": "short_0020_general_help",
+  "metadata": {
+    "scenario": "general_help",
+    "handoff_pattern": [
+      "RouterAgent",
+      "FAQAgent"
+    ]
+  },
+  "customer_profile": {
+    "persona": "impatient",
+    "phone": "0555 123 45 67"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "İnternetim çalışmıyor, çıldırmak üzereyim! Hemen bir çözüm bulun!",
+      "emotion": "impatient"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Evet, 0555 123 45 67. Sorun hala devam ediyor!",
+      "emotion": "impatient"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Tamam, deneyelim. Umarım bu sefer işe yarar.",
+      "emotion": "impatient"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba, Telekom Çağrı Merkezi'ne hoş geldiniz. Kimliğinizi doğrulamak için lütfen telefon numaranızı veya T.C. kimlik numaranızı paylaşır mısınız?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Bilgileriniz doğrulandı. İnternet servisinizde genel bir sorun görünüyor gibi. Bu sorunu çözmek için sizi ilgili birimimize yönlendireceğim. Lütfen bekleyiniz.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "handoff": {
+        "to": "FAQAgent"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "FAQAgent",
+      "text": "Merhaba, size yardımcı olmak için buradayım. Öncelikle modeminizi kapatıp 30 saniye bekledikten sonra tekrar açmayı dener misiniz? Bu çoğu bağlantı sorununu çözebilir.",
+      "tools_triggered": [
+        "search_faq",
+        "send_help_sms"
+      ],
+      "handoff": null
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "FAQAgent",
+      "reason": "general_help"
+    }
+  ],
+  "tool_calls": [
+    {
+      "turn_id": "turn_002",
+      "tool": "verify_user",
+      "arguments": {
+        "phone_number": "0555 123 45 67"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_004",
+      "tool": "route_to_agent",
+      "arguments": {
+        "agent_type": "FAQAgent",
+        "reason": "general_help"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "search_faq",
+      "arguments": {
+        "query": "internet bağlantı sorunu"
+      },
+      "result": "Modem resetleme adımları."
+    }
+  ],
+  "generated_at": "2025-08-14T08:01:10.520851",
+  "index": 20
+}

@@ -1,0 +1,46 @@
+{
+  "id": "smart_0060",
+  "scenario": "esim_reissue",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Merhaba, yeni bir eSIM QR koduna ihtiyacım var.",
+      "emotion": "polite"
+    },
+    {
+      "turn": 3,
+      "text": "Evet, numaram 5XXXXXXXX."
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Merhaba, yardımcı olabilirim. Lütfen telefon numaranızı paylaşır mısınız?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "TechAgent",
+      "text": "Numaranızı doğruladım. eSIM durumunuzu kontrol edip yeni bir aktivasyon kodu yeniden yayınlayacağım. Lütfen bekleyin. ... Yeni QR kodunuz e-posta adresinize gönderildi. Başka yardımcı olabileceğim bir konu var mı?",
+      "tools": [
+        "check_esim_status",
+        "reissue_activation_code",
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:57:13.841572",
+  "required_tools": [
+    "verify_user",
+    "check_esim_status",
+    "reissue_activation_code",
+    "end_conversation"
+  ],
+  "agent_flow": [
+    "RouterAgent",
+    "TechAgent"
+  ]
+}

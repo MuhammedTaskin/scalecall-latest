@@ -1,0 +1,175 @@
+{
+  "id": "flash_heavy_0099",
+  "primary_issue": "billing_payments_failed",
+  "secondary_issue": null,
+  "customer_profile": "gig_worker",
+  "region": "trabzon",
+  "dialect_info": {
+    "dialect": "blacksea",
+    "pace": "fast",
+    "formality": "medium"
+  },
+  "conversation_dynamic": "straightforward",
+  "complexity": "medium",
+  "metadata": {
+    "context": "needs reliable service for work",
+    "traits": [
+      "flexible",
+      "app_dependent",
+      "connectivity_critical"
+    ],
+    "emotional_journey": [
+      "stressed",
+      "urgent",
+      "persistent",
+      "grateful"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo, ula benim internet niye kesildi? Ne oldi böyle birden bire? Sabah siparişleri almam lazımdı, şimdi hiçbir şeye ulaşamıyorum! İşlerim yattı be! Çok stres oldum vallahi.",
+      "emotion": "stressed",
+      "dialect_markers": [
+        "blacksea",
+        "ula",
+        "niye kesildi",
+        "ne oldi",
+        "işlerim yattı be"
+      ],
+      "pace": "fast",
+      "background_context": "needs reliable service for work"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Evet, 532... numarası. Ula acele edin, benim bütün işim bu internete bağlı. Uygulamadan taksi siparişi alıyorum, haritaya bakmam lazım, müşteriyi aramam lazım. Bağlantı olmazsa aç kalırım ben, haçan!",
+      "emotion": "urgent",
+      "dialect_markers": [
+        "blacksea",
+        "ula acele edin",
+        "haçan",
+        "aç kalırım ben"
+      ],
+      "pace": "fast",
+      "background_context": "needs reliable service for work"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Merhaba. Şimdi, bakın, benim internetim gitti. Sabahtan beri iş yapamıyorum. Dün faturayı ödediğime emindim, kredi kartımdan otomatik ödeme vardı. Ama şu an ne olduysa, kesik. Benim için her dakika önemli, bu benim ekmek teknem!",
+      "emotion": "persistent",
+      "dialect_markers": [
+        "blacksea",
+        "ekmek teknem",
+        "emindim",
+        "kesik"
+      ],
+      "pace": "fast",
+      "background_context": "needs reliable service for work"
+    },
+    {
+      "turn_id": "turn_007",
+      "text": "Ödediğime emindim ama... En son kredi kartımla otomatik ödeme yapmıştım. Bir de oradan bakar mısınız? Belki bir hata olmuştur.",
+      "emotion": "persistent",
+      "dialect_markers": [
+        "blacksea",
+        "bakar mısınız"
+      ],
+      "pace": "medium",
+      "background_context": "needs reliable service for work"
+    },
+    {
+      "turn_id": "turn_009",
+      "text": "Anladım, tamam, haçan bu kartla öderim ben o zaman hemen. Evet, evet, linki yollayın. Hemen şimdi halledeyim de benim internetim gelsin. Müşteriler bekliyor, siparişler birikiyor.",
+      "emotion": "hopeful",
+      "dialect_markers": [
+        "blacksea",
+        "haçan",
+        "hemen şimdi halledeyim"
+      ],
+      "pace": "fast",
+      "background_context": "needs reliable service for work"
+    },
+    {
+      "turn_id": "turn_011",
+      "text": "Ula çok sağ olun! Vallahi kurtardınız beni. İşlerime dönebilirim artık. Çok teşekkür ederim, kolay gelsin size de!",
+      "emotion": "grateful",
+      "dialect_markers": [
+        "blacksea",
+        "ula çok sağ olun",
+        "vallahi kurtardınız beni"
+      ],
+      "pace": "fast",
+      "background_context": "needs reliable service for work"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba, Türk Telekom Müşteri Hizmetleri'ne hoş geldiniz. Size nasıl yardımcı olabilirim? Güvenliğiniz için lütfen adınızı, soyadınızı ve T.C. kimlik numaranızın son dört hanesini veya cep telefonu numaranızı belirtir misiniz?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Bilgilerinizi teyit ettim. Sistemde hattınızın fatura kaynaklı olarak geçici olarak askıya alındığını görüyorum. Bu konuda size daha detaylı yardımcı olabilmesi için sizi Fatura ve Ödeme İşlemleri birimimize aktarıyorum. Lütfen kısa bir süre hatta kalınız.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "BillingAgent",
+      "text": "Merhaba, Fatura ve Ödeme İşlemleri biriminden ben, nasıl yardımcı olabilirim? Hattınızın durumunu kontrol ediyorum hemen.",
+      "tools_triggered": [
+        "get_last_bill"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_008",
+      "agent_persona": "BillingAgent",
+      "text": "Evet, kontrol ettim. Son faturanızın ödemesi görünmüyor. Sistemde 15.03.2024 tarihli 325 TL'lik bir faturanızın kredi kartınızdan tahsil edilemediği bilgisi mevcut. Kartınızın limit yetersizliği ya da bankanızdan kaynaklı bir sorun yaşanmış olabilir. Dilerseniz hemen şimdi size güvenli ödeme linki gönderebilirim veya farklı bir kartla ödeme yapabilirsiniz.",
+      "tools_triggered": [
+        "get_last_bill"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_010",
+      "agent_persona": "BillingAgent",
+      "text": "Anladım, hemen ödeme linkini cep telefonunuza SMS olarak gönderiyorum. Ödemeniz tamamlandığında, hattınız ortalama 5 dakika içinde aktif hale gelecektir. Ödeme linki size ulaştı mı?",
+      "tools_triggered": [],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_012",
+      "agent_persona": "BillingAgent",
+      "text": "Rica ederim, önemli değil. Başka bir konuda yardımcı olabileceğim bir durum olursa, her zaman arayabilirsiniz. İyi günler dilerim.",
+      "tools_triggered": [],
+      "formality_level": "medium"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "BillingAgent",
+      "reason": "Customer's service is suspended due to a billing issue, requiring specialized assistance from the Billing and Payment Operations unit.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "Customer's failed bill payment was identified (due to failed automatic payment), and a new secure payment link was provided to resolve the issue. Service is expected to resume shortly after payment.",
+    "customer_satisfaction": "Grateful, as the immediate problem affecting their livelihood was addressed.",
+    "follow_up_needed": false
+  },
+  "generated_at": "2025-08-14T09:20:41.243159",
+  "model": "flash",
+  "index": 99
+}

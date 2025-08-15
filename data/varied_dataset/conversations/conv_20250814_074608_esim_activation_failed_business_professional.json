@@ -1,0 +1,227 @@
+{
+  "conversation_id": "conv_20250814_074608_esim_activation_failed_business_professional",
+  "metadata": {
+    "scenario": "esim_activation_failed",
+    "complexity": "chaos",
+    "persona": "business_professional",
+    "handoff_pattern": [
+      "RouterAgent",
+      "BillingAgent"
+    ],
+    "interruption_type": "multiple_issues",
+    "resolution": "ticket_created"
+  },
+  "customer_profile": {
+    "persona": "business_professional",
+    "phone": "0555 617 44 85",
+    "maiden_name": "Ay",
+    "issue": "esim_activation_failed",
+    "background": "İşletme sahibi"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Merhaba, iyi günler. Ben Alp Ergen, Ergen Bilişim'den arıyorum. Yeni aldığımız bir eSIM'in aktivasyonunda sorun yaşıyoruz. Acil bir konu, bu hattı kullanıma almamız gerekiyor.",
+      "emotion": "urgent_professional",
+      "voice_notes": {
+        "tone": "confident",
+        "speed": "moderate",
+        "emphasis": [
+          "acil",
+          "kullanıma almamız gerekiyor"
+        ]
+      }
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Tabii, numara 0555 617 44 85, anne kızlık soyadım Ay. Bu arada, geçen ayki faturamızda bir kampanya indirimi yansımamış gibi geldi bana. Ona da bakabilir misiniz bu görüşmede?",
+      "emotion": "multi_tasking_demanding",
+      "voice_notes": {
+        "tone": "direct",
+        "speed": "slightly_faster",
+        "emphasis": [
+          "Ay",
+          "kampanya indirimi yansımamış"
+        ]
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "text": "Merhaba. Yönlendirildim ama esas sorunum e-SIM aktivasyonuydu. Yeni bir hat, onu bir türlü aktif edemedik. Ayrıca, evet, geçen ayki faturamda bir indirim beklentim vardı, o da yansımamış.",
+      "emotion": "slightly_confused_then_direct",
+      "voice_notes": {
+        "tone": "clear",
+        "speed": "moderate",
+        "emphasis": [
+          "esas sorunum e-SIM aktivasyonuydu",
+          "onu bir türlü aktif edemedik"
+        ]
+      }
+    },
+    {
+      "turn_id": "turn_008",
+      "text": "Hani şu... kurumsal müşterilere özel aylık %10 indirim kampanyası vardı ya? Neyse, asıl aciliyet e-SIM. Bizim satış ekibinden bir arkadaşımız bugün sahaya çıkacaktı, hattı aktif değil. O konuda bir ilerleme kaydedemiyor muyuz?",
+      "emotion": "impatient_re_prioritizing",
+      "voice_notes": {
+        "tone": "firm",
+        "speed": "accelerating",
+        "emphasis": [
+          "asıl aciliyet e-SIM",
+          "hattı aktif değil",
+          "ilerleme kaydedemiyor muyuz"
+        ]
+      }
+    },
+    {
+      "turn_id": "turn_010",
+      "text": "Yani şimdi tekrar mı aktarılacağım? Bu kaçıncı aktarım olacak? İşimiz gücümüz var, bu kadar vakit kaybetmek istemiyorum. Benim için çözüme ulaşsanız daha iyi olmaz mı?",
+      "emotion": "frustrated_exasperated",
+      "voice_notes": {
+        "tone": "slightly_higher_pitch",
+        "speed": "faster",
+        "emphasis": [
+          "tekrar mı aktarılacağım",
+          "kaçıncı aktarım",
+          "vakit kaybetmek istemiyorum"
+        ]
+      }
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba Alp Bey, Türk Telekom'a hoş geldiniz. Sorununuzla ilgili size yardımcı olabilmek için öncelikle kimlik doğrulama yapmamız gerekiyor. Telefon numaranız ve anne kızlık soyadınızın ilk iki harfini rica edebilir miyim?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Doğrulamayı aldım Alp Bey. e-SIM aktivasyonunuz ve fatura indirimiyle ilgili taleplerinizi anladım. Bir saniye bekletebilir miyim, sizi ilgili departmana aktarıyorum.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "handoff": {
+        "from_agent": "RouterAgent",
+        "to_agent": "BillingAgent"
+      }
+    },
+    {
+      "turn_id": "turn_005",
+      "agent_persona": "BillingAgent",
+      "text": "Merhaba Alp Bey, Türk Telekom Fatura ve Tarife Destek Hattı'na hoş geldiniz. Az önce yönlendirildiniz, size nasıl yardımcı olabilirim?",
+      "tools_triggered": [],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_007",
+      "agent_persona": "BillingAgent",
+      "text": "Anladım Alp Bey. Öncelikle fatura indiriminizle ilgili konuya bakıyorum. Sistemime göre, 0555 617 44 85 numaralı hattınızın geçen ayki faturasında görünürde bir indirim bulunmamakta. Hangi kampanyadan bahsediyorsunuz acaba?",
+      "tools_triggered": [
+        "get_last_bill",
+        "get_unpaid_amount"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_009",
+      "agent_persona": "BillingAgent",
+      "text": "Haklısınız Alp Bey, e-SIM aktivasyonunun iş akışınız için ne kadar önemli olduğunu anlıyorum. Ancak bu konu Fatura ve Tarife Destek Hattı'nın doğrudan yetki alanına girmiyor. Teknik Destek birimimiz bu konuda size daha hızlı ve doğru bir şekilde yardımcı olabilir.",
+      "tools_triggered": [],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_011",
+      "agent_persona": "BillingAgent",
+      "text": "Kesinlikle haklısınız Alp Bey, yaşanan gecikme için özür dilerim. Sizi tekrar bekletmemek adına, e-SIM aktivasyon sorununuzla ilgili detaylı bir kayıt oluşturuyorum ve bu kaydı öncelikli olarak Teknik Destek birimimize iletiyorum. Onlar size en kısa sürede geri dönüş yapacaklar. Fatura indiriminizle ilgili talebinizi de notlarıma ekledim, bu konuda da ayrıca bir kontrol sağlanacak. Kayıt numaranız TRK20250814-789012.",
+      "tools_triggered": [
+        "create_payment_note",
+        "escalate_to_human"
+      ],
+      "handoff": null
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "turn_id": "turn_004",
+      "from_agent": "RouterAgent",
+      "to_agent": "BillingAgent",
+      "reason": "Customer mentioned a billing query, system routed to BillingAgent despite primary issue being technical (chaos)"
+    }
+  ],
+  "tool_calls": [
+    {
+      "turn_id": "turn_002",
+      "tool_name": "verify_user",
+      "parameters": {
+        "phone_number": "0555 617 44 85",
+        "maiden_name_initials": "Ay"
+      }
+    },
+    {
+      "turn_id": "turn_004",
+      "tool_name": "get_customer_status",
+      "parameters": {
+        "phone_number": "0555 617 44 85"
+      }
+    },
+    {
+      "turn_id": "turn_004",
+      "tool_name": "route_to_agent",
+      "parameters": {
+        "agent_type": "BillingAgent",
+        "reason": "Customer inquiry includes billing related questions."
+      }
+    },
+    {
+      "turn_id": "turn_007",
+      "tool_name": "get_last_bill",
+      "parameters": {
+        "phone_number": "0555 617 44 85"
+      }
+    },
+    {
+      "turn_id": "turn_007",
+      "tool_name": "get_unpaid_amount",
+      "parameters": {
+        "phone_number": "0555 617 44 85"
+      }
+    },
+    {
+      "turn_id": "turn_011",
+      "tool_name": "create_payment_note",
+      "parameters": {
+        "phone_number": "0555 617 44 85",
+        "note_details": "Müşteri, kurumsal %10 indirim kampanyasının yansımadığını belirtmiştir, kontrol edilecek."
+      }
+    },
+    {
+      "turn_id": "turn_011",
+      "tool_name": "escalate_to_human",
+      "parameters": {
+        "reason": "eSIM aktivasyon sorunu BillingAgent yetki alanında değil, Teknik Destek birimine öncelikli talep olarak iletiliyor.",
+        "issue_summary": "eSIM aktivasyon hatası, yeni hat aktif olmuyor, acil iş hattı.",
+        "target_department": "Technical Support",
+        "priority": "High"
+      }
+    }
+  ],
+  "generation_id": "94e2776c-a222-47ce-b89f-bfdd08c1d694",
+  "generated_at": "2025-08-14T07:46:34.664566",
+  "index": 13,
+  "variation_params": {
+    "persona": "business_professional",
+    "issue": "esim_activation_failed",
+    "handoff_pattern": [
+      "RouterAgent",
+      "BillingAgent"
+    ],
+    "complexity": "chaos",
+    "interruption": "multiple_issues",
+    "resolution": "ticket_created"
+  }
+}

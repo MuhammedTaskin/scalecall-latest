@@ -1,0 +1,44 @@
+{
+  "id": "smart_0095",
+  "scenario": "plan_info",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Merhaba! Paketim hakkında bilgi almak istiyorum, çok merak ediyorum!",
+      "emotion": "cheerful"
+    },
+    {
+      "turn": 3,
+      "text": "Evet, tabii ki. Numaram 5321234567."
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Hoş geldiniz! Sistemlerimizi kontrol etmek için lütfen telefon numaranızı paylaşır mısınız?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "PlanAgent",
+      "text": "Harika! Mevcut paketinizde sınırsız konuşma ve 20GB internet bulunuyor. Başka bir sorunuz var mı?",
+      "tools": [
+        "get_customer_plan",
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:57:24.638968",
+  "required_tools": [
+    "verify_user",
+    "get_customer_plan",
+    "end_conversation"
+  ],
+  "agent_flow": [
+    "RouterAgent",
+    "PlanAgent"
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "id": "flash_heavy_0020",
+  "primary_issue": "account_management_merge_accounts",
+  "secondary_issue": null,
+  "customer_profile": "small_business_owner",
+  "region": "istanbul",
+  "dialect_info": {
+    "dialect": "neutral",
+    "pace": "fast",
+    "formality": "medium"
+  },
+  "conversation_dynamic": "circular",
+  "complexity": "medium",
+  "metadata": {
+    "context": "managing employee lines",
+    "traits": [
+      "practical",
+      "cost_focused",
+      "busy"
+    ],
+    "emotional_journey": [
+      "businesslike",
+      "questioning",
+      "negotiating",
+      "satisfied"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Merhaba, ben küçük bir işletme sahibiyim. İki ayrı kurumsal hattım var, biri benim şirket hattım, diğeri de çalışanların kullandığı hatlar. Bunları tek bir hesap altında birleştirmek istiyorum. Mümkün müdür?",
+      "emotion": "businesslike",
+      "dialect_markers": [
+        "neutral"
+      ],
+      "pace": "fast",
+      "background_context": "managing employee lines"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Tabii, hemen vereyim. Benim hattım 532 ile başlayan numara, şirket hesabım üzerine kayıtlı. Çalışanların hatları da 530 ile başlayan diğer hesapta. Vergi numaramı da vereyim mi? İşlem hızlı olursa sevinirim, işler güçler malum.",
+      "emotion": "businesslike",
+      "dialect_markers": [
+        "neutral"
+      ],
+      "pace": "fast",
+      "background_context": "managing employee lines"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Tekrar merhaba. Evet, aynen öyle. Şimdi ben bu iki kurumsal hesabı tek bir hesapta birleştirmek istiyorum. Yani hem kendi şirket hattım, hem de çalışanların kullandığı diğer hatlar... Fatura takibi, yönetim falan zor oluyor ayrı ayrı. Bu birleşince bize ne gibi kolaylıklar sağlayacak peki? Sadece fatura mı birleşiyor, yoksa paketlerde falan da bir avantaj olur mu?",
+      "emotion": "questioning",
+      "dialect_markers": [
+        "neutral"
+      ],
+      "pace": "fast",
+      "background_context": "managing employee lines"
+    },
+    {
+      "turn_id": "turn_007",
+      "text": "Anladım, fatura ve yönetim kolaylığı güzel. Ama asıl merak ettiğim, maliyet tarafında bize bir faydası olacak mı? Yani çalışanların hatları da benim kurumsal hesabıma geçince, sanki toplu alım gibi bir şey olacak. Paketlerde veya tarifelerde özel bir indirim veya daha avantajlı bir geçiş imkanı oluyor mu? Sonuçta işlerimizi daha verimli hale getirmeye çalışıyoruz.",
+      "emotion": "negotiating",
+      "dialect_markers": [
+        "neutral"
+      ],
+      "pace": "fast",
+      "background_context": "managing employee lines"
+    },
+    {
+      "turn_id": "turn_009",
+      "text": "Çok iyi oldu bu bilgi. Evet, tam da aradığımız şey buydu. Hem yönetim kolaylığı hem de maliyet avantajı olursa süper. Madem öyle, birleştirelim bu hesapları. Ne yapmamız gerekiyor şimdi? İşlemi başlatabilir miyiz?",
+      "emotion": "satisfied",
+      "dialect_markers": [
+        "neutral"
+      ],
+      "pace": "fast",
+      "background_context": "managing employee lines"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba, X Telekom'a hoş geldiniz. Talebinizle ilgili size yardımcı olabilmem için öncelikle güvenlik doğrulaması yapmamız gerekiyor. Lütfen T.C. Kimlik numaranızı veya abone numaranızı belirtir misiniz?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Bilgileriniz için teşekkürler, doğrulama başarıyla tamamlandı. Anladığım kadarıyla, farklı kurumsal hatlarınızı tek bir çatı altında birleştirmek istiyorsunuz. Bu işlem için sizi Kurumsal Müşteri Hizmetleri departmanımıza, yani FAQAgent'a aktarıyorum. Onlar size bu konuda detaylı bilgi verecek ve yardımcı olacaklardır. Lütfen hatta kalın.",
+      "tools_triggered": [
+        "route_to_agent"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "FAQAgent",
+      "text": "Merhaba, X Telekom Kurumsal Müşteri Hizmetleri'ne hoş geldiniz. Az önce RouterAgent'tan aktarıldınız. Talebiniz kurumsal hatlarınızı tek bir hesapta birleştirmek üzerineydi, doğru mudur? Bu işlem, mevcut faturalarınızı ve hat yönetimini tek bir noktadan takip etmenizi sağlar, bu da işletmeniz için büyük bir kolaylık demektir. İsterseniz önce mevcut hatlarınızın durumunu ve paketlerini kontrol edelim.",
+      "tools_triggered": [
+        "get_customer_status",
+        "get_customer_plan"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_008",
+      "agent_persona": "FAQAgent",
+      "text": "Kesinlikle haklısınız. Birleştirme işlemi, sadece yönetim kolaylığı değil, aynı zamanda maliyet avantajları da sunabilir. Hesaplarınızı birleştirdiğimizde, toplam hat sayınıza ve kullanım alışkanlıklarınıza göre size özel, daha avantajlı 'Kurumsal Toplu Tarife' seçenekleri sunabiliriz. Bu sayede hem çalışanlarınızın hatları hem de sizin şirket hattınız için daha uygun fiyatlı paketlere geçiş yapabilir, aylık maliyetlerinizi optimize edebilirsiniz. Hatta bazı dönemlerde sadece bu tip birleştirmelere özel kampanyalar da olabiliyor. Mevcut tarifelerinizi inceleyip size en uygun seçenekleri sunabiliriz.",
+      "tools_triggered": [
+        "list_all_plans",
+        "change_customer_plan"
+      ],
+      "formality_level": "medium"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "FAQAgent",
+      "reason": "Customer's request for merging accounts requires specialized account management assistance beyond basic routing.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "Customer's primary issue of merging two separate corporate accounts (one personal business line, one for employee lines) into a single account was addressed. The agent explained the benefits of simplified management and potential cost savings through combined usage and special corporate tariffs. The customer was satisfied with the potential financial benefits and agreed to proceed with the merge.",
+    "customer_satisfaction": "satisfied",
+    "follow_up_needed": true
+  },
+  "generated_at": "2025-08-14T09:14:10.940921",
+  "model": "flash",
+  "index": 20
+}

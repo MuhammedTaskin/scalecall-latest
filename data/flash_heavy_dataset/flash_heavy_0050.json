@@ -1,0 +1,122 @@
+{
+  "id": "flash_heavy_0050",
+  "primary_issue": "technical_network_slow_speed",
+  "secondary_issue": null,
+  "customer_profile": "elderly_retiree",
+  "region": "adana",
+  "dialect_info": {
+    "dialect": "southern",
+    "pace": "fast",
+    "formality": "low"
+  },
+  "conversation_dynamic": "discovery",
+  "complexity": "medium",
+  "metadata": {
+    "context": "first smartphone user",
+    "traits": [
+      "confused",
+      "patient",
+      "needs_repetition"
+    ],
+    "emotional_journey": [
+      "confused",
+      "worried",
+      "grateful",
+      "happy"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo alo, kızım/oğlum benim internetimde bi haller var. Yavaşladı galiba. Bu yeni telefonum var ya, onun interneti sanki hiç hızlı değil, Adana sıcağında buz gibi duruyo resmen, hele bi bakıver.",
+      "emotion": "confused",
+      "dialect_markers": [
+        "southern",
+        "hele",
+        "kızım/oğlum"
+      ],
+      "pace": "fast",
+      "background_context": "first smartphone user"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Hele yaz kızım/oğlum, şu numaramı. Ben bu TC'yi ezberleyemiyom ki, kağıda yazmıştım. Dur hele, heh, buldum! 12345678910. Hele bi kontrol et bakayım.",
+      "emotion": "patient",
+      "dialect_markers": [
+        "southern",
+        "hele"
+      ],
+      "pace": "normal"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Hele oğlum, hoş geldin. Valla bu yeni telefonum var ya, onu aldılar bana çocuklar. İlk akıllı telefonum işte. Ben de anlamıyom pek. İnterneti açıyom, sayfa yavaş yavaş dönüyo, dönüyo... Bi türlü açılmıyo sanki. Bi şey mi oldu ki buna şimdi?",
+      "emotion": "worried",
+      "dialect_markers": [
+        "southern",
+        "hele",
+        "oğlum",
+        "yavaş yavaş"
+      ],
+      "pace": "normal",
+      "background_context": "first smartphone user"
+    },
+    {
+      "turn_id": "turn_007",
+      "text": "Aa, evet evet! Düzeldi sanki! Hızlandı, hızlandı! Oh be, rahatladım. Çok sağ ol evladım benim, Allah razı olsun senden! Beni dertten kurtardın.",
+      "emotion": "happy",
+      "dialect_markers": [
+        "southern",
+        "evet evet",
+        "oh be",
+        "evladım"
+      ],
+      "pace": "fast"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba efendim, hattınızla ilgili yardımcı olmak için buradayım. İnternet hızınızda bir yavaşlama mı hissediyorsunuz? Öncelikle size daha iyi yardımcı olabilmek için hattınızı teyit etmemiz gerekiyor. T.C. kimlik numaranızı alabilir miyim lütfen?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkür ederim efendim. Hattınızı kontrol ettim, genel bir sorun görünmüyor. Ancak internet hızınızla ilgili belirttiğiniz sorun teknik bir konu olduğu için sizi uzman ekibimize, teknik destek birimine aktarmam gerekiyor. Onlar size daha detaylı yardımcı olacaklardır. Lütfen hatta kalın.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "TechAgent",
+      "text": "Anladım efendim. Bu yeni akıllı telefonunuz olduğu için bazı ayarlar başta karmaşık gelebilir. Bazen basit bir yeniden başlatma, internet hızınızı etkileyen geçici sorunları çözebilir. Telefonunuzu bir kez kapatıp açmayı denediniz mi? Deneyelim mi birlikte?",
+      "tools_triggered": [],
+      "formality_level": "low"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "TechAgent",
+      "reason": "Customer's issue is technical (internet speed) requiring specialized support.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "Customer's internet speed issue was resolved by a simple device restart, a common solution for first-time smartphone users experiencing minor glitches.",
+    "customer_satisfaction": "happy",
+    "follow_up_needed": false
+  },
+  "generated_at": "2025-08-14T09:16:27.569705",
+  "model": "flash",
+  "index": 50
+}

@@ -1,0 +1,151 @@
+{
+  "id": "flash_heavy_0169",
+  "primary_issue": "billing_discounts_loyalty",
+  "secondary_issue": null,
+  "customer_profile": "gig_worker",
+  "region": "antalya",
+  "dialect_info": {
+    "dialect": "mediterranean",
+    "pace": "slow",
+    "formality": "low"
+  },
+  "conversation_dynamic": "interrupted",
+  "complexity": "medium",
+  "metadata": {
+    "context": "needs reliable service for work",
+    "traits": [
+      "flexible",
+      "app_dependent",
+      "connectivity_critical"
+    ],
+    "emotional_journey": [
+      "stressed",
+      "urgent",
+      "persistent",
+      "grateful"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo? Hele ben... Yani bu ne böyle ya? Fatura bir gelmiş, gözlerim şaşı oldu valla. Benim işlerim var, kurye işi yapıyorum ben, bu parayla internet mi alınır? Stresliyim.",
+      "emotion": "stressed",
+      "dialect_markers": [
+        "mediterranean",
+        "colloquial"
+      ],
+      "pace": "slow",
+      "background_context": "needs reliable service for work"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Adım Cengiz, soyadım Yılmaz. Ama bakın bu fatura işi çok acil, benim uygulamanın çalışması lazım, siparişler düşmüyor, ben para kazanamıyorum böyle. Anladınız mı?",
+      "emotion": "stressed",
+      "dialect_markers": [
+        "mediterranean",
+        "colloquial"
+      ],
+      "pace": "slow",
+      "background_context": "needs reliable service for work"
+    },
+    {
+      "turn_id": "turn_006",
+      "text": "Evet, aynen öyle abla. Yani nasıl olur bu? Ben kaç yıldır sizin müşterinizim, hep aynı paketi kullanıyordum, 50 GB internetim var güya. Bir anda fatura 350 lira gelmiş! Ben kuryeyim, internetim olmazsa iş yok, bu parayı ödesem de aç kalırım. Bir indirim falan yapamaz mısınız bana? Ya da daha uygun bir şey?",
+      "emotion": "urgent",
+      "dialect_markers": [
+        "mediterranean",
+        "colloquial"
+      ],
+      "pace": "slow",
+      "background_context": "needs reliable service for work"
+    },
+    {
+      "turn_id": "turn_008",
+      "text": "Paket aşımı mı? Vay anasını... Ben de diyorum neden böyle oldu. Ya ama şimdi benim bütçem belli, öğrenci gibi yaşıyorum valla. Hani eskiden sadık müşterilere özel indirimler olurdu? Bir de ben bu interneti iş için kullanıyorum, kesilmesi demek para kaybetmem demek. Başka bir şey yok mu böyle, hani bana özel, biraz daha uygun?",
+      "emotion": "persistent",
+      "dialect_markers": [
+        "mediterranean",
+        "colloquial"
+      ],
+      "pace": "slow",
+      "background_context": "needs reliable service for work"
+    },
+    {
+      "turn_id": "turn_010",
+      "text": "Oh be! Vallahi iyi geldi bu. 280 lira daha iyi tabi. Hem 100 GB da bana yeter de artar bile. Tamam tamam, geçirelim ona. Çok sağ olun abla, içime su serptiniz. Benim işlerim de aksamayacak şimdi.",
+      "emotion": "grateful",
+      "dialect_markers": [
+        "mediterranean",
+        "colloquial"
+      ],
+      "pace": "slow",
+      "background_context": "needs reliable service for work"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba, Türknet'e hoş geldiniz. Ben Elif. Size nasıl yardımcı olabilirim? İşlem güvenliğiniz için öncelikle kimlik doğrulaması yapmamız gerekiyor. Adınızı ve soyadınızı alabilir miyim lütfen?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Cengiz Bey, anlıyorum durumun aciliyetini. Fatura ve paketinizle ilgili konularda size daha detaylı yardımcı olabilmemiz için sizi uzman bir ekip arkadaşıma aktarıyorum. Kısa bir bekleme süresi olabilir, hattımdan ayrılmayın lütfen.",
+      "tools_triggered": [
+        "route_to_agent"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_005",
+      "agent_persona": "BillingAgent",
+      "text": "Merhaba Cengiz Bey, hattınızı devraldım. Ben Ayşe, Türknet fatura ve tarife departmanından. Anladığım kadarıyla faturanızla ilgili bir endişeniz var, doğru mudur?",
+      "tools_triggered": [
+        "get_customer_status",
+        "get_last_bill"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_007",
+      "agent_persona": "BillingAgent",
+      "text": "Anlıyorum Cengiz Bey. Hemen kontrol ediyorum son faturanızı ve tarife detaylarınızı... Evet, son faturanızda paket aşımı kaynaklı ek kullanım ücretleri görünüyor. Mevcut 50 GB paketiniz ne yazık ki son dönemde yoğun kullanımınız nedeniyle yetersiz kalmış. İsterseniz size özel, daha yüksek GB'lı ve bütçenize uygun yeni tarifelerimize bir bakalım. Hem internetiniz kesintisiz olur, hem de sürpriz faturalardan kurtulursunuz.",
+      "tools_triggered": [
+        "get_customer_plan"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_009",
+      "agent_persona": "BillingAgent",
+      "text": "Cengiz Bey, haklısınız. Uzun süredir müşterimiz olduğunuzu görüyorum. Sizin gibi değerli müşterilerimiz için özel bir kampanya var. Mevcut paketinize ek olarak, sadece size özel, 100 GB internetli ve sınırsız konuşmalı 'Kurye Dostu Paket'imiz var, aylık 280 TL. Bu paket hem kullanımınıza yeterli gelecek hem de fatura sürprizlerinden sizi koruyacaktır. Ne dersiniz, bu pakete geçiş yapalım mı?",
+      "tools_triggered": [
+        "list_all_plans",
+        "change_customer_plan"
+      ],
+      "formality_level": "low"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "BillingAgent",
+      "reason": "Customer's primary issue is billing/discounts, which requires a specialist.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "The customer's high bill was due to package overage. The billing agent offered a special 'Kurye Dostu Paket' (Courier Friendly Plan) with higher data (100 GB) at a lower, fixed price (280 TL) by leveraging loyalty discounts, resolving the billing and connectivity issue.",
+    "customer_satisfaction": "grateful",
+    "follow_up_needed": false
+  },
+  "generated_at": "2025-08-14T09:26:47.576714",
+  "model": "flash",
+  "index": 169
+}

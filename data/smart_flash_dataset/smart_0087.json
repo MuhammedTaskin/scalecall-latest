@@ -1,0 +1,44 @@
+{
+  "id": "smart_0087",
+  "scenario": "unpaid_check",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Hesabımda ne kadar borcum var acaba? Hemen öğrenmek istiyorum!",
+      "emotion": "impatient"
+    },
+    {
+      "turn": 3,
+      "text": "Evet, 1234567890."
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Anlıyorum. Lütfen kimliğinizi doğrulamak için telefon numaranızı paylaşır mısınız?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "BillingAgent",
+      "text": "Hesabınızda 75 TL borcunuz bulunmaktadır. Başka bir sorunuz yoksa işlemi sonlandırıyorum.",
+      "tools": [
+        "get_unpaid_amount",
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:57:21.464755",
+  "required_tools": [
+    "verify_user",
+    "get_unpaid_amount",
+    "end_conversation"
+  ],
+  "agent_flow": [
+    "RouterAgent",
+    "BillingAgent"
+  ]
+}

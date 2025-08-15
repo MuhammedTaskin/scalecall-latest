@@ -1,0 +1,180 @@
+{
+  "id": "flash_heavy_0094",
+  "primary_issue": "plans_changes_upgrade",
+  "secondary_issue": "billing_issues_late_fee",
+  "customer_profile": "rural_customer",
+  "region": "konya",
+  "dialect_info": {
+    "dialect": "central",
+    "pace": "slow",
+    "formality": "high"
+  },
+  "conversation_dynamic": "circular",
+  "complexity": "complex",
+  "metadata": {
+    "context": "limited service options",
+    "traits": [
+      "practical",
+      "coverage_focused",
+      "loyal"
+    ],
+    "emotional_journey": [
+      "patient",
+      "explaining",
+      "hopeful",
+      "understanding"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo... İyi günler. Benim bir tarifem var idi, onu bir değiştirecektim. Yani, daha çok çekimi olan, interneti de azcık fazla bir şeye geçmek istiyordum gari. Bizim buralar biraz sapa da, o yüzden çekim çok önemli oluyor.",
+      "emotion": "patient",
+      "dialect_markers": [
+        "gari",
+        "idi",
+        "azcık",
+        "sapa"
+      ],
+      "pace": "slow",
+      "background_context": "limited service options"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Tabii efendim. Adım Osman Yılmaz, TC kimlik numaram da 12345678900. Yani, bu bizim köyde, Hacımusalar'da, hele başka operatör hiç çekmiyor. O yüzden size sadık kalmak zorundayız. Ama işte internet bazen kesiliyor, konuşma da yetmiyor aahır... Hayvanların işini, tarlanın durumunu takip edemiyoruz düzgünce.",
+      "emotion": "patient",
+      "dialect_markers": [
+        "tabii efendim",
+        "hele",
+        "aahır",
+        "gari"
+      ],
+      "pace": "slow",
+      "background_context": "limited service options"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Evet, aynen öyle. Hanımefendi/Beyefendi, Router'daki arkadaşa da söyledim. Benim derdim, bu internet çekmiyor gari, bir de konuşma paketim yetmiyor. Bir bakıverin, bizim buralara iyi gelen, böyle kesilmeyen, sağlam bir şey var mıdır?",
+      "emotion": "explaining",
+      "dialect_markers": [
+        "gari",
+        "bakıverin",
+        "bizim buralara",
+        "böyle"
+      ],
+      "pace": "slow",
+      "background_context": "limited service options"
+    },
+    {
+      "turn_id": "turn_007",
+      "text": "Fatura mı? Hele neymiş o gari? Ben hep zamanında öderim. Geçen ay da bankadan ödedim, dekontu bile durur. Neyse, siz şimdi bana şu çekim gücü iyi olan, interneti de bol olan bir şey söyleyin. Yani öyle çok pahalı olmasın ama işimi görsün. Bizim buralarda başka imkan yok, mecburen size bağlıyız.",
+      "emotion": "explaining",
+      "dialect_markers": [
+        "hele",
+        "gari",
+        "mecburen",
+        "bol olan",
+        "yani"
+      ],
+      "pace": "slow",
+      "background_context": "limited service options"
+    },
+    {
+      "turn_id": "turn_009",
+      "text": "Gecikme mi? Olur mu öyle şey? Ben hep düzenli öderim, her ayın beşinde yatırırım. Belki bir yanlışlık olmuştur. Ama çok da önemli değil, yeter ki şu internet işi hallolsun. Yani, tarladayken çocuklarımı arayamıyorum bazen, köydeki haberlerden geri kalıyorum.",
+      "emotion": "hopeful",
+      "dialect_markers": [
+        "olur mu öyle şey",
+        "yani"
+      ],
+      "pace": "slow",
+      "background_context": "limited service options"
+    },
+    {
+      "turn_id": "turn_011",
+      "text": "Aaa, çok sağ olun hanımefendi/beyefendi, Allah razı olsun. Demek öyle oldu. Çok iyi ettiniz. Şimdi tekrar o tarifelere bakabilir miyiz? Benim için önemli olan çekim gücü gari, başka yere gidemiyoruz zaten. Yani, köy yerinde zor oluyor bu işler.",
+      "emotion": "understanding",
+      "dialect_markers": [
+        "gari",
+        "Allah razı olsun",
+        "yani",
+        "köy yerinde"
+      ],
+      "pace": "slow",
+      "background_context": "limited service options"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "İyi günler Osman Bey. Talebinizi anlıyorum. Size yardımcı olabilmek için öncelikle kimlik teyidinizi alabilir miyim? Adınız, soyadınız ve T.C. kimlik numaranızı rica edebilir miyim lütfen?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Bilgileriniz teyit edildi Osman Bey. Talebiniz tarife değişikliği ve özellikle çekim gücü ile ilgili olduğu için, sizi bu konuda uzman olan Tarife ve Paketler Departmanımıza aktarıyorum. Lütfen kısa bir süre hatta kalınız.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "PlanAgent",
+      "text": "Hoş geldiniz Osman Bey. Anlıyorum, çekim gücü ve internet kota ihtiyacınız öncelikli. Hemen mevcut tarifenizi kontrol edip, size özel bölgenizdeki kapsama alanımızı da göz önünde bulundurarak uygun olabilecek paketleri listeleyeyim. Bu arada, sistemimizde son faturanıza dair bir uyarı görüyorum, küçük bir gecikme bedeli olabilir. Detaylarını inceleyeyim.",
+      "tools_triggered": [
+        "get_customer_plan",
+        "list_all_plans"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_008",
+      "agent_persona": "PlanAgent",
+      "text": "Osman Bey, evet, fatura detayınızda geçen ayki ödemenizde 2 günlük çok küçük bir gecikme kaynaklı bir bedel yansımış. Bu konuyu netleştirmek ve gerekirse yardımcı olmak adına sizi doğrudan Fatura Departmanımıza aktarmam daha doğru olacaktır. Onlar bu konuda daha detaylı bilgi verebilir ve çözüm sunabilirler. Uygun mudur sizin için?",
+      "tools_triggered": [
+        "route_to_agent"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_010",
+      "agent_persona": "BillingAgent",
+      "text": "Hoş geldiniz Osman Bey. Fatura Departmanı'ndan arıyoruz. Faturanızı kontrol ettim. Geçen ay ödemenizde gerçekten de küçük bir gecikme yaşanmış ve bu sebeple cüzi bir gecikme bedeli yansımış. Ancak, siz uzun süredir sadık müşterimiz olduğunuz için, bu gecikme bedelini istisnai olarak hesabınızdan düşüyorum. Bilginiz olsun. Şimdi, tarife değişikliği talebiniz için sizi tekrar Tarife Departmanımıza aktarabilirim.",
+      "tools_triggered": [
+        "get_last_bill"
+      ],
+      "formality_level": "high"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "PlanAgent",
+      "reason": "Customer's primary issue is related to plan changes and coverage, requiring a specialist agent for tariffs.",
+      "context_preserved": true
+    },
+    {
+      "at_turn": 8,
+      "from": "PlanAgent",
+      "to": "BillingAgent",
+      "reason": "A secondary issue (billing_issues_late_fee) was discovered during the plan discussion, requiring a specialist from the Billing Department.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "Customer's secondary issue (late fee) was resolved by the Billing Agent (fee waived). The primary issue (plan change for better coverage) was acknowledged and the customer was routed back to the Plan Agent to continue finding a suitable plan. The customer's loyalty and rural context were acknowledged.",
+    "customer_satisfaction": "Customer felt understood and valued, ending in a hopeful and understanding state, ready to proceed with the primary issue.",
+    "follow_up_needed": true
+  },
+  "generated_at": "2025-08-14T09:20:26.082537",
+  "model": "flash",
+  "index": 94
+}

@@ -1,0 +1,140 @@
+{
+  "id": "flash_heavy_0113",
+  "primary_issue": "plans_features_hotspot",
+  "secondary_issue": null,
+  "customer_profile": "frequent_traveler",
+  "region": "izmir",
+  "dialect_info": {
+    "dialect": "aegean",
+    "pace": "relaxed",
+    "formality": "low"
+  },
+  "conversation_dynamic": "interrupted",
+  "complexity": "medium",
+  "metadata": {
+    "context": "international roaming issues",
+    "traits": [
+      "experienced",
+      "specific_needs",
+      "impatient"
+    ],
+    "emotional_journey": [
+      "direct",
+      "frustrated",
+      "demanding",
+      "accepting"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo, iyi günler. Benim numaram 0532*******. Benim yurtdışında internetim çalışmıyor yav, bu ne iş?",
+      "emotion": "direct",
+      "dialect_markers": [
+        "aegean",
+        "yav"
+      ],
+      "pace": "relaxed",
+      "background_context": "international roaming issues"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Ya bakın ben size numarayı verdim zaten. Acelem var, İtalya'dayım şu an, Verona'da. Hotspot'um da çalışmıyor, normal internet de. Bi' bakın şu hatta, doğum tarihim 15.06.1980. Hadi bakalım.",
+      "emotion": "frustrated",
+      "dialect_markers": [
+        "aegean",
+        "ya bakın",
+        "bi' bakın",
+        "hadi bakalım"
+      ],
+      "pace": "fast"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Yine mi aktarım ya? Tamam hadi, hızlı olsun bari. Ben sürekli seyahat ediyorum, haftaya Viyana'dayım. Bana öyle bir paket lazım ki, bu hotspot sorunu bir daha olmasın, internetim kesilmesin. Özellikle işim için çok önemli bu. Ne yapacaksanız yapın ama kalıcı bir çözüm istiyorum.",
+      "emotion": "demanding",
+      "dialect_markers": [
+        "aegean",
+        "yine mi aktarım ya",
+        "hadi"
+      ],
+      "pace": "fast"
+    },
+    {
+      "turn_id": "turn_007",
+      "text": "Eski paketi zaten biliyorum ben, onda sorun var ki arıyorum. Avrupa'da bile bazen kopuyor internet. Geçen Almanya'da başım ağrıdı, bağlanamadım bir türlü. Bana yeni, sağlam bir şey lazım. Hani şu her yerde geçerli olan, kesintisiz paketleriniz var ya, onlardan istiyorum ben.",
+      "emotion": "impatient",
+      "dialect_markers": [
+        "aegean",
+        "hani şu"
+      ],
+      "pace": "normal"
+    },
+    {
+      "turn_id": "turn_009",
+      "text": "Vay be, 50 ülke, sınırsız hotspot? İyiymiş bu. Tamam o zaman, geçin beni o pakete. Umarım bu sefer sorun yaşamam. Hadi bakalım, hayırlısı olsun.",
+      "emotion": "accepting",
+      "dialect_markers": [
+        "aegean",
+        "vay be",
+        "hadi bakalım",
+        "hayırlısı olsun"
+      ],
+      "pace": "relaxed"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba efendim, hoş geldiniz. Öncelikle hattınızın güvenliği için kimlik doğrulama yapmamız gerekiyor. Lütfen doğum tarihinizi gün ay yıl olarak alabilir miyim?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Anladım efendim, kimlik doğrulamanız başarıyla tamamlandı. Verona'da olduğunuzu ve hem internet hem de hotspot sorunu yaşadığınızı belirtmiştiniz... Bu konu daha çok tarife ve uluslararası dolaşım hizmetleri ile ilgili olduğu için sizi hemen tarifeler departmanımıza aktarıyorum. Onlar size daha detaylı yardımcı olacaktır. Kısa bir bekleme süresi olabilir, lütfen hattan ayrılmayın.",
+      "tools_triggered": [],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "PlanAgent",
+      "text": "Hoş geldiniz efendim, ben Tarife Destek Temsilciniz. Anladığım kadarıyla yurtdışında internet ve hotspot kullanımı konusunda bir sıkıntı yaşıyorsunuz ve sık seyahat ediyorsunuz. Öncelikle mevcut tarifenizi kontrol edelim, buna göre size en uygun çözümü sunabiliriz. Hattınızdaki güncel paketi ve kalan haklarınızı kontrol ediyorum bir saniye lütfen.",
+      "tools_triggered": [
+        "get_customer_plan"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_008",
+      "agent_persona": "PlanAgent",
+      "text": "Anladım efendim, haklısınız. Mevcut tarifenizin uluslararası dolaşım kapsamında bazı kısıtlamaları olabileceğini görüyorum. Sizin gibi sık seyahat eden müşterilerimiz için özel 'Dünya Gezgini' paketimiz var. Bu pakette, Avrupa ve Amerika başta olmak üzere 50'den fazla ülkede yüksek hızlı internet kotası ve sınırsız hotspot kullanımı bulunuyor. Ayrıca bu pakette öncelikli müşteri hizmetleri desteği de mevcut. Mevcut tarifenizin üzerine aylık sadece 120 TL farkla geçiş yapabilirsiniz. Ne dersiniz?",
+      "tools_triggered": [
+        "list_all_plans",
+        "change_customer_plan"
+      ],
+      "formality_level": "low"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "PlanAgent",
+      "reason": "Customer's issue (international roaming, hotspot) requires expertise of the PlanAgent.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "Customer's international roaming and hotspot issue was resolved by offering and activating a new 'Dünya Gezgini' (World Traveler) plan, which includes extensive international data and unlimited hotspot.",
+    "customer_satisfaction": "The customer ended the conversation in an accepting and relieved emotional state, indicating satisfaction with the proposed solution.",
+    "follow_up_needed": false
+  },
+  "generated_at": "2025-08-14T09:21:47.980010",
+  "model": "flash",
+  "index": 113
+}

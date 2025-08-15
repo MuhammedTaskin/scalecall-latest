@@ -1,0 +1,35 @@
+{
+  "id": "short_0082",
+  "scenario": "service_outage_check",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "İnternetim yine yok! Ne zaman gelecek bu hizmet ya, çıldıracağım!",
+      "emotion": "impatient"
+    },
+    {
+      "turn": 3,
+      "text": "Tamam, buyurun. Umarım bir an önce halledersiniz.",
+      "emotion": "impatient"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Anlıyorum efendim, yaşadığınız kesinti için üzgünüz. Kimliğinizi doğrulamak için lütfen T.C. kimlik numaranızı veya müşteri numaranızı alabilir miyim?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "RouterAgent",
+      "text": "Ankara'da genel bir kesinti yaşanmaktadır efendim, ekiplerimiz en kısa sürede sorunu gidermek için çalışıyor. Tahmini çözüm süresi 2 saat içinde olacaktır. Sabrınız için teşekkür ederiz.",
+      "tools": [
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:50:03.585811"
+}

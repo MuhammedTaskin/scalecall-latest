@@ -1,0 +1,44 @@
+{
+  "id": "smart_0088",
+  "scenario": "faq_search",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Ya internetim neden bu kadar yavaş anlamıyorum! Bir an önce düzeltin şunu!",
+      "emotion": "impatient"
+    },
+    {
+      "turn": 3,
+      "text": "Evet, numaram 555 123 4567."
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Anlıyorum, sorununuzu çözmek için öncelikle kimliğinizi doğrulamamız gerekiyor. Lütfen telefon numaranızı paylaşır mısınız?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "FAQAgent",
+      "text": "Anladım. İnternet yavaşlığıyla ilgili sıkça sorulan soruları kontrol ediyorum. Genellikle modem resetleme veya cihazları yeniden başlatma bu sorunu çözebilir. Bu adımları denediniz mi? Eğer sorun devam ederse, daha detaylı inceleme için sizi ilgili birime aktarabilirim. Şimdilik bu bilgiyi paylaşabilirim.",
+      "tools": [
+        "search_faq",
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:57:23.016554",
+  "required_tools": [
+    "verify_user",
+    "search_faq",
+    "end_conversation"
+  ],
+  "agent_flow": [
+    "RouterAgent",
+    "FAQAgent"
+  ]
+}

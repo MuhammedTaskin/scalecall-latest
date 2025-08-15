@@ -1,0 +1,168 @@
+{
+  "id": "flash_heavy_0188",
+  "primary_issue": "account_emergency_stolen_device",
+  "secondary_issue": "account_management_authorized_users",
+  "customer_profile": "gig_worker",
+  "region": "adana",
+  "dialect_info": {
+    "dialect": "southern",
+    "pace": "fast",
+    "formality": "low"
+  },
+  "conversation_dynamic": "multi_issue",
+  "complexity": "complex",
+  "metadata": {
+    "context": "needs reliable service for work",
+    "traits": [
+      "flexible",
+      "app_dependent",
+      "connectivity_critical"
+    ],
+    "emotional_journey": [
+      "stressed",
+      "urgent",
+      "persistent",
+      "grateful"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo alo… Müşteri hizmetleri mi? Hele gardaş, yetişin! Telefonumu çaldılar ya, vallahi çaldılar! İçinde bütün işim gücüm, uygulamalarım… Ne yapacam şimdi, işe çıkmam lazım benim. Acil bi şey yapın, allasen!",
+      "emotion": "stressed",
+      "dialect_markers": [
+        "southern",
+        "hele",
+        "gardaş",
+        "allasen"
+      ],
+      "pace": "fast",
+      "background_context": "needs reliable service for work"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Ne TC mi? Tamam tamam, hemen veriyim. 12345678910. Adım da Ahmet Yılmaz. Hele çabuk olun, benim siparişlerim bekliyo, internetsiz yapamam ben! Kuryeyim ben, anladınız mı? Uygulamasız olmaz.",
+      "emotion": "urgent",
+      "dialect_markers": [
+        "southern",
+        "hele",
+        "çabuk olun"
+      ],
+      "pace": "fast",
+      "background_context": "needs reliable service for work"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Ya işte öyle gardaşım… Telefon gitti. İçinde eSIM vardı, fiziksel SIM değil. Benim hat askıya alınsın hemen, kimse kullanmasın diye. Ama benim işim var, hemen online olmam lazım. Yedek telefonum var ama ona eSIM lazım tekrar. Bir de… Benim eşim de bi hat kullanıyo, o da benim üzerime… Onu da kontrol edebilir miyiz, o da mı gidecek diye korkuyom.",
+      "emotion": "urgent",
+      "dialect_markers": [
+        "southern",
+        "gardaşım",
+        "bi de"
+      ],
+      "pace": "fast",
+      "background_context": "needs reliable service for work"
+    },
+    {
+      "turn_id": "turn_007",
+      "text": "Tamam tamam, askıya alın hemen. Benim numara 5xx 123 45 67. Benim için bu numaranın tekrar eSIM'ini hemen çıkarabilir miyiz? Ya da ne bileyim, bi kod falan gönderin, hemen aktif ediyim. İş bekliyor ya! Eşimin kullandığı hat da 5xx 987 65 43. Evet, o da benim üzerime kayıtlı, yani ben tanımladım onu. İkisinin de aktif kalması lazım, o da iş için kullanıyor bazen. Yani, ben yetkili kullanıcı değilim onun için, ama hat benim adıma.",
+      "emotion": "persistent",
+      "dialect_markers": [
+        "southern",
+        "yani"
+      ],
+      "pace": "fast",
+      "background_context": "needs reliable service for work"
+    },
+    {
+      "turn_id": "turn_009",
+      "text": "Hele şükür! Bak buna çok sevindim. Yani hem benim hattım güvenceye alınacak, hem de hemen geri online olabilecem. Eşimin hattı için de ne gerekiyorsa yaparız, yeter ki sorun olmasın. Bu yetkili kullanıcı işi biraz karışık gibi ama sonra hallederiz, değil mi? Şimdi önemli olan benim işe geri dönmem.",
+      "emotion": "persistent",
+      "dialect_markers": [
+        "southern",
+        "hele şükür"
+      ],
+      "pace": "normal",
+      "background_context": "needs reliable service for work"
+    },
+    {
+      "turn_id": "turn_011",
+      "text": "Eyvallah! Çok sağolun, varolun. Vallahi büyük dertten kurtardınız. Hemen e-posta adresimi kontrol edeyim ben. Dediğiniz gibi yaparım. Eşimin hattı için de sonra ararım. Allah razı olsun, işime geri dönebilecem sayenizde.",
+      "emotion": "grateful",
+      "dialect_markers": [
+        "southern",
+        "eyvallah",
+        "allah razı olsun"
+      ],
+      "pace": "normal",
+      "background_context": "needs reliable service for work"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba, hattınızla ilgili nasıl yardımcı olabilirim? Güvenliğiniz için öncelikle kimlik doğrulaması yapmamız gerekiyor. Lütfen T.C. kimlik numaranızı ve ad soyad bilginizi paylaşır mısınız?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Bilgileriniz doğrulandı Ahmet Bey. Anlıyorum durumunuz çok acil. Bu tür acil durumlar için sizi doğrudan çalınan/kaybolan cihazlarla ilgilenen uzman bir ekibimize aktarıyorum. Lütfen hattan ayrılmayın.",
+      "tools_triggered": [
+        "route_to_agent"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "FAQAgent",
+      "text": "Merhaba Ahmet Bey, durumunuzu anlıyorum. Öncelikle sakin olalım. Telefonunuzun çalındığını ve hattınızın askıya alınmasını istediğinizi anladım. Hızlıca işlem yapmak için hattınızın güncel durumunu kontrol ediyorum. eSIM mi kullanıyordunuz? Eski cihazınızın IMEI numarası bilginiz var mıydı? Hattınızı anında askıya alabiliriz.",
+      "tools_triggered": [
+        "get_customer_status",
+        "check_esim_status",
+        "check_device_imei"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_008",
+      "agent_persona": "FAQAgent",
+      "text": "Anladım Ahmet Bey. Hemen 5xx 123 45 67 numaralı hattınızı askıya alıyorum. İşleminiz tamamlandı, hattınız şu an kullanıma kapalı. Yedek telefonunuz için hemen yeni bir eSIM aktivasyon kodu oluşturup e-posta adresinize gönderebiliriz. Bu genellikle birkaç dakika içinde gerçekleşir. Eşinizin kullandığı 5xx 987 65 43 numaralı hat da evet, sizin adınıza kayıtlı görünüyor. O hat aktif durumda ve bir sorun görünmüyor. Eğer eşinizin hattını da kendi yetkisiyle yönetmesini isterseniz, daha sonra yetkili kullanıcı ekleme işlemi yapabiliriz, ancak bu acil bir durum değilse şu an önceliğimiz sizin hattınızın aktif olması.",
+      "tools_triggered": [
+        "reissue_activation_code",
+        "get_customer_status"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_010",
+      "agent_persona": "FAQAgent",
+      "text": "Kesinlikle Ahmet Bey, önceliğimiz sizin işinize geri dönebilmeniz. Hattınız askıya alındı. Yeni eSIM aktivasyon kodunuzu şu an sistem üzerinden kayıtlı e-posta adresinize gönderdim. Lütfen kontrol edin ve yedek telefonunuza kurarak hattınızı aktifleştirebilirsiniz. Eşinizin hattı için yetkili kullanıcı tanımlama işlemi için ise bu görüşmeden sonra veya müsait olduğunuz başka bir zamanda tekrar arayarak talep edebilirsiniz. O zaman detaylı bilgi verebiliriz.",
+      "tools_triggered": [
+        "reissue_activation_code"
+      ],
+      "formality_level": "low"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "FAQAgent",
+      "reason": "Customer's primary issue (stolen device) requires specialized assistance beyond initial routing and verification.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "Customer's stolen device line was suspended. A new eSIM activation code was issued to their registered email for immediate service restoration on a spare phone. The secondary issue of managing an authorized user line (which was also under the customer's name) was identified and deferred for a later, non-urgent call.",
+    "customer_satisfaction": "grateful",
+    "follow_up_needed": true
+  },
+  "generated_at": "2025-08-14T09:28:18.943172",
+  "model": "flash",
+  "index": 188
+}

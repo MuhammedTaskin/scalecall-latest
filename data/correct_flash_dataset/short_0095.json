@@ -1,0 +1,117 @@
+{
+  "conversation_id": "short_0095_plan_upgrade",
+  "metadata": {
+    "scenario": "plan_upgrade",
+    "handoff_pattern": [
+      "RouterAgent",
+      "PlanAgent"
+    ]
+  },
+  "customer_profile": {
+    "persona": "normal",
+    "phone": "0555 123 45 67"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Merhaba, internet paketimi yükseltmek istiyorum.",
+      "emotion": "normal"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Evet, 100 Mbps olan paketimden memnunum ama daha hızlı bir internete geçmek istiyorum.",
+      "emotion": "normal"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Anladım, o halde yeni paketimi hemen oluşturabilirsiniz.",
+      "emotion": "normal"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba, ben Telekom Çağrı Merkezi'nden bağlanıyorum. Kimliğinizi doğrulamak için lütfen TC kimlik numaranızı veya abone numaranızı paylaşır mısınız?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkürler, kimliğiniz doğrulandı. Paket yükseltme işlemleri için sizi ilgili birimimize aktarıyorum.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "handoff": {
+        "to": "PlanAgent"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "PlanAgent",
+      "text": "Merhaba, ben Plan Departmanı'ndan Ayşe. Paket yükseltme talebinizi aldım. Mevcut 100 Mbps paketiniz yerine size daha hızlı bir paket önerisinde bulunabilirim. 200 Mbps paketimiz şu anda özel bir kampanya ile daha uygun fiyata sunuluyor. Bu paket hakkında bilgi almak ister misiniz?",
+      "tools_triggered": [
+        "get_customer_plan",
+        "change_customer_plan"
+      ],
+      "handoff": null
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "PlanAgent",
+      "reason": "plan_upgrade"
+    }
+  ],
+  "tool_calls": [
+    {
+      "turn_id": "turn_002",
+      "tool": "verify_user",
+      "arguments": {
+        "customer_id": "0555 123 45 67"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_004",
+      "tool": "route_to_agent",
+      "arguments": {
+        "agent_name": "PlanAgent",
+        "reason": "plan_upgrade"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "get_customer_plan",
+      "arguments": {
+        "customer_id": "0555 123 45 67"
+      },
+      "result": {
+        "plan_name": "100 Mbps Fiber",
+        "speed": "100 Mbps"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "change_customer_plan",
+      "arguments": {
+        "customer_id": "0555 123 45 67",
+        "new_plan_name": "200 Mbps Fiber",
+        "campaign_applied": true
+      },
+      "result": {
+        "status": "success",
+        "new_plan_name": "200 Mbps Fiber"
+      }
+    }
+  ],
+  "generated_at": "2025-08-14T08:01:59.859443",
+  "index": 95
+}

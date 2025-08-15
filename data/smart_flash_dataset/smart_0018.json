@@ -1,0 +1,44 @@
+{
+  "id": "smart_0018",
+  "scenario": "device_check",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Merhaba! Yeni bir telefon aldım da, sizin hatlarınızla uyumlu olup olmadığını öğrenmek istiyordum.",
+      "emotion": "cheerful"
+    },
+    {
+      "turn": 3,
+      "text": "Tabii, IMEI numaram 123456789012345."
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Merhaba! Elbette yardımcı olurum. Öncelikle kimliğinizi doğrulamamız gerekiyor. Lütfen T.C. kimlik numaranızı paylaşır mısınız?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "TechAgent",
+      "text": "Teşekkürler, IMEI numaranızı kontrol ettim. Cihazınız hatlarımızla tam uyumlu. Başka bir sorunuz var mı?",
+      "tools": [
+        "check_device_imei",
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:57:01.838855",
+  "required_tools": [
+    "verify_user",
+    "check_device_imei",
+    "end_conversation"
+  ],
+  "agent_flow": [
+    "RouterAgent",
+    "TechAgent"
+  ]
+}

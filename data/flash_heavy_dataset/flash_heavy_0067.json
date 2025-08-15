@@ -1,0 +1,108 @@
+{
+  "id": "flash_heavy_0067",
+  "primary_issue": "technical_device_hotspot",
+  "secondary_issue": null,
+  "customer_profile": "small_business_owner",
+  "region": "diyarbakir",
+  "dialect_info": {
+    "dialect": "southeastern",
+    "pace": "moderate",
+    "formality": "medium"
+  },
+  "conversation_dynamic": "escalating",
+  "complexity": "medium",
+  "metadata": {
+    "context": "managing employee lines",
+    "traits": [
+      "practical",
+      "cost_focused",
+      "busy"
+    ],
+    "emotional_journey": [
+      "businesslike",
+      "questioning",
+      "negotiating",
+      "satisfied"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Selamünaleyküm. Benim bir hattım var, çalışanımın kullandığı. Hotspot özelliği çalışmıyor, interneti var ama dağıtamıyor. Bildiğiniz gibi, işimiz gücümüz aksıyor şimdi bu yüzden. Diyarbakır'dayız, sahadayız, çabuk hallolsa iyi olur.",
+      "emotion": "businesslike",
+      "dialect_markers": [
+        "southeastern"
+      ],
+      "pace": "moderate",
+      "background_context": "managing employee lines"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Numara şu: 053X XXX XX XX. T.C. kimlik numaram da XXXXXXXXXXX. Valla billa, ne iş bu şimdi? Çalışanım sahadaydı, internet dağıtamayınca iş yapamıyor. Bu hat şirket hattı, biz boşuna mı para ödüyoruz şimdi böyle şeylere?",
+      "emotion": "questioning",
+      "dialect_markers": [
+        "southeastern"
+      ],
+      "pace": "moderate",
+      "background_context": "managing employee lines, cost-focused"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Hele şükür! Şimdi bakın, ben Diyarbakır'dan arıyorum, esnafım. Çalışanımın telefonunda hotspot çalışmıyor, ama interneti var. Bize bu özellik lazım, işimiz aksıyor. Vakit nakittir, anlıyor musunuz? Ben bu hattın parasını veriyorum, karşılığını almak istiyorum. Çabuk bir çözüm bulun artık, bu iş böyle olmaz!",
+      "emotion": "negotiating",
+      "dialect_markers": [
+        "southeastern"
+      ],
+      "pace": "moderate",
+      "background_context": "small business owner, busy, cost-focused"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba efendim, Turkcell'e hoş geldiniz. Size nasıl yardımcı olabilirim? İşlemlerinize devam edebilmek için öncelikle kimlik doğrulaması rica edeyim. Lütfen hattınızın bağlı olduğu T.C. kimlik numarasını veya GSM numaranızı belirtir misiniz?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Anlıyorum efendim, kimlik doğrulamanız yapıldı. Hattınızda genel bir kısıtlama veya fatura kaynaklı bir sorun görünmüyor. Anladığım kadarıyla cihazınızın hotspot özelliğiyle ilgili bir teknik aksaklık yaşıyorsunuz. Bu konuda size daha detaylı yardımcı olabilecek teknik ekibimize yönlendiriyorum. Lütfen hatta kalın, hemen bağlıyorum.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "TechAgent",
+      "text": "Merhaba efendim, Teknik Destek ekibinden Zeynep. Sorununuzu anladım. Hotspot özelliğiyle ilgili sorun için hemen yardımcı olacağım. Öncelikle hattın bağlı olduğu cihazın IMEI numarasını alabilir miyim? Ayrıca, sistemden hattınızın internet profilini bir yenileyeceğim. Genellikle bu tür sorunlar profil ayarlarından veya cihazın yazılımsal bir takılmasından kaynaklanabilir. Hızlıca bir kontrol edelim, büyük ihtimalle sorununuzu kısa sürede çözeceğiz.",
+      "tools_triggered": [
+        "check_device_imei",
+        "reissue_activation_code"
+      ],
+      "formality_level": "medium"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "TechAgent",
+      "reason": "Customer's issue requires technical troubleshooting specific to device features (hotspot) which falls outside basic routing agent's scope.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "The TechAgent will attempt to resolve the hotspot issue by requesting the device's IMEI for diagnosis and by reissuing the activation code/refreshing the internet profile, which often resolves such technical glitches.",
+    "customer_satisfaction": "The customer is expected to be satisfied at the end of the conversation, as a clear and quick path to resolution is provided by the TechAgent.",
+    "follow_up_needed": false
+  },
+  "generated_at": "2025-08-14T09:17:54.827933",
+  "model": "flash",
+  "index": 67
+}

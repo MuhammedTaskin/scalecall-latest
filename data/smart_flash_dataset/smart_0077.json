@@ -1,0 +1,44 @@
+{
+  "id": "smart_0077",
+  "scenario": "unpaid_check",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Merhaba, borcum hakkında bilgi almak istiyorum.",
+      "emotion": "polite"
+    },
+    {
+      "turn": 3,
+      "text": "Evet, TC kimlik numaram 12345678901."
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Merhaba, borç sorgusu için TC kimlik numaranızı alabilir miyim?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "BillingAgent",
+      "text": "TC kimlik numaranızla yaptığım sorguda güncel borcunuz 55 TL olarak görünmektedir. Başka yardımcı olabileceğim bir konu var mı?",
+      "tools": [
+        "get_unpaid_amount",
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:57:18.531275",
+  "required_tools": [
+    "verify_user",
+    "get_unpaid_amount",
+    "end_conversation"
+  ],
+  "agent_flow": [
+    "RouterAgent",
+    "BillingAgent"
+  ]
+}

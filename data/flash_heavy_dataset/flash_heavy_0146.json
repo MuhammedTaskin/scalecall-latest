@@ -1,0 +1,124 @@
+{
+  "id": "flash_heavy_0146",
+  "primary_issue": "technical_services_voicemail",
+  "secondary_issue": null,
+  "customer_profile": "frequent_traveler",
+  "region": "ankara",
+  "dialect_info": {
+    "dialect": "formal",
+    "pace": "moderate",
+    "formality": "high"
+  },
+  "conversation_dynamic": "discovery",
+  "complexity": "medium",
+  "metadata": {
+    "context": "international roaming issues",
+    "traits": [
+      "experienced",
+      "specific_needs",
+      "impatient"
+    ],
+    "emotional_journey": [
+      "direct",
+      "frustrated",
+      "demanding",
+      "accepting"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "İyi günler. Ben yurtdışındayım ve sesli mesaj kutuma erişimde sorun yaşıyorum. Sürekli seyahat eden biri olarak bu benim için kritik bir hizmet. Ankara'dan arıyorum, hattım aktif ama sesli mesaj bir türlü açılmıyor.",
+      "emotion": "direct",
+      "dialect_markers": [
+        "formal",
+        "Ankara'dan arıyorum"
+      ],
+      "pace": "moderate",
+      "background_context": "international roaming issues"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Tabii ki, hemen veriyorum. Numaram 05XX XXX XX XX. Kimlik numaramın son dört hanesi ise XXXX. Dediğim gibi, şu an yurt dışındayım ve acil olarak sesli mesajlarıma ulaşmam gerekiyor. Bu ilk kez olmuyor maalesef.",
+      "emotion": "direct",
+      "dialect_markers": [
+        "formal"
+      ],
+      "pace": "moderate"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Merhaba. Sanırım az önce durumu anlattım. Yurt dışındayım ve sesli mesaj kutuma giremiyorum. Bu, iş seyahatlerimde beni çok zor durumda bırakıyor. Daha önce de bu sorunları yaşadım, neden kalıcı bir çözüm bulunamıyor anlamıyorum. Her seferinde aynı senaryo!",
+      "emotion": "frustrated",
+      "dialect_markers": [
+        "formal"
+      ],
+      "pace": "moderate"
+    },
+    {
+      "turn_id": "turn_007",
+      "text": "Fiziksel SIM kart kullanıyorum, e-SIM değil. Cihazım ise Samsung Galaxy S23 Ultra. Bakın, ben her ay en az bir kere yurtdışına çıkıyorum. Bu sesli mesaj sorunu sürekli başıma geliyor. Bu konuda bir an önce kalıcı bir çözüm bekliyorum. Bu durum benim iş akışımı ciddi şekilde aksatıyor. Lütfen bu sefer sorunu kökten çözün.",
+      "emotion": "demanding",
+      "dialect_markers": [
+        "formal"
+      ],
+      "pace": "moderate"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "İyi günler efendim, Türk Telekom Müşteri Hizmetleri'ne hoş geldiniz. Size yardımcı olabilmemiz için öncelikle kimlik doğrulamanızı rica edeceğim. Telefon numaranız ve T.C. kimlik numaranızın son dört hanesini alabilir miyim lütfen?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Bilgileriniz için teşekkür ederim Sayın [Müşteri Adı Soyadı]. Kontrollerimi sağladım. Anladığım kadarıyla yurt dışı dolaşımdayken sesli mesaj hizmetinizle ilgili teknik bir desteğe ihtiyacınız var. Bu konu için sizi teknik ekibimize yönlendirmem gerekmekte. İzninizle aktarıyorum.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "TechAgent",
+      "text": "Merhaba Sayın [Müşteri Adı Soyadı], Türk Telekom Teknik Destek'e hoş geldiniz. Yaşadığınız aksaklık için üzgünüm. Sesli mesaj hizmetinizin yurtdışında çalışmamasıyla ilgili durumu anlıyorum. Cihazınızda e-SIM mi kullanıyorsunuz yoksa fiziksel SIM kart mı takılı? Ayrıca, cihazınızın modelini de öğrenebilir miyim?",
+      "tools_triggered": [
+        "check_esim_status"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_008",
+      "agent_persona": "TechAgent",
+      "text": "Anlıyorum Sayın [Müşteri Adı Soyadı], bu durumun iş akışınızı ne kadar olumsuz etkilediğini farkındayım. Verdiğiniz bilgiler ışığında, sesli mesaj hizmetinizin yurtdışı dolaşım ayarlarında detaylı bir inceleme ve gerekli düzenlemelerin yapılması için acil bir teknik arıza kaydı oluşturuyorum. Kaydınızın durumu hakkında SMS ile bilgilendirileceksiniz ve en kısa sürede sorun giderilecektir. Bu süreçte sabrınız için teşekkür ederiz.",
+      "tools_triggered": [
+        "create_tech_ticket"
+      ],
+      "formality_level": "high"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "TechAgent",
+      "reason": "Yurt dışı dolaşımında sesli mesaj hizmetiyle ilgili teknik destek talebi.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "Technical ticket created for detailed investigation and resolution of voicemail service issues during international roaming.",
+    "customer_satisfaction": "accepting (of the proposed solution path)",
+    "follow_up_needed": true
+  },
+  "generated_at": "2025-08-14T09:24:45.753136",
+  "model": "flash",
+  "index": 146
+}

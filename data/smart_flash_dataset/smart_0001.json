@@ -1,0 +1,44 @@
+{
+  "id": "esim_status_001",
+  "scenario": "esim_quick_check",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Merhaba, eSIM'im aktif mi acaba? Biraz kafam karışık.",
+      "emotion": "confused"
+    },
+    {
+      "turn": 3,
+      "text": "Evet, T.C. Kimlik numaram 12345678901."
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Elbette yardımcı olayım. Kimliğinizi doğrulamak için lütfen T.C. Kimlik numaranızı paylaşır mısınız?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "TechAgent",
+      "text": "T.C. Kimlik numaranızla eşleşen eSIM'iniz aktif görünüyor. Başka bir sorunuz var mıydı?",
+      "tools": [
+        "check_esim_status",
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:56:56.925072",
+  "required_tools": [
+    "verify_user",
+    "check_esim_status",
+    "end_conversation"
+  ],
+  "agent_flow": [
+    "RouterAgent",
+    "TechAgent"
+  ]
+}

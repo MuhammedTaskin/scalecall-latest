@@ -1,0 +1,46 @@
+{
+  "id": "smart_0075",
+  "scenario": "esim_reissue",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Merhaba! Yeni bir eSIM QR koduna ihtiyacım var, telefonumu değiştirdim de. Çok heyecanlıyım!",
+      "emotion": "cheerful"
+    },
+    {
+      "turn": 3,
+      "text": "Evet, numaram 555 123 4567 ve T.C. kimlik numaram 12345678901."
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Merhaba! Elbette yardımcı olurum. Güvenliğiniz için lütfen kimlik bilgilerinizi teyit edelim. Telefon numaranızı ve T.C. kimlik numaranızı alabilir miyim?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "TechAgent",
+      "text": "Teşekkürler. eSIM'inizin mevcut durumunu kontrol ediyorum... Durum aktif görünüyor. Yeni QR kodunuzu hemen oluşturuyorum. Lütfen birkaç saniye bekleyin. İşte yeni eSIM QR kodunuzu gönderebileceğimiz bir bağlantı. Bu işleminiz tamamlandı, başka bir konuda yardımcı olabilir miyim?",
+      "tools": [
+        "check_esim_status",
+        "reissue_activation_code",
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:57:18.352255",
+  "required_tools": [
+    "verify_user",
+    "check_esim_status",
+    "reissue_activation_code",
+    "end_conversation"
+  ],
+  "agent_flow": [
+    "RouterAgent",
+    "TechAgent"
+  ]
+}

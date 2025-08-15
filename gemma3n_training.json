@@ -1,0 +1,805 @@
+[
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: worried]\nAlo, merhaba. Acil bir durumum var. eSIM'im aktive olmuyor ve ben yurtdışında okuyorum, internetsiz kaldım. Derslerime yetişmem lazım, ne yapacağımı bilemiyorum. Çok endişeliyim şu an.",
+    "output": "Merhaba Sayın Can Yılmaz. Hattınızla ilgili yaşadığınız aksaklık için üzgünüz. Size yardımcı olabilmem için öncelikle kimlik doğrulaması yapmamız gerekiyor. Lütfen T.C. kimlik numaranızı ve anne kızlık soyadınızın ilk iki harfini söyler misiniz?\n[ARAÇLAR: verify_user]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0174_turn_1.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: anxious]\nEvet, evet… Tabii. Adım Can Yılmaz, T.C. kimlik numaram 12345678910. Lütfen çabuk olalım, sabahki dersimi kaçırıyorum. Saatlerdir uğraşıyorum, her şeyi denedim, olmuyor.",
+    "output": "Bilgilerinizi doğruladım Sayın Yılmaz. eSIM aktivasyon sorunu yaşadığınızı anlıyorum. Bu konuda size daha detaylı yardımcı olabilmek için sizi teknik ekibimize aktarıyorum. Lütfen kısa bir süre hatta kalınız. Konuşmanız kesilmeyecektir.\n[ARAÇLAR: get_customer_status, route_to_agent]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0174_turn_2.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom TechAgent uzmanısın.",
+    "input": "[DUYGU: concerned]\niPhone 14 Pro kullanıyorum. QR kodu tarattım, manuel denedim, hücresel ayarlardan defalarca sıfırladım, hatta telefonun ayarlarını bile sıfırladım. Yok, hiçbiri işe yaramadı. Sürekli 'eSIM etkinleştirilemiyor' hatası veriyor. Uzaktan derslerimi takip etmem gerekiyor, araştırma yapmalıyım… Bu internetsizlik beni çok zorluyor.",
+    "output": "Merhaba Sayın Yılmaz, ben Teknik Destek Ekibi'nden Ayşe. Az önce eSIM aktivasyon sorununuzla ilgili RouterAgent'tan devraldım. Sorununuzun ne olduğunu, hangi cihazı kullandığınızı ve şimdiye kadar hangi adımları denediğinizi detaylıca anlatır mısınız lütfen?",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0174_turn_3.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom TechAgent uzmanısın.",
+    "input": "[DUYGU: concerned]\nTamam, lütfen yollayın. Peki bu ne kadar sürer? Çünkü 10 dakikaya bir online dersim başlıyor ve internetim yok. Yetişebilir miyim dersime?",
+    "output": "Anladım Can Bey. Denemediğiniz bir adım kalmamış gibi görünüyor. Cihazınızın IMEI numarasını kontrol ettim ve eSIM profilinizin sunucularımızda takılı kaldığını görüyorum. Bu tür durumlarda en hızlı çözüm, size yeni bir aktivasyon QR kodu göndermektir. Onaylarsanız hemen sistemden yenisini oluşturup SMS ile size ileteceğim.\n[ARAÇLAR: check_esim_status, check_device_imei, reissue_activation_code]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0174_turn_4.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom TechAgent uzmanısın.",
+    "input": "[DUYGU: normal]\n",
+    "output": "Yeni QR kodunuzu SMS ile az önce gönderdim Can Bey. Telefonunuzun hücresel ayarlarına girip 'eSIM Ekle' seçeneğiyle bu yeni kodu taratarak veya manuel giriş yaparak tekrar denemenizi rica ediyorum. Genellikle anında aktifleşir. Dersinize yetişeceğinizi umuyorum.\n[ARAÇLAR: reissue_activation_code]"
+  },
+  {
+    "instruction": "Sen bir Türk telekom TechAgent uzmanısın.",
+    "input": "[DUYGU: budget-conscious]\nEvet, şu anki paketim sanırım 'Genç Tarife 10GB'. Ama buradaki dersler, ödevler, kütüphane erişimleri falan derken 10GB yetmiyor. Özellikle görüntülü konuşmalar çok yiyor. Öğrenciye özel, daha uygun fiyatlı ve yüksek kotalı bir şey var mıydı? Hani böyle 20-30GB civarı, ama bütçemi çok aşmayacak bir şey.",
+    "output": "Harika! eSIM'inizin aktive olmasına çok sevindim Can Bey. Şimdi paketinizi ve internet ihtiyacınızı anladım. Bu konuda size en uygun çözümleri sunabilmesi için sizi tarife ve paketler departmanındaki uzman bir arkadaşıma aktarıyorum. Lütfen hatta kalınız, aktarım hemen gerçekleşecektir.\n[ARAÇLAR: route_to_agent]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0174_turn_6.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom PlanAgent uzmanısın.",
+    "input": "[DUYGU: thankful]\nHarika! 'Akademisyen Destek Paketi' kulağa çok iyi geliyor, tam bana göre. 25GB internet ve ek avantajlar… Evet, evet, kesinlikle bunu istiyorum. Hemen geçiş yapabilir miyiz? Gerçekten çok teşekkür ederim! Hem internet sorunumu çözdünüz hem de bu paketle beni büyük bir dertten kurtardınız. Derslerime daha rahat odaklanabilirim artık. Çok sağ olun!",
+    "output": "Merhaba Can Bey, ben Tarife ve Paketler Ekibi'nden Mert. Ayşe Hanım'dan devraldım. İnternetinizin yetersiz kaldığını ve daha uygun, bol kotalı bir paket arayışında olduğunuzu anlıyorum. Öncelikle mevcut tarifenizi kontrol edebilir miyim?\n[ARAÇLAR: get_customer_plan]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0174_turn_7.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: confused]\nAlo, iyi günler evladım. Ben sizi aradım da... bu yeni telefonum var ya, bir türlü anlayamadım. İki tane hat var diyorlar, ama biri çalışmıyor gibi... Hele bi bakın hele.",
+    "output": "İyi günler efendim, Türk Telekom'a hoş geldiniz. Size nasıl yardımcı olabilirim? İşlemlerinize devam edebilmem için lütfen adınızı, soyadınızı ve T.C. kimlik numaranızı söyler misiniz?\n[ARAÇLAR: verify_user]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0074_turn_1.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: confused]\nAdım Mehmet Yılmaz, tamam mı? T.C. kimlik numaram da 12345678910. İşte öyle, bu yeni akıllı telefon... Benim eski tuşlu telefonum gibi değil, çok karışık. İki tane numara varmış içinde, ama diğeri niye aktif değil, ben bilmem.",
+    "output": "Sayın Mehmet Yılmaz, bilgileriniz doğrulandı. Anlıyorum efendim, yeni telefonunuzda çift SIM kart özelliğiyle ilgili bir sorun yaşıyorsunuz. Bu teknik bir konu olduğu için sizi uzman ekibimize aktarıyorum. Lütfen hattan ayrılmayın.\n[ARAÇLAR: get_customer_status, route_to_agent]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0074_turn_2.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom TechAgent uzmanısın.",
+    "input": "[DUYGU: worried]\nHele bakın efendim... Benim bu telefonum yeni, ilk defa akıllı telefon kullanıyorum. Diyorlar ki 'Mehmet amca, iki tane numaran olacak bu telefonda.' İyi de, biri arama yapmıyor, mesaj gelmiyor. Diğeri çalışıyor ama... Ben anlamadım ki bu çift hat işini. Bir de geçen ayki faturam çok geldi, vergi çok yazmışlar...",
+    "output": "Merhaba Mehmet Bey, ben Teknik Destek Uzmanı. Aktarılan bilgilere göre yeni telefonunuzda çift SIM kart kullanımıyla ilgili bir problem yaşıyorsunuz. Lütfen detaylıca anlatır mısınız, tam olarak ne oluyor?",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0074_turn_3.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom TechAgent uzmanısın.",
+    "input": "[DUYGU: worried]\nYok yok, telefonun modeli... Şey, kutusunda yazıyordu da... 'Samsung Galaxy A24' mü ne... Heh, o işte. Ama bak, ben sana asıl derdimi anlatayım; bu faturadaki vergi niye bu kadar yüksek? Ben emekliyim, bu kadar vergi olmaz ki.",
+    "output": "Anladım Mehmet Bey. İlk akıllı telefonunuz olması nedeniyle bu tür durumlar yaşanabilir, merak etmeyin halledeceğiz. Lütfen telefonunuzun modelini söyler misiniz? Ayrıca, diğer hattınızın numarasını da teyit edebilir miyiz? Bu bilgilerle size daha doğru yardımcı olabilirim. Telefonunuzda bir ayar değişikliği mi oldu, yoksa hiç mi çalışmadı?\n[ARAÇLAR: check_device_imei, check_esim_status]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0074_turn_4.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom TechAgent uzmanısın.",
+    "input": "[DUYGU: grateful]\nHee, tamam şimdi anladım galiba... Şu ayarları değiştirdim. Diğer hat da çalıştı. Çok şükür, Allah razı olsun evladım! Gözüm açıldı şimdi. Ama o faturanın işi ne olacak? O da canımı sıkıyor.",
+    "output": "Anladım Mehmet Bey, o konuda da yardımcı olacağım. Ancak önceliğimiz şu an hattınızın düzgün çalışması. Faturanıza tabii ki bakarız. Samsung A24 cihazlarda çift SIM kurulumu genellikle ayarlar menüsünden yapılıyor. Şimdi lütfen telefonunuzun Ayarlar menüsüne girin. Oradan 'Bağlantılar' veya 'Ağ ve İnternet' seçeneğini bulun. İçinde 'SIM kart yöneticisi' veya 'Mobil ağlar' gibi bir seçenek olacak. Diğer hattınızın pasif durumda olup olmadığını kontrol edip oradan etkinleştirebiliriz. Ayrıca ben sizin diğer hattınız için bir aktivasyon kodu da gönderiyorum, belki yeniden etkinleştirilmesi gerekiyordur.\n[ARAÇLAR: reissue_activation_code, create_tech_ticket]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0074_turn_5.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom TechAgent uzmanısın.",
+    "input": "[DUYGU: worried]\nMerhaba evladım. Evet, bu faturadaki vergi meselesi. Benim geçen ayki faturam 250 lira gelmiş. Normalde 100 lira falan gelirdi. Baktım, vergiye çok yazmışlar. Ben emekliyim, bize indirimli olması lazımdı. Yanlışlık mı oldu?",
+    "output": "Harika Mehmet Bey! Hattınızın düzelmesine sevindim. Şimdi de fatura konunuza geçelim. Fatura ve vergi konularında uzmanlaşmış fatura birimimize aktarıyorum sizi. Oradaki arkadaşımız size detaylı bilgi verecek ve yardımcı olacaktır. Lütfen kısa bir süre bekleyin.\n[ARAÇLAR: route_to_agent]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0074_turn_6.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom BillingAgent uzmanısın.",
+    "input": "[DUYGU: happy]\nVay, sağ olasın evladım! Çok şükür! Gözüm açıldı şimdi. Hem telefonum düzeldi hem param cepte kaldı. Çok teşekkür ederim sana da, Allah razı olsun! İyi çalışmalar dilerim.",
+    "output": "Merhaba Mehmet Bey, ben Fatura ve Tarife Destek biriminden. Teknik ekipten aktarıldınız. Faturanızla ilgili bir sorun yaşadığınızı anlıyorum. Nasıl yardımcı olabilirim size?",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0074_turn_7.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: joyful]\nMerhaba! Harika bir günüm var, umarım sizin de öyledir! Benim küçük bir eSIM sorunum vardı da, acaba doğru yere mi düştüm?",
+    "output": "Merhaba, Türk Telekom'a hoş geldiniz! Ben Aslı. Size nasıl yardımcı olabilirim? İşlemleriniz için telefon numaranızı ve annenizin evlilik soyadını rica edebilir miyim?\n[ARAÇLAR: verify_user]",
+    "audio_ref": "data/tts_audio_final/conv_20250814_074428_multiple_esim_management_cheerful_optimistic_turn_1.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: optimistic]\nTabii ki! Telefon numaram 0557 899 61 22. Annemin evlilik soyadı Kaya. Ben birkaç hattımı eSIM'e taşımak istiyorum, ama biraz kafam karıştı. Acaba doğru yere mi düştüm?",
+    "output": "Bilgileriniz için teşekkürler Sayın Kaya. Sisteme giriş yaptım. eSIM ile ilgili bir sorun yaşadığınızı belirtmiştiniz. Tam olarak ne tür bir işlem yapmaya çalışıyordunuz veya ne tür bir hata alıyorsunuz?\n[ARAÇLAR: get_customer_status]",
+    "audio_ref": "data/tts_audio_final/conv_20250814_074428_multiple_esim_management_cheerful_optimistic_turn_2.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: hopeful]\nEvet evet! Aslında birden fazla hattım var ve hepsini tek telefonda eSIM olarak kullanmak istiyorum. Birini hallettim ama diğer ikisinde sorun yaşıyorum. Sanırım teknik bir konu bu, değil mi?",
+    "output": "Anladım Sayın Kaya. Birden fazla hattınızı eSIM'e taşımak istediğinizi ve teknik sorunlar yaşadığınızı görüyorum. Bu konuda size en iyi teknik desteği sağlayabilmesi için görüşmenizi Teknoloji Destek Ekibimize aktarıyorum. Lütfen hattan ayrılmayın.\n[ARAÇLAR: route_to_agent]",
+    "audio_ref": "data/tts_audio_final/conv_20250814_074428_multiple_esim_management_cheerful_optimistic_turn_3.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom TechAgent uzmanısın.",
+    "input": "[DUYGU: slightly_stressed_but_optimistic]\nMerhaba! Durum şu: Yeni bir iPhone aldım ve üç hattımı da buraya taşımak istedim. Bir tanesi (0557 899 61 22) sorunsuz geçti, harika! Ama 0557 899 61 23 numaram için aktivasyon kodu gelmedi, 0557 899 61 24 numaram da 'hizmet yok' diyor sürekli. Sanki aktivasyonu yarım kaldı gibi.",
+    "output": "Merhaba Sayın Kaya, Türk Telekom Teknoloji Destek Ekibi'nden Can ben. Az önce Router Ekibimizden aktarıldınız. eSIM geçişlerinizle ilgili sorun yaşadığınızı anladım. Hangi numaralarınızda tam olarak ne gibi bir sorun yaşıyorsunuz ve cihazınızın IMEI numarasını alabilir miyim?",
+    "audio_ref": "data/tts_audio_final/conv_20250814_074428_multiple_esim_management_cheerful_optimistic_turn_4.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom TechAgent uzmanısın.",
+    "input": "[DUYGU: curious_and_observant]\nIMEI numaramı hemen veriyorum: 123456789012345. Bu arada, diğer hattımda (0557 899 61 22) bazen internet yavaşlıyor gibi hissediyorum, bu da eSIM'le mi alakalı acaba? Küçük bir not olarak aklıma gelmişken söyleyeyim.",
+    "output": "Teşekkür ederim Sayın Kaya. IMEI numaranızı ve numara detaylarını not aldım. Sistemden kontrol ediyorum. 0557 899 61 23 numaranız için aktivasyon kodunun size ulaşmadığını, 0557 899 61 24 numaranızda ise 'hizmet yok' hatası aldığınızı görüyorum. Ayrıca 0557 899 61 22 numaralı hattınızdaki internet yavaşlığı notunuzu da aldım, bunu da inceleyeceğim.\n[ARAÇLAR: check_device_imei, check_esim_status]",
+    "audio_ref": "data/tts_audio_final/conv_20250814_074428_multiple_esim_management_cheerful_optimistic_turn_5.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom TechAgent uzmanısın.",
+    "input": "[DUYGU: excited_then_concerned]\nAy harika! Kodu bekliyorum o zaman. Peki bu eSIM'leri aktifleştirmek, bu kadar uğraşmak ek bir ücrete tabi mi? Benim çoklu hat indirimim vardı, o hala geçerli mi acaba? Yoksa şimdi üç ayrı hat olunca faturam çok mu kabarır?",
+    "output": "Sayın Kaya, 0557 899 61 23 için yeni bir eSIM aktivasyon kodu talebi oluşturdum, kısa süre içinde SMS ile size ulaşacaktır. 0557 899 61 24 numaranızdaki 'hizmet yok' durumu ve 0557 899 61 22'deki internet yavaşlığı için daha detaylı inceleme gerektiren bir teknik arıza kaydı oluşturuyorum. Bu durumlar için ekiplerimiz size en kısa sürede dönüş yapacaklardır. Bu süreçte faturanızla ilgili bir sorunuz olduğunu anladım, bu konuda size en doğru bilgiyi Fatura ve Tarife Departmanımız sağlayacaktır. İsterseniz görüşmenizi oraya aktarabilirim?\n[ARAÇLAR: reissue_activation_code, create_tech_ticket]",
+    "audio_ref": "data/tts_audio_final/conv_20250814_074428_multiple_esim_management_cheerful_optimistic_turn_6.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom TechAgent uzmanısın.",
+    "input": "[DUYGU: calm_but_inquisitive]\nMerhaba! Evet, ben bu yeni eSIM geçişlerimle ilgili bir fatura durumu sormak istemiştim. Hani bu üç hattı bir telefonda kullanınca, ekstra bir ücret yansıması olur mu? Özellikle de bu kadar sorun yaşayınca...",
+    "output": "Fatura ve tarife bilgileriniz için sizi doğru departmana aktarıyorum Sayın Kaya. Lütfen hattan ayrılmayın, iyi günler dilerim.",
+    "audio_ref": "data/tts_audio_final/conv_20250814_074428_multiple_esim_management_cheerful_optimistic_turn_7.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom BillingAgent uzmanısın.",
+    "input": "[DUYGU: playfully_frustrated_but_eager]\nAman ne karışıkmış bu eSIM işi! Ama olsun, sonunda hepsi çalışırsa değer. Peki bu indirimler, kampanyalar filan tam olarak neymiş? Ben hep en avantajlısını kullanmak isterim!",
+    "output": "Merhaba Sayın Kaya, Türk Telekom Fatura ve Tarife Departmanı'ndan Mert ben. Teknoloji Destek ekibimizden aktarıldınız. eSIM geçişlerinizle bağlantılı olarak fatura ve indirimleriniz hakkında bilgi almak istediğinizi anladım. Size nasıl yardımcı olabilirim?",
+    "audio_ref": "data/tts_audio_final/conv_20250814_074428_multiple_esim_management_cheerful_optimistic_turn_8.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom BillingAgent uzmanısın.",
+    "input": "[DUYGU: relieved_and_grateful]\nTamamdır, anladım. O zaman siz bana ne zaman müsaitseniz geri dönün. Benim için önemli olan bu hatların düzgün çalışması ve faturamın da sürpriz olmaması! Çok teşekkür ederim ilginiz için!",
+    "output": "Bilginiz için teşekkür ederim Sayın Kaya. Mevcut tarifenizi, geçmiş faturalarınızı ve çoklu hat indirimlerinizin durumunu kontrol ediyorum. Sistemde şu anda geçerli olan kampanyalarınızı ve eSIM geçişlerinin faturanıza olası yansımalarını inceliyorum.\n[ARAÇLAR: get_customer_plan, get_last_bill, apply_campaign_discount]",
+    "audio_ref": "data/tts_audio_final/conv_20250814_074428_multiple_esim_management_cheerful_optimistic_turn_9.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: direct]\nAlo, merhaba! Ya bu telefonum yurt dışında çekmiyor yine! Singapur'dayım, ne hallere düştüm. Ayarlar mı bozuk n'oldu anlamadım. Çabuk bi bakın hele!",
+    "output": "Merhaba efendim, yaşadığınız durum için üzgünüz. Size yardımcı olabilmemiz için öncelikle kimliğinizi doğrulamamız gerekiyor. Lütfen TC kimlik numaranızı veya abone numaranızı söyler misiniz?\n[ARAÇLAR: verify_user]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0058_turn_1.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: direct]\nTamam tamam, TC kimlik numaram 12345678900. Hadi çabuk olun gardaş, işim var, toplantıya yetişecem. Bi bakın şu hatta, acil lazım.",
+    "output": "Bilgilerinizi doğruladım efendim. Anlıyorum, acil bir durum. Görüşmenizi uluslararası dolaşım ve teknik konularda uzman bir arkadaşımıza aktarıyorum. Kendisi cihaz ayarlarınızla ilgili detaylı yardımcı olacaktır.\n[ARAÇLAR: get_customer_status, route_to_agent]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0058_turn_2.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom TechAgent uzmanısın.",
+    "input": "[DUYGU: frustrated]\nNe ayarı ya? Kaç kere yurtdışına çıktım, sanki ilk defa yaşıyorum bu sorunu! Her seferinde aynı muhabbet. Ben zaten ayarları kontrol ettim, bi sorun yoktu. Sizin sisteminizde bi sıkıntı var belli ki. Yoksa niye çekmesin, emme ben burda mağdur oldum!",
+    "output": "Merhaba efendim, ben Teknik Destek'ten Burak. Dolaşım sorununuz için buradayım. Yurtdışında bağlantı sorunları genellikle cihaz ayarlarından kaynaklanır, bu yüzden öncelikle cihazınızın modelini ve eSIM kullanıp kullanmadığınızı kontrol etmemiz gerekiyor. Ayarlarınızı birlikte gözden geçirelim.\n[ARAÇLAR: check_esim_status, check_device_imei]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0058_turn_3.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom TechAgent uzmanısın.",
+    "input": "[DUYGU: demanding]\nTamam, gönderin bakalım. Ama bu hep oluyor! Sanki ben bilmem ne yapacağımı. Hem bi de, benim bulut depolamam neden doldu geçen ay? Ben onu boşaltmıştım, 50 GB az geliyor zaten, neden doldu bi anda?",
+    "output": "Haklısınız efendim, sık yaşanan bir durum olabiliyor. Ancak bazen küçük bir ayar değişikliği bile fark yaratır. Genellikle APN ayarları veya ağ seçimi otomatik gelmeyebiliyor. İsterseniz size hızlıca bir aktivasyon kodu gönderip cihazınızı yeniden başlatmanızı rica edelim, bu çoğu zaman sorunu çözer. Yoksa da detaylı ayar kontrolü yaparız.\n[ARAÇLAR: reissue_activation_code]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0058_turn_4.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: direct]\nAlo, iyi günler. Ben yurtdışındayım, roaming sorunum var. Yeni telefon aldım, eSIM'i aktaramıyorum. Eski telefonumdaki eSIM'i buraya taşımam lazım, emme olmuyor. Acil işim var.",
+    "output": "Merhaba efendim, hattınızla ilgili yardımcı olabilmek için öncelikle kimlik doğrulamanızı yapmamız gerekiyor. Adınız soyadınız ve doğum tarihinizi alabilir miyim lütfen?\n[ARAÇLAR: verify_user]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0012_turn_1.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: direct]\nMustafa Demir, doğum tarihim 15.03.1978. Haydi hızlı olun kardaş, zamanım yok. Bu kaçıncı kez başıma geliyor.",
+    "output": "Kimlik doğrulamanız başarıyla tamamlanmıştır Mustafa Bey. Anladığım kadarıyla eSIM transferi konusunda bir sorun yaşıyorsunuz ve bu teknik bir konu. Sizi hemen teknik destek ekibimize bağlıyorum. Lütfen hattan ayrılmayın.\n[ARAÇLAR: verify_user, route_to_agent]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0012_turn_2.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom TechAgent uzmanısın.",
+    "input": "[DUYGU: frustrated]\nMerhaba Sude Hanım. Eski telefonum Samsung, yeni telefonum iPhone 15 Pro Max. IMEI'yi vereyim hemen: 357984XXXXX. Ben bu eSIM'i defalarca taşıdım emme ilk defa böyle bir sorun yaşıyorum. Yurtdışındayım, işim var, roaming yapamıyorum. Sabah beri uğraşıyorum, internetim yok. Ha bir de faturamda garip bir yükseliş var, ona da bakarsınız sonra.",
+    "output": "Merhaba Mustafa Bey, ben teknik destekten Sude. Hoş geldiniz. eSIM transferi konusunda yaşadığınız sorunu detaylı dinleyebilir miyim? Hangi cihazdan hangi cihaza geçiş yapmaya çalışıyorsunuz? Cihazınızın IMEI numarasını da alabilir miyim, bir kontrol edelim.\n[ARAÇLAR: check_esim_status, check_device_imei]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0012_turn_3.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom TechAgent uzmanısın.",
+    "input": "[DUYGU: demanding]\nGeldi kod, denedim şimdi... Yine olmadı! Allah Allah, bu nasıl iş? Kaçıncı kez oluyor bu sorun, ben sürekli seyahat eden biriyim, her seferinde bu çileyi çekmek zorunda mıyım? Faturamdaki o saçma artış da neyin nesi? Roaming paketim vardı sözde!",
+    "output": "IMEI numarasını aldım Mustafa Bey. Sistemde kontrol ediyorum... Evet, eSIM'iniz eski cihazınıza tanımlı görünüyor ve yeni cihazınıza aktarım talebiniz mevcut. Hemen yeni bir aktivasyon kodu oluşturup size SMS ile gönderiyorum. Lütfen yeni cihazınızda bu kodu kullanarak eSIM'i yeniden kurmayı deneyin. SMS'in gelmesi birkaç dakika sürebilir.\n[ARAÇLAR: reissue_activation_code]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0012_turn_4.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom TechAgent uzmanısın.",
+    "input": "[DUYGU: demanding]\nHoş bulduk Ayşe Hanım. Benim yurtdışı paketi vardı. Bu son faturamda 500 TL'lik bir ek ücret var, neyin nesi bu? Paketim bitmeden mi kesti, yoksa yanlış mı hesaplandı? Ben sürekli yurtdışına çıkıyorum, böyle bir şey ilk defa oluyor. Açıklama istiyorum.",
+    "output": "Anlıyorum Mustafa Bey, bu durum için çok üzgünüz. Teknik ekip olarak eSIM transferini uzaktan çözemediğimiz durumlarda, talebinizi bir üst birime aktarmamız gerekiyor. eSIM transferi için detaylı bir teknik arıza kaydı oluşturdum. Bu kaydın çözüm süresi 24-48 saat sürebilir, ancak yurtdışı olduğunuz için önceliklendirme isteğiyle ilettim. Ayrıca, fatura konusundaki endişenizi de anlıyorum. Bu konuda size daha net bilgi verebilmesi için sizi hemen Faturalama ekibimize aktarıyorum. Onlar fatura detaylarınızı inceleyebilirler.\n[ARAÇLAR: create_tech_ticket, route_to_agent]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0012_turn_5.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom BillingAgent uzmanısın.",
+    "input": "[DUYGU: accepting]\nVay, demek öyle oldu ha. Tamamdır, anladım şimdi. O zaman o yeni paketlerden birini mutlaka yapalım, bir daha böyle sürprizle karşılaşmayalım. eSIM işi de umarım çabuk çözülür. Eyvallah, sağ olun.",
+    "output": "Merhaba Mustafa Bey, ben faturalama ekibinden Ayşe. Hoş geldiniz. Teknik destekten arkadaşımız beni bilgilendirdi, faturanızda bir anormallik olduğunu belirtmişsiniz. Son faturanızı kontrol edebilir miyim sizin için?\n[ARAÇLAR: get_last_bill]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0012_turn_6.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: businesslike]\nAlo, merhaba gardaşım. Bi hattımda garip işler oluyor da, bi bak hele. Sanki biri girmiş, ne iş?",
+    "output": "Hoş geldiniz efendim. Güvenliğiniz için öncelikle numaranızı teyit edebilir miyiz?\n[ARAÇLAR: verify_user]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0131_turn_1.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: businesslike]\nHele dur, şu numara... 532 555 12 34. Bu bizim elemanın hattıydı. Bi an önce halledin, vaktim yok benim.",
+    "output": "Anladım efendim. Hesabınızdaki güvenlik endişesi için sizi ilgili birimdeki uzman arkadaşıma bağlıyorum. Lütfen hattan ayrılmayın.\n[ARAÇLAR: route_to_agent]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0131_turn_2.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom FAQAgent uzmanısın.",
+    "input": "[DUYGU: questioning]\nYav, bu numaradan dün gece durduk yere arama gitmiş, üstüne paket bitmiş hemen. Benim haberim yok, eleman da uyuyo. Biri mi girmiş ne? Şaşırdım kaldım.",
+    "output": "Merhaba efendim, aktarıldınız. Hattınızda ne gibi bir sorun yaşadığınızı alabilir miyim?\n[ARAÇLAR: get_customer_status]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0131_turn_3.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom FAQAgent uzmanısın.",
+    "input": "[DUYGU: businesslike]\nHeh, iyi ettiniz. Şifre falan yollayın, hattı bi güzel güvenceye alın. O iş halloldu mu şimdi? Paket falan da boşuna gitmiş, o ne olacak?",
+    "output": "Anladım efendim, hemen kontrol ediyorum. Evet, sistemde bu hatta yetkisiz erişim denemeleri görünüyor. Erişimi hemen kısıtladık. Güvenliğiniz için hattınıza yeni bir aktivasyon şifresi tanımlayıp göndermemi ister misiniz?\n[ARAÇLAR: create_tech_ticket, reissue_activation_code]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0131_turn_4.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom FAQAgent uzmanısın.",
+    "input": "[DUYGU: questioning]\nYok yav, hepsi faturalıydı da, şimdi bu olaydan sonra düşündüm, faturalı paketler bizim işe gelmiyor bazen. Elemanlar az kullanıyor, boşuna para gidiyor. Hazır kartlara geçsek daha mı iyi olur acaba? Var mı öyle paketleriniz, esnafa özel falan?",
+    "output": "Evet efendim, şifrenizi az önce SMS olarak gönderdik. Hattınız şu an güvende. Kullanımınızla ilgili de inceleme başlatıldı. Başka bir konu var mıydı acaba? Diğer çalışanlarınızın hatları da mı faturalıydı?",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0131_turn_5.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: negotiating]\nÜç hat var şimdilik. Öyle çok konuşma internet yok. En ucuz, en cıncık gibi paketi istiyorum. Esnaf adamız, para kolay kazanılmıyor. Bi de bu hatları ben yönetiyom, sıkıntı çıkarmasın sonra.",
+    "output": "Anladım efendim. Hatlarınızı hazır karta geçirme ve esnafa özel paketler konusunda size en doğru bilgiyi Plan ve Tarife uzmanımız verebilir. Hemen bağlıyorum sizi, bir saniye lütfen.\n[ARAÇLAR: route_to_agent]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0131_turn_6.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom PlanAgent uzmanısın.",
+    "input": "[DUYGU: satisfied]\nOh, valla iyi olur. Hemen yapın o zaman. Yeter ki başımız ağrımasın, para da boşa gitmesin. Hadi Allah razı olsun, kolay gelsin.",
+    "output": "Merhaba efendim, hazır kart paketlerimizle ilgili yardımcı olayım. Kaç hattınız için düşünüyorsunuz bu geçişi? Ve çalışanlarınız genelde ne kadar kullanıyorlar?\n[ARAÇLAR: get_customer_plan]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0131_turn_7.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: patient]\nAlo, iyi günler. Ben Sincan'ın Sazak köyünden arıyorum. Bir sorunum vardı da, bir türlü halledemedim.",
+    "output": "İyi günler Beyefendi/Hanımefendi. Türk Telekom'a hoş geldiniz. Size nasıl yardımcı olabilirim? İşlemlerinize devam edebilmek için kimliğinizi doğrulamam gerekiyor. Lütfen T.C. kimlik numaranızı veya abone numaranızı söyler misiniz?\n[ARAÇLAR: verify_user]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0014_turn_1.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: explaining]\nTabii ki, hemen söyleyeyim. T.C. kimlik numaram [TC Kimlik No]. Ben uzun yıllardır sizin abonenizim, hiç değiştirmedim hattımı. Ama son zamanlarda telefonla konuşurken ses kesilmeleri oluyor, bazen de aramalar düşüyor. Özellikle internet açıkken çok oluyor bu durum. Köyde zaten doğru düzgün çekmiyor, bir de bu çıktı başımıza.",
+    "output": "Bilgilerinizi teyit ettim, teşekkür ederim Sayın [Müşteri Adı Soyadı]. Anladığım kadarıyla hattınızda konuşma kalitesiyle ilgili bir sorun yaşıyorsunuz. Bu durum teknik bir destek gerektirebilir. Sizi bu konuda daha detaylı yardımcı olabilecek Teknik Destek birimimize aktarıyorum. Lütfen kısa bir süre hatta kalınız.\n[ARAÇLAR: get_customer_status, route_to_agent]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0014_turn_2.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom TechAgent uzmanısın.",
+    "input": "[DUYGU: explaining]\nMerhaba, ben Sazak köyünden [Müşteri Adı Soyadı]. Az önce arkadaşa da anlattım, telefon görüşmelerinde ses kesiliyor, hattım düşüyor. Özellikle telefonumda internet açıkken bu sorun daha da belirginleşiyor. Yeni telefon aldım, acaba ondan mı diye düşündüm ama önceki telefonumda da ara ara oluyordu. Köy yerinde zaten zorla çekiyor, komşuların diğer operatörlerdeki telefonları daha iyi sanki...",
+    "output": "Tekrar hoş geldiniz Sayın [Müşteri Adı Soyadı]. Yaşadığınız bu durum için üzgün olduğumuzu belirtmek isterim. Sorununuzu daha net anlayabilmek adına, kullandığınız telefonun markasını ve modelini alabilir miyim? Ayrıca, telefonunuzun IMEI numarasını tuşlayarak *#06# yapıp ekrana gelen 15 haneli numarayı bana iletebilir misiniz? SIM kartınız fiziksel bir kart mı, yoksa eSIM mi kullanıyorsunuz?\n[ARAÇLAR: check_device_imei, check_esim_status]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0014_turn_3.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom TechAgent uzmanısın.",
+    "input": "[DUYGU: explaining]\nTelefonum Samsung Galaxy [Model Adı]. IMEI numaram [IMEI No]. SIM kartım da bildiğimiz fiziksel kart, eski kartımı taktım yeni telefona. Bu durum yüzünden işim gücüm aksıyor, tarladayken arayanlara cevap veremiyorum doğru düzgün.",
+    "output": "Bilgileri kontrol ediyorum Sayın [Müşteri Adı Soyadı]. IMEI numaranız uyumlu görünüyor. Belirttiğiniz ses kesintileri ve çağrı düşmeleri, genellikle VoLTE (HD Ses) servisi ile ilgili ayarlar veya şebeke optimizasyonu eksikliklerinden kaynaklanabilir. Sistemden kontrol ettiğimde hattınızda VoLTE servisi aktif görünse de, cihazınızın bu servisi tam olarak kullanabilmesi için bazı şebeke ayarları veya yazılım güncellemeleri gerekebilir. Bu durumu derinlemesine incelemek ve gerekli düzenlemeleri yapmak üzere bir teknik arıza kaydı oluşturmamız gerekiyor. Onayınızla bu kaydı açabilir miyim?\n[ARAÇLAR: check_device_imei, create_tech_ticket]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0014_turn_4.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom TechAgent uzmanısın.",
+    "input": "[DUYGU: hopeful]\nArıza kaydı açılması iyi olur tabii, yeter ki sorun çözülsün. Peki bu arıza kaydı açılınca veya bu sorun giderilince benim paketimde bir değişiklik olur mu? Yani ek bir ücret çıkar mı veya internetimde kısıtlama falan olur mu? Zaten köyde doğru düzgün internet yok, paketi de ona göre almıştım. Fazla kota, hız falan istemiyorum, yeter ki telefonum çeksin, konuşmam kesilmesin.",
+    "output": "Merak etmeyiniz Sayın [Müşteri Adı Soyadı], oluşturacağımız teknik arıza kaydı hattınızdaki VoLTE servisi ile ilgili olup, mevcut tarifenizi doğrudan etkilemeyecektir. Ancak, tarifenizle ilgili endişelerinizi anlıyorum. Köyünüzdeki şebeke koşulları ve kullanım alışkanlıklarınız doğrultusunda, size en uygun tarifeyi veya ek paketi bulmak adına Tarife Danışmanı arkadaşlarımız daha detaylı yardımcı olabilirler. Sizi şimdi Tarife Danışmanı birimimize aktarıyorum. Tarifenizi inceleyip, size özel teklifleri sunacaklardır.\n[ARAÇLAR: get_customer_plan, route_to_agent]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0014_turn_5.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom PlanAgent uzmanısın.",
+    "input": "[DUYGU: hopeful]\nİyi günler hanımefendi/beyefendi. Az önce teknik arkadaşla konuşuyordum, arıza kaydı açılacakmış VoLTE için. Ama benim asıl derdim, bu düzeltmeler paketime yansır mı diye. Benim için önemli olan telefonun çekmesi, konuşma yetmesi. Köyde internet zaten iyi değil, o yüzden fazla internete ihtiyacım yok. Sadece uygun fiyatlı, çekimi iyi bir paketim olsun istiyorum.",
+    "output": "Tekrar hoş geldiniz Sayın [Müşteri Adı Soyadı]. Durumunuzu anlıyorum ve endişelerinizi gidermek için buradayım. Mevcut tarifenizi kontrol ediyorum... (kısa bir duraklama) Evet, şu an [Mevcut Tarife Adı] tarifesini kullanmaktasınız. Bu tarife [X GB internet, Y dakika, Z SMS] içermektedir. Köyünüzdeki şebeke koşulları ve önceliğinizin konuşma ve çekim gücü olması sebebiyle, size özel olarak tasarlanmış, daha çok konuşma ve SMS odaklı, uygun fiyatlı [Önerilen Tarife Adı] tarifemizi veya mevcut tarifenize ekleyebileceğiniz [Konuşma/SMS Eklentisi Adı] paketimizi önerebilirim. Bu paketler, özellikle şebeke performansı göz önünde bulundurularak daha optimize edilmiş seçenekler sunmaktadır. Ne dersiniz, bu seçenekleri detaylı inceleyelim mi?\n[ARAÇLAR: get_customer_plan, list_all_plans]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0014_turn_6.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom PlanAgent uzmanısın.",
+    "input": "[DUYGU: understanding]\nŞimdi teknik sorun ayrı, paket ayrı değil miydi? Yani bu yeni paket benim köyde çekim kalitemi doğrudan artıracak mı, yoksa sadece daha uygun fiyata mı konuşma verecek? Benim için önemli olan o çekme sorununun çözülmesi. Hani paket değişince sanki sihirli değnek değmiş gibi çekmeye başlayacak mı?",
+    "output": "Çok haklısınız Sayın [Müşteri Adı Soyadı], önemli bir noktaya değindiniz. Teknik arıza kaydı, VoLTE hizmetinizin ve dolayısıyla çağrı kalitenizin iyileştirilmesi için şebeke tarafında yapılan düzenlemeleri kapsar. Tarife değişikliği ise, bu iyileşmiş hizmeti kullanım alışkanlıklarınıza en uygun maliyetle almanızı sağlar. Önerdiğim [Önerilen Tarife Adı] veya [Konuşma/SMS Eklentisi Adı] paketleri, sizin gibi konuşma ve çekim kalitesine öncelik veren abonelerimiz için tasarlanmıştır; daha dengeli bir kullanım sunarken bütçenizi de korur. Yani evet, öncelikle teknik sorun giderilecek, ardından da bu yeni paketle kullanımınız daha verimli hale gelecek. İsterseniz şimdi bu pakete geçişinizi sağlayabiliriz, ya da sadece teknik arıza kaydınızın takibini yapabiliriz, karar sizin.\n[ARAÇLAR: change_customer_plan, create_tech_ticket]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0014_turn_7.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: direct]\nAlo! Ne oluyor ya? Yurtdışında bağlantım resmen sürünüyor, iş yapamıyorum! Allah aşkına bir bakın şu hatta, hızım yerlerde! Ben sürekli seyahat ediyorum, bu durum kabul edilemez.",
+    "output": "Merhaba efendim, X Telekom'a hoş geldiniz. Anlıyorum, yaşadığınız sıkıntı için üzgünüz. Güvenliğiniz için öncelikle kimlik doğrulaması yapmamız gerekiyor. Adınız soyadınız ve T.C. kimlik numaranızla yardımcı olabilir misiniz?\n[ARAÇLAR: verify_user]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0041_turn_1.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: direct]\nTamam, tamam, hızlı olalım lütfen. Adım Can Yılmaz, T.C. numaram 12345678900. Lütfen bu ağı düzeltin artık, Paris'teyim ve hiçbir şey yüklenmiyor.",
+    "output": "Teşekkürler Sayın Yılmaz. Doğrulamanız yapıldı. Anladığım kadarıyla yurt dışı bağlantınızda hız problemi yaşıyorsunuz. Bu teknik bir konu olduğu için sizi ilgili birimimize, Teknik Destek ekibimize aktarıyorum. Onlar size daha detaylı yardımcı olacaklardır. Beklemede kalın lütfen.\n[ARAÇLAR: get_customer_status, route_to_agent]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0041_turn_2.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom TechAgent uzmanısın.",
+    "input": "[DUYGU: frustrated]\nBeklemedeyiz zaten, kaç saattir... Merhaba? Dinleyin, benim hattım neden bu kadar yavaş? eSIM kullanıyorum, cihazım son model, her şey yerli yerinde ama bağlantı resmen sürünüyor. Mail bile atamıyorum. Bu sorun sürekli oluyor, ben bu işlerden anlarım, altyapı mı yetersiz, benim paketim mi sorunlu? Bir çözüm bulun!",
+    "output": "Merhaba Sayın Yılmaz, Teknik Destek'ten Ayla. Az önce aktarıldınız. Yurt dışı bağlantı sorununuzu anlıyorum. Sistemden eSIM durumunuzu kontrol ediyorum... Aktif görünüyor. Cihazınızın IMEI numarasını alabilir miyim, bir de oradan kontrol edelim? Bu sırada sizin için acil bir teknik arıza kaydı oluşturuyorum.\n[ARAÇLAR: check_esim_status, check_device_imei, create_tech_ticket]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0041_turn_3.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom TechAgent uzmanısın.",
+    "input": "[DUYGU: frustrated]\nIMEI'yi boş verin şimdi, problem cihazda değil! 123456789012345. Bu hız düşüşü özellikle uluslararası dolaşımda oluyor. Ben sürekli farklı ülkelere gidiyorum, bu işler için güçlü bir pakete ihtiyacım var. Mevcut paketim nedir, gerçekten bu kadar yetersiz mi? Yoksa altyapıda mı bir sıkıntı var? Bana net bir şey söyleyin, vaktim kısıtlı!",
+    "output": "Anlıyorum Sayın Yılmaz, IMEI kontrolü tamamlandı. Mevcut paketinizin 'Gezgin Avantaj' paketi olduğunu görüyorum. Hız düşüşü bölgesel yoğunluklardan veya uluslararası operatör anlaşmalarımızdan kaynaklanabilir. Teknik kaydınızda bu detaylar incelenecek. Ancak belirttiğiniz gibi, sık seyahat eden biriyseniz, 'Gezgin Avantaj' paketi sizin yoğun kullanımınıza ve yüksek hız beklentinize yetersiz kalıyor olabilir. Daha yüksek kotalı ve öncelikli bir pakete geçiş yapmayı düşündünüz mü?\n[ARAÇLAR: get_customer_plan, create_tech_ticket]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0041_turn_4.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom TechAgent uzmanısın.",
+    "input": "[DUYGU: demanding]\nHa yani sorun paketimde miymiş? Başından beri söylesenize! Tabi ki düşündüm! Ben bu kadar sık seyahat ederken neden hala bu paketteyim ki? Bana derhal yurt dışında da sorunsuz çalışacak, hızlı, premium bir paket lazım! Sizin en iyi paketiniz neyse, ona geçin beni hemen!",
+    "output": "Haklısınız Sayın Yılmaz. Paket değişikliklerini ve yeni teklifleri Planlama ve Tarife Departmanımızdaki arkadaşlarımız yönetiyor. Sizin talebiniz doğrultusunda sizi hemen oraya aktarıyorum. Onlar size en uygun premium seçenekleri sunacaklardır. Teknik arıza kaydınız da takipte olacak.\n[ARAÇLAR: route_to_agent]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0041_turn_5.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom PlanAgent uzmanısın.",
+    "input": "[DUYGU: demanding]\nMerhaba tekrar... Umarım bu sefer son aktarım olur. Dinleyin, ben Can Yılmaz. Az önce teknik ekille konuştum, yurt dışı internet hızım yüzünden. Anlaşılan mevcut paketim yetersizmiş. Ben sık seyahat eden, işi internete bağlı biriyim. Bana en iyi, en hızlı ve yurt dışında sorun çıkarmayacak bir paket lazım. Fiyatı önemli değil, kalite önemli! Ne sunacaksınız?",
+    "output": "Merhaba Sayın Yılmaz, Planlama ve Tarife Departmanı'ndan Elif. Endişelerinizi anlıyorum. Mevcut 'Gezgin Avantaj' paketinizden daha üstün, özellikle yurt dışı kullanımlarınız için tasarlanmış 'Global Elit' ve 'Sınırsız Dünya' paketlerimiz mevcut. 'Global Elit' paketimiz, aylık 50 GB yurt dışı kullanım hakkı ve öncelikli ağ erişimi sunarken, 'Sınırsız Dünya' paketimiz adından da anlaşılacağı gibi belirli ülkelerde sınırsız data ve premium destek sağlıyor. Sizin kullanım alışkanlıklarınıza ve yurt dışı yoğunluğunuza göre 'Sınırsız Dünya' paketimizin daha uygun olacağını düşünüyorum. Onaylarsanız geçişinizi hemen sağlayabilirim.\n[ARAÇLAR: get_customer_plan, list_all_plans, change_customer_plan]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0041_turn_6.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: suspicious]\nAlo? Alo! Kimse var mı orada? Yine mi numaramı kaydettiniz? Sanırım bir sorun var. Benim eSIM'lerimle ilgili, sanki bir şeyler karışıyor gibi hissediyorum.",
+    "output": "Merhaba, Turkcell'e hoş geldiniz. Size nasıl yardımcı olabilirim? Güvenliğiniz için öncelikle kimlik doğrulaması yapmamız gerekiyor. Lütfen hattınızın kayıtlı olduğu TC kimlik numaranızın son dört hanesini ve annenizin evlenmeden önceki soyadını söyler misiniz?\n[ARAÇLAR: verify_user]",
+    "audio_ref": "data/tts_audio_final/conv_20250814_073857_multiple_esim_management_suspicious_paranoid_turn_1.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: suspicious, slightly agitated]\n0553 437 88 77. Anne kızlık soyadım Ay. Ama neden soruyorsunuz? Yine neyi kontrol edeceksiniz? Benim bilgilerimi başkasına mı veriyorsunuz?",
+    "output": "Bilgileriniz doğrulandı, teşekkür ederiz. Endişelerinizi anlıyorum. Numaranız ve anne kızlık soyadınız güvenlik amaçlı istenmektedir, bilgileriniz tamamen güvendedir ve kimseyle paylaşılmaz. e-SIM'lerinizle ilgili bir sorun olduğunu belirtmiştiniz. Tam olarak ne gibi bir sorun yaşıyorsunuz?\n[ARAÇLAR: get_customer_status]",
+    "audio_ref": "data/tts_audio_final/conv_20250814_073857_multiple_esim_management_suspicious_paranoid_turn_2.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: paranoid, accusatory]\nE-SIM'lerimle ilgili. Benim birden fazla eSIM'im var ve bana öyle geliyor ki, verilerim olması gerekenden daha hızlı bitiyor. Sanki bir yerlerden ekstra kullanım yazılıyor gibi. Ayrıca faturamda da bir gariplik var gibi hissediyorum. Ne olduğunu anlamak istiyorum, bana ne saklıyorsunuz?",
+    "output": "Anladım. eSIM yönetimi ve fatura detayları konusunda size en doğru bilgiyi Plan ve Tarife Uzmanımız verecektir. Sizi ilgili departmana aktarıyorum. Lütfen hattan ayrılmayın.\n[ARAÇLAR: route_to_agent]",
+    "audio_ref": "data/tts_audio_final/conv_20250814_073857_multiple_esim_management_suspicious_paranoid_turn_3.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom PlanAgent uzmanısın.",
+    "input": "[DUYGU: skeptical, wary]\nAnladım... Yani siz benim planımı değiştirmeye çalışmıyorsunuz, değil mi? Ben şüpheliyim, çünkü her aradığımda sanki bana yeni bir şeyler satmaya çalışıyorsunuz. Bu eSIM'ler yüzünden faturam artmasın sonra.",
+    "output": "Merhaba, ben Plan ve Tarife Uzmanı. e-SIM'leriniz ve fatura detaylarınızla ilgili yardımcı olmak için buradayım. Kesinlikle yeni bir plan satışı gibi bir amacımız yok, sadece mevcut durumunuzu açıklığa kavuşturmak istiyoruz. Mevcut planınızı ve e-SIM kullanımlarınızı kontrol edelim. Bilgilerinizi teyit etmek adına son dört haneli TC kimlik numaranızı tekrar rica edebilir miyim?\n[ARAÇLAR: get_customer_plan]",
+    "audio_ref": "data/tts_audio_final/conv_20250814_073857_multiple_esim_management_suspicious_paranoid_turn_4.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom PlanAgent uzmanısın.",
+    "input": "[DUYGU: demanding clarification, suspicious]\nTamam, peki. Bakalım neymiş. Bu eSIM'lerin tam olarak nasıl çalıştığını da birisi bana doğru düzgün anlatsın. Benim üç tane eSIM'im var, birincil hattım bir telefonda, diğerleri yedek olarak başka cihazlarda. Ama hepsi aynı numaraya bağlı, değil mi? Yoksa bana ekstra hat mı açtınız gizlice?",
+    "output": "Teşekkür ederim. Sistemden kontrol ettiğimde, numaranıza tanımlı üç adet eSIM profili olduğunu görüyorum. Ancak, bir telefon numarasında aynı anda sadece bir e-SIM profili aktif olabilir. Diğerleri pasif durumdadır ve yedekte bekler. Yani bu profiller size ekstra hat açıldığı anlamına gelmez, sadece mevcut hattınızın farklı cihazlarda kullanılabilmesi için tanımlanmış dijital kopyalardır ve pasif durumdayken herhangi bir ücret yansıtmazlar.\n[ARAÇLAR: check_esim_status]",
+    "audio_ref": "data/tts_audio_final/conv_20250814_073857_multiple_esim_management_suspicious_paranoid_turn_5.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom PlanAgent uzmanısın.",
+    "input": "[DUYGU: confused, accusatory, misunderstanding]\nNe demek sadece bir tanesi aktif olabilir? Ama bana dendi ki, yedek olarak tutabilirsiniz. Yani diğerleri boşa mı para harcıyor şimdi? Ya da siz onları aktif tutup bana ekstra mı fatura çıkarıyorsunuz?",
+    "output": "Hayır, tam olarak öyle değil. Anladığım kadarıyla bir yanlış anlaşılma olmuş. eSIM'ler, fiziksel SIM kartın dijital versiyonudur ve aynı telefon numarasına birden fazla cihazda erişim sağlamak için kullanılır. Ancak, aynı anda sadece bir eSIM profili etkin olabilir. Diğerleri, siz aktif hale getirene kadar pasif kalır ve pasif durumdayken herhangi bir kullanım veya ücret oluşturmazlar. Yani size gizlice ekstra hat açılmadı veya pasif profillerden ücret yansıtılmıyor. Fatura garipliği konusuna gelirsek, bu konuda size en detaylı bilgiyi Fatura ve Ödeme Uzmanımız verecektir. Sizi hemen ona aktarıyorum.\n[ARAÇLAR: get_customer_plan, route_to_agent]",
+    "audio_ref": "data/tts_audio_final/conv_20250814_073857_multiple_esim_management_suspicious_paranoid_turn_6.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom BillingAgent uzmanısın.",
+    "input": "[DUYGU: realizing, still suspicious about billing]\nYani ben yanlış mı anlamışım? Demek ki her eSIM yeni bir hat demek değil, sadece bir numaranın farklı cihazlarda kullanımı için bir teknoloji. Anladım... Peki o zaman neden faturamda bir gariplik var? Geçen ayki faturamda sanki normalden fazla bir kullanım var gibiydi. Bunu da kontrol edebilir misiniz?",
+    "output": "Merhaba, ben Fatura ve Ödeme Uzmanı. e-SIM'lerinizle ilgili yaşadığınız yanlış anlaşılma ve fatura detaylarınızdaki gariplik hissi konusunda yardımcı olmak için buradayım. Geçen ayki faturanızı detaylıca inceleyelim. Lütfen fatura tutarınızı ve sizi şüphelendiren kalemi belirtir misiniz?\n[ARAÇLAR: get_last_bill]",
+    "audio_ref": "data/tts_audio_final/conv_20250814_073857_multiple_esim_management_suspicious_paranoid_turn_7.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom BillingAgent uzmanısın.",
+    "input": "[DUYGU: impatient, suspicious, demanding explanation]\nTamam, dinliyorum. Ama bu sefer doğru düzgün açıklayın lütfen. Geçen ayki faturam 120 TL'ydi. Benim tarifem 90 TL. O 30 TL'lik fark nereden geldi? Bana 'ekstra internet paketi' diye bir şey yazmışsınız, ama ben öyle bir şey almadım! Yoksa otomatik mi yeniliyor bir şeyleri?",
+    "output": "Hemen kontrol ediyorum. Evet, sistemde geçen ayki faturanızda 30 TL'lik bir 'Ek İnternet Paketi' kaydı görüyorum. Bu paket, ana tarifenizdeki internet kotanız bittiğinde otomatik olarak devreye giren veya sizin onayınızla satın alınan ek bir pakettir. Genellikle internetiniz bittiğinde size SMS ile bilgilendirme yapılır ve onayınız istenir. Böyle bir mesajı hatırlıyor musunuz?\n[ARAÇLAR: get_last_bill]",
+    "audio_ref": "data/tts_audio_final/conv_20250814_073857_multiple_esim_management_suspicious_paranoid_turn_8.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom BillingAgent uzmanısın.",
+    "input": "[DUYGU: recollecting, still suspicious about the amount]\nEvet, hatırladım şimdi. Geçen ay bir kere internetim bittiğinde 'devam etmek ister misiniz?' diye bir mesaj gelmişti. Ben de fark etmeden 'evet' demiş olabilirim. Ama bu kadar büyük bir paket miydi? Sanki 5-10 TL'lik bir şeydi diye hatırlıyorum. Bu kampanya indirimi falan ne demek oluyor şimdi?",
+    "output": "Evet, o mesaj 'Devam etmek ister misiniz?' sorusuydu. Genellikle küçük ek paketler için bu mesaj gönderilir, ancak bazen yanlışlıkla daha büyük bir paketi onaylamak mümkün olabilir. Sizin durumunuzda, 30 TL'lik bir 5 GB ek paketi tanımlanmış görünüyor. Ancak, sizin gibi değerli bir müşterimiz olduğunuz ve bu durumun bir yanlış anlaşılmadan kaynaklandığını düşündüğümüz için, bu 30 TL'lik paketin yarısı olan 15 TL'yi bir sonraki faturanızda 'Kampanya İndirimi' olarak yansıtacağım. Bu, iyi niyetimizin bir göstergesidir.\n[ARAÇLAR: apply_campaign_discount, create_payment_note]",
+    "audio_ref": "data/tts_audio_final/conv_20250814_073857_multiple_esim_management_suspicious_paranoid_turn_9.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom BillingAgent uzmanısın.",
+    "input": "[DUYGU: relieved, slightly surprised, still cautious]\nAnladım. Yani o 30 TL'lik paket, bir kerelik bir şeymiş ve ben yanlışlıkla onaylamışım. Ve siz şimdi bu 15 TL'yi bana geri mi ödeyeceksiniz? Vay be... Beklemiyordum açıkçası. Peki, başka bir sürpriz fatura çıkmayacak değil mi? Bu eSIM'ler yüzünden.",
+    "output": "Kesinlikle! Bu 15 TL'lik indirim bir sonraki faturanıza otomatik yansıyacak. Ayrıca, eSIM'lerinizle ilgili tüm durum netleşti, pasif eSIM profilleri asla fatura oluşturmaz. Faturanızda başka bir sürpriz yaşanmaması için, bundan sonra gelecek tüm bilgilendirme SMS'lerini dikkatle okumanızı ve onaylamadan önce içeriğini kontrol etmenizi tavsiye ederim. Başka bir konuda yardımcı olabileceğim bir şey var mı?\n[ARAÇLAR: get_unpaid_amount, end_conversation]",
+    "audio_ref": "data/tts_audio_final/conv_20250814_073857_multiple_esim_management_suspicious_paranoid_turn_10.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom BillingAgent uzmanısın.",
+    "input": "[DUYGU: satisfied, relieved]\nTamam, çok teşekkür ederim. İçim rahatladı. Gerçekten de bu eSIM'ler kafa karıştırıcı. İyi günler.",
+    "output": "Rica ederim, her zaman yardımcı olmak için buradayız. İyi günler dilerim.\n[ARAÇLAR: end_conversation]",
+    "audio_ref": "data/tts_audio_final/conv_20250814_073857_multiple_esim_management_suspicious_paranoid_turn_11.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: worried]\nAlo, iyi günler. Ben Ayşe Yılmaz. Oğlumun hattına gelen son faturayı görünce çok endişelendim de. Aile paketindeyiz, kendisi zaten evde hep Wi-Fi kullanır, bu kadar yüksek bir fatura gelmesi... Normal değil sanki, değil mi?",
+    "output": "İyi günler Ayşe Hanım, hoş geldiniz. Endişenizi anlıyorum. Size yardımcı olabilmem için öncelikle kimlik doğrulaması yapmamız gerekmekte. T.C. Kimlik numaranızı veya abone numaranızı rica edebilir miyim?\n[ARAÇLAR: verify_user]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0088_turn_1.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: questioning]\nEvet, tabii ki. Kimlik numaram 12345678900. Fatura 500 liradan fazla gelmiş efendim. Oğlum, Can Yılmaz'ın hattı bu. Daha geçen ay 80-90 lira civarı geliyordu. Bir anda bu kadar artış akla mantığa sığmıyor açıkçası. Bir hata olmalı diye düşünüyorum.",
+    "output": "Teşekkür ederim Ayşe Hanım. Kimlik doğrulamanız başarıyla tamamlanmıştır. Fatura bilginizi ve oğlunuzun hattını kontrol ediyorum. Evet, Can Yılmaz'ın hattında bir fatura detayı görünüyor. Fatura konusu olduğu için sizi fatura ve ödeme işlemlerimizden sorumlu ilgili birime aktarıyorum. Lütfen kısa bir süre hatta kalınız.\n[ARAÇLAR: get_customer_status, route_to_agent]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0088_turn_2.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom BillingAgent uzmanısın.",
+    "input": "[DUYGU: questioning]\nAma nasıl olur? Can'ın telefonu sürekli Wi-Fi'ye bağlı. Evdeyiz, okulda da internetleri var. Dışarıda da ben yanında olmadığım sürece pek kullanmaz. Bu kadar yüksek mobil veri kullanımı mümkün değil. Geçen ayki faturası da gayet normaldi. Acaba sistemsel bir yanlışlık mı var?",
+    "output": "İyi günler Ayşe Hanım, hoş geldiniz. Ben Fatura ve Ödeme Destek Ekibi'nden Ahmet. Çağrınız az önce aktarıldı. Oğlunuzun hattına ait son faturadaki artışla ilgili endişeniz olduğunu anlıyorum. Hemen faturanın detaylarına bakıyorum sizin için. Bekletiyorum kısa bir süre.\n[ARAÇLAR: get_last_bill]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0088_turn_3.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom BillingAgent uzmanısın.",
+    "input": "[DUYGU: firm]\nKesinlikle! Mümkün değil. Telefonunda hep Wi-Fi açıktır, bunu kontrol ediyorum düzenli olarak. Zaten internet paketi de çok kısıtlı. Belki yeni aldığı telefonda bir sorun mu var? O telefon çift hatlıydı galiba, biz ona sadece tek bir hat takmıştık ama... Ya da eSIM falan mı var içinde, bilemiyorum. Bu konuyu bir teknik ekibe sormak gerekir mi?",
+    "output": "Ayşe Hanım, faturanın detaylarını inceledim. Görünen o ki, fatura tutarındaki artışın ana nedeni, paket dışı yüksek mobil veri kullanımı. Özellikle ayın son haftasında ciddi bir veri tüketimi gerçekleşmiş. Paketinizdeki internet limitinin çok üzerinde bir kullanım söz konusu. Acaba Can'ın telefonunda bir değişiklik oldu mu ya da internet kullanım alışkanlığında farklı bir durum mu yaşandı?\n[ARAÇLAR: get_last_bill]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0088_turn_4.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom BillingAgent uzmanısın.",
+    "input": "[DUYGU: relieved]\nEvet, evet! Yeni bir telefon aldı, onda çift hat özelliği var. Biz sadece kendi operatörümüzden olan, yani benim aile paketimdeki SIM kartı taktık. Ama dediğiniz gibi, belki ikinci bir hat ya da eSIM aktif oldu da haberimiz mi olmadı? Can'a da sorayım hemen... Gerçekten çok endişelendim bu durumdan. Ne yapabiliriz şimdi?",
+    "output": "Anlıyorum Ayşe Hanım, bu konuda haklı olabilirsiniz. Eğer mobil veri kullanımında böyle bir beklenmedik artış varsa ve kullanım alışkanlıklarınızda bir değişiklik yoksa, bu durum teknik bir aksaklıktan kaynaklanıyor olabilir. Özellikle çift hatlı veya eSIM özellikli telefonlarda bazen farkında olmadan farklı bir hattın veri kullanımı devreye girebiliyor. Bu durumu daha detaylı incelemesi için sizi Teknik Destek birimimize aktarıyorum. Onlar cihaz detaylarını kontrol edebilirler.\n[ARAÇLAR: route_to_agent]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0088_turn_5.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: direct]\nAlo, iyi günler. Ben yurtdışındayım, telefonum kayboldu. Acil hattımın kapatılması lazım. Roaming açıkken oldu bu, çok önemli.",
+    "output": "Merhaba, Turkcell'e hoş geldiniz. Hattınızın güvenliği için öncelikle kimlik doğrulaması yapmamız gerekiyor. Adınız, soyadınız ve T.C. kimlik numaranızı alabilir miyim lütfen?\n[ARAÇLAR: verify_user]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0057_turn_1.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: direct]\nMehmet Karahan. T.C. kimlik numaram 12345678901. Doğum tarihim 15.04.1978. Bakın, acil diyorum, biliyorsunuz yurtdışında bu durumlar daha sıkıntılı olur.",
+    "output": "Sayın Karahan, bilgileriniz doğrulandı. Anlıyorum acil bir durum. Hattınızın kapatılması ve uluslararası dolaşım sorunları için sizi ilgili birime aktarıyorum. Kısa bir bekleme süresi olabilir, anlayışınız için teşekkür ederiz.\n[ARAÇLAR: get_customer_status, route_to_agent]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0057_turn_2.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom FAQAgent uzmanısın.",
+    "input": "[DUYGU: frustrated]\nVallahi, yine mi başa sardık? Az önce anlattım ya... Telefonum çalındı. Kaybolmadı, çalındı! Diyarbakır'dan arıyorum, ama şu an Brüksel'deyim. Hattımın acil kapatılması lazım ki, kimse kullanmasın.",
+    "output": "Sayın Karahan, transfer için kusura bakmayın. Durumu anlıyorum, Brüksel'de telefonunuzun çalınması üzücü bir durum. Hattınızın kötüye kullanılmasını önlemek için cihazınızın IMEI numarasını alabilir miyiz? Bu sayede cihazınızı ve hattınızı bloke edebiliriz.\n[ARAÇLAR: check_device_imei]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0057_turn_3.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom FAQAgent uzmanısın.",
+    "input": "[DUYGU: frustrated]\nIMEI numarasını nereden bileyim ben şimdi? Telefon çalındı diyorum size. Üstelik bu bir eSIM'di, fiziksel kartım bile yoktu. Benim acil internete erişmem lazım, işlerimi halletmem gerekiyor. Sürekli seyahat eden biriyim, bu durum beni çok zor durumda bıraktı.",
+    "output": "Anlıyorum Sayın Karahan, IMEI numarasını bilmemeniz durumunda cihazı bloke etmemiz zorlaşıyor ancak yine de hattınızı kapatabiliriz. eSIM'inizin durumu için hemen kontrol sağlıyorum. IMEI numarasını faturanızdan, cihazın kutusundan veya farklı bir cihazdan 'yıldız kare sıfır altı kare' tuşlayarak bulabilirdiniz. Ama şu an için hattınızı kapatmak önceliğimiz.\n[ARAÇLAR: check_esim_status]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0057_turn_4.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom FAQAgent uzmanısın.",
+    "input": "[DUYGU: demanding]\nYani şimdi benim işim gücüm var, bu IMEI peşinde mi koşacağım? Benim acil bir çözüm bulmam lazım. Peki, bu eSIM'i tekrar çıkartıp, yeni bir telefona aktarabiliyor muyuz? Nasıl oluyor bu işler? Roaming paketim vardı, o ne olacak?",
+    "output": "Haklısınız, acil bir durum bu. eSIM'inizi yeniden aktif edebiliriz. Bunun için size yeni bir aktivasyon kodu gönderebiliriz. Ancak bu kodu yeni bir telefona tanımlamanız gerekecek. Mevcut roaming paketinizin durumu için de kontrol sağlıyorum. Bu işlem için güvenlik doğrulaması yapmamız gerekecek, son 3 ayda yaptığınız bir ödemenin miktarını veya irtibat numaranızı teyit edebilir misiniz?\n[ARAÇLAR: reissue_activation_code, get_customer_plan]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0057_turn_5.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom FAQAgent uzmanısın.",
+    "input": "[DUYGU: demanding]\nYeni telefon bulmak kolay mı sanıyorsunuz? Brüksel'deyim ben! Diyelim ki buldum, bu eSIM'i hemen aktif edebilir miyim? Yoksa ben şimdi internetsiz mi kalacağım? Benim uluslararası aramalarım, veri kullanımlarım çok önemli, hep açık olur roamingim.",
+    "output": "Yeni bir telefon temin etmeniz durumunda, eSIM aktivasyon kodunu e-posta adresinize veya kayıtlı başka bir numaranıza gönderebiliriz. Anında aktif olacaktır. Şu anki durum için hattınızın çalındığına dair bir teknik talep oluşturup hattınızın tamamen bloke edilmesini sağlayabiliriz. Yeni bir cihaz ve eSIM aktivasyonu sonrasında roaming paketiniz kaldığı yerden devam edecektir. Geçici bir veri paketi ihtiyacınız olursa, yeni cihazınızla kolayca tanımlayabiliriz.\n[ARAÇLAR: list_all_plans, create_tech_ticket]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0057_turn_6.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom FAQAgent uzmanısın.",
+    "input": "[DUYGU: accepting]\nPeki, en azından çalınan telefon için bir tutanak oluşturup hattı bloke edelim. eSIM'in aktivasyon kodu ne kadar sürede gelir? Ve bunu bana mail atabilir misiniz? Fiziksel bir kart bekleme şansım yok burada.",
+    "output": "Talebinizi aldım, çalınan cihazınız için teknik takip ve hat bloke işlemi başlatılmıştır. eSIM aktivasyon kodunu ortalama 15-20 dakika içinde e-posta adresinize göndereceğiz. Fiziksel kart beklemenize gerek kalmayacak, kodu yeni telefonunuza tanımlayarak hemen kullanmaya başlayabilirsiniz. Mail adresiniz ...@...com değil miydi?\n[ARAÇLAR: create_tech_ticket]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0057_turn_7.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom FAQAgent uzmanısın.",
+    "input": "[DUYGU: accepting]\nAnladım. Yani şimdi ben yeni bir telefon bulup, mailime gelen kodu oraya girince hattım tekrar açılacak, değil mi? Roaming paketim de devam eder mi?",
+    "output": "Evet, aynen öyle Sayın Karahan. Yeni bir telefon temin ettiğinizde, e-postanıza gelen QR kodu okutarak veya manuel kodu girerek hattınızı anında aktif edebilirsiniz. Mevcut roaming paketiniz de kaldığı yerden devam edecektir. Başka bir konuda yardımcı olabileceğim bir şey var mı?",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0057_turn_8.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: direct]\nAlo, iyi günler. Ben numara taşıma başvurumun son durumunu öğrenmek istiyorum. Şu an yurt dışındayım ve acilen hattımın aktifleşmesi gerekiyor.",
+    "output": "Hoş geldiniz. Numara taşıma başvurunuzla ilgili yardımcı olmak için kimlik doğrulamanızı rica edeceğim. Adınız, soyadınız ve T.C. kimlik numaranızı alabilir miyim?\n[ARAÇLAR: verify_user]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0097_turn_1.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: direct]\nTC kimlik numaram 12345678901. Hattım ne zaman aktif olacak? İki gündür bekliyorum, işlerim aksıyor burada.",
+    "output": "Bilgilerinizi doğruladım. Numara taşıma sürecinizle ilgili size daha detaylı bilgi verebilmesi için sizi Taşıma İşlemleri Departmanımıza aktarıyorum. Lütfen kısa bir süre bekleyiniz.\n[ARAÇLAR: get_customer_status, route_to_agent]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0097_turn_2.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom FAQAgent uzmanısın.",
+    "input": "[DUYGU: frustrated]\nEvet, taşıma durumu ne oldu? Bir de asıl sorun şu an, yurt dışındayım ve hattımda sinyal yok! Ne arama yapabiliyorum ne internete girebiliyorum. Taşıma tamamlandıysa bile neden sinyal yok?",
+    "output": "Merhaba, ben Elif. Numara taşıma başvurunuzla ilgili yardımcı olmak için buradayım. Sanırım yurt dışındayken hattınızın aktifleşme durumu hakkında bilgi almak istiyorsunuz, doğru mu?",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0097_turn_3.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom FAQAgent uzmanısın.",
+    "input": "[DUYGU: demanding]\nBiliyorum! Yurt dışındayım diyorum size, bu durum çok kritik. Acil çözülmesi lazım. Taşıma tamamlandıysa bile sinyal neden yok, onu çözün önce!",
+    "output": "Anlıyorum, taşıma işleminiz henüz 'Devam Ediyor' olarak görünüyor. Sinyal sorununa gelince, bu teknik bir konu. Hattınızın taşıması tamamlanmadığı için mi sinyal yok, yoksa cihazınızla ilgili mi bir sorun var emin olamıyorum. Detaylı kontrol için teknik destek ekibimize aktarmam gerekecek.\n[ARAÇLAR: get_customer_status]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0097_turn_4.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom FAQAgent uzmanısın.",
+    "input": "[DUYGU: demanding]\nSinyal yok işte. Telefonum iPhone 15 Pro, eSIM kullanıyorum. Ayarları kontrol ettim, manuel şebeke seçimi de yaptım ama yok. Ne yapmam lazım? Acaba eSIM'de mi bir sorun var?",
+    "output": "Haklısınız, yurt dışında internet ve arama bağlantısı hayati önem taşır. Sinyal sorununu çözmek için sizi teknik ekibimize yönlendiriyorum. Onlar cihazınız ve hattınız üzerinde daha detaylı inceleme yapabilecekler. Lütfen hatta kalın.\n[ARAÇLAR: route_to_agent]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0097_turn_5.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom TechAgent uzmanısın.",
+    "input": "[DUYGU: demanding]\nIMEI numaram: 357913579135791. Lütfen hızlı olun, önemli bir toplantıya yetişmem gerekiyor, iletişime geçemiyorum kimseyle!",
+    "output": "İyi günler, ben Mert. Teknik Destek'ten. Sinyal sorununuzla ilgili yardımcı olacağım. Nerede tam olarak sinyal alamıyorsunuz ve cihazınızın modeli nedir?",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0097_turn_6.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom TechAgent uzmanısın.",
+    "input": "[DUYGU: accepting]\nPeki, anladım. Teknik ekip ne kadar sürede geri döner? Bu ne zaman çözülür? Bir de ilk sorduğum, numara taşıma işi ne oldu peki? O tamamlandı mı şimdi?",
+    "output": "Anladım. eSIM kullanmanız önemli. Cihazınızın IMEI numarasını alabilir miyim? Ayrıca, eSIM profilinizin durumu ve şebeke ayarlarınızı kontrol edelim. Belki bir yeniden aktivasyon gerekebilir.\n[ARAÇLAR: check_device_imei, check_esim_status]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0097_turn_7.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: stressed]\nUla bu internet niye böyle ya? Trabzon'dan az bi dışarı çıkıyom, hemen kopuyo. İş yapamıyorum da! Uygulamalarım çalışmıyo, siparişler düşmüyo. Stres oldum vallahi!",
+    "output": "Merhaba, nasıl yardımcı olabilirim? Anlıyorum hattınızda bir sorun var. Güvenliğiniz için önce kimliğinizi teyit etmemiz gerekiyor, müşteri numaranızı veya T.C. kimlik numaranızı alabilir miyim?\n[ARAÇLAR: verify_user]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0063_turn_1.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: urgent]\nÇabuk olun da, işlerim var bekliyo! Müşteri numarası mı? Yok bende öyle bi numara, T.C. kimlik numaramı vereyim: 12345678910. Hadi bekliyorum!",
+    "output": "Teşekkürler T.C. kimlik numaranız için. Anlıyorum efendim, özellikle uluslararası kullanım ve paketler konusunda bir sorun yaşıyorsunuz anlaşılan. Bu konuda size en doğru bilgiyi Plan ve Paket Departmanı'ndaki yetkili arkadaşlarımız verecektir. Sizi oraya aktarıyorum, lütfen beklemede kalın.\n[ARAÇLAR: route_to_agent]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0063_turn_2.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom PlanAgent uzmanısın.",
+    "input": "[DUYGU: persistent]\nHe uşağım, aynen öyle! Gig işçisiyim ben. Bir bakıyom Gürcistan'a geçiyom, bir bakıyom İstanbul'a. Uygulamalar çalışmıyo da! Bana öyle bi paket lazım ki, her yerde internetim olsun, çağrım düşmesin. Hem de öyle çok pahalı olmasın ha! Bir de geçen ay bi fatura gelmişti, o neydi öyle? Ula kafayı yiyecem!",
+    "output": "Merhaba, Plan ve Paket Departmanı'ndan arıyorum. Hoş geldiniz. Hattınızla ilgili sorununuz nedir tam olarak? Sistemden gördüğüm kadarıyla şu anki paketinizde uluslararası dolaşım özelliği aktif değil. İşiniz gereği sıkça seyahat mi ediyorsunuz?\n[ARAÇLAR: get_customer_status, get_customer_plan]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0063_turn_3.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom PlanAgent uzmanısın.",
+    "input": "[DUYGU: persistent]\nHah! İşte öyle bi şey lazım bana. O 'Global İş Paketi' ne kadar? Hemen geçebilir miyim? Ama o fatura işini de halletmemiz lazım ha! Yoksa olmaz. O parayı niye verdim ben?!",
+    "output": "Anladım efendim, işinizin doğası gereği esnek ve kapsamlı bir pakete ihtiyacınız var. Mevcut paketiniz maalesef bu duruma uygun değil. Size özel olarak hazırladığımız, uluslararası dolaşım ve yüksek kota içeren 'Global İş Paketi' veya 'Sınır Tanımaz Paket' seçeneklerimiz var. İsterseniz detaylarını paylaşabilirim. Fatura konusuna gelince, o muhtemelen yurtdışı kullanımından kaynaklı bir sürpriz olabilir. İsterseniz bu konuyu da Fatura Departmanı'ndaki arkadaşlara yönlendirebilirim, onlar net bilgi vereceklerdir.\n[ARAÇLAR: list_all_plans]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0063_turn_4.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom PlanAgent uzmanısın.",
+    "input": "[DUYGU: grateful]\nOh be! Evet, evet, hemen geçelim pakete! Çok sağolun valla, indirim olursa iyi olur. Artık rahat rahat çalışırım. İyi ki aradım! Kolay gelsin size de.",
+    "output": "Elbette efendim, 'Global İş Paketi' aylık 249 TL ve onayınız dahilinde hemen aktif edebiliriz, eski paketiniz otomatik iptal olur. Onaylıyor musunuz? Fatura detaylarınız için ise sizi doğrudan Fatura ve Muhasebe Departmanı'na aktarıyorum. Onlar son faturanızdaki o yüksek tutarı inceleyip size açıklama yapacaklardır. Lütfen hatta kalın, iyi günler dilerim.\n[ARAÇLAR: change_customer_plan, route_to_agent]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0063_turn_5.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: worried]\nAlo, iyi günler. Ben Şengül Yılmaz. Bizim fatura bu ay bi garip geldi de... İki kere aynı ücreti kesmişsiniz sanki. Benim uşağın hattı için endişelendim. Ne oluyor haçan?",
+    "output": "Merhaba Şengül Hanım. Talebinizi anlıyorum. Güvenliğiniz için öncelikle kimlik doğrulama yapmamız gerekiyor. TC kimlik numaranızın son dört hanesini veya müşteri numaranızı rica edebilir miyim?\n[ARAÇLAR: verify_user]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0144_turn_1.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: questioning]\nTabii, hemen... TC kimlik numaramın son dört hanesi 1234. Bizim paketin ücreti geçen ay 150 liraydı, şimdi 300 lira yazıyor. Aynı paket, aynı hat. Benim uşağa yeni telefon aldık diye mi böyle oldu acaba?",
+    "output": "Bilgileriniz doğrulandı Şengül Hanım. Anlıyorum, fatura detaylarınızda bir sorun olduğunu belirtiyorsunuz. Bu durumla ilgili size en doğru bilgiyi Fatura Departmanımızdaki arkadaşlarımız verecektir. Sizi oraya aktarıyorum, hattımızda kalın lütfen.\n[ARAÇLAR: get_customer_status, route_to_agent]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0144_turn_2.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom BillingAgent uzmanısın.",
+    "input": "[DUYGU: firm]\nEvet, evet aynen öyle. Benim uşağın hattına, yani 5xx xxx 1234 numaraya, her ay ödediğimiz 150 liralık paketin yanında bir 150 lira daha gelmiş. Niye böyle oldu ki? Ben ödediğime emindim, iki kere niye düşsün aynı şey?",
+    "output": "Merhaba Şengül Hanım, iyi günler. Ben Fatura Departmanı'ndan Ayşe. Az önceki arkadaşımız konuyu aktardı, fatura detaylarınızda bir çift ödeme olduğunu düşünüyorsunuz, doğru mu anladım?",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0144_turn_3.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom BillingAgent uzmanısın.",
+    "input": "[DUYGU: firm]\nYeni hat aktivasyon ücreti mi? Ama o hattı zaten kullanıyorduk biz! Haçan bizim uşağa yeni telefon aldık, evet. Ama hat aynı hat. Sadece yeni telefon, çift hatlı diye öyle bi şey mi oldu acaba? Bizim çocuk kurcaladı mı ki bi yerlerini?",
+    "output": "Anlıyorum Şengül Hanım. Hemen sistemimizden kontrol ediyorum son faturanızı. (Kısa bir duraklama) Şengül Hanım, sistemde 5xx xxx 1234 numaralı hattınız için 150 TL'lik bir paket ücreti görünüyor. Ancak, bunun dışında 150 TL'lik farklı bir ücret daha yansımış. Bu 'Yeni Hat Aktivasyon Ücreti' olarak görünüyor.\n[ARAÇLAR: get_last_bill]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0144_turn_4.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom BillingAgent uzmanısın.",
+    "input": "[DUYGU: questioning]\nHeh, evet! Telefon Xiaomi, yeni model. Benim uşak aldı, çift hatlıymış. Eski hattı taktı ama bi de bi şeyleri kurcaladı, dedi ki 'Anne, sanki bi tane daha hat açtı telefon kendine.' Ben de anlamadım. Sonra da bu fatura geldi. Demek ondanmış! Bizim çocuk yanlışlıkla bi şey mi yaptı?",
+    "output": "Şengül Hanım, anlıyorum. Yeni telefon ve çift hatlı olması bu durumu açıklayabilir. Görünüşe göre, mevcut hattınıza ek olarak cihazda ikinci bir SIM veya eSIM aktivasyonu denenmiş. Bu durum teknik bir konu olduğu için, sizi doğrudan Teknik Destek Departmanımıza aktarmam daha doğru olacaktır. Onlar cihaz üzerindeki SIM/eSIM durumunu kontrol edip size net bilgi verebilirler. Hattımızda kalın lütfen.\n[ARAÇLAR: route_to_agent]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0144_turn_5.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom TechAgent uzmanısın.",
+    "input": "[DUYGU: relieved]\nAy, çok sağ olun Burak Bey! İçime su serpildi vallahi. Benim uşak bi hata yaptı sandım, şimdi rahatladım. Tamamdır, o zaman bi dahaki faturada düşecek yani o 150 lira? İkinci hata falan gerekmez, şimdilik böyle idare ederiz. Çok teşekkür ederim.",
+    "output": "Merhaba Şengül Hanım, iyi günler. Ben Teknik Destek'ten Burak. Fatura Departmanı'ndan aktarıldınız, yeni telefon ve çift SIM/eSIM aktivasyonuyla ilgili bir sorun olduğunu anladım. Hangi model telefonu kullanıyorsunuz ve çocuğunuz yeni bir SIM mi taktı yoksa eSIM mi etkinleştirmeye çalıştı?",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0144_turn_6.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: businesslike]\nHele gardaş, bi bakın şu bizim hatlara. İşyerinden üç hat var bende, şu anki paketler ağır geliyo vallaha. Daha uygun bi şeylere bakacaz.",
+    "output": "Merhaba, nasıl yardımcı olabilirim? Güvenliğiniz için TC kimlik numaranızı veya abone numaranızı alabilir miyim?\n[ARAÇLAR: verify_user]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0082_turn_1.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: businesslike]\n74512345678 bu benim TC'm, abone numaram da zaten kayıtlıdır. Deli misiniz? Çabuk olun biraz, işim var.",
+    "output": "Teşekkürler, Sayın Yılmaz. Abone bilgileriniz doğrulandı. Paket değişikliği talebiniz için sizi Plan ve Tarife Uzmanımıza aktarıyorum. Kendisi size yardımcı olacaktır.\n[ARAÇLAR: get_customer_status, route_to_agent]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0082_turn_2.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom PlanAgent uzmanısın.",
+    "input": "[DUYGU: questioning]\nVay be, aktardınız demek. Tamamdır. Ben bu çalışan hatlarının paketlerini düşürmek istiyorum. Şu anki 20 GB'lık paketler bize fazla geliyor, maliyetli. Daha uygun, 8-10 GB civarı bi şeyler yok mu?",
+    "output": "Merhaba Sayın Yılmaz, ben Tarife Uzmanınız Elif. Anlıyorum talebinizi. Mevcut paketlerinizi ve iş hatlarınız için uygun olabilecek diğer seçenekleri hemen kontrol ediyorum. Şu an kullandığınız 'Esnaf Dostu Mega' paketini görüyorum. Yerine 'Esnaf Ekonomik' veya 'İşletme Mini' paketlerimize bakabiliriz. 'Esnaf Ekonomik' 10 GB internet, 1000 DK, 250 SMS, 'İşletme Mini' ise 8 GB internet, 750 DK, 200 SMS sunuyor. Fiyatları da mevcut paketinize göre oldukça avantajlı.\n[ARAÇLAR: get_customer_plan, list_all_plans]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0082_turn_3.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom PlanAgent uzmanısın.",
+    "input": "[DUYGU: negotiating]\nOoo Elif Hanım, iyi güzel de, 'Esnaf Ekonomik' dediğiniz de pahalı gibi geldi bana. Geçen bizim komşu esnaf var, o daha ucuza almış 10 GB'ı başka operatörden. Yok mu yani sizin daha uygun bi şeyiniz? Bi zahmet bi bakın, esnafız biz, cebimiz belli.",
+    "output": "Sayın Yılmaz, anlıyorum hassasiyetinizi. Kontrol ediyorum hemen... Evet, size özel 'Esnaf Destek' paketi var. Bu paket listelerde genelde çıkmaz ama küçük işletmeler için özel açılıyor. 10 GB internet, sınırsız dakika ve 500 SMS ile aylık 129 TL. Bu paket sizin için uygun olacaktır. Ne dersiniz, bu pakete geçiş yapalım mı tüm hatlarınız için?\n[ARAÇLAR: change_customer_plan]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0082_turn_4.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom PlanAgent uzmanısın.",
+    "input": "[DUYGU: satisfied]\nHa işte bu oldu bak! 129 TL iyiymiş. Tamamdır, üç hattı da buna geçin o zaman. Hemen işim bitsin. Bir de bi şey soracam hazır sizi bulmuşken. Bizim Mehmet'in hattında çağrı yönlendirme çalışmıyor, deli oldum. Şirket hattı o, yönlendirme lazım acil.",
+    "output": "Harika, Sayın Yılmaz! Üç hattınızın da 'Esnaf Destek' paketine geçişini başlattım. En geç 15 dakika içinde aktif olacaktır. Çağrı yönlendirme sorununuz için ise sizi Teknik Destek Uzmanımıza aktarıyorum. Kendisi bu konuda en doğru bilgiyi verecektir.\n[ARAÇLAR: change_customer_plan, route_to_agent]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0082_turn_5.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom TechAgent uzmanısın.",
+    "input": "[DUYGU: businesslike]\nHah, tamam, bekliyorum. Bu Mehmet'in hattı 532 123 45 67. Ne denediysek olmadı çağrı yönlendirme. İşlerimiz aksıyo resmen, müşteriler ulaşamıyor.",
+    "output": "Merhaba Sayın Yılmaz, ben Teknik Destek Uzmanınız Can. Mehmet Bey'in 532 123 45 67 numaralı hattı için çağrı yönlendirme sorununu anladım. Hatta herhangi bir kısıtlama olup olmadığını ve cihaz ayarlarını kontrol etmemiz gerekiyor. Mehmet Bey'in telefonu hangi marka model acaba?\n[ARAÇLAR: create_tech_ticket]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0082_turn_6.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom TechAgent uzmanısın.",
+    "input": "[DUYGU: businesslike]\nVallaha modeli neydi şimdi hatırlamıyorum ama yeni iPhone. Ne bileyim, denedik ayarlardan, tuş kodlarından, olmadı. Sanki hat üzerinde bi engelleme var gibi. Bi bakın şuna, çabuk olsun.",
+    "output": "Anladım Sayın Yılmaz. iPhone'larda ayarlar bazen farklı olabiliyor. Hat üzerinde şu an bir kısıtlama görünmüyor, ancak cihaz ayarlarını ve ağ senkronizasyonunu kontrol etmemiz gerekiyor. Şimdi sizin adınıza bir teknik destek kaydı oluşturuyorum. Ekiplerimiz Mehmet Bey'e kısa süre içinde ulaşıp uzaktan destekle sorunu çözecekler. Genellikle 1-2 saat içinde çözülür. Başka bir konu var mıydı yardımcı olabileceğim?\n[ARAÇLAR: create_tech_ticket]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0082_turn_7.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: confused]\nAlo, selamün aleyküm yavrum. Ben Zeynep nine. Bu ay faturam niye böyle çok geldi gızım? Hiç anlamıyom ben bu işlerden. Ne yaptı ki bu telefon böyle?",
+    "output": "Aleykümselam Zeynep Hanım. Hoş geldiniz. Faturalarınızla ilgili yardımcı olabilmemiz için öncelikle kimlik doğrulama yapmamız gerekmektedir. Adınızı, soyadınızı ve TC kimlik numaranızı rica edebilir miyim lütfen?\n[ARAÇLAR: verify_user]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0139_turn_1.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: confused]\nZeynep Yılmaz ben evladım. TC numaram mı? Dur bakayım, şu cüzdanımdaydı... Ay, kaçtı ki o? Ha, 12345678910. Doğru mu bu şimdi gızım? Benim oğlan yazdıydı buraya.",
+    "output": "Teşekkür ederim Zeynep Hanım. Bilgileriniz doğrulandı. Faturanızda bir artış olduğunu belirtmiştiniz, doğru mudur? Sizi bu konuda daha detaylı yardımcı olabilecek Fatura Destek birimimize aktarıyorum. Lütfen kısa bir süre hatta kalınız.\n[ARAÇLAR: get_customer_status, route_to_agent]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0139_turn_2.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom BillingAgent uzmanısın.",
+    "input": "[DUYGU: worried]\nAlo? Duyuyor musunuz beni? Sanki ses gitti geldi... Fatura diyorum, çok gelmiş. Ben hiç öyle çok konuşan biri de değilimdir normalde. Geçen ay azdı, bu ay bire ne olduysa... Bir de mesajlar gelmiş, ben hiç okumadım ki onları.",
+    "output": "Zeynep Hanım, hoş geldiniz. Ben Fatura Destek biriminden Ayşe. Faturanızdaki artışı ve gelen mesajları kontrol ediyorum hemen. Son faturanıza baktığımda, evet, bazı 'Katma Değerli Servis' kullanımları görünüyor. Bunlar genellikle ücretli SMS veya abonelik servisleri oluyor.\n[ARAÇLAR: get_last_bill]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0139_turn_3.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom BillingAgent uzmanısın.",
+    "input": "[DUYGU: worried]\nKatma Değerli Servis mi? O ne ki yavrum? Ben hiçbir şeye abone olmadım ki. Benim oğlan aldıydı bu telefonu, 'Nineciğim, rahat rahat konuşursun' dediydi. Ben anca arama yapmayı, mesaj atmayı bilirim. Belki çocuklardan biri yanlışlıkla bastı? Ya da bu telefon kendiliğinden mi etti bunları?",
+    "output": "Anlıyorum Zeynep Hanım. Bu servisler bazen yanıltıcı reklamlar veya hatalı tıklamalar sonucu aktif olabilmektedir. İsterseniz bu tür servisleri hattınızdan tamamen engelleyebiliriz. Ayrıca, bir de telefonunuzla ilgili bir sıkıntı mı var acaba? 'Kendiliğinden mi etti' derken?",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0139_turn_4.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom BillingAgent uzmanısın.",
+    "input": "[DUYGU: worried]\nAman yavrum, engelleyin ne olur! Paramız boşa gitmesin. Ee, ne olacak şimdi bu gelen fatura? Ben ödemesem mi? Telefon mu? He, bazen internete girmiyor, bazen de sanki hat çekmiyor gibi oluyor. Oğlana dedim, 'Nine, sen anlamazsın' dediydi.",
+    "output": "Merak etmeyin Zeynep Hanım, Katma Değerli Servisler hattınızdan tamamen engellendi. Bu ayki faturanızdaki ilgili ücretler için de bir inceleme başlatacağız, sonucu size bildireceğiz. Telefonunuzla ilgili yaşadığınız sıkıntılar için de sizi Teknik Destek birimimize aktarıyorum. Onlar size daha detaylı yardımcı olacaktır. Kısa bir süre hatta kalınız lütfen.\n[ARAÇLAR: route_to_agent]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0139_turn_5.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom TechAgent uzmanısın.",
+    "input": "[DUYGU: worried]\nYine mi aktarıyorsunuz? Neyse, hayırlısı olsun. Alo, buyurun yavrum. Benim telefon bazen çalışmıyor, sanki internete girmiyor, hat çekmiyor gibi oluyor. Oğlan eSIM dediydi, o mu bozuk acaba?",
+    "output": "Zeynep Hanım, hoş geldiniz. Ben Teknik Destek biriminden Cem. Telefonunuzla ilgili yaşadığınız aksaklıkları anlıyorum. eSIM mi kullanıyorsunuz acaba? Cihazınızın IMEI numarasını alabilir miyim lütfen, bir kontrol edelim hem eSIM durumunu hem de cihazınızın uyumluluğunu?\n[ARAÇLAR: check_esim_status, check_device_imei]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0139_turn_6.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom TechAgent uzmanısın.",
+    "input": "[DUYGU: grateful]\nIMEI mi? Nerede yazıyor ki o? Dur bakayım, benim oğlan bir kağıda yazmıştı... Ah, buldum! 357913579135791. Bu mudur? Sağ olun yavrum, uğraşıyorsunuz benimle.",
+    "output": "Teşekkür ederim Zeynep Hanım. Kontrol ettiğimde, cihazınızın eSIM'i desteklediğini ancak eSIM profilinizde bir sorun olduğunu görüyorum. Bu nedenle zaman zaman bağlantı sorunları yaşıyorsunuz. Mevcut eSIM profilinizi yenilememiz gerekiyor. Bunun için size en yakın mağazamızdan destek almanız için bir talep oluşturabiliriz, böylece teknik ekibimiz size yardımcı olur. Sizin için hangisi uygun olur?\n[ARAÇLAR: create_tech_ticket]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0139_turn_7.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: stressed]\nAlo, ya benim çağrı yönlendirmem çalışmıyor, ne iş? Vallahi iki gündür böyle, arayanlar bana ulaşamıyor. İşimi yapamıyem, siparişler kaçıyor. Bu nasıl iş?",
+    "output": "Merhaba, Türk Telekom müşteri hizmetlerine hoş geldiniz. Güvenliğiniz için öncelikle kimlik doğrulaması yapabilir miyiz? Lütfen TC kimlik numaranızı veya abone numaranızı tuşlar mısınız?\n[ARAÇLAR: verify_user]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0142_turn_1.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: urgent]\nHele bir an önce halledin n'olur. Benim TC kimlik numaram 12345678900. Ya acil bu durum, kuryecilik yapıyem ben, telefon çalmayınca, çağrı yönlendirme olmayınca kimseye yetişemiyem. App'lerden iş geliyek, arıyorlar beni, ulaşamayınca başka birine veriyolar işi.",
+    "output": "Bilgileriniz doğrulandı, teşekkürler. Çağrı yönlendirme sorunu teknik bir konu olduğu için sizi teknik destek birimimize aktarıyorum. Lütfen kısa bir süre bekleyiniz.\n[ARAÇLAR: get_customer_status, route_to_agent]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0142_turn_2.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom TechAgent uzmanısın.",
+    "input": "[DUYGU: urgent]\nEvet, evet! Tam olarak o. Ya ben eski hattıma yönlendiriyordum hep, şimdi çalışmıyor. İki gündür böyleyim ben. Yani bu benim ekmeğim, ekmeğimi kazanıyem bu telefonla. Çağrı yönlendirmesi olmasa nasıl olacak? Hani bu kadar önemli benim için, anlıyor musunuz?",
+    "output": "Merhaba, Türk Telekom teknik destek biriminden Ayşe ben. Beyefendi, çağrı yönlendirme sorununuz vardı sanırım, doğru mu anladım?\n[ARAÇLAR: get_customer_status]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0142_turn_3.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom TechAgent uzmanısın.",
+    "input": "[DUYGU: persistent]\nNe demek aktif değil ya? Nasıl aktif değil? Eskiden çalışıyordu, ben hiçbir şey değiştirmedim ki. Bu nasıl iş böyle? Benim acil çözüm bulmam lazım, vallahi aç kalacaz bu gidişle. Hemen halledin, n'olur. Ya ben şimdi siparişleri nasıl takip edecem? Akşama kadar böyle bekleyecek miyim?",
+    "output": "Anlıyorum, bu durumun işleriniz için ne kadar kritik olduğunu farkındayım. Hattınızda genel bir sorun görünmüyor. Telefonunuzun çağrı ayarlarından veya *21# tuşlayarak kontrol ettiniz mi? Hattınıza özel bir kısıtlama olup olmadığını ve paket detaylarınızı kontrol ediyorum bir saniye lütfen... Anladım, sistemde çağrı yönlendirme servisinizin mevcut paketinizde aktif görünmediğini fark ettim. Bu durum, paketinize bağlı olabilir.\n[ARAÇLAR: create_tech_ticket, get_customer_plan]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0142_turn_4.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom TechAgent uzmanısın.",
+    "input": "[DUYGU: grateful]\nHa, iyi oldu bu. Evet, evet, o Esnaf Paketi daha mantıklı geliyor, işimi fazlasıyla görür. Hemen geçin n'olur. Çok teşekkür ederim, vallahi büyük sıkıntıdan kurtardınız beni. Sağ olun, var olun. Şimdi rahat rahat işimi yaparım.",
+    "output": "Haklısınız, anlıyorum. Mevcut kullandığınız ekonomik pakette çağrı yönlendirme servisi ek ücrete tabi veya bazı eski paketlerde hiç bulunmayabiliyor. Sistemde de bu durum bu şekilde görünüyor. Ancak daha kapsamlı, genellikle gig ekonomisi çalışanlarına özel, sınırsız çağrı yönlendirme içeren paketlerimiz mevcut. Bu konuyu detaylı görüşmek ve size uygun bir çözüm bulmak adına sizi Tarife ve Paketler birimimize aktarıyorum. Onlar size en uygun paketi sunacaklardır. Lütfen hatta kalınız.\n[ARAÇLAR: get_customer_plan, route_to_agent]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0142_turn_5.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: patient]\nAlo, iyi günler. Ben Bursa'dan arıyorum, köydeyim. Bi sıkıntı var da internetle alakalı, yardımcı olur musunuz?",
+    "output": "Merhaba efendim, hoş geldiniz. Tabii ki yardımcı olalım. Güvenliğiniz için öncelikle kimliğinizi doğrulamam gerekiyor. Adınız ve soyadınız nedir lütfen?\n[ARAÇLAR: verify_user]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0026_turn_1.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: explaining]\nAdım Ahmet Yılmaz, soyadım Yılmaz. İnternetim çekmiyor doğru düzgün. Hani 5G dediler, kurdular, ama bi geldi bi gitti, bazen hiç yok.",
+    "output": "Anladım Ahmet Bey. Kimliğinizi doğruladım. Anlattığınız kadarıyla şebeke kaynaklı bir problem yaşıyorsunuz gibi görünüyor. Bu konuda size daha detaylı yardımcı olabilmesi için sizi teknik birimdeki arkadaşımıza aktarıyorum. Hattınızda kalır mısınız lütfen?\n[ARAÇLAR: route_to_agent]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0026_turn_2.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom TechAgent uzmanısın.",
+    "input": "[DUYGU: explaining]\nMerhaba Fatih Bey. Vallahi yaklaşık bir haftadır böyle. Özellikle akşamları, işte hava kararınca iyice kötüleşiyor. Köyde biliyorsunuz, başka çaremiz yok, sizin hizmetinize güveniyoruz yıllardır.",
+    "output": "Merhaba Ahmet Bey, ben Teknik Destek biriminden Fatih. Aktarıldığınızı görüyorum. İnternetinizde, özellikle 5G şebekesinde kesintiler yaşandığını anladım. Tam olarak ne zaman başladı bu durum? Ve genellikle günün hangi saatlerinde oluyor?\n[ARAÇLAR: get_customer_status]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0026_turn_3.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom TechAgent uzmanısın.",
+    "input": "[DUYGU: explaining]\nBenim telefonum yeni model Fatih Bey, Samsung S23. 5G destekliyor diye aldım zaten. SIM kartım da fiziksel, eski telefonumdan taktım. Yahu, bu köyde internetimiz doğru düzgün çeksin diye bekliyoruz, eskiden hiç böyle değildi.",
+    "output": "Anladım Ahmet Bey, notlarımı aldım. Cihazınızın modeli nedir acaba? 5G uyumlu olduğundan emin olmak için kontrol etmem gerekiyor. Ayrıca SIM kartınız e-SIM mi, yoksa fiziksel bir SIM mi kullanıyorsunuz?\n[ARAÇLAR: check_device_imei, check_esim_status]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0026_turn_4.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom TechAgent uzmanısın.",
+    "input": "[DUYGU: hopeful]\nTamamdır Fatih Bey, oluşturun tabii. İnşallah düzelir. Bi de bi şey sorucam, madem sizi buldum... Geçen ayki faturam bana biraz yüksek geldi. Sanki iki kere aynı ay içinde kesilmiş gibiydi, yanlış mı gördüm acaba?",
+    "output": "Ahmet Bey, cihazınız ve SIM kartınız uyumlu görünüyor. Bölgenizde bir yoğunluk ya da baz istasyonunda geçici bir durum olabilir. Sizin için detaylı bir teknik arıza kaydı oluşturacağım. Ekiplerimiz en kısa sürede bölgedeki durumu kontrol edip size bilgi verecekler. Bu süreçte cihazınızı bir kez kapatıp açmayı dener misiniz?\n[ARAÇLAR: create_tech_ticket]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0026_turn_5.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom TechAgent uzmanısın.",
+    "input": "[DUYGU: explaining]\nMerhaba Elif Hanım. Evet, öyle. Geçen ayın sonlarına doğru, hani normalde her ayın 20'sinde kesilir ya, 25'i gibi falan bi daha kesilmiş gibiydi. İki kere SMS geldi hatta. Normalde 150 lira öderim, 300'e yakın bi şey ödemiş gibi oldum.",
+    "output": "Ahmet Bey, anladım. Fatura kontrolü ve iade işlemleri bizim teknik birimimizin kapsamı dışında kalıyor maalesef. Ancak bu konuda da size hemen yardımcı olmaları için sizi direkt Faturalandırma birimimize aktarıyorum. Lütfen hatta kalın.\n[ARAÇLAR: route_to_agent]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0026_turn_6.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom BillingAgent uzmanısın.",
+    "input": "[DUYGU: understanding]\nÇok şükür. Ben de diyorum, niye bu kadar geldi. Anladım Elif Hanım, çok teşekkür ederim. Hem internet için kayıt açtınız, hem de bu fatura işini hallettiniz. Sağ olun.",
+    "output": "Merhaba Ahmet Bey, Faturalandırma biriminden Elif ben. Aktarıldığınızı görüyorum. Faturanızda bir hata olduğunu, çift faturalandırma gibi bir durum olduğunu belirtmişsiniz. Konuyla ilgili size yardımcı olacağım. Hangi tarihteki faturanızda bu durumu fark ettiniz acaba?",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0026_turn_7.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: direct]\nAlo, iyi günler. Ben Halil İbrahim Topçu. Efendim, geçen ay yurt dışındaydım, İsviçre'de. Bir de ne göreyim, gelen fatura bin liranın üstünde. Böyle şey olur mu gari? Benim hattımda yurt dışı paketim vardı hani, emme bu neyin nesi? Bi' bakın hele şu işe, bir yanlışlık olmalı.",
+    "output": "Hoş geldiniz Sayın Topçu. Talebinizi anlıyorum. Güvenliğiniz için öncelikle kimlik doğrulamanızı rica edeceğim. Adınız ve soyadınız ile birlikte, TC kimlik numaranızın son dört hanesini veya doğum tarihinizi iletebilir misiniz?\n[ARAÇLAR: verify_user]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0163_turn_1.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: direct]\nHe, Halil İbrahim Topçu. TC kimlik numaram da 12345678910. Yani, bu ilk defa olmuyor, ben sürekli geziyorum, biliyorsunuz. Her ay bir yerlerdeyim. Bu roaming ücretleri beni bezdirdi gari. Bi' çözüm bulun artık.",
+    "output": "Bilgileriniz doğrulandı Sayın Topçu. Fatura ve yurt dışı kullanımınızla ilgili yaşadığınız aksaklık için özür dileriz. Bu konuda size en doğru bilgiyi ve desteği sağlamak adına, çağrınızı fatura ve finans birimimize aktarıyorum. Lütfen kısa bir süre hatta kalınız.\n[ARAÇLAR: get_customer_status, route_to_agent]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0163_turn_2.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom BillingAgent uzmanısın.",
+    "input": "[DUYGU: frustrated]\nEfendim, bakın, ben geçen ay İsviçre'deydim, tamam mı? Paketi ben ona göre yaptım. Günde belki bir iki telefon görüşmesi yapmışımdır, interneti de hani acil bir işim olunca açmışımdır. Zaten çoğu yerde Wi-Fi kullandım. Emme, fatura gelmiş bin küsür lira. Bu nasıl bir iş anlamadım ki. Benim hattım o kadar kullanıma müsait değil zaten. Geçen ay da Almanya'da-",
+    "output": "İyi günler Sayın Halil İbrahim Topçu. Fatura ve finans biriminden ben Ayşe Yılmaz. Az önce aktarılan görüşme notlarınıza göre yurt dışı kullanımınızla ilgili bir sorun yaşadığınızı anlıyorum. Son faturanıza bakıyorum. Lütfen sorununuzu detaylıca anlatır mısınız?\n[ARAÇLAR: get_last_bill]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0163_turn_3.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom BillingAgent uzmanısın.",
+    "input": "[DUYGU: demanding]\nHayır efendim! Dinler misiniz beni bi' zahmet! Ben size diyorum ki ben her ay yurt dışına çıkıyorum. Benim bu paketimle ilgili bir sorun var demek ki. Ben paketi ona göre yapıyorum, yine de bu faturalar geliyor. Bu benim hatam değil! Ya bu faturayı düzeltin ya da ben hattımı kapatacağım gari. Böyle hizmet olmaz. Yıllardır sizinleyim ben.",
+    "output": "Anlıyorum Sayın Topçu. Faturanızda İsviçre'deki veri kullanımınızdan kaynaklanan bir yükseliş gözlemliyorum. Özellikle 15-17 Mart tarihleri arasında yüksek bir… (Müşteri araya girer) Evet, Almanya'daki durum da notlarınızda mevcut. Yurt dışı paketiniz olmasına rağmen bu durumun yaşanması elbette üzücü. Kullanım detaylarınızı inceleyerek size yardımcı olmak isterim. Bir saniye lütfen, detaylı inceleme yapıyorum. İsterseniz bu kullanımın bir kısmına...\n[ARAÇLAR: get_last_bill]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0163_turn_4.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom BillingAgent uzmanısın.",
+    "input": "[DUYGU: accepting]\nEvet, aynen öyle. Bakın, benim bir ay Japonya'ya gitmem gerekiyor, sonra Amerika var. Yani öyle kısa süreli paketler bana fayda etmiyor. Sürekli yurt dışı bağlantısı olan, interneti bol olan bir paket lazım bana. Hem uygun olsun, hem de bu roaming derdimi kökten çözsün. Böyle her ay fatura derdiyle uğraşmak istemiyorum artık.",
+    "output": "Sayın Topçu, haklı serzenişinizi anlıyorum. Yıllardır müşterimiz olmanız ve sık seyahat etmeniz bizim için değerli. Mevcut paketinizin yurt dışı kullanım alışkanlıklarınıza tam olarak uygun olmadığını görüyorum. Bu ayki faturanızda, size özel bir jest olarak 300 TL'lik bir indirim tanımlayabiliriz. Ancak daha kalıcı bir çözüm için, sizin gibi sık seyahat eden müşterilerimize özel tasarlanmış daha kapsamlı yurt dışı paketlerimizi sunan tarife ve paket birimimize aktarmak isterim. Bu sayede benzer durumları tekrar yaşamazsınız. Ne dersiniz?\n[ARAÇLAR: get_customer_plan, route_to_agent]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0163_turn_5.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom PlanAgent uzmanısın.",
+    "input": "[DUYGU: accepting]\nTamam, efendim. Bu bayağı iyiymiş. Hem fatura da düşecekse, benim için sorun yok. Geçirin o pakete beni o zaman. Teşekkür ederim. En azından bu seferlik bir çözüm bulduk.",
+    "output": "Merhaba Sayın Topçu. Tarife ve paket biriminden Emre Can. Faturanızdaki düzenleme ve yeni paket ihtiyacınızla ilgili bilgiyi aldım. Sık seyahat eden bir müşteri olarak, tam olarak hangi ülkelerde ve ne kadar süreyle internet ve görüşme ihtiyacınız oluyor? Mevcut paketinizin yurt dışı kapsamını ve daha uygun olabilecek alternatiflerimizi hemen inceleyelim.\n[ARAÇLAR: get_customer_plan, list_all_plans]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0163_turn_6.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: worried]\nAlo... Hayırlı işler beyefendi. Ben şimdi bizim faturaları kontrol ediyordum da... Bir sıkıntı var galiba. Yani, bu ayki faturaya bir gecikme zammı mı ne gelmiş? Anlayamadım ben. Bizim aile paketinde böyle bir şey olmamıştı hiç. Çok dikkat ederiz ödemelerine.",
+    "output": "Merhaba, hoş geldiniz. Talebinizi anlıyorum. Güvenliğiniz için öncelikle kimlik doğrulamanızı rica edeceğim. Adınız ve soyadınız ile birlikte hattınızın bağlı olduğu TC kimlik numarasını veya müşteri numaranızı benimle paylaşabilir misiniz?\n[ARAÇLAR: verify_user]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0194_turn_1.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom RouterAgent uzmanısın.",
+    "input": "[DUYGU: worried]\nHımm... Adım Hasan Yılmaz efendim. Numaram da 532... Durun hele, 532 123 45 67. Bu gecikme zammı neyin nesi şimdi? Bizim oğlanın da hattı var bu pakette, onun başına da bir iş gelmesin sonra. Her ay günü gününe öderiz biz, şaşırıp kaldım.",
+    "output": "Bilgileri teyit ettim Hasan Bey. Gecikme zammı ile ilgili bir faturanız olduğunu görüyorum. Bu konuda size daha detaylı yardımcı olabilmesi için sizi Faturalandırma Departmanımıza aktarıyorum. Lütfen hattan ayrılmayın.\n[ARAÇLAR: route_to_agent]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0194_turn_2.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom BillingAgent uzmanısın.",
+    "input": "[DUYGU: questioning]\nEvet, buyurun hanımefendi. Az önce de söyledim, bu faturada bir gecikme zammı var. Bizim aile paketi, dört hattımız var. Ben bu yaşıma geldim, bir kuruş borç bırakmadım kimseye. Bu gecikme zammı da neyin nesi şimdi? Yanlışlık olmasın?",
+    "output": "Merhaba Hasan Bey, Faturalandırma Departmanına hoş geldiniz. Konuyu RouterAgent'ımızdan öğrendim. Gecikme zammı hakkında bilgi almak istediğinizi belirtmişsiniz. Hattınızın bağlı olduğu müşteri numarasını veya TC kimlik numarasını tekrar teyit edebilir misiniz lütfen? Fatura detaylarınızı hemen kontrol ediyorum.\n[ARAÇLAR: get_last_bill]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0194_turn_3.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom BillingAgent uzmanısın.",
+    "input": "[DUYGU: firm]\nMüşteri numaramı mı? Bir saniye... Buldum şimdi. 7891011. Yani şimdi bu gecikme zammı geçen aydan kalma ufak bir bakiyeden mi kaynaklanıyor? Bize niye haber gelmedi o zaman? Biz her kuruşun hesabını yaparız, hele bizim oğlanın hattında fazladan para gitmesin diye dikkat ederiz.",
+    "output": "Teşekkür ederim Hasan Bey. Kontrol ettiğimde, geçmiş dönemdeki faturanızda 2,50 TL'lik çok küçük bir bakiye kaldığını ve bu bakiyenin son ödeme tarihinden sonra ödendiğini görüyorum. Gecikme zammı bu nedenle yansımış. Ancak sistemde uzun süredir faturalarınızı düzenli ödediğiniz ve herhangi bir olumsuz kaydınızın bulunmadığı gözüküyor. Bu nedenle, oluşan gecikme zammını tek sefere mahsus olmak üzere faturanızdan düşebiliriz. Onaylar mısınız?\n[ARAÇLAR: get_customer_status]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0194_turn_4.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom BillingAgent uzmanısın.",
+    "input": "[DUYGU: relieved]\nAllah razı olsun hanımefendi, çok iyi oldu bu. Sağ olun. Demek ki o geçen ayki ufak meblağdanmış. İyi oldu hallolduğu. Ama dur hele, aklıma gelmişken, bizim oğlan geçen gün aradı, dedi 'Baba, bu bulut depolama ne iş?' dedi. Hattımızda öyle bir şey mi var? Fazladan bir masraf çıkarmasın bize.",
+    "output": "Rica ederim Hasan Bey, seve seve yardımcı oldum. Gecikme zammı konusunu faturanızdan düşmek üzere notumu aldım. Bulut depolama hizmetiyle ilgili sorunuzu anladım. Bu, genellikle tarife veya ek hizmetlerle ilgili bir konu olduğu için sizi Tarife ve Ek Hizmetler Departmanımıza aktarmam daha doğru olacaktır. Sizi hemen bağlıyorum.\n[ARAÇLAR: route_to_agent]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0194_turn_5.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom PlanAgent uzmanısın.",
+    "input": "[DUYGU: questioning]\nEvet hanımefendi, aynen öyle. Bu bulut depolama meselesi neydi şimdi? Oğlanın hattında var mı öyle bir şey? Kendisi de anlamamış, arayıp duruyor beni. Gereksiz bir şeyse kaldıralım, öyle boşuna masraf yapmayalım.",
+    "output": "Merhaba Hasan Bey, Tarife ve Ek Hizmetler Departmanına hoş geldiniz. Konuyu BillingAgent'ımızdan öğrendim. Oğlunuzun hattındaki bulut depolama hizmeti hakkında bilgi almak istediğinizi belirtmişsiniz. Hemen kontrol ediyorum. Evet, sistemde oğlunuzun kullandığı Genç Yıldız tarifesinde 50 GB ücretsiz bulut depolama alanının bir kampanya dahilinde otomatik olarak tanımlandığını görüyorum. Bu, tarifesinin bir parçası olarak sunulmaktadır.\n[ARAÇLAR: get_customer_plan]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0194_turn_6.mp3"
+  },
+  {
+    "instruction": "Sen bir Türk telekom PlanAgent uzmanısın.",
+    "input": "[DUYGU: cost_aware]\nHa öyle mi diyorsunuz? Demek pakette varmış zaten... Peki bu paralı mı? Yani şimdi bu ücretsiz mi, yoksa belli bir süre sonra para mı kesmeye başlayacak? İstemezsek kaldırabilir miyiz? Bizim oğlanın zaten fazla bir şeye ihtiyacı yok, internet paketi yeter ona. Fazla masraftan kaçınırız biz.",
+    "output": "Hasan Bey, merak etmeyin. Bu bulut depolama hizmeti, oğlunuzun mevcut Genç Yıldız tarifesine dahil olan ücretsiz bir özelliktir. Ekstra bir ücret yansımaz, yani tamamen ücretsizdir. Eğer kullanmak istemiyorsanız veya bu hizmeti kapatmak isterseniz, bu konuda da size yardımcı olabilirim. Herhangi bir ücret yansımadan bu özelliği hattınızdan kaldırabiliriz. Nasıl bir tercih yaparsınız?\n[ARAÇLAR: change_customer_plan]",
+    "audio_ref": "data/tts_audio_final/flash_heavy_0194_turn_7.mp3"
+  }
+]

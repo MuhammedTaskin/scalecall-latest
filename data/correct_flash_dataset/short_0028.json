@@ -1,0 +1,100 @@
+{
+  "conversation_id": "short_0028_general_help",
+  "metadata": {
+    "scenario": "general_help",
+    "handoff_pattern": [
+      "RouterAgent",
+      "FAQAgent"
+    ]
+  },
+  "customer_profile": {
+    "persona": "confused",
+    "phone": "0555 123 45 67"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Merhaba, internetim çalışmıyor sanırım bir şeyler ters gitti.",
+      "emotion": "confused"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Evet, numaram 0555 123 45 67.",
+      "emotion": "confused"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Anladım, peki bu konuda bana nasıl yardımcı olabilirsiniz?",
+      "emotion": "confused"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba, Telekom Çağrı Merkezi'ne hoş geldiniz. Kimliğinizi doğrulamak için lütfen kayıtlı telefon numaranızı veya TC kimlik numaranızı paylaşır mısınız?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkürler, numaranızı doğruladım. Durumunuzu kontrol ediyorum. İnternetinizde bir kesinti görünüyor. Bu konuda size daha detaylı yardımcı olabilmek adına konuyu ilgili ekibimize yönlendiriyorum.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "handoff": {
+        "to": "FAQAgent"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "FAQAgent",
+      "text": "Merhaba, ben FAQ Agent. İnternet bağlantınızdaki olası sorunlar hakkında size yardımcı olabilirim. Lütfen modeminizi yeniden başlatmayı denediniz mi? Genellikle bu, basit bağlantı sorunlarını çözer.",
+      "tools_triggered": [
+        "search_faq"
+      ],
+      "handoff": null
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "FAQAgent",
+      "reason": "general_help"
+    }
+  ],
+  "tool_calls": [
+    {
+      "turn_id": "turn_002",
+      "tool": "verify_user",
+      "arguments": {
+        "phone_number": "0555 123 45 67"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_004",
+      "tool": "route_to_agent",
+      "arguments": {
+        "agent_name": "FAQAgent",
+        "reason": "general_help"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "search_faq",
+      "arguments": {
+        "query": "internet stopped working"
+      },
+      "result": "Modem reset is a common solution."
+    }
+  ],
+  "generated_at": "2025-08-14T08:01:15.160237",
+  "index": 28
+}

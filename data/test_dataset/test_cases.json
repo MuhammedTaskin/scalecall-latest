@@ -1,0 +1,235 @@
+{
+  "metadata": {
+    "total_tests": 12,
+    "categories": [
+      "critical_emergency",
+      "complex_multi_issue",
+      "emotion_handling",
+      "dialect_understanding",
+      "tool_chain_complexity",
+      "interruption_recovery",
+      "edge_cases"
+    ],
+    "generated_at": "2025-08-14T09:16:39.656150"
+  },
+  "test_cases": [
+    {
+      "test_id": "TEST_0001",
+      "category": "critical_emergency",
+      "priority": "CRITICAL",
+      "input": "Acil durum! Ambulans arayamıyorum, hattım çalışmıyor!",
+      "metadata": {
+        "emotion": "normal",
+        "dialect": "standard",
+        "challenge": "none"
+      },
+      "expected_behavior": "immediate_escalation",
+      "required_tools": [
+        "verify_user",
+        "escalate_to_human"
+      ],
+      "required_handoffs": [],
+      "max_acceptable_turns": 3,
+      "timestamp": "2025-08-14T09:16:39.656061"
+    },
+    {
+      "test_id": "TEST_0002",
+      "category": "critical_emergency",
+      "priority": "CRITICAL",
+      "input": "Telefonum çalındı ve içinde hassas bilgiler var, hattımı kapatın!",
+      "metadata": {
+        "emotion": "normal",
+        "dialect": "standard",
+        "challenge": "none"
+      },
+      "expected_behavior": "immediate_line_suspension",
+      "required_tools": [
+        "verify_user",
+        "suspend_line",
+        "create_ticket"
+      ],
+      "required_handoffs": [],
+      "max_acceptable_turns": 4,
+      "timestamp": "2025-08-14T09:16:39.656071"
+    },
+    {
+      "test_id": "TEST_0003",
+      "category": "complex_multi_issue",
+      "priority": "HIGH",
+      "input": "eSIM'im çalışmıyor, faturamda yanlış ücret var ve planımı değiştirmek istiyorum",
+      "metadata": {
+        "emotion": "normal",
+        "dialect": "standard",
+        "challenge": "none"
+      },
+      "expected_behavior": "systematic_resolution",
+      "required_tools": [
+        "verify_user",
+        "check_esim_status",
+        "get_last_bill",
+        "list_all_plans"
+      ],
+      "required_handoffs": [
+        "RouterAgent",
+        "TechAgent",
+        "BillingAgent",
+        "PlanAgent"
+      ],
+      "max_acceptable_turns": 10,
+      "timestamp": "2025-08-14T09:16:39.656074"
+    },
+    {
+      "test_id": "TEST_0004",
+      "category": "complex_multi_issue",
+      "priority": "HIGH",
+      "input": "Numara taşıma yapıyorum ama eski operatörümden borç var, ayrıca yurtdışı paketi de istiyorum",
+      "metadata": {
+        "emotion": "normal",
+        "dialect": "standard",
+        "challenge": "none"
+      },
+      "expected_behavior": "coordinate_departments",
+      "required_tools": [
+        "verify_user",
+        "check_porting_status",
+        "get_unpaid_amount",
+        "list_all_plans"
+      ],
+      "required_handoffs": [
+        "RouterAgent",
+        "BillingAgent",
+        "PlanAgent"
+      ],
+      "max_acceptable_turns": 10,
+      "timestamp": "2025-08-14T09:16:39.656075"
+    },
+    {
+      "test_id": "TEST_0005",
+      "category": "emotion_handling",
+      "priority": "HIGH",
+      "input": "YA YETER ARTIK! 5. KEZ ARIYORUM! SORUNU ÇÖZEMİYORSANIZ KAPATIYORUM!",
+      "metadata": {
+        "emotion": "extremely_angry",
+        "dialect": "standard",
+        "challenge": "none"
+      },
+      "expected_behavior": "de-escalation",
+      "required_tools": [],
+      "required_handoffs": [],
+      "max_acceptable_turns": 10,
+      "timestamp": "2025-08-14T09:16:39.656077"
+    },
+    {
+      "test_id": "TEST_0006",
+      "category": "emotion_handling",
+      "priority": "MEDIUM",
+      "input": "Ben... şey... yaşlıyım biraz, bu telefon işlerini anlamıyorum, yardım eder misiniz?",
+      "metadata": {
+        "emotion": "confused_elderly",
+        "dialect": "standard",
+        "challenge": "none"
+      },
+      "expected_behavior": "patient_guidance",
+      "required_tools": [],
+      "required_handoffs": [],
+      "max_acceptable_turns": 10,
+      "timestamp": "2025-08-14T09:16:39.656078"
+    },
+    {
+      "test_id": "TEST_0007",
+      "category": "dialect_understanding",
+      "priority": "MEDIUM",
+      "input": "Uşağum benim hat gari çalışmıyor, nooldu buna böyle?",
+      "metadata": {
+        "emotion": "normal",
+        "dialect": "black_sea",
+        "challenge": "none"
+      },
+      "expected_behavior": "understand_and_respond",
+      "required_tools": [],
+      "required_handoffs": [],
+      "max_acceptable_turns": 10,
+      "timestamp": "2025-08-14T09:16:39.656080"
+    },
+    {
+      "test_id": "TEST_0008",
+      "category": "dialect_understanding",
+      "priority": "MEDIUM",
+      "input": "Valla billahi internet yok gardaş, bi bakıver şuna",
+      "metadata": {
+        "emotion": "normal",
+        "dialect": "southeastern",
+        "challenge": "none"
+      },
+      "expected_behavior": "understand_and_respond",
+      "required_tools": [],
+      "required_handoffs": [],
+      "max_acceptable_turns": 10,
+      "timestamp": "2025-08-14T09:16:39.656081"
+    },
+    {
+      "test_id": "TEST_0009",
+      "category": "tool_chain_complexity",
+      "priority": "HIGH",
+      "input": "Kurumsal müşteriyim, 50 hattım var, hepsini başka tarıfeye geçireceğim",
+      "metadata": {
+        "emotion": "normal",
+        "dialect": "standard",
+        "challenge": "none"
+      },
+      "expected_behavior": "standard_resolution",
+      "required_tools": [],
+      "required_handoffs": [],
+      "max_acceptable_turns": 10,
+      "timestamp": "2025-08-14T09:16:39.656082"
+    },
+    {
+      "test_id": "TEST_0010",
+      "category": "interruption_recovery",
+      "priority": "MEDIUM",
+      "input": "Merhaba ben-- *bağlantı kopuyor* --duyabiliyor musun-- *parazit* --faturamda sorun--",
+      "metadata": {
+        "emotion": "normal",
+        "dialect": "standard",
+        "challenge": "connection_issues"
+      },
+      "expected_behavior": "maintain_context",
+      "required_tools": [],
+      "required_handoffs": [],
+      "max_acceptable_turns": 10,
+      "timestamp": "2025-08-14T09:16:39.656084"
+    },
+    {
+      "test_id": "TEST_0011",
+      "category": "edge_cases",
+      "priority": "LOW",
+      "input": "0 TL fatura ödedim ama hala borç görünüyor",
+      "metadata": {
+        "emotion": "normal",
+        "dialect": "standard",
+        "challenge": "none"
+      },
+      "expected_behavior": "standard_resolution",
+      "required_tools": [],
+      "required_handoffs": [],
+      "max_acceptable_turns": 10,
+      "timestamp": "2025-08-14T09:16:39.656085"
+    },
+    {
+      "test_id": "TEST_0012",
+      "category": "edge_cases",
+      "priority": "LOW",
+      "input": "eSIM'imi 2 cihazda aynı anda kullanabilir miyim?",
+      "metadata": {
+        "emotion": "normal",
+        "dialect": "standard",
+        "challenge": "none"
+      },
+      "expected_behavior": "standard_resolution",
+      "required_tools": [],
+      "required_handoffs": [],
+      "max_acceptable_turns": 10,
+      "timestamp": "2025-08-14T09:16:39.656086"
+    }
+  ]
+}

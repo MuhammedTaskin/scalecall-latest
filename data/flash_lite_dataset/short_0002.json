@@ -1,0 +1,34 @@
+{
+  "id": "short_0002",
+  "scenario": "verify_and_route",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Merhaba, internetim nedense çok yavaş çalışıyor, anlamadım nedenini.",
+      "emotion": "confused"
+    },
+    {
+      "turn": 3,
+      "text": "Evet, numaram 5XXXXXXXX."
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Merhaba, Telekom'a hoş geldiniz. Size yardımcı olabilmem için öncelikle kimlik doğrulaması yapmamız gerekiyor. Lütfen kimlik numaranızı veya kayıtlı telefon numaranızı söyler misiniz?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "RouterAgent",
+      "text": "Anladım, numaranız doğrulandı. İnternet hızınızla ilgili yaşadığınız sorunu teknik ekibimize iletiyorum. En kısa sürede sizinle iletişime geçecekler. Başka bir konuda yardımcı olabilir miyim?",
+      "tools": [
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:49:40.974649"
+}

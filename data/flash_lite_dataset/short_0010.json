@@ -1,0 +1,34 @@
+{
+  "id": "short_0010",
+  "scenario": "service_outage_check",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Merhaba, internetim kesildi sanırım. Kontrol edebilir misiniz?",
+      "emotion": "polite"
+    },
+    {
+      "turn": 3,
+      "text": "Anladım, teşekkür ederim."
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Elbette, yardımcı olayım. Kimlik doğrulaması için lütfen adınızı ve soyadınızı alabilir miyim?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "RouterAgent",
+      "text": "Yaptığım kontrollerde bölgenizde bir kesinti görünmüyor. Modeminizin ışıklarını kontrol edip yeniden başlatmayı denediniz mi?",
+      "tools": [
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:49:43.277421"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "smart_0051",
+  "scenario": "tech_issue_ticket",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Merhaba, internetim stabil çalışmıyor, bağlantım sürekli kopuyor. Yardımcı olabilir misiniz?",
+      "emotion": "polite"
+    },
+    {
+      "turn": 3,
+      "text": "Evet, TC kimlik numaram 12345678901."
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Elbette, yardımcı olalım. Lütfen TC kimlik numaranızı alabilir miyim?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "TechAgent",
+      "text": "Kimlik numaranız doğrulandı. eSIM durumunuzda bir sorun görünmüyor. Bu durumu daha detaylı incelemek için bir teknik destek kaydı oluşturdum. Kayıt numarası: TICKET-XYZ. Ekiplerimiz en kısa sürede sizinle iletişime geçecektir.",
+      "tools": [
+        "check_esim_status",
+        "create_tech_ticket"
+      ]
+    },
+    {
+      "turn": 5,
+      "agent": "TechAgent",
+      "text": "Başka yardımcı olabileceğim bir konu var mı?",
+      "tools": [
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:57:11.197281",
+  "required_tools": [
+    "verify_user",
+    "check_esim_status",
+    "create_tech_ticket",
+    "end_conversation"
+  ],
+  "agent_flow": [
+    "RouterAgent",
+    "TechAgent"
+  ]
+}

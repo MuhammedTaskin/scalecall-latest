@@ -1,0 +1,111 @@
+{
+  "id": "flash_heavy_0034",
+  "primary_issue": "technical_services_call_forwarding",
+  "secondary_issue": null,
+  "customer_profile": "rural_customer",
+  "region": "konya",
+  "dialect_info": {
+    "dialect": "central",
+    "pace": "slow",
+    "formality": "high"
+  },
+  "conversation_dynamic": "circular",
+  "complexity": "medium",
+  "metadata": {
+    "context": "limited service options",
+    "traits": [
+      "practical",
+      "coverage_focused",
+      "loyal"
+    ],
+    "emotional_journey": [
+      "patient",
+      "explaining",
+      "hopeful",
+      "understanding"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo... Hayırlı günler efenim. Bir derdim var da, telefonum... Ne bileyim, çağrı falan gelmiyor, ya da arayanlar başkasına yönlendirildi diyor. Anlayamadım gitti.",
+      "emotion": "patient",
+      "dialect_markers": [
+        "central",
+        "ezen (efendim yerine)"
+      ],
+      "pace": "slow",
+      "background_context": "limited service options"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Hee, tabii ki efenim. Adım Ahmet Yılmaz, T.C. numaram da... (biraz duraklar) ...12345678901. Şimdi bu çağrı yönlendirme meselesi, bizim köyde birez sıkıntı oluyor. Dükkandan dışarı çıkınca telefon çekmiyor, ya da civar kasabaya gidince de arayanlar bana ulaşamıyor. Diyorlar ki 'sizin numaranız başka bir yere yönlendirildi'. Ben de anlamadım, düzeltmek lazım.",
+      "emotion": "explaining",
+      "dialect_markers": [
+        "central",
+        "birez",
+        "bizim köyde"
+      ],
+      "pace": "slow",
+      "background_context": "limited service options"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Sağ olun, çok iyi olur. Vallahi bu iş çözülürse çok makbule geçer. Burda başka hat da doğru düzgün çekmiyor zaten, sizinle devam etmek istiyoruz hep. İnşallah düzelir de arayanlar bana ulaşabilirler, işlerimiz aksıyor.",
+      "emotion": "hopeful",
+      "dialect_markers": [
+        "central",
+        "vallahi",
+        "makbule geçer"
+      ],
+      "pace": "slow",
+      "background_context": "limited service options"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Hayırlı günler efendim. Talebinizi anlıyorum. Güvenliğiniz için öncelikle kimliğinizi teyit etmemiz gerekiyor. Adınızı, soyadınızı ve T.C. kimlik numaranızı rica edebilir miyim?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Ahmet Bey, anladım. Çağrılarınızın yönlendirilmesiyle ilgili bir teknik desteğe ihtiyacınız var. Bu konu teknik ekibimizin uzmanlık alanına giriyor. Sizi hemen ilgili birimimize aktarıyorum. Konuşmanız ve verdiğiniz bilgiler eksiksiz bir şekilde aktarılacaktır, tekrar anlatmanıza gerek kalmayacak.",
+      "tools_triggered": [
+        "route_to_agent"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "TechAgent",
+      "text": "Ahmet Bey, merhaba, ben Teknik Destek biriminden Elif. Çağrı yönlendirme probleminizi anladım. Sistemden kontrol ettiğimde, evet, bazı yönlendirme ayarlarınızın aktif olduğunu görüyorum. Bu durumu detaylıca inceleyip size özel bir çözüm bulmak için bir teknik talep oluşturacağım. En kısa sürede size dönüş sağlayacağız. Bu talep numarasıyla da durumunuzu takip edebilirsiniz: TRK-567890.",
+      "tools_triggered": [
+        "create_tech_ticket"
+      ],
+      "formality_level": "high"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "TechAgent",
+      "reason": "Customer's issue requires technical expertise (call forwarding/network settings).",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "A technical ticket (TRK-567890) has been created for the customer's call forwarding issue. The TechAgent will investigate the active call forwarding settings and provide a solution.",
+    "customer_satisfaction": "The customer is hopeful and understanding that their problem is being actively addressed by the technical team. Their loyalty remains strong due to limited alternative service options.",
+    "follow_up_needed": true
+  },
+  "generated_at": "2025-08-14T09:15:06.378285",
+  "model": "flash",
+  "index": 34
+}

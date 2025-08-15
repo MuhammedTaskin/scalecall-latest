@@ -1,0 +1,101 @@
+{
+  "conversation_id": "short_0088_bill_question",
+  "metadata": {
+    "scenario": "bill_question",
+    "handoff_pattern": [
+      "RouterAgent",
+      "BillingAgent"
+    ]
+  },
+  "customer_profile": {
+    "persona": "normal",
+    "phone": "0555 123 45 67"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Merhaba, geçen ayki faturamla ilgili bir sorum olacaktı.",
+      "emotion": "normal"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Evet, kimlik numaram 1234567890.",
+      "emotion": "normal"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Anladım, teşekkürler. Faturamdaki toplam tutarı merak ediyorum.",
+      "emotion": "normal"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba, Telekom'a hoş geldiniz. Kimliğinizi doğrulamak için lütfen TC kimlik numaranızı paylaşır mısınız?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkürler, kimliğiniz doğrulandı. Fatura işlemleriniz için sizi ilgili birimimize yönlendiriyorum.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "handoff": {
+        "to": "BillingAgent"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "BillingAgent",
+      "text": "Merhaba, ben fatura departmanından Ayşe. Faturanızdaki toplam tutarı öğrenmek için 'get_last_bill' aracını kullanıyorum. Lütfen bekleyiniz.",
+      "tools_triggered": [
+        "get_last_bill"
+      ],
+      "handoff": null
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "BillingAgent",
+      "reason": "bill_question"
+    }
+  ],
+  "tool_calls": [
+    {
+      "turn_id": "turn_002",
+      "tool": "verify_user",
+      "arguments": {
+        "customer_id": "0555 123 45 67"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_004",
+      "tool": "route_to_agent",
+      "arguments": {
+        "agent_name": "BillingAgent",
+        "reason": "bill_question"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "get_last_bill",
+      "arguments": {},
+      "result": {
+        "bill_amount": "150 TL",
+        "due_date": "2023-12-15"
+      }
+    }
+  ],
+  "generated_at": "2025-08-14T08:01:54.901413",
+  "index": 88
+}

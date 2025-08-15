@@ -1,0 +1,146 @@
+{
+  "id": "flash_heavy_0126",
+  "primary_issue": "account_security_password_reset",
+  "secondary_issue": null,
+  "customer_profile": "rural_customer",
+  "region": "izmir",
+  "dialect_info": {
+    "dialect": "aegean",
+    "pace": "relaxed",
+    "formality": "low"
+  },
+  "conversation_dynamic": "multi_issue",
+  "complexity": "medium",
+  "metadata": {
+    "context": "limited service options",
+    "traits": [
+      "practical",
+      "coverage_focused",
+      "loyal"
+    ],
+    "emotional_journey": [
+      "patient",
+      "explaining",
+      "hopeful",
+      "understanding"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo, iyi günler efendim. Bir şey soracaktım ben, internet şifremi unuttum da, giremiyorum. Buralarda biliyosunuz zor işler bunlar, köyde anca bu kadar teknolojiye alışık milletiz.",
+      "emotion": "patient",
+      "dialect_markers": [
+        "aegean",
+        "gari (implied by context)"
+      ],
+      "pace": "relaxed",
+      "background_context": "limited service options"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Ben Hasan amca, Hasan Yılmaz. Doğum tarihim de 15 Ocak 1960. Bu internet işleri karışık gari, köyde anca bu kadar oluyor. Eskiden böyle miydi, bir de şimdi her şey şifre oldu.",
+      "emotion": "explaining",
+      "dialect_markers": [
+        "aegean",
+        "amca",
+        "gari"
+      ],
+      "pace": "relaxed",
+      "background_context": "limited service options"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Alo, buyurun... Yeniden mi anlatıcam? Şey, ben internete giremiyorum işte. Şifremi unuttum. Telefonumdan falan da denedim olmuyo. Köyde zaten zar zor çekiyo, bir de bu çıktı başıma. Akşam haberleri izleyecektim.",
+      "emotion": "explaining",
+      "dialect_markers": [
+        "aegean",
+        "gari (implied)",
+        "zar zor çekiyo"
+      ],
+      "pace": "relaxed",
+      "background_context": "limited service options"
+    },
+    {
+      "turn_id": "turn_007",
+      "text": "Aman iyi olur valla! Hadi bakalım... Geldi mi şimdi o mesaj? Telefondan bakıyorum, bazen geç düşüyor gari. Hah, geldi galiba. Bir numara var burada, 5 haneli.",
+      "emotion": "hopeful",
+      "dialect_markers": [
+        "aegean",
+        "valla",
+        "hadi bakalım",
+        "gari"
+      ],
+      "pace": "relaxed",
+      "background_context": "limited service options"
+    },
+    {
+      "turn_id": "turn_009",
+      "text": "Tamamdır evladım, hemen söylüyorum: [Müşteri şifreyi söyler]. Oh be, çok şükür. Bu şifre işleri de bir dertmiş gari. Çok sağolun, ellerinize sağlık. Şu çekmeme işine de bakarsanız tadından yenmez!",
+      "emotion": "understanding",
+      "dialect_markers": [
+        "aegean",
+        "evladım",
+        "gari"
+      ],
+      "pace": "relaxed",
+      "background_context": "limited service options"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba efendim, hoş geldiniz. Yardımcı olalım hemen. Güvenliğiniz için önce bir kimlik doğrulaması yapalım mı? Adınız soyadınız ve doğum tarihinizle başlayabiliriz.",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkürler Hasan Bey, bilgileriniz doğru. Anladığım kadarıyla internet şifrenizle ilgili bir sıkıntı yaşıyorsunuz. Bu konuda size daha detaylı yardımcı olabilecek, teknik ekibimizden bir arkadaşımıza yönlendiriyorum sizi. Hattınızda kalın lütfen.",
+      "tools_triggered": [
+        "verify_user",
+        "route_to_agent"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "FAQAgent",
+      "text": "Merhaba Hasan Amca, ben de Elif, teknik ekipten. Şifre yenileme konusunda size yardımcı olacağım. Önce bir deneme yapalım. Telefonunuza bir SMS şifresi gönderelim mi? O şifreyle yeni bir parola belirleyebiliriz.",
+      "tools_triggered": [
+        "reissue_activation_code"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_008",
+      "agent_persona": "FAQAgent",
+      "text": "Harika Hasan Amca, o gelen tek kullanımlık şifreyi bana söyleyebilir misiniz? Onu girdikten sonra yeni şifrenizi belirleyeceğiz. Daha sonra da rahat rahat internete girebileceksiniz. Kapsama sorunları için de ayrıca bir not alıp ilgilenelim, olur mu?",
+      "tools_triggered": [
+        "reissue_activation_code"
+      ],
+      "formality_level": "low"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "FAQAgent",
+      "reason": "Customer's issue (password reset) requires a specialist agent (FAQAgent) for resolution.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "Customer's internet password was successfully reset using an SMS activation code. A note was taken for the customer's recurring coverage concern.",
+    "customer_satisfaction": "High, customer expressed relief and gratitude, and appreciation for acknowledging the secondary coverage concern.",
+    "follow_up_needed": true
+  },
+  "generated_at": "2025-08-14T09:23:07.194883",
+  "model": "flash",
+  "index": 126
+}

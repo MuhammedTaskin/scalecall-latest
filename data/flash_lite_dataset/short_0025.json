@@ -1,0 +1,34 @@
+{
+  "id": "short_0025",
+  "scenario": "service_outage_check",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Ya yine internetim yok! Bu ne rezalet ya!",
+      "emotion": "angry"
+    },
+    {
+      "turn": 3,
+      "text": "Hâlâ çalışmıyor, ne zaman düzelecek bu?"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Merhaba, yaşadığınız durum için üzgünüm. Kimliğinizi doğrulamak için lütfen TC kimlik numaranızı paylaşır mısınız?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "RouterAgent",
+      "text": "Kontrol ettim, şu an bulunduğunuz bölgede bir kesinti söz konusu. Çalışmalarımız devam ediyor, en kısa sürede normal seyrine dönecektir. Anlayışınız için teşekkürler.",
+      "tools": [
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:49:47.620097"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "smart_0065",
+  "scenario": "unpaid_check",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Merhaba! Faturamda bir sorun mu var acaba, öğrenebilir miyim?",
+      "emotion": "cheerful"
+    },
+    {
+      "turn": 3,
+      "text": "Evet, telefon numaram 555 123 4567."
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Merhaba! Elbette yardımcı olayım. Kimliğinizi doğrulamak için lütfen telefon numaranızı paylaşır mısınız?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "BillingAgent",
+      "text": "Teşekkürler. Kontrol ediyorum... Anladım, şu an için ödenmemiş bir borcunuz görünmüyor. Başka bir konuda yardımcı olabilir miyim?",
+      "tools": [
+        "get_unpaid_amount",
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:57:14.930721",
+  "required_tools": [
+    "verify_user",
+    "get_unpaid_amount",
+    "end_conversation"
+  ],
+  "agent_flow": [
+    "RouterAgent",
+    "BillingAgent"
+  ]
+}

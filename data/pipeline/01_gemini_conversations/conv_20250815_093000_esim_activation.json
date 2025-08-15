@@ -1,0 +1,271 @@
+{
+  "conversation_id": "conv_20250815_093000_esim_activation",
+  "metadata": {
+    "scenario": "esim_activation",
+    "complexity": "medium",
+    "customer_emotion_arc": [
+      "frustrated",
+      "annoyed",
+      "relieved"
+    ],
+    "agent_flow": [
+      "RouterAgent",
+      "TechAgent"
+    ],
+    "total_turns": 10
+  },
+  "customer_profile": {
+    "persona": "impatient_customer",
+    "phone": "0555 123 45 67",
+    "maiden_name": "Yıldız",
+    "issue": "eSIM aktivasyon sorunu"
+  },
+  "dialogue_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "speaker": "customer",
+      "text": "Merhaba, 3 gündür eSIM kuramıyorum, sürekli hata alıyorum. Artık çok sıkıldım!",
+      "emotion": "frustrated",
+      "voice_notes": {
+        "tone": "frustrated",
+        "speed": "normal",
+        "emphasis": [
+          "3 gündür",
+          "hata alıyorum",
+          "çok sıkıldım"
+        ]
+      },
+      "duration_estimate": 5.0
+    },
+    {
+      "turn_id": "turn_002",
+      "speaker": "agent",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba, yaşadığınız sorun için üzgünüm. Size yardımcı olabilmek adına önce kimlik doğrulama yapmamız gerekiyor. Telefon numaranızla başlayabilir miyiz?",
+      "emotion": "professional",
+      "voice_notes": {
+        "tone": "calm_professional",
+        "speed": "normal",
+        "emphasis": [
+          "üzgünüm",
+          "kimlik doğrulama"
+        ]
+      },
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "duration_estimate": 7.0
+    },
+    {
+      "turn_id": "turn_003",
+      "speaker": "customer",
+      "text": "Telefon numaram 0555 123 45 67. Lütfen çabuk olalım.",
+      "emotion": "impatient",
+      "voice_notes": {
+        "tone": "impatient",
+        "speed": "slightly_fast",
+        "emphasis": [
+          "0555 123 45 67",
+          "çabuk olalım"
+        ]
+      },
+      "duration_estimate": 4.0
+    },
+    {
+      "turn_id": "turn_004",
+      "speaker": "agent",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkürler. Güvenliğiniz için annenizin kızlık soyadını da alabilir miyim?",
+      "emotion": "professional",
+      "voice_notes": {
+        "tone": "professional",
+        "speed": "normal",
+        "emphasis": [
+          "annenizin kızlık soyadı"
+        ]
+      },
+      "tools_triggered": [],
+      "duration_estimate": 4.0
+    },
+    {
+      "turn_id": "turn_005",
+      "speaker": "customer",
+      "text": "Yıldız. Neden bu kadar çok şey soruyorsunuz ki?",
+      "emotion": "annoyed",
+      "voice_notes": {
+        "tone": "annoyed",
+        "speed": "normal",
+        "emphasis": [
+          "Yıldız",
+          "çok şey"
+        ]
+      },
+      "duration_estimate": 3.5
+    },
+    {
+      "turn_id": "turn_006",
+      "speaker": "agent",
+      "agent_persona": "RouterAgent",
+      "text": "Doğrulama tamamlandı. eSIM aktivasyon sorununuz teknik bir konu olduğu için sizi teknik destek ekibimize aktarıyorum. Lütfen hattan ayrılmayın.",
+      "emotion": "professional",
+      "voice_notes": {
+        "tone": "professional",
+        "speed": "normal",
+        "emphasis": [
+          "teknik destek",
+          "aktarıyorum"
+        ]
+      },
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "duration_estimate": 8.0
+    },
+    {
+      "turn_id": "turn_007",
+      "speaker": "agent",
+      "agent_persona": "TechAgent",
+      "text": "Merhaba, ben teknik destekten Can. eSIM aktivasyon sorununuzla ilgili size yardımcı olacağım. Cihazınızın IMEI numarasını alabilir miyim?",
+      "emotion": "professional",
+      "voice_notes": {
+        "tone": "professional",
+        "speed": "normal",
+        "emphasis": [
+          "teknik destekten",
+          "IMEI numarasını"
+        ]
+      },
+      "tools_triggered": [],
+      "duration_estimate": 6.5
+    },
+    {
+      "turn_id": "turn_008",
+      "speaker": "customer",
+      "text": "IMEI mi? Yine mi bir şey lazım? Bekleyin... 359111222333444.",
+      "emotion": "annoyed",
+      "voice_notes": {
+        "tone": "annoyed",
+        "speed": "slow",
+        "emphasis": [
+          "IMEI mi",
+          "Yine mi"
+        ]
+      },
+      "duration_estimate": 5.0
+    },
+    {
+      "turn_id": "turn_009",
+      "speaker": "agent",
+      "agent_persona": "TechAgent",
+      "text": "Teşekkür ederim. Sistemden kontrol ediyorum... Cihazınız uyumlu görünüyor. Daha önceki aktivasyon denemelerinizde bir hata oluşmuş. Şimdi size yeni bir eSIM profilini yeniden gönderiyorum. Cihazınıza otomatik olarak düşmesi gerekiyor.",
+      "emotion": "professional",
+      "voice_notes": {
+        "tone": "professional",
+        "speed": "normal",
+        "emphasis": [
+          "uyumlu görünüyor",
+          "hata oluşmuş",
+          "yeni bir eSIM profilini yeniden gönderiyorum"
+        ]
+      },
+      "tools_triggered": [
+        "check_device_registration",
+        "reissue_activation_code"
+      ],
+      "duration_estimate": 12.0
+    },
+    {
+      "turn_id": "turn_010",
+      "speaker": "customer",
+      "text": "Gerçekten mi? Çok sevinirim. Umarım bu sefer olur, çok uğraştım.",
+      "emotion": "relieved",
+      "voice_notes": {
+        "tone": "relieved",
+        "speed": "normal",
+        "emphasis": [
+          "Gerçekten mi",
+          "Çok sevinirim",
+          "bu sefer olur",
+          "çok uğraştım"
+        ]
+      },
+      "duration_estimate": 6.0
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 6,
+      "from": "RouterAgent",
+      "to": "TechAgent",
+      "reason": "technical_expertise_needed",
+      "handoff_text": "Teknik desteğe yönlendiriyorum"
+    }
+  ],
+  "tool_calls": [
+    {
+      "turn_id": "turn_006",
+      "tool": "verify_user",
+      "arguments": {
+        "msisdn": "05551234567",
+        "maiden_name": "Yıldız"
+      },
+      "result_affects_next_turn": true
+    },
+    {
+      "turn_id": "turn_009",
+      "tool": "check_device_registration",
+      "arguments": {
+        "imei": "359111222333444"
+      },
+      "result_affects_next_turn": true
+    },
+    {
+      "turn_id": "turn_009",
+      "tool": "reissue_activation_code",
+      "arguments": {
+        "customer_id": "12345"
+      },
+      "result_affects_next_turn": true
+    }
+  ],
+  "elevenlabs_config": {
+    "customer_voice": {
+      "voice_id": "to_be_assigned",
+      "emotion_settings": {
+        "frustrated": {
+          "stability": 0.35,
+          "similarity_boost": 0.75,
+          "style": 0.7
+        },
+        "impatient": {
+          "stability": 0.4,
+          "similarity_boost": 0.7,
+          "style": 0.6
+        },
+        "annoyed": {
+          "stability": 0.45,
+          "similarity_boost": 0.7,
+          "style": 0.65
+        },
+        "relieved": {
+          "stability": 0.6,
+          "similarity_boost": 0.8,
+          "style": 0.4
+        }
+      }
+    },
+    "agent_voice": {
+      "voice_id": "to_be_assigned",
+      "emotion_settings": {
+        "professional": {
+          "stability": 0.75,
+          "similarity_boost": 0.85,
+          "style": 0.2
+        }
+      }
+    }
+  },
+  "generation_id": "db18b201-9454-4878-884c-2425d851a6ea",
+  "generated_at": "2025-08-14T06:51:19.572012",
+  "index": 0
+}

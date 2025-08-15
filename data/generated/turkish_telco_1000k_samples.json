@@ -1,0 +1,742 @@
+[
+  {
+    "sample_id": 1,
+    "scenario_type": "context_switch_esim_to_device",
+    "context": "SIM",
+    "has_noise": true,
+    "quality_tier": "expert",
+    "conversation_length": 12,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "eSIM aktivasyon yapmak istiyorum"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"handoff\":{\"persona\":\"TechAgent\",\"say\":\"Teknik uzmanımıza yönlendiriyorum.\"}}"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"063e403e-ee55-4b12-8b58-89371e3df4ab\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"Aydın\",\"msisdn\":\"905532289455\"}}}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": 2,
+    "scenario_type": "multi_step_package_change_with_error",
+    "context": "PLAN",
+    "has_noise": false,
+    "quality_tier": "advanced",
+    "conversation_length": 13,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Paketimi değiştirmek istiyorum, daha uygun seçenekler var mı?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"handoff\":{\"persona\":\"PlanAgent\",\"say\":\"Sizi tarife uzmanımıza bağlıyorum.\"}}"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"accc1bc6-44e7-4518-a011-51a7ac4833fb\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"Yıldız\",\"msisdn\":\"905556291722\"}}}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": 3,
+    "scenario_type": "context_switch_package_to_billing_with_error",
+    "context": "MIXED",
+    "has_noise": false,
+    "quality_tier": "expert",
+    "conversation_length": 11,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Paket seçeneklerimi görmek istiyorum"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"957b3ea9-c8a5-4e08-b2f3-8627c1bb3f0b\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"Aktaş\",\"msisdn\":\"905529641751\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\": false, \"error\": \"Cihaz eSIM desteklemiyor\"}</tool_result>"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": 4,
+    "scenario_type": "interrupted_context_switch_esim_to_device",
+    "context": "SIM",
+    "has_noise": false,
+    "quality_tier": "expert",
+    "conversation_length": 14,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "eSIM aktivasyon yapmak istiyorum"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"handoff\":{\"persona\":\"TechAgent\",\"say\":\"Teknik uzmanımıza yönlendiriyorum.\"}}"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"d58c2891-dd7d-475f-a1d0-46118b1db169\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"Kaya\",\"msisdn\":\"905560175911\"}}}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": 5,
+    "scenario_type": "ambiguous_multi_step_package_change",
+    "context": "PLAN",
+    "has_noise": false,
+    "quality_tier": "advanced",
+    "conversation_length": 15,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Fatura yüksek geldi"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Bu ay kullanım alışkanlığınızda değişiklik oldu mu?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Kapsama sorunlu sanırım, kontrol eder misiniz?"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": 6,
+    "scenario_type": "multi_step_billing_dispute",
+    "context": "BILLING",
+    "has_noise": true,
+    "quality_tier": "advanced",
+    "conversation_length": 9,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Fatura itirazım var, nasıl çözebiliriz?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"handoff\":{\"persona\":\"BillingAgent\",\"say\":\"Sizi faturalama uzmanımıza bağlıyorum.\"}}"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"63541001-a379-43cf-a782-0c4c76399aae\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"Polat\",\"msisdn\":\"905531438578\"}}}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": 7,
+    "scenario_type": "context_switch_package_to_billing",
+    "context": "MIXED",
+    "has_noise": false,
+    "quality_tier": "expert",
+    "conversation_length": 11,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Paket seçeneklerimi görmek istiyorum"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"2fdf4c3d-4ca8-4eb0-8709-0326c2e2482e\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"Yılmaz\",\"msisdn\":\"905545585239\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\": false, \"error\": \"Cihaz eSIM desteklemiyor\"}</tool_result>"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": 8,
+    "scenario_type": "multi_step_package_change_with_error",
+    "context": "PLAN",
+    "has_noise": false,
+    "quality_tier": "advanced",
+    "conversation_length": 13,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Paketimi değiştirmek istiyorum, daha uygun seçenekler var mı?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"handoff\":{\"persona\":\"PlanAgent\",\"say\":\"Sizi tarife uzmanımıza bağlıyorum.\"}}"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"ab4a0cd2-5652-4639-a327-339eabc51930\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"Kılıç\",\"msisdn\":\"905582436889\"}}}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": 9,
+    "scenario_type": "context_switch_package_to_billing",
+    "context": "MIXED",
+    "has_noise": true,
+    "quality_tier": "expert",
+    "conversation_length": 11,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Paket seçeneklerimi görmek istiyorum"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"f72f9bf7-e020-4ceb-9dbd-1f6af2e15b34\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"Yılmaz\",\"msisdn\":\"905548662683\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\": false, \"error\": \"Kullanıcı bulunamadı\"}</tool_result>"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": 10,
+    "scenario_type": "interrupted_multi_step_billing_dispute",
+    "context": "BILLING",
+    "has_noise": false,
+    "quality_tier": "advanced",
+    "conversation_length": 11,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Faturamda hata var gibi, kontrol eder misiniz?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"handoff\":{\"persona\":\"BillingAgent\",\"say\":\"Sizi faturalama uzmanımıza bağlıyorum.\"}}"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"1ae07f91-8781-4e79-8b10-b9bd4fa660a0\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"Özdemir\",\"msisdn\":\"905596614566\"}}}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": 11,
+    "scenario_type": "multi_step_package_change_with_error",
+    "context": "PLAN",
+    "has_noise": true,
+    "quality_tier": "advanced",
+    "conversation_length": 13,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Mevcut tarifem pahalı geliyor, ne önerirsiniz?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"handoff\":{\"persona\":\"PlanAgent\",\"say\":\"Sizi tarife uzmanımıza bağlıyorum.\"}}"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"439711c7-1925-4fda-8f92-26f13c5d437c\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"Tuncer\",\"msisdn\":\"905541465260\"}}}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": 12,
+    "scenario_type": "multi_step_package_change",
+    "context": "PLAN",
+    "has_noise": false,
+    "quality_tier": "advanced",
+    "conversation_length": 13,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Paketimi değiştirmek istiyorum, daha uygun seçenekler var mı?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"handoff\":{\"persona\":\"PlanAgent\",\"say\":\"Sizi tarife uzmanımıza bağlıyorum.\"}}"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"ab4a0cd2-5652-4639-a327-339eabc51930\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"Kılıç\",\"msisdn\":\"905582436889\"}}}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": 13,
+    "scenario_type": "multi_step_package_change",
+    "context": "PLAN",
+    "has_noise": true,
+    "quality_tier": "advanced",
+    "conversation_length": 13,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Daha fazla internet ihtiyacım var, yükseltebilir miyiz?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"handoff\":{\"persona\":\"PlanAgent\",\"say\":\"Sizi tarife uzmanımıza bağlıyorum.\"}}"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"8d908e5d-4281-4969-bf80-70fe520d4646\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"Kaya\",\"msisdn\":\"905571048032\"}}}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": 14,
+    "scenario_type": "multi_step_esim_setup",
+    "context": "SIM",
+    "has_noise": false,
+    "quality_tier": "advanced",
+    "conversation_length": 15,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "eSIM almak istiyorum, nasıl başlarız?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"handoff\":{\"persona\":\"TechAgent\",\"say\":\"Sizi teknik uzmanımıza yönlendiriyorum.\"}}"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"75120be3-463c-44c5-99a2-03433a51fa34\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"Aktaş\",\"msisdn\":\"905583516080\"}}}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": 15,
+    "scenario_type": "context_switch_esim_to_device",
+    "context": "SIM",
+    "has_noise": false,
+    "quality_tier": "expert",
+    "conversation_length": 12,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "eSIM aktivasyon yapmak istiyorum"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"handoff\":{\"persona\":\"TechAgent\",\"say\":\"Teknik uzmanımıza yönlendiriyorum.\"}}"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"3974dfbf-f580-4d12-b97e-54ec717dc6f2\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"Aktaş\",\"msisdn\":\"905596336794\"}}}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": 16,
+    "scenario_type": "multi_step_billing_dispute",
+    "context": "BILLING",
+    "has_noise": false,
+    "quality_tier": "advanced",
+    "conversation_length": 9,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Fatura itirazım var, nasıl çözebiliriz?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"handoff\":{\"persona\":\"BillingAgent\",\"say\":\"Sizi faturalama uzmanımıza bağlıyorum.\"}}"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"59b9a3d5-c99d-421c-84fe-5bcf0a55d800\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"Kılıç\",\"msisdn\":\"905587883191\"}}}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": 17,
+    "scenario_type": "context_switch_package_to_billing",
+    "context": "MIXED",
+    "has_noise": false,
+    "quality_tier": "expert",
+    "conversation_length": 11,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Paket seçeneklerimi görmek istiyorum"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"d80c4e0a-f80c-4c34-8ae2-e6b8d7c1ff76\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"Özkan\",\"msisdn\":\"905510564764\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\": false, \"error\": \"Seçilen paket mevcut değil\"}</tool_result>"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": 18,
+    "scenario_type": "multi_step_esim_setup",
+    "context": "SIM",
+    "has_noise": false,
+    "quality_tier": "advanced",
+    "conversation_length": 15,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Yeni eSIM kurulumu için yardım lazım"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"handoff\":{\"persona\":\"TechAgent\",\"say\":\"Sizi teknik uzmanımıza yönlendiriyorum.\"}}"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"c3e7a324-cb98-4905-b066-db9ef063c7d1\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"Çelik\",\"msisdn\":\"905586815353\"}}}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": 19,
+    "scenario_type": "urgent_priority_switch",
+    "context": "MIXED",
+    "has_noise": true,
+    "quality_tier": "expert",
+    "conversation_length": 12,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Fatura detaylarımı görebilirmiyim?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"6467570b-0113-4bf9-972d-797b33692773\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"Aktaş\",\"msisdn\":\"905517608280\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\": true, \"data\": {\"customer_id\": \"95888\", \"name\": \"Hüseyin Şahin\", \"verified\": true}}</tool_result>"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": 20,
+    "scenario_type": "ambiguous_multi_step_esim_setup",
+    "context": "SIM",
+    "has_noise": true,
+    "quality_tier": "advanced",
+    "conversation_length": 17,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Internetim yavaş"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Hangi bölgedesiniz? Kapsama kontrol edeyim, size yardımcı olmaya devam ediyorum."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Kapsama sorunlu sanırım, kontrol eder misiniz?"
+          }
+        ]
+      }
+    ]
+  }
+]

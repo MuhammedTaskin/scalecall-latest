@@ -1,0 +1,119 @@
+{
+  "conversation_id": "short_0086_plan_upgrade",
+  "metadata": {
+    "scenario": "plan_upgrade",
+    "handoff_pattern": [
+      "RouterAgent",
+      "PlanAgent"
+    ]
+  },
+  "customer_profile": {
+    "persona": "polite",
+    "phone": "0555 123 45 67"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Merhaba, ben mevcut internet paketimi yükseltmek istiyorum. Yardımcı olabilir misiniz?",
+      "emotion": "polite"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Evet, numaram 0555 123 45 67.",
+      "emotion": "polite"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Anladım, teşekkürler. Yeni planımı öğrenmek istiyorum.",
+      "emotion": "polite"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba, size nasıl yardımcı olabilirim? Öncelikle kimliğinizi doğrulamak için telefon numaranızı alabilir miyim?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkürler, bilgileriniz doğrulandı. Mevcut paketinizle ilgili bir güncelleme yapabilmemiz için sizi Plan Departmanımıza yönlendirmem gerekiyor. Lütfen bekleyin.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "handoff": {
+        "to": "PlanAgent"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "PlanAgent",
+      "text": "Merhaba, ben Plan Departmanından Ayşe. Mevcut paketiniz hakkında bilgi almak ve yükseltme seçeneklerini görüşmek için buradayım. Hangi pakete geçmek istediğinizle ilgili bir fikriniz var mıydı?",
+      "tools_triggered": [
+        "get_customer_plan",
+        "list_all_plans"
+      ],
+      "handoff": null
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "PlanAgent",
+      "reason": "plan_upgrade"
+    }
+  ],
+  "tool_calls": [
+    {
+      "turn_id": "turn_002",
+      "tool": "verify_user",
+      "arguments": {
+        "phone_number": "0555 123 45 67"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_004",
+      "tool": "route_to_agent",
+      "arguments": {
+        "agent_name": "PlanAgent",
+        "reason": "plan_upgrade"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "get_customer_plan",
+      "arguments": {},
+      "result": {
+        "plan_name": "Basicinternet",
+        "speed": "50 Mbps"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "list_all_plans",
+      "arguments": {},
+      "result": [
+        {
+          "plan_name": "Standardinternet",
+          "speed": "100 Mbps",
+          "price": "150 TL"
+        },
+        {
+          "plan_name": "Premiuminternet",
+          "speed": "200 Mbps",
+          "price": "220 TL"
+        }
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T08:01:54.067696",
+  "index": 86
+}

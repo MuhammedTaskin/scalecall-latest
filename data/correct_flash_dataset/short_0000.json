@@ -1,0 +1,111 @@
+{
+  "conversation_id": "short_0000_bill_question",
+  "metadata": {
+    "scenario": "bill_question",
+    "handoff_pattern": [
+      "RouterAgent",
+      "BillingAgent"
+    ]
+  },
+  "customer_profile": {
+    "persona": "angry",
+    "phone": "0555 123 45 67"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Yine mi fatura geldi ya! Bu ne böyle, geçen ay ödediğim halde yine aynı miktar! Hesabımda bir yanlışlık var kesin!",
+      "emotion": "angry"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Evet, evet, 555 123 45 67. Bu fatura meselesini halledin artık!",
+      "emotion": "angry"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Tamam, bekliyorum. Ama bu sefer yanlış olmasın!",
+      "emotion": "angry"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba, Türk Telekom Müşteri Hizmetleri'ne hoş geldiniz. Kimliğinizi doğrulamak için lütfen telefon numaranızı paylaşır mısınız?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkürler, kimliğiniz doğrulandı. Fatura sorununuzu ilgili birimimiz daha detaylı inceleyecektir. Sizi şimdi fatura birimine yönlendiriyorum.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "handoff": {
+        "to": "BillingAgent"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "BillingAgent",
+      "text": "Merhaba, fatura departmanından arıyorum. Fatura detaylarınızı kontrol ettim ve son ödemenizde bir kampanya indirimi uygulanmış görünüyor. Bu nedenle bu ayki faturanızda bir önceki aya göre bir değişiklik yok. Ancak, isterseniz mevcut kampanyalarınızı da kontrol edebiliriz. Sizin için uygun bir kampanya var mı diye bakabilirim. Bu konuda size yardımcı olabilir miyim?",
+      "tools_triggered": [
+        "get_last_bill",
+        "apply_campaign_discount"
+      ],
+      "handoff": null
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "BillingAgent",
+      "reason": "bill_question"
+    }
+  ],
+  "tool_calls": [
+    {
+      "turn_id": "turn_002",
+      "tool": "verify_user",
+      "arguments": {
+        "phone_number": "0555 123 45 67"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_004",
+      "tool": "route_to_agent",
+      "arguments": {
+        "agent_name": "BillingAgent"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "get_last_bill",
+      "arguments": {},
+      "result": {
+        "bill_amount": 150,
+        "due_date": "2023-10-26"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "apply_campaign_discount",
+      "arguments": {},
+      "result": {
+        "discount_applied": true,
+        "discount_amount": 20,
+        "new_bill_amount": 130
+      }
+    }
+  ],
+  "generated_at": "2025-08-14T08:00:58.348850",
+  "index": 0
+}

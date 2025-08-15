@@ -1,0 +1,150 @@
+{
+  "id": "flash_heavy_0177",
+  "primary_issue": "technical_services_sms",
+  "secondary_issue": null,
+  "customer_profile": "small_business_owner",
+  "region": "istanbul",
+  "dialect_info": {
+    "dialect": "neutral",
+    "pace": "fast",
+    "formality": "medium"
+  },
+  "conversation_dynamic": "negotiation",
+  "complexity": "medium",
+  "metadata": {
+    "context": "managing employee lines",
+    "traits": [
+      "practical",
+      "cost_focused",
+      "busy"
+    ],
+    "emotional_journey": [
+      "businesslike",
+      "questioning",
+      "negotiating",
+      "satisfied"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo, merhaba. Bizim şirket hattında SMS gelmiyor, acil bakabilir misiniz? Önemli onaylar bekliyoruz.",
+      "emotion": "businesslike",
+      "dialect_markers": [
+        "neutral"
+      ],
+      "pace": "fast",
+      "background_context": "managing employee lines"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Tabii, ismim Can Yılmaz. T.C. kimlik numaram 12345678910. Bu SMS meselesi çok kritik, banka onayları, kargo bildirimleri falan gelmiyor, işimiz aksıyor resmen.",
+      "emotion": "businesslike",
+      "dialect_markers": [
+        "neutral"
+      ],
+      "pace": "fast",
+      "background_context": "managing employee lines"
+    },
+    {
+      "turn_id": "turn_006",
+      "text": "Bakın, bir tane değil, benim üç çalışanımın hattında da benzer sorunlar oluyor. Bir ay önce de birinin başına geldi, şimdi gene. Bu geçici bir şey mi, yoksa sisteminizde mi bir sıkıntı var? Her seferinde arayıp vakit mi kaybedeceğiz?",
+      "emotion": "questioning",
+      "dialect_markers": [
+        "neutral"
+      ],
+      "pace": "fast",
+      "background_context": "managing employee lines"
+    },
+    {
+      "turn_id": "turn_008",
+      "text": "24-48 saat çok uzun! Bizim işimiz duruyor o sırada. Bir de, tek tek uğraşmak yerine, bu tip sorunlar için benim şirket hatlarımı öncelikli hale getiremez misiniz? Ya da toplu bir çözüm yok mu? Bu sürekli olursa iş yapamayız.",
+      "emotion": "negotiating",
+      "dialect_markers": [
+        "neutral"
+      ],
+      "pace": "fast",
+      "background_context": "managing employee lines"
+    },
+    {
+      "turn_id": "turn_010",
+      "text": "Tamam, o zaman o resetlemeyi hemen yapın. Bir de şu şirket hatları için araştırma meselesini bekliyorum, o önemli. Ne zaman dönersiniz?",
+      "emotion": "satisfied",
+      "dialect_markers": [
+        "neutral"
+      ],
+      "pace": "fast",
+      "background_context": "managing employee lines"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba efendim, hattınızla ilgili yardımcı olmak için kimlik doğrulama yapabilir miyiz? Adınız soyadınız ve T.C. kimlik numaranız alabilir miyim?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Bilgileriniz doğrulandı efendim. Anladığım kadarıyla SMS gönderip alma sorunları yaşıyorsunuz. Bu konuda size Teknik Destek birimimiz daha detaylı yardımcı olacaktır. Hemen bağlıyorum, bekletmeyelim.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_005",
+      "agent_persona": "TechAgent",
+      "text": "Merhaba Can Bey, Teknik Destek birimine hoş geldiniz. Az önce arkadaşımızın aktardığı kadarıyla SMS sorunları yaşıyorsunuz. Tam olarak hangi hatlarda ve ne tür bir problem var?",
+      "tools_triggered": [],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_007",
+      "agent_persona": "TechAgent",
+      "text": "Anlıyorum efendim, tekrar eden bir durum olması elbette can sıkıcı. Hatlarınızın detaylı kontrolü ve kök nedenin bulunması için bir teknik kayıt oluşturalım. Bu genellikle 24-48 saat içinde çözüme kavuşuyor.",
+      "tools_triggered": [
+        "create_tech_ticket"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_009",
+      "agent_persona": "TechAgent",
+      "text": "Aciliyetinizi anlıyorum Can Bey. Şu an için öncelikli olarak mevcut sorunlu hatlar için sistemsel bir resetleme yapabiliriz, bu genellikle anında çözülür. Tekrar eden sorunlarınız için oluşturacağımız teknik kayda 'acil' notu düşüp ilgili birimi bilgilendireceğim. Ayrıca, şirket hatlarınız için özel bir destek paketi veya proaktif izleme seçeneği olup olmadığını da araştırıp size bilgi verebiliriz.",
+      "tools_triggered": [
+        "create_tech_ticket"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_011",
+      "agent_persona": "TechAgent",
+      "text": "Hemen resetlemeyi başlatıyorum efendim, birkaç dakika içinde SMS akışınızın normale dönmesi bekleniyor. Şirket hatlarınızla ilgili araştırma sonucunu da en geç 2 iş günü içinde size bildirmek üzere bir not düşüyorum. Başka bir konuda yardımcı olabilir miyim?",
+      "tools_triggered": [],
+      "formality_level": "medium"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "TechAgent",
+      "reason": "Technical issue requiring specialized support (SMS not working).",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "Customer's immediate SMS issue for employee lines was resolved via a system reset. A technical ticket was created for recurring issues, and a follow-up was promised regarding proactive support/special packages for company lines.",
+    "customer_satisfaction": "Satisfied, as immediate problem was addressed and a plan for recurring issues/proactive support was put in place.",
+    "follow_up_needed": true
+  },
+  "generated_at": "2025-08-14T09:27:24.116994",
+  "model": "flash",
+  "index": 177
+}

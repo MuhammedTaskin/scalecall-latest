@@ -1,0 +1,44 @@
+{
+  "id": "smart_0050",
+  "scenario": "faq_search",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Merhaba, internet hızım hakkında genel bir sorum olacaktı.",
+      "emotion": "normal"
+    },
+    {
+      "turn": 3,
+      "text": "Evet, adım Ayşe Yılmaz. Müşteri numaram 123456789."
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Merhaba Ayşe Hanım, öncelikle kimliğinizi doğrulamamız gerekiyor. Lütfen adınızı ve müşteri numaranızı paylaşır mısınız?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "FAQAgent",
+      "text": "Teşekkürler Ayşe Hanım. Sıkça sorulan sorular bölümünde internet hızınızla ilgili genel bilgileri bulabilirsiniz. Bu konuda size yardımcı olabildim mi?",
+      "tools": [
+        "search_faq",
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:57:10.895981",
+  "required_tools": [
+    "verify_user",
+    "search_faq",
+    "end_conversation"
+  ],
+  "agent_flow": [
+    "RouterAgent",
+    "FAQAgent"
+  ]
+}

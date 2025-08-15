@@ -1,0 +1,120 @@
+{
+  "conversation_id": "short_0063_payment_issue",
+  "metadata": {
+    "scenario": "payment_issue",
+    "handoff_pattern": [
+      "RouterAgent",
+      "BillingAgent"
+    ]
+  },
+  "customer_profile": {
+    "persona": "angry",
+    "phone": "0555 123 45 67"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Yeter artık! Faturam neden bu kadar yüksek? Sürekli aynı sorunlardan bıktım!",
+      "emotion": "angry"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Evet, benim. Ama bu şekilde devam edemez. Ödeme yapamıyorum çünkü bana gelen faturalar çok fazla!",
+      "emotion": "angry"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Tamam, bir kampanya indirimi var mıydı? Ya da bu ayki ödememi taksitlendirebilir miyiz?",
+      "emotion": "frustrated"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba, Telekom çağrı merkezine hoş geldiniz. Kimliğinizi doğrulamak için lütfen T.C. kimlik numaranızı veya telefon numaranızı paylaşır mısınız?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkürler. Durumunuzu kontrol ettim. Ödeme ile ilgili bir sorun yaşadığınızı görüyorum. Bu konuyu daha detaylı inceleyebilmesi için sizi ilgili birimimize yönlendireceğim. Lütfen bekleyiniz.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "handoff": {
+        "to": "BillingAgent"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "BillingAgent",
+      "text": "Merhaba, ben faturalama departmanından Ayşe. Ödeme sorununuzu anlıyorum. Son faturanızı ve ödenmemiş tutarınızı kontrol edeyim. Bir saniye lütfen. Evet, bu ayki faturanızda bir kampanya indirimi uygulanmamış görünüyor. Size özel bir indirim tanımlayabilir miyim?",
+      "tools_triggered": [
+        "get_last_bill",
+        "get_unpaid_amount",
+        "apply_campaign_discount"
+      ],
+      "handoff": null
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "BillingAgent",
+      "reason": "payment_issue"
+    }
+  ],
+  "tool_calls": [
+    {
+      "turn_id": "turn_002",
+      "tool": "verify_user",
+      "arguments": {
+        "phone_number": "0555 123 45 67"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_004",
+      "tool": "route_to_agent",
+      "arguments": {
+        "agent_type": "BillingAgent",
+        "reason": "payment_issue"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "get_last_bill",
+      "arguments": {},
+      "result": {
+        "bill_amount": 250,
+        "due_date": "2023-10-26"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "get_unpaid_amount",
+      "arguments": {},
+      "result": 250
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "apply_campaign_discount",
+      "arguments": {
+        "discount_percentage": 15
+      },
+      "result": {
+        "success": true,
+        "new_bill_amount": 212.5
+      }
+    }
+  ],
+  "generated_at": "2025-08-14T08:01:39.233327",
+  "index": 63
+}

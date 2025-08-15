@@ -1,0 +1,44 @@
+{
+  "id": "smart_0086",
+  "scenario": "plan_info",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Ya yeter artık! Ne kadar fatura ödüyorum, hangi tarifedeyim anlamıyorum!",
+      "emotion": "frustrated"
+    },
+    {
+      "turn": 3,
+      "text": "Evet, kimliğimi teyit edeyim. Adım Ayşe Yılmaz, TC kimlik numaram 12345678901."
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Merhaba Ayşe Hanım. Size yardımcı olabilmem için kimliğinizi doğrulamanız gerekiyor. Lütfen TC kimlik numaranızı ve adınızı soyadınızı paylaşır mısınız?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "PlanAgent",
+      "text": "Ayşe Hanım, mevcut tarifeniz 'Her Yöne 500 Dakika' paketi. Aylık 30 TL olarak faturalandırılıyorsunuz. Başka bir sorunuz var mı?",
+      "tools": [
+        "get_customer_plan",
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:57:22.252173",
+  "required_tools": [
+    "verify_user",
+    "get_customer_plan",
+    "end_conversation"
+  ],
+  "agent_flow": [
+    "RouterAgent",
+    "PlanAgent"
+  ]
+}

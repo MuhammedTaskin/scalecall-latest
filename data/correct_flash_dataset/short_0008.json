@@ -1,0 +1,98 @@
+{
+  "conversation_id": "short_0008_tech_problem",
+  "metadata": {
+    "scenario": "tech_problem",
+    "handoff_pattern": [
+      "RouterAgent",
+      "TechAgent"
+    ]
+  },
+  "customer_profile": {
+    "persona": "normal",
+    "phone": "0555 123 45 67"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Merhaba, internetim çalışmıyor. Sürekli kopuyor.",
+      "emotion": "frustrated"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Evet, modemim yanıp sönüyor kırmızı ışıkla.",
+      "emotion": "worried"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Anladım, teşekkürler. Umarım kısa sürede çözülür.",
+      "emotion": "hopeful"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba, size nasıl yardımcı olabilirim? Öncelikle kimlik bilgilerinizi doğrulamam gerekiyor. Lütfen T.C. Kimlik numaranızın son 4 hanesini söyler misiniz?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Bilgileriniz doğrulandı. İnternetinizde bir kesinti olduğunu görüyorum. Bu durumun daha detaylı incelenmesi için sizi teknik ekibimize aktarıyorum. Lütfen bekleyiniz.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "handoff": {
+        "to": "TechAgent"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "TechAgent",
+      "text": "Merhaba, teknik destek ekibinden arıyorum. Modeminizde bir arıza görünüyor. Cihazınızın IMEI numarasını kontrol edebilir miyim?",
+      "tools_triggered": [
+        "check_device_imei"
+      ],
+      "handoff": null
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "TechAgent",
+      "reason": "tech_problem"
+    }
+  ],
+  "tool_calls": [
+    {
+      "turn_id": "turn_002",
+      "tool": "verify_user",
+      "arguments": {
+        "id_last_4_digits": "4567"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_004",
+      "tool": "route_to_agent",
+      "arguments": {
+        "agent_type": "TechAgent",
+        "reason": "tech_problem"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "check_device_imei",
+      "arguments": {},
+      "result": "123456789012345"
+    }
+  ],
+  "generated_at": "2025-08-14T08:01:01.573963",
+  "index": 8
+}

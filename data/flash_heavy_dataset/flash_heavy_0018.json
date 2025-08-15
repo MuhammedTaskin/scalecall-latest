@@ -1,0 +1,124 @@
+{
+  "id": "flash_heavy_0018",
+  "primary_issue": "account_management_billing_address",
+  "secondary_issue": null,
+  "customer_profile": "frequent_traveler",
+  "region": "diyarbakir",
+  "dialect_info": {
+    "dialect": "southeastern",
+    "pace": "moderate",
+    "formality": "medium"
+  },
+  "conversation_dynamic": "educational",
+  "complexity": "medium",
+  "metadata": {
+    "context": "international roaming issues",
+    "traits": [
+      "experienced",
+      "specific_needs",
+      "impatient"
+    ],
+    "emotional_journey": [
+      "direct",
+      "frustrated",
+      "demanding",
+      "accepting"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo, iyi günler. Bir sıkıntım var, uluslararası dolaşımım çalışmıyor. Diyarbakır'dan arıyorum ben, Yılmaz Koç.",
+      "emotion": "direct",
+      "dialect_markers": [
+        "southeastern"
+      ],
+      "pace": "moderate",
+      "background_context": "international roaming issues"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Hemen verem. Doğum tarihim 15.03.1978. Anne kızlık soyadı, 'AY' ilk iki harfi. Vallahi gardaş, sürekli seyahat eden biriyim, bu roaming işi benim için çok önemli. Hem de bir süredir adresime fatura da gelmiyor, o da kafama takılıydı. Acaba onunla mı alakalı?",
+      "emotion": "direct",
+      "dialect_markers": [
+        "southeastern"
+      ],
+      "pace": "moderate",
+      "background_context": "international roaming issues, unresolved billing"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Ne demek oluyor şimdi bu? Benim roaming çalışmıyor, siz bana adres diyorunuz. Ben zaten dedim, fatura gelmiyor diye. Şimdi baştan mı anlatacağım her şeyi? Hele tez olun, benim işlerim var, bu hat benim için nefes almak gibi. Bir an önce çözülsün bu iş!",
+      "emotion": "frustrated",
+      "dialect_markers": [
+        "southeastern"
+      ],
+      "pace": "moderate",
+      "background_context": "transferred call, impatience with perceived lack of progress"
+    },
+    {
+      "turn_id": "turn_007",
+      "text": "Yani benim bunca zaman çektiğim çile bir adres yüzünden miydi? Vallahi aklım almıyor. Peki, ne yapacaz şimdi? Hemen güncelleyemez miyiz bunu? Benim acil yurt dışı çıkışım var, yetişmesi lazım bu işin.",
+      "emotion": "demanding",
+      "dialect_markers": [
+        "southeastern"
+      ],
+      "pace": "moderate",
+      "background_context": "understanding the root cause, but still demanding immediate resolution"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba Yılmaz Bey, çağrınızı aldık. Uluslararası dolaşımınızla ilgili bir sorun yaşadığınızı anlıyorum. Güvenliğiniz için öncelikle kimliğinizi teyit etmem gerekiyor. Doğum tarihinizi ve anne kızlık soyadınızın ilk iki harfini alabilir miyim lütfen?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkür ederim Yılmaz Bey, kimlik teyidiniz başarılı. Sistemde kontrol ettiğimde, uluslararası dolaşımınızla ilgili teknik bir sorun görünmüyor. Ancak, adres bilgilerinizle ilgili bir kayıt hatası veya güncellenmeme durumu söz konusu olabilir. Bu durum, güvenlik gereği bazı hizmetlerinizin devamlılığını etkileyebilir. Bu konuyu sizin için Fatura ve Hesap Yönetimi departmanımıza aktarmam gerekiyor. Onlar size daha detaylı yardımcı olabilirler.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "BillingAgent",
+      "text": "Merhaba Yılmaz Bey, ben Ayşe, Fatura ve Hesap Yönetimi'nden. Aktarılan bilgilere göre, adres bilgilerinizde bir sorun olduğunu anlıyorum. Sistemimizde kontrol ettiğimde, son faturalarınızın teslim edilemediği ve adresinizle ilgili bir uyarı kaydı olduğunu görüyorum. Bu durum, güvenlik ve yasal zorunluluklar gereği, bazı hizmetlerinizin kısıtlanmasına neden olabiliyor. Uluslararası dolaşımınızın da bu nedenle kapalı olduğunu görüyoruz. Adres bilginizin güncellenmesiyle bu kısıtlama hemen kalkacaktır.",
+      "tools_triggered": [
+        "get_last_bill"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_008",
+      "agent_persona": "BillingAgent",
+      "text": "Haklısınız Yılmaz Bey, bu durumun sizi mağdur ettiğini anlıyorum. Endişelenmeyin, bu sorunu hemen çözebiliriz. Adres bilginizi sistem üzerinden sizinle birlikte güncelleyebiliriz. Güncelleme tamamlandığında, uluslararası dolaşımınız anında aktif hale gelecektir. Sadece birkaç dakikanızı alacak bir işlem.",
+      "tools_triggered": [],
+      "formality_level": "medium"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "BillingAgent",
+      "reason": "Customer's primary issue (international roaming) is a symptom of a deeper account management problem related to billing address, which is outside the RouterAgent's scope. BillingAgent is needed to address the core issue.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "The customer's international roaming issue was identified as a consequence of an unconfirmed or incorrect billing address. The Billing Agent will guide the customer through updating their address, which will then reactivate their international roaming services.",
+    "customer_satisfaction": "accepting",
+    "follow_up_needed": false
+  },
+  "generated_at": "2025-08-14T09:13:57.403124",
+  "model": "flash",
+  "index": 18
+}

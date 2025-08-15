@@ -1,0 +1,113 @@
+{
+  "conversation_id": "short_0045_bill_question",
+  "metadata": {
+    "scenario": "bill_question",
+    "handoff_pattern": [
+      "RouterAgent",
+      "BillingAgent"
+    ]
+  },
+  "customer_profile": {
+    "persona": "normal",
+    "phone": "0555 123 45 67"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Merhaba, geçen ayki faturamla ilgili bir sorum olacaktı.",
+      "emotion": "normal"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Evet, telefon numaram 0555 123 45 67.",
+      "emotion": "normal"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Anladım, teşekkürler. Faturamda bir yanlışlık olduğunu düşünüyorum.",
+      "emotion": "normal"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba, Telekom Çağrı Merkezi'ne hoş geldiniz. Kimliğinizi doğrulamak için lütfen telefon numaranızı veya TC kimlik numaranızı paylaşır mısınız?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkürler. Bilgileriniz doğrulandı. Faturanızla ilgili daha detaylı bilgi ve işlem için sizi ilgili birime aktarıyorum.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "handoff": {
+        "to": "BillingAgent"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "BillingAgent",
+      "text": "Merhaba, ben Fatura Departmanından Ayşe. Faturanızda ne gibi bir sorun yaşadığınızı öğrenebilir miyim? Faturanızın detaylarını kontrol edeyim.",
+      "tools_triggered": [
+        "get_last_bill"
+      ],
+      "handoff": null
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "BillingAgent",
+      "reason": "bill_question"
+    }
+  ],
+  "tool_calls": [
+    {
+      "turn_id": "turn_002",
+      "tool": "verify_user",
+      "arguments": {
+        "phone_number": "0555 123 45 67"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_004",
+      "tool": "route_to_agent",
+      "arguments": {
+        "agent_name": "BillingAgent",
+        "reason": "bill_question"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "get_last_bill",
+      "arguments": {
+        "phone_number": "0555 123 45 67"
+      },
+      "result": {
+        "bill_amount": 150.5,
+        "bill_date": "2023-10-26",
+        "details": [
+          {
+            "description": "Internet Paketi",
+            "amount": 120.0
+          },
+          {
+            "description": "TV Paketi",
+            "amount": 30.5
+          }
+        ]
+      }
+    }
+  ],
+  "generated_at": "2025-08-14T08:01:25.749671",
+  "index": 45
+}

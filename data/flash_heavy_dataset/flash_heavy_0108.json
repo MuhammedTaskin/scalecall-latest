@@ -1,0 +1,148 @@
+{
+  "id": "flash_heavy_0108",
+  "primary_issue": "account_management_billing_address",
+  "secondary_issue": null,
+  "customer_profile": "frequent_traveler",
+  "region": "izmir",
+  "dialect_info": {
+    "dialect": "aegean",
+    "pace": "relaxed",
+    "formality": "low"
+  },
+  "conversation_dynamic": "educational",
+  "complexity": "medium",
+  "metadata": {
+    "context": "international roaming issues",
+    "traits": [
+      "experienced",
+      "specific_needs",
+      "impatient"
+    ],
+    "emotional_journey": [
+      "direct",
+      "frustrated",
+      "demanding",
+      "accepting"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Merhaba yahu, bu ne iş gari? Ben yurtdışındayım, roamingim çalışmıyor. Yurt dışı paketim var, kontrol ettim, ama bağlanamıyorum hiçbir yere. Ne iş bu şimdi? Ben sürekli seyahat eden adamım, böyle aksaklık görmedim.",
+      "emotion": "direct",
+      "dialect_markers": [
+        "aegean",
+        "yahu",
+        "gari",
+        "böyle aksaklık görmedim"
+      ],
+      "pace": "relaxed",
+      "background_context": "international roaming issues"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Tabii ki, adım Cem Yılmaz, TC kimlik numaram da 12345678910. Vallahi yurt dışında hep aynı paketi kullanıyorum, hiç sorun yaşamadım. Şimdi Fas'tayım, ne arama ne internet, tık yok. Çok acil bu durum, sürekli işim gereği seyahat ediyorum, hattım aktif olmak zorunda. Bir çaresi yok mu bunun hemen?",
+      "emotion": "frustrated",
+      "dialect_markers": [
+        "aegean",
+        "vallahi",
+        "tık yok",
+        "çok acil"
+      ],
+      "pace": "relaxed",
+      "background_context": "international roaming issues"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Yahu Allah aşkına, bir de hat mı değiştireceğiz şimdi? Ben bu kadar seyahat eden biriyim, hattım yanımda, niye başkasına aktarıyorsunuz? Direk çözemiyor musunuz? Ne gerekiyorsa yapın da bu iş hallolsun, öyle bekleyecek zamanım yok benim.",
+      "emotion": "demanding",
+      "dialect_markers": [
+        "aegean",
+        "yahu Allah aşkına",
+        "ne gerekiyorsa yapın"
+      ],
+      "pace": "relaxed",
+      "background_context": "international roaming issues"
+    },
+    {
+      "turn_id": "turn_007",
+      "text": "Adres mi? Ne alaka şimdi adresle roaming? Ben o adreste 5 yıldır oturmuyorum ki. Eskiden kalma bir adres olmalı. Ama bu zamana kadar hiç sorun olmadı, roaming paketlerim hep çalıştı. Şimdi niye problem oldu bu birden bire?",
+      "emotion": "demanding",
+      "dialect_markers": [
+        "aegean",
+        "ne alaka",
+        "bu zamana kadar hiç sorun olmadı"
+      ],
+      "pace": "relaxed",
+      "background_context": "international roaming issues"
+    },
+    {
+      "turn_id": "turn_009",
+      "text": "Anladım… Yani benim adres güncel değil diye yurt dışı hizmetlerinde kısıtlama mı oluyor? İyi, tamam. Peki ne yapmamız lazım şimdi? Gelince şubeye mi gideyim, yoksa online bir yolu var mı? Hadi bakalım, uğraş dur şimdi bununla da… Teşekkürler yine de bilgilendirme için.",
+      "emotion": "accepting",
+      "dialect_markers": [
+        "aegean",
+        "yani",
+        "hadi bakalım",
+        "uğraş dur şimdi"
+      ],
+      "pace": "relaxed",
+      "background_context": "international roaming issues"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba efendim, hoş geldiniz. Öncelikle sakin olalım lütfen. Ben Buse, size nasıl yardımcı olabilirim? Hattınızın durumunu kontrol edebilmem için, güvenlik doğrulaması amacıyla TC kimlik numaranızı veya doğum tarihinizi alabilir miyim?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Anladım Cem Bey, yurt dışı seyahatlerinizde böyle bir sorun yaşamanız gerçekten can sıkıcı. Sistemden kontrol ediyorum hemen... Evet, hattınızda bir yurt dışı paketi görünüyor ancak genel hesap bilgilerinizde bir güncelleme ihtiyacı gözüküyor. Bu durum, roaming hizmetlerinizin tam olarak aktifleşmesini engelliyor olabilir. Bu hesap bilgileriyle ilgili bir durum olduğu için sizi fatura ve hesap işlemlerinden sorumlu uzman bir arkadaşımıza aktarmam gerekecek. Lütfen hatta kalın, hemen bağlıyorum.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "BillingAgent",
+      "text": "Merhaba Cem Bey, ben Ayşe. Buse Hanım'dan devraldım görüşmeyi. Yurt dışı roaming sorununuzla ilgili aradığınızı ve hesap bilgilerinizde bir güncelleme ihtiyacı olduğunu anlıyorum. Sistemden bilgilerinizi kontrol edeyim hemen... Evet, Cem Bey, sorun anlaşıldı. Kayıtlarımızdaki fatura adresiniz güncel değil. Yurt dışı hizmetlerimizin bazı gelişmiş özelliklerinin ve paketlerinin tam olarak aktifleşebilmesi için güncel ve doğrulanmış bir adres bilgisi gerekiyor.",
+      "tools_triggered": [
+        "get_customer_status",
+        "get_customer_plan"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_008",
+      "agent_persona": "BillingAgent",
+      "text": "Haklısınız Cem Bey, bu durum daha önce sorun yaratmamış olabilir. Ancak sistemlerimizde yapılan son güncellemelerle birlikte, özellikle yurt dışı dolaşım servislerinde güvenlik ve dolandırıcılık önlemleri artırıldı. Bu sebeple, hattınızın bağlı olduğu adresin güncel ve sizin adınıza kayıtlı olması, bazı özel yurt dışı paketlerinin veya yüksek hızlı roaming hizmetlerinin tam kapasiteyle çalışabilmesi için şart koşuluyor. Mevcut paketiniz eski sistemde çalışırken, yeni ve daha performanslı hizmetler için bu güncelleme zorunlu hale geldi. Maalesef, şu an yurt dışındayken bunu online olarak yapamıyoruz. Ülkeye döndüğünüzde kimliğinizle birlikte en yakın Turkcell mağazasına giderek adresinizi güncellemeniz gerekiyor. Bu işlem tamamlandığında roaming hizmetlerinizdeki kısıtlama kalkacaktır.",
+      "tools_triggered": [],
+      "formality_level": "low"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "BillingAgent",
+      "reason": "Customer's primary issue (roaming not working) is due to an account-level problem related to billing/account information that requires a BillingAgent's expertise.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "The customer's international roaming issue was identified as a consequence of an outdated billing address on file. The agent explained the importance of an updated address for full roaming service activation due to recent system updates. The resolution steps provided were to update the address by visiting a physical Turkcell store upon returning to the country, as it cannot be done remotely while abroad.",
+    "customer_satisfaction": "Customer is accepting of the solution, albeit with some lingering frustration about the inconvenience.",
+    "follow_up_needed": true
+  },
+  "generated_at": "2025-08-14T09:21:27.711386",
+  "model": "flash",
+  "index": 108
+}

@@ -1,0 +1,46 @@
+{
+  "id": "smart_0017",
+  "scenario": "payment_note",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Ödememi geciktirdim diye neden sürekli aranıyorum! Rezillik!",
+      "emotion": "angry"
+    },
+    {
+      "turn": 3,
+      "text": "Evet, kimlik numaram 1234567890."
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Anlıyorum, sorununuzu çözmek için öncelikle kimlik bilgilerinizi doğrulamam gerekiyor. Lütfen TC kimlik numaranızı paylaşır mısınız?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "BillingAgent",
+      "text": "Teşekkürler, TC kimlik numaranız doğrulandı. Geciken ödemeniz için bir not oluşturdum. Bilgilendirme için sizi tekrar arayacağız. İyi günler.",
+      "tools": [
+        "get_unpaid_amount",
+        "create_payment_note",
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:57:01.244024",
+  "required_tools": [
+    "verify_user",
+    "get_unpaid_amount",
+    "create_payment_note",
+    "end_conversation"
+  ],
+  "agent_flow": [
+    "RouterAgent",
+    "BillingAgent"
+  ]
+}

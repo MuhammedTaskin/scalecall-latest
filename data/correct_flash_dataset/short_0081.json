@@ -1,0 +1,111 @@
+{
+  "conversation_id": "short_0081_general_help",
+  "metadata": {
+    "scenario": "general_help",
+    "handoff_pattern": [
+      "RouterAgent",
+      "FAQAgent"
+    ]
+  },
+  "customer_profile": {
+    "persona": "angry",
+    "phone": "0555 123 45 67"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "İnternetim çalışmıyor, sürekli kopuyor! Bu ne rezalet!",
+      "emotion": "angry"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Tamam, numaram 0555 123 45 67. Sorun devam ediyor.",
+      "emotion": "frustrated"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Anlamıyorum, bu kadar basit bir sorunu neden çözemiyorsunuz? Başka bir yere aktarın beni!",
+      "emotion": "angry"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba, Telekom Çağrı Merkezi'ne hoş geldiniz. Kimliğinizi doğrulamak için lütfen telefon numaranızı veya TC kimlik numaranızı paylaşır mısınız?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkürler, kimliğiniz doğrulandı. Durumunuza baktığımda, genel bir hatadan kaynaklanan bir sorun gözüküyor. Bu konuya daha hakim olan teknik destek ekibimize yönlendirileceksiniz.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "handoff": {
+        "to": "FAQAgent"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "FAQAgent",
+      "text": "Merhaba, ben Telekom'dan Ayşe. İnternet bağlantınızla ilgili yaşadığınız sorunu anlıyorum. Sizin için sıkça sorulan sorular bölümünden hızlı bir çözüm önerisi göndereceğim. Lütfen biraz bekleyin.",
+      "tools_triggered": [
+        "search_faq",
+        "send_help_sms"
+      ],
+      "handoff": null
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "FAQAgent",
+      "reason": "general_help"
+    }
+  ],
+  "tool_calls": [
+    {
+      "turn_id": "turn_002",
+      "tool": "verify_user",
+      "arguments": {
+        "phone_number": "0555 123 45 67"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_004",
+      "tool": "route_to_agent",
+      "arguments": {
+        "agent_type": "FAQAgent"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "search_faq",
+      "arguments": {
+        "query": "internet kopması"
+      },
+      "result": {
+        "solution": "Modeminizi kapatıp 30 saniye bekledikten sonra tekrar açmayı deneyin."
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "send_help_sms",
+      "arguments": {
+        "phone_number": "0555 123 45 67",
+        "message": "İnternet kopması sorununuz için: Modeminizi kapatıp 30 saniye bekledikten sonra tekrar açmayı deneyin."
+      },
+      "result": true
+    }
+  ],
+  "generated_at": "2025-08-14T08:01:51.040815",
+  "index": 81
+}

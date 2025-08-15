@@ -1,0 +1,44 @@
+{
+  "id": "smart_0073",
+  "scenario": "esim_quick_check",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Yeter artık! eSIM'im ne zaman aktif olacak? Bir haftadır bekliyorum!",
+      "emotion": "frustrated"
+    },
+    {
+      "turn": 3,
+      "text": "Evet, kimliğimi doğrulamak için telefon numaramı vereyim: 555 123 4567."
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Anlıyorum, yaşadığınız durum için üzgünüz. Lütfen kimliğinizi doğrulamak için telefon numaranızı alabilir miyim?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "TechAgent",
+      "text": "Teşekkürler. eSIM'inizin durumu aktif görünüyor. Sorununuz çözülmüş olmalı. Başka bir konuda yardımcı olabilir miyim?",
+      "tools": [
+        "check_esim_status",
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:57:18.241336",
+  "required_tools": [
+    "verify_user",
+    "check_esim_status",
+    "end_conversation"
+  ],
+  "agent_flow": [
+    "RouterAgent",
+    "TechAgent"
+  ]
+}

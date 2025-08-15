@@ -1,0 +1,44 @@
+{
+  "id": "smart_0021",
+  "scenario": "unpaid_check",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Hesabımda ne kadar borç var anlamıyorum! Hemen öğrenmek istiyorum!",
+      "emotion": "angry"
+    },
+    {
+      "turn": 3,
+      "text": "Evet, numaram 532XXXXXX."
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Anlıyorum efendim, sizi hemen doğru birime bağlıyorum. Lütfen telefon numaranızı teyit eder misiniz?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "BillingAgent",
+      "text": "Teyit edildi. Mevcut borcunuz 150 TL'dir. Ödeme yapmanız gerekmektedir. İyi günler dilerim.",
+      "tools": [
+        "get_unpaid_amount",
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:57:02.671573",
+  "required_tools": [
+    "verify_user",
+    "get_unpaid_amount",
+    "end_conversation"
+  ],
+  "agent_flow": [
+    "RouterAgent",
+    "BillingAgent"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "short_0020",
+  "scenario": "data_usage_query",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Ya bu internetim ne kadar bitti anlamadım! Sürekli kesiliyor!",
+      "emotion": "impatient"
+    },
+    {
+      "turn": 3,
+      "text": "Tamam, anladım. Teşekkürler."
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Merhaba, Türk Telekom'a hoş geldiniz. Hattınızla ilgili bilgi verebilmem için kimlik bilgilerinizi alabilir miyim?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "RouterAgent",
+      "text": "Hesabınıza baktığımda, bu ayki internet kotanızın %85'ini kullandığınızı görüyorum. Bu nedenle hızınız düşmüş olabilir. Bir sonraki fatura döneminizde kotanız yenilenecektir. Başka bir sorunuz var mıydı?",
+      "tools": [
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:49:46.587851"
+}

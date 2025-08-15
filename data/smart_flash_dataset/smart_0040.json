@@ -1,0 +1,41 @@
+{
+  "id": "smart_0040",
+  "scenario": "escalate_angry",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "İnternetim çalışmıyor, ne yapmam gerekiyor? Hiçbir şey anlamıyorum!",
+      "emotion": "confused"
+    },
+    {
+      "turn": 3,
+      "text": "Hayır, hala çalışmıyor. Lütfen birini bağlayın!"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Merhaba, hesabınızı doğrulamak için lütfen kimlik numaranızı girer misiniz?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "RouterAgent",
+      "text": "Anlıyorum. Sizi hemen bir müşteri temsilcisine aktarıyorum.",
+      "tools": [
+        "escalate_to_human"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:57:07.403903",
+  "required_tools": [
+    "verify_user",
+    "escalate_to_human"
+  ],
+  "agent_flow": [
+    "RouterAgent"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "smart_0001",
+  "scenario": "discount_apply",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Merhaba, indirim kodum var ve hemen uygulamak istiyorum!",
+      "emotion": "impatient"
+    },
+    {
+      "turn": 3,
+      "text": "Evet, 123456789."
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Merhaba, indirim kodunuz için yardımcı olacağım. Lütfen kimliğinizi doğrulamak için T.C. kimlik numaranızı paylaşır mısınız?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "BillingAgent",
+      "text": "Teşekkürler, T.C. kimlik numaranız doğrulandı. Son faturanızı getiriyorum. Evet, indirim kodunuzu başarıyla uyguladım. Yeni tutar güncellendi. İyi günler!",
+      "tools": [
+        "get_last_bill",
+        "apply_campaign_discount",
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:56:57.534822",
+  "required_tools": [
+    "verify_user",
+    "get_last_bill",
+    "apply_campaign_discount",
+    "end_conversation"
+  ],
+  "agent_flow": [
+    "RouterAgent",
+    "BillingAgent"
+  ]
+}

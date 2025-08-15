@@ -1,0 +1,155 @@
+{
+  "id": "flash_heavy_0147",
+  "primary_issue": "plans_migrations_prepaid_to_postpaid",
+  "secondary_issue": null,
+  "customer_profile": "gig_worker",
+  "region": "erzurum",
+  "dialect_info": {
+    "dialect": "eastern",
+    "pace": "slow",
+    "formality": "high"
+  },
+  "conversation_dynamic": "escalating",
+  "complexity": "medium",
+  "metadata": {
+    "context": "needs reliable service for work",
+    "traits": [
+      "flexible",
+      "app_dependent",
+      "connectivity_critical"
+    ],
+    "emotional_journey": [
+      "stressed",
+      "urgent",
+      "persistent",
+      "grateful"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo… İyi günler size de. Benim internetim niye böyle acayip yavaş çalışir hele? Yani… sipariş alamirem, uygulama donup durir. Bi bak hele, işlerim aksıyor gardaş. Benim için çok mühim bu bağlantı, ekmek paramız burdan çıkir.",
+      "emotion": "stressed",
+      "dialect_markers": [
+        "eastern"
+      ],
+      "pace": "slow",
+      "background_context": "needs reliable service for work"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Tabii, tabii. TC kimlik numaram… 12345678901. Şimdi hele, ben kurye işi yapirem. Yemek siparişlerini teslim edirem. İnternetim kesilirse, uygulama donarsa… Vallah işim durur, sipariş alamirem. Birez hızlı olsak iyi olur, müşteri bekliyor… Vakit nakittir değil mi?",
+      "emotion": "urgent",
+      "dialect_markers": [
+        "eastern"
+      ],
+      "pace": "normal",
+      "background_context": "needs reliable service for work"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Ha… Bağlantı sıkıntısı var ama ben onu biliyordum zaten ağa. Benim derdim, bu faturasız hatla olmuyor bu işler. Sürekli paket yükle, bitecek mi diye düşün… Ben faturalı hatta geçmek istiyorum. Yani… sürekli, kesintisiz internet lazım bana. Günde en az 10-15 GB kullanirem ben, işlerim yoğun oluyor. Bana öyle sağlam, kopmayacak bi faturalı paket lazım.",
+      "emotion": "persistent",
+      "dialect_markers": [
+        "eastern"
+      ],
+      "pace": "normal",
+      "background_context": "needs reliable service for work"
+    },
+    {
+      "turn_id": "turn_007",
+      "text": "Hele… evet, faturasız hat kullanirem ben. Turkcell'in hazır kartlarından. Ama işte… sürekli kesiliyor, hız düşüyor. İşin ortasında kalakalıyirem. Faturalı hatta geçip, şöyle limitsiz olmasa da bol kotalı, hızlı ve stabil bi internetim olsun istiyorum. Benim bu işim tamamen internete bağlı. Uygulama çökse, konum atamasa, vay halime. Bana ne önerirsiniz, en uygunu ne olur?",
+      "emotion": "persistent",
+      "dialect_markers": [
+        "eastern"
+      ],
+      "pace": "normal",
+      "background_context": "needs reliable service for work"
+    },
+    {
+      "turn_id": "turn_009",
+      "text": "Ooo… 'Full İletişim 50GB' paketi kulağa hoş geliyir. Hem bol internet, hem de sınırsız konuşma... Kurye işi yapınca arama da çok oluyor, müşteriler, restoranlar… Bu tam bana göre gibi. Evet, o pakete geçiş yapalım hele. İnşallah bundan sonra internet derdim olmaz da, rahat rahat işimi yaparım.",
+      "emotion": "grateful",
+      "dialect_markers": [
+        "eastern"
+      ],
+      "pace": "slow",
+      "background_context": "needs reliable service for work"
+    },
+    {
+      "turn_id": "turn_011",
+      "text": "Çok sağ olasın ağa! Ellerine sağlık. İnşallah her şey yoluna girer. Hayırlı işler size de. Allah'a emanet ol.",
+      "emotion": "grateful",
+      "dialect_markers": [
+        "eastern"
+      ],
+      "pace": "slow",
+      "background_context": "needs reliable service for work"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Hoş geldiniz, Turkcell Müşteri Hizmetleri'ne. İnternet bağlantınızla ilgili yaşadığınız aksaklık için üzgünüz. Size yardımcı olabilmemiz adına öncelikle kimliğinizi doğrulamamız gerekmektedir. Lütfen TC kimlik numaranızı veya abone numaranızı belirtir misiniz?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkür ederim, bilgileriniz tarafımızca doğrulanmıştır. Sistemimizde hattınızda anlık bir bağlantı sorunu görünmemektedir, ancak belirttiğiniz gibi internet hızında genel bir yavaşlama ya da kesinti yaşanıyor olabilir. Anladığım kadarıyla hattınızın mevcut durumu ve kullanım alışkanlıklarınız, işinizi aksatıyor. Faturasız hattan faturalı hatta geçiş talebiniz ve paket seçenekleri için sizi hemen Fatura ve Paket Değişikliği birimimize aktarıyorum. Konuyu en hızlı şekilde çözüme kavuşturacaklardır. Hattınızı aktarıyorum, lütfen hattan ayrılmayın.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "PlanAgent",
+      "text": "Merhaba, Fatura ve Paket Değişikliği birimine hoş geldiniz. Az önce RouterAgent tarafından aktarıldınız. İnternet bağlantınızla ilgili yaşadığınız sıkıntıyı ve faturalı hatta geçiş talebinizi anlıyorum. Şu anki hattınızın faturasız olduğunu teyit edebilir miyiz? Ayrıca mevcut paketinizi inceleyelim ve size en uygun faturalı seçenekleri sunalım.",
+      "tools_triggered": [
+        "get_customer_plan"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_008",
+      "agent_persona": "PlanAgent",
+      "text": "Anladım efendim. Kurye işi gibi yoğun veri kullanımına ve kesintisiz bağlantıya ihtiyaç duyan bir meslekte olduğunuz için faturalı hat sizin için çok daha avantajlı olacaktır. Turkcell'de size özel, bol kotalı ve sabit ücretli faturalı paketlerimiz mevcut. Örneğin: 'Full İletişim 50GB' paketimiz var; 50 GB internet, sınırsız konuşma ve 1000 SMS ile aylık X TL. Ya da 'Mega Esnaf 75GB' paketimiz var; 75 GB internet, sınırsız konuşma ve yurt içi sınırsız WhatsApp kullanımı ile aylık Y TL. Bu paketler, sizin gibi sürekli bağlantıda kalması gereken profesyoneller için idealdir. Hız ve stabilite konusunda da öncelikli hizmet alırsınız. Hangisi sizin için daha uygun olur?",
+      "tools_triggered": [
+        "list_all_plans"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_010",
+      "agent_persona": "PlanAgent",
+      "text": "Harika bir tercih efendim! 'Full İletişim 50GB' paketinize geçiş işleminizi hemen başlatıyorum. Geçişiniz ortalama 5 dakika içerisinde tamamlanacak ve hattınız faturalı olarak aktif hale gelecektir. Bu süre zarfında kısa bir kesinti yaşayabilirsiniz, sonrasında internetiniz daha stabil ve yüksek hızda çalışmaya başlayacaktır. Paketiniz aktif olduğunda SMS ile bilgilendirileceksiniz. Yeni paketiniz hayırlı olsun, işlerinizde kolaylıklar dileriz.",
+      "tools_triggered": [
+        "change_customer_plan"
+      ],
+      "formality_level": "high"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "PlanAgent",
+      "reason": "Customer needs to migrate from prepaid to postpaid and discuss new plan options, which falls under PlanAgent's expertise.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "Customer successfully migrated from a prepaid line to a postpaid line with the 'Full İletişim 50GB' plan, which provides ample data and unlimited calls, addressing their critical need for stable and high-volume internet for gig work.",
+    "customer_satisfaction": "grateful",
+    "follow_up_needed": false
+  },
+  "generated_at": "2025-08-14T09:24:45.774858",
+  "model": "flash",
+  "index": 147
+}

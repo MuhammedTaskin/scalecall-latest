@@ -1,0 +1,195 @@
+{
+  "id": "flash_heavy_0141",
+  "primary_issue": "technical_services_sms",
+  "secondary_issue": "billing_payments_failed",
+  "customer_profile": "tech_executive",
+  "region": "bursa",
+  "dialect_info": {
+    "dialect": "marmara",
+    "pace": "moderate",
+    "formality": "medium"
+  },
+  "conversation_dynamic": "interrupted",
+  "complexity": "complex",
+  "metadata": {
+    "context": "managing multiple business lines",
+    "traits": [
+      "demanding",
+      "knowledgeable",
+      "time_sensitive"
+    ],
+    "emotional_journey": [
+      "professional",
+      "impatient",
+      "frustrated",
+      "satisfied"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo, iyi günler. Benim hattımda SMS gönderiminde problem var. Yani son birkaç saattir hiçbir SMS'im gitmiyor, özellikle işimle alakalı kritik bildirimler var, bu benim için çok önemli. Acil bir durum, birkaç farklı iş kolunu yönetiyorum ve iletişim aksamamalı.",
+      "emotion": "professional",
+      "dialect_markers": [
+        "yani",
+        "çok önemli",
+        "aksamamalı"
+      ],
+      "pace": "moderate",
+      "background_context": "managing multiple business lines"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Tabii, T.C. kimlik numaramı vereyim: 12345678900. Lütfen hızlı olalım, önemli bir toplantı öncesi bu konuyu çözmem gerekiyor. İşimin akışını aksatıyor.",
+      "emotion": "impatient",
+      "dialect_markers": [
+        "tabii",
+        "lütfen hızlı olalım"
+      ],
+      "pace": "moderate",
+      "background_context": "managing multiple business lines"
+    },
+    {
+      "turn_id": "turn_006",
+      "text": "Evet, söyledim ya az önce. SMS'ler gitmiyor, hiçbiri. Ne bireysel ne kurumsal. Normalde sorunsuzdu. Telefonumda herhangi bir ayar değiştirmedim. Mesela bankadan gelen onay kodları, ya da tedarikçilerden gelen sipariş güncellemeleri, bunlar bana ulaşmıyor. Gönderdiğim de gitmiyor. Anladınız mı? Çok kritik bu benim için.",
+      "emotion": "frustrated",
+      "dialect_markers": [
+        "söyledim ya",
+        "anladınız mı",
+        "çok kritik bu benim için"
+      ],
+      "pace": "moderate",
+      "background_context": "managing multiple business lines"
+    },
+    {
+      "turn_id": "turn_008",
+      "text": "Nasıl yani? Fatura mı? Hangi fatura? Benim hesabımda otomatik ödeme tanımlı. Hiçbir zaman böyle bir sorun yaşamadım. Bu kabul edilemez! Şimdi benim bu SMS'ler yüzünden kaçırdığım iş fırsatlarının hesabını kim verecek? Bu nasıl bir aksaklık? Hem SMS gitmiyor diyorsunuz, hem de fatura diyorsunuz. Anlamıyorum, bu ne alaka?",
+      "emotion": "frustrated",
+      "dialect_markers": [
+        "nasıl yani",
+        "hangi fatura",
+        "kabul edilemez",
+        "hesabını kim verecek",
+        "bu ne alaka"
+      ],
+      "pace": "moderate",
+      "background_context": "managing multiple business lines"
+    },
+    {
+      "turn_id": "turn_011",
+      "text": "Hımm, anladım. Peki bu ayki ödeme ne zaman başarısız oldu? Otomatik ödeme talimatım vardı, neden bildirim gelmedi? Tamam, şimdi hemen mobil bankacılıktan ödeyeyim. Ama sizden ricam, ödeme geçer geçmez hattımı hemen açın. Benim için her dakika önemli.",
+      "emotion": "impatient",
+      "dialect_markers": [
+        "hımm",
+        "anladım",
+        "peki",
+        "hemen",
+        "her dakika önemli"
+      ],
+      "pace": "moderate",
+      "background_context": "managing multiple business lines"
+    },
+    {
+      "turn_id": "turn_013",
+      "text": "Evet, evet! SMS'ler gelmeye başladı! Teşekkür ederim. Bu konuyu hızlıca çözdüğünüz için minnettarım. İyi çalışmalar dilerim. Sağ olun.",
+      "emotion": "satisfied",
+      "dialect_markers": [
+        "evet evet",
+        "teşekkür ederim",
+        "minnettarım",
+        "sağ olun"
+      ],
+      "pace": "moderate",
+      "background_context": "managing multiple business lines"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "İyi günler efendim, Türk Telekom'a hoş geldiniz. Size nasıl yardımcı olabilirim? İşlemlerinize devam edebilmek için kimlik doğrulaması yapmamız gerekmektedir. Lütfen T.C. kimlik numaranızı veya abone numaranızı belirtir misiniz?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Bilgilerinizi teyit ettim efendim. SMS gönderim ve alımında sorun yaşadığınızı anlıyorum. Bu teknik bir konu olduğu için sizi teknik destek ekibimize yönlendiriyorum. Lütfen hatta kalın, hemen bağlıyorum.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_005",
+      "agent_persona": "TechAgent",
+      "text": "Merhaba efendim, teknik destek ekibinden Sibel. RouterAgent arkadaşımızdan durumunuzu devraldım. SMS gönderim ve alımında sorun yaşadığınızı görüyorum. Detaylı bilgi verebilir misiniz? SMS'ler hiç mi gitmiyor, yoksa belirli numaralara mı gitmiyor?",
+      "tools_triggered": [],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_007",
+      "agent_persona": "TechAgent",
+      "text": "Anladım efendim, tamamen kesinti var diyorsunuz. Hattınızın ve cihazınızın durumunu kontrol ediyorum. Bir saniye lütfen... Hımm, sistemde hattınızla ilgili farklı bir durum gözüküyor. SMS gönderiminizin kısıtlanmış olmasının nedeni, maalesef ödenmemiş bir faturanızın bulunması.",
+      "tools_triggered": [
+        "check_esim_status",
+        "get_customer_status"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_009",
+      "agent_persona": "TechAgent",
+      "text": "Efendim, sizi anlıyorum. Bu durumun iş akışınızı aksattığını biliyorum. Ancak bu konu teknik destek birimimizin dışında, doğrudan fatura ve ödeme birimimizle ilgili. Sizi en doğru şekilde bilgilendirecek ve sorunu çözecek olan fatura ekibimize aktarmam gerekiyor. Lütfen hatta kalın, hemen bağlıyorum.",
+      "tools_triggered": [
+        "route_to_agent"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_010",
+      "agent_persona": "BillingAgent",
+      "text": "İyi günler efendim, fatura ve ödeme ekibinden Mert. Sibel Hanım'dan devraldım. Sistemde son dönem faturanızın otomatik ödeme talimatınızla tahsil edilemediğini ve bu nedenle hattınızın kısıtlandığını görüyorum. Ödeme denemeniz 15.03.2024 tarihinde başarısız olmuş. Bu nedenle hizmetiniz kısıtlanmıştır.",
+      "tools_triggered": [
+        "get_customer_status"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_012",
+      "agent_persona": "BillingAgent",
+      "text": "Ödemeyi gerçekleştirdiğiniz için teşekkür ederiz efendim. Sistemde ödemenizin yansıdığını görüyorum. Hattınızın kısıtlaması an itibarıyla kaldırılmıştır. SMS servisiniz de aktifleşmiş olmalı. Eğer hala bir sorun yaşarsanız, cihazınızı bir kez kapatıp açmanızı rica edebilirim. Gerekirse sizin için bir aktivasyon kodu yeniden tetikleyebilirim.",
+      "tools_triggered": [
+        "reissue_activation_code"
+      ],
+      "formality_level": "medium"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "TechAgent",
+      "reason": "Customer's primary issue (SMS problem) is a technical service matter.",
+      "context_preserved": true
+    },
+    {
+      "at_turn": 9,
+      "from": "TechAgent",
+      "to": "BillingAgent",
+      "reason": "Secondary issue (failed payment) discovered, which is outside the scope of technical support.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "The customer's primary SMS issue was caused by a secondary billing issue (failed automatic payment). The customer was routed from RouterAgent to TechAgent, where the billing issue was discovered. Then, the customer was routed to BillingAgent, who confirmed the payment failure and, upon customer's immediate payment, reactivated the service, resolving the SMS issue.",
+    "customer_satisfaction": "satisfied",
+    "follow_up_needed": false
+  },
+  "generated_at": "2025-08-14T09:24:16.664859",
+  "model": "flash",
+  "index": 141
+}

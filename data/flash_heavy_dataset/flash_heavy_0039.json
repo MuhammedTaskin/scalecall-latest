@@ -1,0 +1,124 @@
+{
+  "id": "flash_heavy_0039",
+  "primary_issue": "account_emergency_stolen_device",
+  "secondary_issue": null,
+  "customer_profile": "rural_customer",
+  "region": "antalya",
+  "dialect_info": {
+    "dialect": "mediterranean",
+    "pace": "slow",
+    "formality": "low"
+  },
+  "conversation_dynamic": "straightforward",
+  "complexity": "medium",
+  "metadata": {
+    "context": "limited service options",
+    "traits": [
+      "practical",
+      "coverage_focused",
+      "loyal"
+    ],
+    "emotional_journey": [
+      "patient",
+      "explaining",
+      "hopeful",
+      "understanding"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo... Hayırlı günler. Benim telefon kayboldu galiba, bulamıyom bire. Buralarda zor işler, bizim köyde başka türlü haberleşilmiyo ki. Ne edeceyik şimdi havar?",
+      "emotion": "patient",
+      "dialect_markers": [
+        "mediterranean",
+        "bire",
+        "edeceyik",
+        "havar"
+      ],
+      "pace": "slow",
+      "background_context": "limited service options"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "He, tabii efendim. Benim adım Ali, soyadım da Yılmaz. Kimlik numaram da... Bir saniye... Heh, şu köşede yazıyo: 12345678901. Telefon önemli benim için, tarlada iş yaparken düştü herhalde. Köye dönünce fark ettim. Torunumla konuşuyordum, o da başka şehirde okuyo. Onunla konuşamazsam olmaz.",
+      "emotion": "explaining",
+      "dialect_markers": [
+        "mediterranean",
+        "He",
+        "yazıyo"
+      ],
+      "pace": "slow",
+      "background_context": "limited service options"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Tamam, bekleyeyim ben. İnşallah çabuk olur da işlerimiz aksamaz. Buralarda başka telefoncu da yok pek, yani size kaldı işimiz. Yeni bir kart filan hemen alabilir miyim acaba? Çok uzakta olmamalı köyümüzden, merkeze gidip gelmek zor oluyor.",
+      "emotion": "hopeful",
+      "dialect_markers": [
+        "mediterranean",
+        "filan",
+        "pek"
+      ],
+      "pace": "slow",
+      "background_context": "limited service options"
+    },
+    {
+      "turn_id": "turn_007",
+      "text": "Yok, benimki normal karttı. Yani bildiğin eski usul. İyi oldu şimdi kapattığınız. Rahatladım. Kargo olursa daha iyi olur. Köyden çıkmak zor oluyor dediydim ya. O zaman yeni kart gelince tekrar aramamıza gerek yok, direkt çalışır mı?",
+      "emotion": "understanding",
+      "dialect_markers": [
+        "mediterranean",
+        "dediydim ya"
+      ],
+      "pace": "slow",
+      "background_context": "limited service options"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba, hoş geldiniz. Anlıyorum efendim. Öncelikle size yardımcı olabilmek için kimlik doğrulama yapmamız gerekiyor. Adınız soyadınız ve kimlik numaranız nedir rica etsem?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Bilgileriniz için teşekkür ederim Sayın Yılmaz. Kimlik doğrulamanız yapıldı. Telefonunuzun kaybolduğunu anlıyorum. Bu konuda size daha detaylı yardımcı olabilecek, hattınızın kapatılması ve yeni bir hat/SIM kart temini gibi acil durumlar için özel bir ekibimiz var. Sizi o ekibe aktarıyorum şimdi. Lütfen bekleyiniz.",
+      "tools_triggered": [
+        "route_to_agent"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "FAQAgent",
+      "text": "Merhaba Sayın Yılmaz, hattınızın kaybolmasıyla ilgili aktarıldınız. Geçmiş olsun. Endişelenmeyin, hemen hattınızı güvenliğe alıp kimsenin kullanmamasını sağlayacağız. Yeni bir SIM kart için de size en yakın bayimizi veya kargoyla gönderim seçeneklerini değerlendirebiliriz. Hattınızı kullanıma kapatmak için bir işlem başlatıyorum hemen. Bu işlemle mevcut hattınız devre dışı kalacak ve yeni SIM kartınız çıktığında numaranızı tekrar kullanabileceksiniz. eSIM kullanıyor muydunuz yoksa normal SIM miydi?",
+      "tools_triggered": [
+        "create_tech_ticket"
+      ],
+      "formality_level": "low"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "FAQAgent",
+      "reason": "Customer requires assistance with a lost/stolen device, which is an emergency requiring line closure and new SIM card provision. This is handled by a specialized team.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "The customer's lost phone line was initiated to be blocked, and options for obtaining a new SIM card (physical or eSIM) were discussed, including nearest dealer or cargo delivery, to accommodate the rural customer's limited access.",
+    "customer_satisfaction": "The customer ends the conversation feeling understanding and relieved, as their immediate concern (line security) is being addressed and a solution for a new SIM is in progress.",
+    "follow_up_needed": true
+  },
+  "generated_at": "2025-08-14T09:15:43.668724",
+  "model": "flash",
+  "index": 39
+}

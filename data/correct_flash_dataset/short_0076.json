@@ -1,0 +1,92 @@
+{
+  "conversation_id": "short_0076_plan_upgrade",
+  "metadata": {
+    "scenario": "plan_upgrade",
+    "handoff_pattern": [
+      "RouterAgent",
+      "PlanAgent"
+    ]
+  },
+  "customer_profile": {
+    "persona": "impatient",
+    "phone": "0555 123 45 67"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Merhaba, tarifemi yükseltmek istiyorum ama bir türlü halledemedim. Çok acil!",
+      "emotion": "impatient"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Evet, numaram 0555 123 45 67. Lütfen hemen yardımcı olun.",
+      "emotion": "impatient"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Anladım, peki şimdi ne olacak?",
+      "emotion": "impatient"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba, Telekom Çağrı Merkezi'ne hoş geldiniz. Kimliğinizi doğrulamak için lütfen telefon numaranızı veya T.C. kimlik numaranızı paylaşır mısınız?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkürler, kimliğiniz doğrulandı. Tarifeyle ilgili işlemleri planlama ekibimiz daha hızlı halledebilir. Sizi ilgili birime aktarıyorum.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "handoff": {
+        "to": "PlanAgent"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "PlanAgent",
+      "text": "Merhaba, ben Plan Departmanından Tuğba. Tarifinizi yükseltme talebinizi aldım. Mevcut tarifeniz hakkında bilgi verebilir misiniz veya hangi tarifeye geçmek istediğinizi öğrenebilir miyim?",
+      "tools_triggered": [
+        "get_customer_plan",
+        "change_customer_plan"
+      ],
+      "handoff": null
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "PlanAgent",
+      "reason": "plan_upgrade"
+    }
+  ],
+  "tool_calls": [
+    {
+      "turn_id": "turn_002",
+      "tool": "verify_user",
+      "arguments": {
+        "phone_number": "0555 123 45 67"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_004",
+      "tool": "route_to_agent",
+      "arguments": {
+        "agent": "PlanAgent"
+      },
+      "result": true
+    }
+  ],
+  "generated_at": "2025-08-14T08:01:46.576963",
+  "index": 76
+}

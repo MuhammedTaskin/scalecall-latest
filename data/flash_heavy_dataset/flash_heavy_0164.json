@@ -1,0 +1,154 @@
+{
+  "id": "flash_heavy_0164",
+  "primary_issue": "technical_esim_multi_device",
+  "secondary_issue": null,
+  "customer_profile": "student_abroad",
+  "region": "antalya",
+  "dialect_info": {
+    "dialect": "mediterranean",
+    "pace": "slow",
+    "formality": "low"
+  },
+  "conversation_dynamic": "negotiation",
+  "complexity": "medium",
+  "metadata": {
+    "context": "studying overseas",
+    "traits": [
+      "anxious",
+      "budget_conscious",
+      "tech_savvy"
+    ],
+    "emotional_journey": [
+      "worried",
+      "concerned",
+      "relieved",
+      "thankful"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo, merhaba... Ay bir yardım edin gari, vallahi kafayı yiyecem ya! Benim eSIM'im var ya, telefona takılıydı, şimdi bir de tablet var, ona da takayım dedim... Olmadı, ikisi de gitti şimdi. Ne telefon ne tablet çekiyo! Ben burada öğrenciyim, ailemi arayamıyorum, derslerim var... Ne yapacam şimdi?",
+      "emotion": "worried",
+      "dialect_markers": [
+        "mediterranean",
+        "gari",
+        "vallahi",
+        "ya",
+        "şimdi"
+      ],
+      "pace": "slow",
+      "background_context": "studying overseas"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Tabii, tabii. Adım Emre Yılmaz, TC kimlik numaram da 12345678900. Ya şimdi ben bu eSIM'i eski telefonumda kullanıyordum, sonra yeni bir telefon aldım, ona aktardım. Bir de tabletim var, yurt dışından aldım, ona da olsun istedim. Ama aktarırken bir şeyler oldu, şimdi ikisi de çalışmıyor. Yani bir numara, iki cihaza birden aktarılır sanıyordum... acaba yanlış mı oldu? Bir de bu işler pahalı olmasın şimdi, öğrenci halimle...",
+      "emotion": "concerned",
+      "dialect_markers": [
+        "mediterranean",
+        "tabii",
+        "ya",
+        "şimdi",
+        "acaba",
+        "bir de"
+      ],
+      "pace": "slow",
+      "background_context": "studying overseas"
+    },
+    {
+      "turn_id": "turn_006",
+      "text": "Evet, evet, anladım. Yani bir numara için tek bir eSIM mi aktif olabiliyor? Ben de diyorum neden böyle oldu... Benim esas derdim şu an telefonumun çalışması aslında, tableti sonra düşünürüm. Ama şimdi ikisi de çalışmıyor ya, acil bir şekilde telefonuma geri aktarmam lazım. Hani bu mevcut eSIM'imi tekrar aktif edebilir miyiz telefonda? Yoksa yeni bir eSIM mi almam gerekecek? Ve bu bana ne kadara patlayacak şimdi?",
+      "emotion": "concerned",
+      "dialect_markers": [
+        "mediterranean",
+        "yani",
+        "esas",
+        "şimdi",
+        "hani",
+        "patlayacak"
+      ],
+      "pace": "slow",
+      "background_context": "studying overseas"
+    },
+    {
+      "turn_id": "turn_008",
+      "text": "Oh be! Çok iyi oldu bu şimdi. Aynen, yeni telefonuma, o zaman Samsung S23 olanına, mevcut eSIM'imi tekrar tanımlayalım. Kod falan gerekiyorsa hemen girerim. Yeter ki internetim gelsin, arama yapabileyim. Çok sağ olun ya, gerçekten içime su serptiniz! Hiç masraf çıkmaması da süper oldu.",
+      "emotion": "relieved",
+      "dialect_markers": [
+        "mediterranean",
+        "oh be",
+        "şimdi",
+        "aynen",
+        "ya",
+        "süper oldu"
+      ],
+      "pace": "slow",
+      "background_context": "studying overseas"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba Emre Bey, Türk Telekom'a hoş geldiniz. Öncelikle sakin olalım, sorununuza çözüm bulacağız. Güvenliğiniz için TC kimlik numaranızı ya da cep telefonu numaranızı alabilir miyim lütfen?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Emre Bey, bilgileriniz doğrulandı. Anlıyorum durumunuzu, yurt dışında olmak ve iletişimsiz kalmak zorlayıcı olabilir. eSIM'inizle ilgili bir teknik sorun yaşadığınızı belirtiyorsunuz, bu konuda size daha detaylı yardımcı olabilecek teknik destek ekibimize aktarıyorum. Lütfen hattan ayrılmayın.",
+      "tools_triggered": [
+        "route_to_agent"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_005",
+      "agent_persona": "TechAgent",
+      "text": "Merhaba Emre Bey, ben Teknik Destek'ten Elif. Az önce RouterAgent'taki arkadaşımızdan aktarıldınız, eSIM'inizle ilgili bir problem yaşadığınızı anlıyorum. Özellikle çift cihazda kullanma girişimi sonrası problem yaşadığınızı görüyorum. Sorunu daha iyi anlamak adına, şu an kullandığınız telefonunuzun marka ve modelini, bir de varsa IMEI numarasını alabilir miyim? Daha önce eSIM'i kullandığınız telefonunuzun modeli de önemli.",
+      "tools_triggered": [
+        "check_esim_status",
+        "check_device_imei"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_007",
+      "agent_persona": "TechAgent",
+      "text": "Anladım Emre Bey. Şöyle açıklayayım: Bir numara için aktif olan eSIM, aynı anda sadece bir cihazda çalışabilir. Yani siz tablete aktardığınızda, telefondaki eSIM otomatik olarak devre dışı kalmıştır. Şimdi her ikisi de çalışmıyor çünkü aktarım tam olarak gerçekleşmemiş ya da bir çakışma olmuş. Ama merak etmeyin, mevcut eSIM'inizi tekrar aktif hale getirebiliriz. Bunun için size bir aktivasyon kodu göndereceğim ve telefonunuzdan bu kodu girerek eSIM'inizi yeniden tanımlayacaksınız. Bu işlem için sizden herhangi bir ücret talep edilmeyecektir, sadece mevcut eSIM'inizin yeniden tanımlanması sağlanacak. Hangi cihazda kullanmak istersiniz, yeni telefonunuzda mı?",
+      "tools_triggered": [
+        "reissue_activation_code"
+      ],
+      "formality_level": "low"
+    },
+    {
+      "turn_id": "turn_009",
+      "agent_persona": "TechAgent",
+      "text": "Rica ederim Emre Bey, ne demek. Hemen yeni telefonunuz için aktivasyon kodunuzu düzenleyip SMS olarak gönderiyorum. Lütfen telefonunuzun ayarlar kısmından eSIM ekleme bölümüne girerek bu kodu okutun ya da manuel olarak girin. İşlem tamamlandığında, telefonunuzda sinyalin geldiğini göreceksiniz. Herhangi bir sorun yaşarsanız bize tekrar ulaşmaktan çekinmeyin. İyi dersler dilerim size.",
+      "tools_triggered": [
+        "reissue_activation_code"
+      ],
+      "formality_level": "low"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "TechAgent",
+      "reason": "Customer's issue is a technical eSIM problem requiring specialized support.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "The customer's existing eSIM was re-activated for their primary device (new phone) by reissuing an activation code, resolving the connectivity issue caused by attempting to use it on multiple devices simultaneously. The customer understood that one eSIM works with one device.",
+    "customer_satisfaction": "thankful",
+    "follow_up_needed": false
+  },
+  "generated_at": "2025-08-14T09:26:23.410745",
+  "model": "flash",
+  "index": 164
+}

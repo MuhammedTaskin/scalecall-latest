@@ -1,0 +1,127 @@
+{
+  "id": "flash_heavy_0143",
+  "primary_issue": "plans_changes_upgrade",
+  "secondary_issue": null,
+  "customer_profile": "gig_worker",
+  "region": "konya",
+  "dialect_info": {
+    "dialect": "central",
+    "pace": "slow",
+    "formality": "high"
+  },
+  "conversation_dynamic": "interrupted",
+  "complexity": "medium",
+  "metadata": {
+    "context": "needs reliable service for work",
+    "traits": [
+      "flexible",
+      "app_dependent",
+      "connectivity_critical"
+    ],
+    "emotional_journey": [
+      "stressed",
+      "urgent",
+      "persistent",
+      "grateful"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo, iyi günler. Ben pek memnun değilim bu halden, efendim. İnternetim hep gidip geliyor. İşlerimi yapamıyorum doğru dürüst, garibim ben. Bak, bu böyle olmaz.",
+      "emotion": "stressed",
+      "dialect_markers": [
+        "central"
+      ],
+      "pace": "slow",
+      "background_context": "needs reliable service for work"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Durun efendim, durun hele! Ben şimdi size kimliğimi vericem de... Benim derdim kimlik değil ki. Ben bu internetle çalışıyorum, ekmeğimi kazanıyorum. İşim var benim, uygulamalar açılmıyor, siparişler düşmüyor. Bu paketin mi yetmiyor, ne bileyim ben... Acil bir çözüm lazım bana, yoksa ben nasıl geçineceğim?",
+      "emotion": "urgent",
+      "dialect_markers": [
+        "central"
+      ],
+      "pace": "slightly faster",
+      "background_context": "connectivity critical for work"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Merhaba efendim, buyurun. Ben yine aynı mesele için arıyorum... Bakın benim internetim işime yaramıyor, sürekli kopuyor, hızım düşük. Ben kuryelik yapıyorum, harita falan kullanmam lazım, siparişleri takip etmem lazım. Bu mevcut paketle olmuyor bu iş, olmuyor! Bana daha sağlam, daha güvenilir bir şey lazım, anlamıyorsunuz sanki...",
+      "emotion": "persistent",
+      "dialect_markers": [
+        "central"
+      ],
+      "pace": "normal",
+      "background_context": "connectivity critical for work"
+    },
+    {
+      "turn_id": "turn_007",
+      "text": "Sınırsız mı dediniz? Hız garantili mi? Hele bi durun... Benim burada, Konya'da, özellikle sanayi bölgesinde falan çekim sıkıntım çok oluyor. O taraflarda da hız garantisi verir mi bu paket? Gerçekten işimi görür mü yani? Uygulamalarım, haritalarım takılmadan çalışır mı? Boşuna para vermeyeyim sonra.",
+      "emotion": "persistent",
+      "dialect_markers": [
+        "central"
+      ],
+      "pace": "normal",
+      "background_context": "connectivity critical for work"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Hoş geldiniz efendim, size nasıl yardımcı olabilirim? Güvenliğiniz için öncelikle kimlik doğrulaması yapmamız gerekmektedir. Adınız, soyadınız ve T.C. kimlik numaranız nedir rica etsem?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Anladım efendim, sesinizin tonundan da durumun aciliyetini sezinliyorum. Öncelikle sistemde kayıtlı müşteri durumunuzu kontrol edelim. Ardından, belirttiğiniz gibi tarife ve paket değişikliği konusunda size daha iyi yardımcı olabilecek 'Tarife ve Paket Değişikliği' departmanımıza aktarım sağlayacağım. Lütfen hattımdan ayrılmayın.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "PlanAgent",
+      "text": "Beyefendi, durumunuzu anladım. Sabrınız için teşekkür ederiz. Mevcut tarifenizi hemen kontrol ediyorum... Evet, şu anki paketinizde belirli bir kota ve hız limiti mevcutmuş. İşinizin gerektirdiği yoğun internet kullanımı için daha uygun tarifelerimiz bulunmaktadır. Örneğin, sınırsız veya yüksek GB'lı, hız garantili 'Profesyonel GigPaket' adını verdiğimiz yeni bir seçeneğimiz var. Bu paket, sizin gibi mobil uygulamalara bağımlı çalışanlar için özel olarak tasarlanmıştır. İçerisinde yüksek hızlı internetin yanı sıra, belirli uygulamalarda kota harcamayan özellikler de barındırıyor.",
+      "tools_triggered": [
+        "get_customer_plan",
+        "list_all_plans"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_008",
+      "agent_persona": "PlanAgent",
+      "text": "Kesinlikle efendim. 'Profesyonel GigPaket'imiz, geniş kapsama alanımız ve yeni nesil altyapımızla Konya genelinde, sanayi bölgeleri de dahil olmak üzere yüksek hız ve kesintisiz bağlantı vaat etmektedir. Kullandığınız uygulamalar ve haritalar için optimize edilmiş bir yapısı mevcuttur. Eğer onaylarsanız, bu pakete geçişinizi hemen sağlayabilirim. Yeni tarifenizle birlikte işlerinizde aksaklık yaşamayacağınıza eminim.",
+      "tools_triggered": [
+        "change_customer_plan"
+      ],
+      "formality_level": "high"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "PlanAgent",
+      "reason": "Customer's primary issue identified as a need for a plan upgrade/change due to work requirements, which is outside the RouterAgent's scope of technical troubleshooting.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "Customer's plan was successfully upgraded to 'Profesyonel GigPaket' which is tailored for gig workers, promising high-speed, reliable internet and optimized app usage.",
+    "customer_satisfaction": "Customer's emotional journey ends with a strong sense of relief and gratitude, as their critical work-related connectivity issue is resolved with a suitable plan.",
+    "follow_up_needed": false
+  },
+  "generated_at": "2025-08-14T09:24:26.775156",
+  "model": "flash",
+  "index": 143
+}

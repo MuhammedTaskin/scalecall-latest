@@ -1,0 +1,107 @@
+{
+  "id": "flash_heavy_0069",
+  "primary_issue": "account_porting_number_out",
+  "secondary_issue": null,
+  "customer_profile": "rural_customer",
+  "region": "konya",
+  "dialect_info": {
+    "dialect": "central",
+    "pace": "slow",
+    "formality": "high"
+  },
+  "conversation_dynamic": "negotiation",
+  "complexity": "medium",
+  "metadata": {
+    "context": "limited service options",
+    "traits": [
+      "practical",
+      "coverage_focused",
+      "loyal"
+    ],
+    "emotional_journey": [
+      "patient",
+      "explaining",
+      "hopeful",
+      "understanding"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Hayırlı günler evladım. Ben size bir şey danışacaktım gari... Uzun yıllardır sizinle çalışıyoz, çok şükür bir sıkıntımız olmadıydı da... Şimdi bu numarayı başka yere taşımak icap etti gari.",
+      "emotion": "patient",
+      "dialect_markers": [
+        "central"
+      ],
+      "pace": "slow",
+      "background_context": "limited service options"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Endee, benim adım Ahmet Yılmaz, T.C. numaram da... (duraklar) ...sonu dört beş altı yedi. Şimdi bak evladım, ben bu işi keyfimden yapmıyom. Bizim köyde, Yassıören'de, sizin çekim gücünüz pek yok gari. Telefon çekmeyince de bir işimizi göremiyoz. Başka bir firma daha iyi çekiyormuş dediler, mecbur kaldık gari. Buralarda da pek seçenek olmaz bilmez misin?",
+      "emotion": "explaining",
+      "dialect_markers": [
+        "central"
+      ],
+      "pace": "slow",
+      "background_context": "limited service options"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "He mi? Eyvallah. Sağ olsunlar... Yani gari, eğer bir çaresi varsa, biz de durmak isteriz aslında. Kaç yıldır sizinleyiz. Ama dediğim gibi, telefon çekmeyince köyde, işimiz aksıyor. Belki bir şey yapılıverir böğürde, bilemedim şimdi.",
+      "emotion": "hopeful",
+      "dialect_markers": [
+        "central"
+      ],
+      "pace": "slow",
+      "background_context": "limited service options"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Hayırlı günler efendim. Talebinizi anladım. İşlemlerinize devam edebilmemiz için öncelikle kimlik doğrulaması yapmamız gerekmektedir. Adınız, soyadınız ve T.C. kimlik numaranızın son dört hanesini rica edebilir miyim?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Ahmet Bey, bilgileriniz doğrulandı. Talebiniz ve bulunduğunuz bölgedeki çekim gücü sorunu anlaşıldı. Sadık bir müşterimiz olduğunuzu sistemden görüyorum. Bu tür konular için size daha detaylı yardımcı olabilecek, tarife ve çekim gücü çözümleri konusunda uzman bir arkadaşımıza aktarıyorum efendim. Lütfen hattan ayrılmayın.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "FAQAgent",
+      "text": "Ahmet Bey, tekrar hoş geldiniz. Anlattığınız durumu ve bölgenizdeki çekim gücü sıkıntısını anladım. Sadakatiniz bizim için çok kıymetli. Numaranızı taşımadan önce, bölgenizdeki çekim gücünü detaylı incelememiz ve size özel bir çözüm sunabilmemiz adına teknik bir talep oluşturmak istiyorum. Bu talep sonrası saha ekiplerimiz bölgedeki durumu kontrol edecek ve size geri dönüş sağlayacağız. Ayrıca, bu süreçte size özel avantajlı tarife seçenekleri de sunabiliriz. Ne dersiniz, öncelikle bu teknik incelemeyi başlatalım mı?",
+      "tools_triggered": [
+        "create_tech_ticket"
+      ],
+      "formality_level": "high"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "FAQAgent",
+      "reason": "Customer reporting coverage issue leading to account port-out request; requires specialized retention and problem-solving.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "The customer's port-out request is paused. The agent initiates a technical ticket to investigate the reported coverage issue in the customer's rural area. The agent also offers to discuss advantageous plan options as part of a retention effort, providing a clear path for resolution.",
+    "customer_satisfaction": "The customer feels heard and understood. They are cautiously hopeful that the technical investigation will resolve their primary issue (poor coverage), potentially allowing them to remain a loyal customer.",
+    "follow_up_needed": true
+  },
+  "generated_at": "2025-08-14T09:18:04.202376",
+  "model": "flash",
+  "index": 69
+}

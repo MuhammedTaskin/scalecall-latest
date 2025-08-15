@@ -1,0 +1,173 @@
+{
+  "id": "flash_heavy_0063",
+  "primary_issue": "plans_types_international",
+  "secondary_issue": "billing_charges_roaming",
+  "customer_profile": "gig_worker",
+  "region": "trabzon",
+  "dialect_info": {
+    "dialect": "blacksea",
+    "pace": "fast",
+    "formality": "medium"
+  },
+  "conversation_dynamic": "discovery",
+  "complexity": "complex",
+  "metadata": {
+    "context": "needs reliable service for work",
+    "traits": [
+      "flexible",
+      "app_dependent",
+      "connectivity_critical"
+    ],
+    "emotional_journey": [
+      "stressed",
+      "urgent",
+      "persistent",
+      "grateful"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Ula bu internet niye böyle ya? Trabzon'dan az bi dışarı çıkıyom, hemen kopuyo. İş yapamıyorum da! Uygulamalarım çalışmıyo, siparişler düşmüyo. Stres oldum vallahi!",
+      "emotion": "stressed",
+      "dialect_markers": [
+        "blacksea",
+        "Ula",
+        "da"
+      ],
+      "pace": "fast",
+      "background_context": "needs reliable service for work"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Çabuk olun da, işlerim var bekliyo! Müşteri numarası mı? Yok bende öyle bi numara, T.C. kimlik numaramı vereyim: 12345678910. Hadi bekliyorum!",
+      "emotion": "urgent",
+      "dialect_markers": [
+        "blacksea",
+        "da"
+      ],
+      "pace": "fast",
+      "background_context": "needs reliable service for work"
+    },
+    {
+      "turn_id": "turn_006",
+      "text": "He uşağım, aynen öyle! Gig işçisiyim ben. Bir bakıyom Gürcistan'a geçiyom, bir bakıyom İstanbul'a. Uygulamalar çalışmıyo da! Bana öyle bi paket lazım ki, her yerde internetim olsun, çağrım düşmesin. Hem de öyle çok pahalı olmasın ha! Bir de geçen ay bi fatura gelmişti, o neydi öyle? Ula kafayı yiyecem!",
+      "emotion": "persistent",
+      "dialect_markers": [
+        "blacksea",
+        "He",
+        "uşağım",
+        "da",
+        "Ula"
+      ],
+      "pace": "fast",
+      "background_context": "needs reliable service for work"
+    },
+    {
+      "turn_id": "turn_008",
+      "text": "Hah! İşte öyle bi şey lazım bana. O 'Global İş Paketi' ne kadar? Hemen geçebilir miyim? Ama o fatura işini de halletmemiz lazım ha! Yoksa olmaz. O parayı niye verdim ben?!",
+      "emotion": "persistent",
+      "dialect_markers": [
+        "blacksea",
+        "Hah!",
+        "da"
+      ],
+      "pace": "fast",
+      "background_context": "needs reliable service for work"
+    },
+    {
+      "turn_id": "turn_010",
+      "text": "Oh be! Evet, evet, hemen geçelim pakete! Çok sağolun valla, indirim olursa iyi olur. Artık rahat rahat çalışırım. İyi ki aradım! Kolay gelsin size de.",
+      "emotion": "grateful",
+      "dialect_markers": [
+        "blacksea",
+        "Oh be!",
+        "valla"
+      ],
+      "pace": "medium",
+      "background_context": "needs reliable service for work"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba, nasıl yardımcı olabilirim? Anlıyorum hattınızda bir sorun var. Güvenliğiniz için önce kimliğinizi teyit etmemiz gerekiyor, müşteri numaranızı veya T.C. kimlik numaranızı alabilir miyim?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkürler T.C. kimlik numaranız için. Anlıyorum efendim, özellikle uluslararası kullanım ve paketler konusunda bir sorun yaşıyorsunuz anlaşılan. Bu konuda size en doğru bilgiyi Plan ve Paket Departmanı'ndaki yetkili arkadaşlarımız verecektir. Sizi oraya aktarıyorum, lütfen beklemede kalın.",
+      "tools_triggered": [
+        "route_to_agent"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_005",
+      "agent_persona": "PlanAgent",
+      "text": "Merhaba, Plan ve Paket Departmanı'ndan arıyorum. Hoş geldiniz. Hattınızla ilgili sorununuz nedir tam olarak? Sistemden gördüğüm kadarıyla şu anki paketinizde uluslararası dolaşım özelliği aktif değil. İşiniz gereği sıkça seyahat mi ediyorsunuz?",
+      "tools_triggered": [
+        "get_customer_status",
+        "get_customer_plan"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_007",
+      "agent_persona": "PlanAgent",
+      "text": "Anladım efendim, işinizin doğası gereği esnek ve kapsamlı bir pakete ihtiyacınız var. Mevcut paketiniz maalesef bu duruma uygun değil. Size özel olarak hazırladığımız, uluslararası dolaşım ve yüksek kota içeren 'Global İş Paketi' veya 'Sınır Tanımaz Paket' seçeneklerimiz var. İsterseniz detaylarını paylaşabilirim. Fatura konusuna gelince, o muhtemelen yurtdışı kullanımından kaynaklı bir sürpriz olabilir. İsterseniz bu konuyu da Fatura Departmanı'ndaki arkadaşlara yönlendirebilirim, onlar net bilgi vereceklerdir.",
+      "tools_triggered": [
+        "list_all_plans"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_009",
+      "agent_persona": "PlanAgent",
+      "text": "Elbette efendim, 'Global İş Paketi' aylık 249 TL ve onayınız dahilinde hemen aktif edebiliriz, eski paketiniz otomatik iptal olur. Onaylıyor musunuz? Fatura detaylarınız için ise sizi doğrudan Fatura ve Muhasebe Departmanı'na aktarıyorum. Onlar son faturanızdaki o yüksek tutarı inceleyip size açıklama yapacaklardır. Lütfen hatta kalın, iyi günler dilerim.",
+      "tools_triggered": [
+        "change_customer_plan",
+        "route_to_agent"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_010_agent",
+      "agent_persona": "BillingAgent",
+      "text": "Merhaba, Fatura Departmanı'ndan arıyorum. Hattınız yeni 'Global İş Paketi'ne sorunsuz bir şekilde geçiş yaptı. Son faturanızdaki yüksek tutar ise, geçen ay Gürcistan'da yaptığınız yüksek data kullanımından kaynaklanıyor. O dönemki paketinizde uluslararası dolaşım tanımlı olmadığı için standart tarife üzerinden ücretlendirilmiş. Ancak merak etmeyin, yeni paketinizle bu tür sorunlar yaşamayacaksınız. Geçmiş faturanızdaki bu özel durum için, müşteri memnuniyeti adına tek seferlik bir indirim talebi oluşturabilirim, ne dersiniz?",
+      "tools_triggered": [
+        "get_last_bill"
+      ],
+      "formality_level": "medium"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "PlanAgent",
+      "reason": "Customer needs international plan options and details.",
+      "context_preserved": true
+    },
+    {
+      "at_turn": 9,
+      "from": "PlanAgent",
+      "to": "BillingAgent",
+      "reason": "Customer has a secondary issue regarding unexpected high roaming charges on a previous bill.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "Customer's primary issue (lack of international connectivity for work) was resolved by changing their plan to a suitable 'Global İş Paketi'. The secondary issue (unexpected high roaming charges from a previous bill) was identified, explained, and a one-time discount was offered by the Billing Agent.",
+    "customer_satisfaction": "grateful",
+    "follow_up_needed": false
+  },
+  "generated_at": "2025-08-14T09:17:34.270563",
+  "model": "flash",
+  "index": 63
+}

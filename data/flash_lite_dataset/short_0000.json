@@ -1,0 +1,34 @@
+{
+  "id": "short_0001",
+  "scenario": "plan_info_request",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Ya şu paketimle ilgili bilgi almak istiyorum artık, ne zaman ararsam hep bekletiyorsunuz!",
+      "emotion": "impatient"
+    },
+    {
+      "turn": 3,
+      "text": "Evet, tamam."
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Anlıyorum efendim, sabrınız için teşekkürler. Öncelikle kimlik bilgilerinizi alabilir miyim?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "PlanAgent",
+      "text": "Paket bilgilerinizi kontrol ettim efendim, mevcut paketinizle ilgili tüm detaylar şimdi hesabınızda görünüyor. Başka yardımcı olabileceğim bir konu var mı?",
+      "tools": [
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:49:40.590524"
+}

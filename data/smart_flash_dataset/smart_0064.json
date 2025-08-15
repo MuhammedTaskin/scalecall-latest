@@ -1,0 +1,41 @@
+{
+  "id": "smart_0064",
+  "scenario": "escalate_angry",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "İNTERNETİM ÇALIŞMIYOR, SİZE ULAŞAMIYORUM! HEMEN BİRİSİYLE GÖRÜŞMEK İSTİYORUM!",
+      "emotion": "angry"
+    },
+    {
+      "turn": 3,
+      "text": "Evet, numaram 1234567890. Bu otomatik sistem beni çıldırtacak!"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Anlıyorum, sorununuzu çözmek için buradayım. Lütfen kimliğinizi doğrulamak için cep telefonu numaranızı paylaşır mısınız?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "RouterAgent",
+      "text": "Anlıyorum, bu durumun sizi ne kadar rahatsız ettiğini biliyorum. Konuyu en kısa sürede bir insan temsilciye aktarıyorum.",
+      "tools": [
+        "escalate_to_human"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:57:15.165858",
+  "required_tools": [
+    "verify_user",
+    "escalate_to_human"
+  ],
+  "agent_flow": [
+    "RouterAgent"
+  ]
+}

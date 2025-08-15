@@ -1,0 +1,46 @@
+{
+  "id": "smart_0085",
+  "scenario": "discount_apply",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Bu faturada neden indirim yok! Bana bir indirim kodu verdiniz!",
+      "emotion": "angry"
+    },
+    {
+      "turn": 3,
+      "text": "Evet, evet, 123456789."
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Anlıyorum. Kimliğinizi doğrulamam gerekiyor. Lütfen TC kimlik numaranızı veya telefon numaranızı alabilir miyim?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "BillingAgent",
+      "text": "Teşekkürler. Son faturanızı kontrol ediyorum ve indirim kodunuzu uyguluyorum. Evet, indirim uygulandı ve yeni tutar X TL oldu. İyi günler dilerim.",
+      "tools": [
+        "get_last_bill",
+        "apply_campaign_discount",
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:57:21.684983",
+  "required_tools": [
+    "verify_user",
+    "get_last_bill",
+    "apply_campaign_discount",
+    "end_conversation"
+  ],
+  "agent_flow": [
+    "RouterAgent",
+    "BillingAgent"
+  ]
+}

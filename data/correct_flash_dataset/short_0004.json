@@ -1,0 +1,109 @@
+{
+  "conversation_id": "short_0004_general_help",
+  "metadata": {
+    "scenario": "general_help",
+    "handoff_pattern": [
+      "RouterAgent",
+      "FAQAgent"
+    ]
+  },
+  "customer_profile": {
+    "persona": "polite",
+    "phone": "0555 123 45 67"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Merhaba, internetim çok yavaş çalışıyor, ne yapabilirim?",
+      "emotion": "polite"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Evet, modemimi yeniden başlattım ama bir değişiklik olmadı.",
+      "emotion": "polite"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Anladım, teşekkürler.",
+      "emotion": "polite"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba, Telekom'a hoş geldiniz. Kimliğinizi doğrulamak için lütfen TC kimlik numaranızı paylaşır mısınız?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkürler, TC kimlik numaranızı doğruladım. Mevcut durumunuzu kontrol ediyorum. Modeminizi yeniden başlattığınızı belirttiniz. Bu tür yavaşlık sorunları için sıkça sorulan sorular bölümümüz size yardımcı olabilir. Sizi bu konudaki bilgileri içeren uzmanımıza yönlendiriyorum.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "handoff": {
+        "to": "FAQAgent"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "FAQAgent",
+      "text": "Merhaba, internet yavaşlığı konusunda size yardımcı olmak için buradayım. Modeminizi yeniden başlattığınızı anlıyorum. Öncelikle, internet hızınızı test etmek için bir araç kullanabiliriz. Ayrıca, Wi-Fi sinyalinizin güçlü olduğundan emin olmak için modeminizi evin merkezine yakın bir yere koymanızı öneririm. Bu adımları denediniz mi?",
+      "tools_triggered": [
+        "search_faq",
+        "send_help_sms"
+      ],
+      "handoff": null
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "FAQAgent",
+      "reason": "general_help"
+    }
+  ],
+  "tool_calls": [
+    {
+      "turn_id": "turn_002",
+      "tool": "verify_user",
+      "arguments": {
+        "tc_kimlik_no": "12345678901"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_004",
+      "tool": "route_to_agent",
+      "arguments": {
+        "agent_name": "FAQAgent"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "search_faq",
+      "arguments": {
+        "query": "internet yavaşlığı"
+      },
+      "result": "İnternet yavaşlığı için modem yeniden başlatma, Wi-Fi sinyali kontrolü gibi adımlar önerilir."
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "send_help_sms",
+      "arguments": {
+        "phone_number": "05551234567",
+        "message": "İnternet yavaşlığı için önerilerimiz: Modem yeniden başlatma, Wi-Fi sinyalini güçlendirme."
+      },
+      "result": true
+    }
+  ],
+  "generated_at": "2025-08-14T08:00:58.163386",
+  "index": 4
+}

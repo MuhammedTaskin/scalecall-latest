@@ -1,0 +1,109 @@
+{
+  "conversation_id": "short_0061_bill_question",
+  "metadata": {
+    "scenario": "bill_question",
+    "handoff_pattern": [
+      "RouterAgent",
+      "BillingAgent"
+    ]
+  },
+  "customer_profile": {
+    "persona": "impatient",
+    "phone": "0555 123 45 67"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Faturamda bir yanlışlık var, acil bakılmasını istiyorum!",
+      "emotion": "impatient"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Evet, doğru. O tutar bana çok yüksek geldi.",
+      "emotion": "impatient"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Tamam, bekliyorum. Umarım bu sefer yardımcı olursunuz.",
+      "emotion": "impatient"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba, Telekom Çağrı Merkezi'ne hoş geldiniz. Kimliğinizi doğrulamak için lütfen T.C. kimlik numaranızı veya telefon numaranızı paylaşır mısınız?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkürler, kimliğiniz doğrulandı. Faturanızla ilgili sorununuz için sizi ilgili birimimize, yani Fatura Departmanı'na aktarıyorum. Lütfen bekleyiniz.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "handoff": {
+        "to": "BillingAgent"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "BillingAgent",
+      "text": "Fatura Departmanı'ndan ben, size yardımcı olabilirim. Son faturanızda bir tutar fazla görünüyor, değil mi? Hemen kontrol ediyorum. Evet, ödeme bilgilerinizde bir hata olmuş. Bunu düzelttim ve size yeni bir fatura göndereceğim. Başka yardımcı olabileceğim bir konu var mı?",
+      "tools_triggered": [
+        "get_last_bill",
+        "end_conversation"
+      ],
+      "handoff": null
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "BillingAgent",
+      "reason": "bill_question"
+    }
+  ],
+  "tool_calls": [
+    {
+      "turn_id": "turn_002",
+      "tool": "verify_user",
+      "arguments": {
+        "phone_number": "0555 123 45 67"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_004",
+      "tool": "route_to_agent",
+      "arguments": {
+        "agent_name": "BillingAgent",
+        "reason": "bill_question"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "get_last_bill",
+      "arguments": {},
+      "result": {
+        "bill_amount": "150 TL",
+        "due_date": "2024-03-15",
+        "status": "paid"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "end_conversation",
+      "arguments": {},
+      "result": true
+    }
+  ],
+  "generated_at": "2025-08-14T08:01:36.107382",
+  "index": 61
+}

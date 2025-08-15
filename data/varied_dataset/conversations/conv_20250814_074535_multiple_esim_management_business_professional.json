@@ -1,0 +1,330 @@
+{
+  "conversation_id": "conv_20250814_074535_multiple_esim_management_business_professional",
+  "metadata": {
+    "scenario": "multiple_esim_management",
+    "complexity": "chaos",
+    "persona": "business_professional",
+    "handoff_pattern": [
+      "RouterAgent",
+      "TechAgent"
+    ],
+    "interruption_type": "emotional_escalation",
+    "resolution": "ticket_created"
+  },
+  "customer_profile": {
+    "persona": "business_professional",
+    "phone": "0559 995 18 95",
+    "maiden_name": "Yıldız",
+    "issue": "multiple_esim_management",
+    "background": "Yönetici"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "İyi günler, [Müşteri Adı] ben. Kurumsal hatlarımızla ilgili ciddi bir eSIM yönetimi problemimiz var. Acil destek rica ediyorum, vaktim kısıtlı.",
+      "emotion": "urgent_professional",
+      "voice_notes": {
+        "tone": "net, hafif gergin",
+        "speed": "orta-hızlı",
+        "emphasis": [
+          "acil destek",
+          "vaktim kısıtlı"
+        ]
+      }
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Doğum tarihim 12 Mart 1985, anne kızlık soyadım Yıldız. Lütfen hızlıca yardımcı olabilecek birine aktarın.",
+      "emotion": "impatient_compliant",
+      "voice_notes": {
+        "tone": "daha da gerginleşen",
+        "speed": "hızlı",
+        "emphasis": [
+          "hızlıca",
+          "aktarın"
+        ]
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "text": "Evet, şöyle ki: İlk olarak, yeni aldığımız X marka telefona tanımladığımız kurumsal hattımızın eSIM'i bir türlü aktive olmadı, 'geçersiz QR kod' hatası veriyor. İkincisi, eski telefonumdaki kişisel hattımın eSIM'ini yeni Y marka telefonuma aktaramıyorum, sürekli 'eşleşme hatası' diyor. Bir de Z marka bir tabletimiz var, ona da data hattı eSIM olarak tanımlanacaktı, onun aktivasyon kodu hiç gelmedi. Üç farklı cihaz, üç farklı sorun. Cidden yetişemiyorum artık.",
+      "emotion": "frustrated_detailed",
+      "voice_notes": {
+        "tone": "bıkkın, detayları sıralarken yorgun",
+        "speed": "orta",
+        "emphasis": [
+          "bir türlü aktive olmadı",
+          "üç farklı sorun",
+          "yetişemiyorum artık"
+        ]
+      }
+    },
+    {
+      "turn_id": "turn_008",
+      "text": "IMEI numarası: [IMEI Numarası]. QR kod hatası da 'Geçersiz Aktivasyon Kodu' diyor. Hani bu kaçıncı deneme artık. Ben bunu günlerdir çözmeye çalışıyorum, işlerimiz aksıyor.",
+      "emotion": "irritated_insistent",
+      "voice_notes": {
+        "tone": "ses tonu yükseliyor, sabırsız",
+        "speed": "hızlı",
+        "emphasis": [
+          "kaçıncı deneme",
+          "işlerimiz aksıyor"
+        ]
+      }
+    },
+    {
+      "turn_id": "turn_010",
+      "text": "Hayır, yine olmadı! Bakın, kaç saattir bununla uğraşıyorum. Sizin bu sisteminiz neden bu kadar karmaşık? Ben bir iş insanıyım, vaktim çok değerli. Her aradığımda sıfırdan mı anlatacağım? Bu sorun neden bir türlü çözülmüyor? Bana basit bir eSIM aktivasyonunu yapamıyorsanız, siz ne iş yapıyorsunuz? BU NE CİDDİYETSİZLİK!",
+      "emotion": "angry_escalated",
+      "voice_notes": {
+        "tone": "yüksek sesle, öfkeli, bağırarak",
+        "speed": "çok hızlı",
+        "emphasis": [
+          "yine olmadı",
+          "vaktim çok değerli",
+          "bu ne ciddiyetsizlik!"
+        ],
+        "volume": "loud"
+      }
+    },
+    {
+      "turn_id": "turn_012",
+      "text": "Peki, madem anlık çözemiyorsunuz, öyle olsun. Kaydı oluşturun. Ama ne zaman döneceksiniz? Takip numarası alabilir miyim? Bu işin takibini ben mi yapacağım yine?",
+      "emotion": "resigned_skeptical",
+      "voice_notes": {
+        "tone": "pes etmiş, ama sorgulayıcı",
+        "speed": "orta",
+        "emphasis": [
+          "ne zaman döneceksiniz",
+          "takibini ben mi yapacağım"
+        ]
+      }
+    },
+    {
+      "turn_id": "turn_014",
+      "text": "Hayır, teşekkürler. Umarım bu sefer gerçekten çözülür.",
+      "emotion": "tired_hopeful",
+      "voice_notes": {
+        "tone": "yorgun, umutsuzlukla karışık",
+        "speed": "yavaş",
+        "emphasis": [
+          "umarım bu sefer gerçekten çözülür"
+        ]
+      }
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Hoş geldiniz Sayın [Müşteri Adı]. Telekomünikasyon şirketimize gösterdiğiniz ilgi için teşekkür ederiz. Konuşmalarımız kalite standartları gereği kayıt altına alınmaktadır. Kimlik doğrulamanız ve size daha iyi hizmet verebilmemiz için doğum tarihinizi ve anne kızlık soyadınızı alabilir miyim?",
+      "tools_triggered": [
+        {
+          "tool_name": "verify_user",
+          "parameters": {
+            "customer_phone": "0559 995 18 95",
+            "required_fields": [
+              "date_of_birth",
+              "maiden_name"
+            ]
+          }
+        }
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Bilgileriniz doğrulandı Sayın [Müşteri Adı]. Anladığım kadarıyla eSIM aktivasyon ve yönetim sorunları yaşıyorsunuz. Bu konuda size en iyi şekilde yardımcı olabilecek teknik ekibimize aktarıyorum. Lütfen kısa bir süre hatta kalınız.",
+      "tools_triggered": [
+        {
+          "tool_name": "get_customer_status",
+          "parameters": {
+            "customer_id": "verified_customer_id"
+          }
+        },
+        {
+          "tool_name": "route_to_agent",
+          "parameters": {
+            "target_agent_type": "TechAgent",
+            "reason": "eSIM_management_issue"
+          }
+        }
+      ],
+      "handoff": "TechAgent"
+    },
+    {
+      "turn_id": "turn_005",
+      "agent_persona": "TechAgent",
+      "text": "Merhaba Sayın [Müşteri Adı], ben Teknik Destek Uzmanı [Agent Adı]. Konuşmanız RouterAgent'tan bana aktarıldı. Yaşadığınız eSIM problemlerini detaylıca anlatır mısınız lütfen?",
+      "tools_triggered": [],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_007",
+      "agent_persona": "TechAgent",
+      "text": "Anlıyorum Sayın [Müşteri Adı], oldukça karmaşık ve can sıkıcı bir durum. Lütfen tek tek ilerleyelim ki bir noktayı atlamayalım. İlk olarak X marka telefondaki kurumsal hattınız için, o telefonun IMEI numarasını ve 'geçersiz QR kod' hatasının tam olarak ne zaman başladığını söyleyebilir misiniz?",
+      "tools_triggered": [
+        {
+          "tool_name": "check_device_imei",
+          "parameters": {
+            "imei_number": "requested_from_customer"
+          }
+        }
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_009",
+      "agent_persona": "TechAgent",
+      "text": "Teşekkürler Sayın [Müşteri Adı]. Sistemden kontrol ediyorum... Evet, bu numara için birkaç aktivasyon denemesi görünüyor ve başarısız olmuş. Şimdi size yeni bir aktivasyon kodu göndermeyi deneyeceğim. Lütfen telefonunuza gelen SMS'i kontrol edin veya tekrar QR kodu tarayın.",
+      "tools_triggered": [
+        {
+          "tool_name": "check_esim_status",
+          "parameters": {
+            "customer_phone": "0559 995 18 95",
+            "esim_type": "corporate_line"
+          }
+        },
+        {
+          "tool_name": "reissue_activation_code",
+          "parameters": {
+            "customer_phone": "0559 995 18 95",
+            "esim_type": "corporate_line"
+          }
+        }
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_011",
+      "agent_persona": "TechAgent",
+      "text": "Sayın [Müşteri Adı], sakinliğinizi korumanızı rica ediyorum. Haklısınız, bu tarz durumlar can sıkıcı olabilir ve vaktinizin değerli olduğunun farkındayım. Anlıyorum ki yaşadığınız sorunlar standart bir aktivasyonun ötesinde ve birden fazla cihazı kapsıyor. Bu durum, arka planda detaylı bir inceleme gerektiriyor. Bu nedenle, şu anda size anlık bir çözüm sunmak yerine, tüm bu sorunları kapsayacak kapsamlı bir teknik destek kaydı oluşturmamız gerekiyor. Bu, uzman ekibimizin sorunu kökten çözmesi için en etkili yol olacaktır.",
+      "tools_triggered": [
+        {
+          "tool_name": "create_tech_ticket",
+          "parameters": {
+            "customer_id": "verified_customer_id",
+            "issue_description": "Multiple eSIM issues: Corporate line activation (X phone, QR code error), Personal line transfer (Y phone, pairing error), Data line activation code missing (Z tablet). Requires deep investigation.",
+            "priority": "high"
+          }
+        }
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_013",
+      "agent_persona": "TechAgent",
+      "text": "Kesinlikle. Teknik destek kaydınız [Takip Numarası: TK-20250814-123456] ile oluşturulmuştur. Uzman ekibimiz 24 ila 48 saat içinde sizinle iletişime geçecektir. Bu takip numarası üzerinden işlemlerinizin durumunu çağrı merkezimizden veya mobil uygulamamızdan sorgulayabilirsiniz. Başka bir konu için yardımcı olabilir miydim?",
+      "tools_triggered": [],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_015",
+      "agent_persona": "TechAgent",
+      "text": "İyi günler dilerim, Sayın [Müşteri Adı].",
+      "tools_triggered": [
+        {
+          "tool_name": "end_conversation",
+          "parameters": {}
+        }
+      ],
+      "handoff": null
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "turn_id": "turn_004",
+      "from_agent_persona": "RouterAgent",
+      "to_agent_persona": "TechAgent",
+      "reason": "eSIM_management_issue"
+    }
+  ],
+  "tool_calls": [
+    {
+      "turn_id": "turn_002",
+      "tool_name": "verify_user",
+      "parameters": {
+        "customer_phone": "0559 995 18 95",
+        "required_fields": [
+          "date_of_birth",
+          "maiden_name"
+        ]
+      },
+      "result": "pending_customer_input"
+    },
+    {
+      "turn_id": "turn_004",
+      "tool_name": "get_customer_status",
+      "parameters": {
+        "customer_id": "verified_customer_id"
+      },
+      "result": "success"
+    },
+    {
+      "turn_id": "turn_004",
+      "tool_name": "route_to_agent",
+      "parameters": {
+        "target_agent_type": "TechAgent",
+        "reason": "eSIM_management_issue"
+      },
+      "result": "success"
+    },
+    {
+      "turn_id": "turn_007",
+      "tool_name": "check_device_imei",
+      "parameters": {
+        "imei_number": "requested_from_customer"
+      },
+      "result": "pending_customer_input"
+    },
+    {
+      "turn_id": "turn_009",
+      "tool_name": "check_esim_status",
+      "parameters": {
+        "customer_phone": "0559 995 18 95",
+        "esim_type": "corporate_line"
+      },
+      "result": "activation_failed"
+    },
+    {
+      "turn_id": "turn_009",
+      "tool_name": "reissue_activation_code",
+      "parameters": {
+        "customer_phone": "0559 995 18 95",
+        "esim_type": "corporate_line"
+      },
+      "result": "reissue_attempted_customer_feedback_awaited"
+    },
+    {
+      "turn_id": "turn_011",
+      "tool_name": "create_tech_ticket",
+      "parameters": {
+        "customer_id": "verified_customer_id",
+        "issue_description": "Multiple eSIM issues: Corporate line activation (X phone, QR code error), Personal line transfer (Y phone, pairing error), Data line activation code missing (Z tablet). Requires deep investigation.",
+        "priority": "high"
+      },
+      "result": "ticket_created_TK-20250814-123456"
+    },
+    {
+      "turn_id": "turn_015",
+      "tool_name": "end_conversation",
+      "parameters": {},
+      "result": "success"
+    }
+  ],
+  "generation_id": "bf22fbdd-c993-49e4-86bb-8870584afbf8",
+  "generated_at": "2025-08-14T07:46:05.358487",
+  "index": 12,
+  "variation_params": {
+    "persona": "business_professional",
+    "issue": "multiple_esim_management",
+    "handoff_pattern": [
+      "RouterAgent",
+      "TechAgent"
+    ],
+    "complexity": "chaos",
+    "interruption": "emotional_escalation",
+    "resolution": "ticket_created"
+  }
+}

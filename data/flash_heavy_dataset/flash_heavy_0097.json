@@ -1,0 +1,205 @@
+{
+  "id": "flash_heavy_0097",
+  "primary_issue": "account_porting_status_check",
+  "secondary_issue": "technical_network_no_signal",
+  "customer_profile": "frequent_traveler",
+  "region": "istanbul",
+  "dialect_info": {
+    "dialect": "neutral",
+    "pace": "fast",
+    "formality": "medium"
+  },
+  "conversation_dynamic": "circular",
+  "complexity": "complex",
+  "metadata": {
+    "context": "international roaming issues",
+    "traits": [
+      "experienced",
+      "specific_needs",
+      "impatient"
+    ],
+    "emotional_journey": [
+      "direct",
+      "frustrated",
+      "demanding",
+      "accepting"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo, iyi günler. Ben numara taşıma başvurumun son durumunu öğrenmek istiyorum. Şu an yurt dışındayım ve acilen hattımın aktifleşmesi gerekiyor.",
+      "emotion": "direct",
+      "dialect_markers": [
+        "neutral"
+      ],
+      "pace": "fast",
+      "background_context": "international roaming issues"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "TC kimlik numaram 12345678901. Hattım ne zaman aktif olacak? İki gündür bekliyorum, işlerim aksıyor burada.",
+      "emotion": "direct",
+      "dialect_markers": [
+        "neutral"
+      ],
+      "pace": "fast",
+      "background_context": "international roaming issues"
+    },
+    {
+      "turn_id": "turn_006",
+      "text": "Evet, taşıma durumu ne oldu? Bir de asıl sorun şu an, yurt dışındayım ve hattımda sinyal yok! Ne arama yapabiliyorum ne internete girebiliyorum. Taşıma tamamlandıysa bile neden sinyal yok?",
+      "emotion": "frustrated",
+      "dialect_markers": [
+        "neutral"
+      ],
+      "pace": "fast",
+      "background_context": "international roaming issues"
+    },
+    {
+      "turn_id": "turn_008",
+      "text": "Biliyorum! Yurt dışındayım diyorum size, bu durum çok kritik. Acil çözülmesi lazım. Taşıma tamamlandıysa bile sinyal neden yok, onu çözün önce!",
+      "emotion": "demanding",
+      "dialect_markers": [
+        "neutral"
+      ],
+      "pace": "fast",
+      "background_context": "international roaming issues"
+    },
+    {
+      "turn_id": "turn_011",
+      "text": "Sinyal yok işte. Telefonum iPhone 15 Pro, eSIM kullanıyorum. Ayarları kontrol ettim, manuel şebeke seçimi de yaptım ama yok. Ne yapmam lazım? Acaba eSIM'de mi bir sorun var?",
+      "emotion": "demanding",
+      "dialect_markers": [
+        "neutral"
+      ],
+      "pace": "fast",
+      "background_context": "international roaming issues"
+    },
+    {
+      "turn_id": "turn_013",
+      "text": "IMEI numaram: 357913579135791. Lütfen hızlı olun, önemli bir toplantıya yetişmem gerekiyor, iletişime geçemiyorum kimseyle!",
+      "emotion": "demanding",
+      "dialect_markers": [
+        "neutral"
+      ],
+      "pace": "fast",
+      "background_context": "international roaming issues"
+    },
+    {
+      "turn_id": "turn_015",
+      "text": "Peki, anladım. Teknik ekip ne kadar sürede geri döner? Bu ne zaman çözülür? Bir de ilk sorduğum, numara taşıma işi ne oldu peki? O tamamlandı mı şimdi?",
+      "emotion": "accepting",
+      "dialect_markers": [
+        "neutral"
+      ],
+      "pace": "fast",
+      "background_context": "international roaming issues"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Hoş geldiniz. Numara taşıma başvurunuzla ilgili yardımcı olmak için kimlik doğrulamanızı rica edeceğim. Adınız, soyadınız ve T.C. kimlik numaranızı alabilir miyim?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Bilgilerinizi doğruladım. Numara taşıma sürecinizle ilgili size daha detaylı bilgi verebilmesi için sizi Taşıma İşlemleri Departmanımıza aktarıyorum. Lütfen kısa bir süre bekleyiniz.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_005",
+      "agent_persona": "FAQAgent",
+      "text": "Merhaba, ben Elif. Numara taşıma başvurunuzla ilgili yardımcı olmak için buradayım. Sanırım yurt dışındayken hattınızın aktifleşme durumu hakkında bilgi almak istiyorsunuz, doğru mu?",
+      "tools_triggered": [],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_007",
+      "agent_persona": "FAQAgent",
+      "text": "Anlıyorum, taşıma işleminiz henüz 'Devam Ediyor' olarak görünüyor. Sinyal sorununa gelince, bu teknik bir konu. Hattınızın taşıması tamamlanmadığı için mi sinyal yok, yoksa cihazınızla ilgili mi bir sorun var emin olamıyorum. Detaylı kontrol için teknik destek ekibimize aktarmam gerekecek.",
+      "tools_triggered": [
+        "get_customer_status"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_009",
+      "agent_persona": "FAQAgent",
+      "text": "Haklısınız, yurt dışında internet ve arama bağlantısı hayati önem taşır. Sinyal sorununu çözmek için sizi teknik ekibimize yönlendiriyorum. Onlar cihazınız ve hattınız üzerinde daha detaylı inceleme yapabilecekler. Lütfen hatta kalın.",
+      "tools_triggered": [
+        "route_to_agent"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_010",
+      "agent_persona": "TechAgent",
+      "text": "İyi günler, ben Mert. Teknik Destek'ten. Sinyal sorununuzla ilgili yardımcı olacağım. Nerede tam olarak sinyal alamıyorsunuz ve cihazınızın modeli nedir?",
+      "tools_triggered": [],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_012",
+      "agent_persona": "TechAgent",
+      "text": "Anladım. eSIM kullanmanız önemli. Cihazınızın IMEI numarasını alabilir miyim? Ayrıca, eSIM profilinizin durumu ve şebeke ayarlarınızı kontrol edelim. Belki bir yeniden aktivasyon gerekebilir.",
+      "tools_triggered": [
+        "check_device_imei",
+        "check_esim_status"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_014",
+      "agent_persona": "TechAgent",
+      "text": "IMEI numaranızı kontrol ettim. Görünen o ki, eSIM profilinizde yurt dışı bağlantısı için bazı güncellemeler eksik. Bu durumu uzaktan düzeltmek için teknik bir talep oluşturmamız gerekiyor. Hattınızın tam performansla çalışabilmesi için acil durum kaydı açıyorum.",
+      "tools_triggered": [
+        "create_tech_ticket"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_016",
+      "agent_persona": "TechAgent",
+      "text": "Acil durum kaydınız oluşturuldu. Teknik ekibimiz en geç 4 saat içinde size dönüş yapacak ve sorunu çözmek için gerekli işlemleri tamamlayacak. Numara taşıma işleminiz ise ayrı bir süreçte ilerliyor, o konuda Taşıma Departmanı'ndaki arkadaşlarımız yardımcı olacaktır. Önceliğimiz şu anki sinyal sorununuz.",
+      "tools_triggered": [
+        "create_tech_ticket"
+      ],
+      "formality_level": "medium"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "FAQAgent",
+      "reason": "Customer's primary issue (account porting status check) requires a specialized agent (FAQAgent) who can access porting status details.",
+      "context_preserved": true
+    },
+    {
+      "at_turn": 9,
+      "from": "FAQAgent",
+      "to": "TechAgent",
+      "reason": "Customer introduced a secondary, technical issue (no signal while roaming) which is outside the FAQAgent's scope and requires a technical support specialist (TechAgent).",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "The primary issue (porting status) was acknowledged as 'in progress' but not fully resolved during this call due to its nature. The secondary issue (no signal while roaming) was addressed by creating an urgent technical support ticket for eSIM profile update/network configuration, with a promise of a 4-hour callback.",
+    "customer_satisfaction": "The customer moved from frustrated/demanding to accepting, understanding that a solution path was initiated for the most pressing issue (signal), even if not immediate. The porting issue remains open but is deprioritized.",
+    "follow_up_needed": true
+  },
+  "generated_at": "2025-08-14T09:20:33.392820",
+  "model": "flash",
+  "index": 97
+}

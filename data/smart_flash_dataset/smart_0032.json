@@ -1,0 +1,44 @@
+{
+  "id": "smart_0032",
+  "scenario": "plan_info",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Hızlıca mevcut tarifemin detaylarını öğrenmek istiyorum. Ne kadar kaldı, ne kadar ödenecek?",
+      "emotion": "impatient"
+    },
+    {
+      "turn": 3,
+      "text": "Evet, telefon numaram 5551234567."
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Tabii ki efendim. Lütfen kimliğinizi doğrulamak için telefon numaranızı paylaşır mısınız?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "PlanAgent",
+      "text": "5551234567 numaralı hattınız için mevcut tarifeniz X GB internet, sınırsız konuşma ve SMS içermektedir. Güncel fatura tutarınız ise Y TL'dir. Başka bir sorunuz yoksa işlemi sonlandırabiliriz.",
+      "tools": [
+        "get_customer_plan",
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:57:06.090763",
+  "required_tools": [
+    "verify_user",
+    "get_customer_plan",
+    "end_conversation"
+  ],
+  "agent_flow": [
+    "RouterAgent",
+    "PlanAgent"
+  ]
+}

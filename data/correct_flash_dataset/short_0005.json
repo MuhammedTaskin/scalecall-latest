@@ -1,0 +1,143 @@
+{
+  "conversation_id": "short_0005_payment_issue",
+  "metadata": {
+    "scenario": "payment_issue",
+    "handoff_pattern": [
+      "RouterAgent",
+      "BillingAgent"
+    ]
+  },
+  "customer_profile": {
+    "persona": "polite",
+    "phone": "0555 123 45 67"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Merhaba, hesabımda bir ödeme sorunu yaşıyorum. Son faturamı göremiyorum ve ödeme yapamıyorum.",
+      "emotion": "polite"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Evet, doğru. Numaram 0555 123 45 67.",
+      "emotion": "polite"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Anladım, teşekkür ederim. O zaman faturamla ilgili yardımı oradan alabilirim.",
+      "emotion": "polite"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba, Türk Telekom'a hoş geldiniz. Kimliğinizi doğrulamak için lütfen telefon numaranızı veya TC kimlik numaranızı paylaşır mısınız?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkürler, kimliğiniz doğrulandı. Ödeme sorununuzla ilgili olarak sizi ilgili birime aktarıyorum. Lütfen hatta kalınız.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "handoff": {
+        "to": "BillingAgent"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "BillingAgent",
+      "text": "Merhaba, ben faturalandırma departmanından Ayşe. Ödeme sorununuzla ilgili yardımcı olmak için buradayım. Son faturanızı ve ödenmemiş tutarı kontrol ediyorum.",
+      "tools_triggered": [
+        "get_last_bill",
+        "get_unpaid_amount"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_007",
+      "agent_persona": "BillingAgent",
+      "text": "Evet, son faturanızda bir gecikme görünüyor. Size özel bir kampanya indirimi uygulayabilirim. Bu indirimi kabul ediyor musunuz?",
+      "tools_triggered": [
+        "apply_campaign_discount"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_008",
+      "agent_persona": "BillingAgent",
+      "text": "Harika, indirim uygulandı. Faturanızı ödeyebilmeniz için gerekli düzenlemeleri yaptım. Başka bir konuda yardımcı olabilir miyim?",
+      "tools_triggered": [
+        "create_payment_note",
+        "end_conversation"
+      ],
+      "handoff": null
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "BillingAgent",
+      "reason": "payment_issue"
+    }
+  ],
+  "tool_calls": [
+    {
+      "turn_id": "turn_002",
+      "tool": "verify_user",
+      "arguments": {
+        "phone": "0555 123 45 67"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_004",
+      "tool": "route_to_agent",
+      "arguments": {
+        "agent_type": "BillingAgent"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "get_last_bill",
+      "arguments": {},
+      "result": {
+        "bill_date": "2023-10-26",
+        "amount": 150,
+        "due_date": "2023-11-10"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "get_unpaid_amount",
+      "arguments": {},
+      "result": 150
+    },
+    {
+      "turn_id": "turn_007",
+      "tool": "apply_campaign_discount",
+      "arguments": {
+        "discount_percentage": 10
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_008",
+      "tool": "create_payment_note",
+      "arguments": {
+        "note": "Customer agreed to 10% discount for late payment."
+      },
+      "result": true
+    }
+  ],
+  "generated_at": "2025-08-14T08:01:01.622732",
+  "index": 5
+}

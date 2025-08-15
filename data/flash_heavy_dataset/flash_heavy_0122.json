@@ -1,0 +1,144 @@
+{
+  "id": "flash_heavy_0122",
+  "primary_issue": "technical_device_hotspot",
+  "secondary_issue": null,
+  "customer_profile": "gig_worker",
+  "region": "bursa",
+  "dialect_info": {
+    "dialect": "marmara",
+    "pace": "moderate",
+    "formality": "medium"
+  },
+  "conversation_dynamic": "educational",
+  "complexity": "medium",
+  "metadata": {
+    "context": "needs reliable service for work",
+    "traits": [
+      "flexible",
+      "app_dependent",
+      "connectivity_critical"
+    ],
+    "emotional_journey": [
+      "stressed",
+      "urgent",
+      "persistent",
+      "grateful"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo, kolay gelsin. Benim internetim niye paylaşılmıyor ya? Hotspot çalışmıyor, iş yapamıyorum ben! Bursa'dan arıyorum, Can ben.",
+      "emotion": "stressed",
+      "dialect_markers": [
+        "marmara"
+      ],
+      "pace": "moderate",
+      "background_context": "needs reliable service for work"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Can Yılmaz. Çabuk olalım lütfen, kuryeyim ben. Navigasyon açamıyorum, sipariş düşmüyor, bekletmeyin beni. Her an yolda olmam lazım.",
+      "emotion": "urgent",
+      "dialect_markers": [
+        "marmara"
+      ],
+      "pace": "moderate",
+      "background_context": "needs reliable service for work"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Tamam da hemen bağlayın abi, bekleyecek vaktim yok. Zaten dün de hafif sorunluydu, bugün tamamen gitti. Uygulamadan sipariş gelmiyor, işim durdu benim.",
+      "emotion": "urgent",
+      "dialect_markers": [
+        "marmara"
+      ],
+      "pace": "moderate",
+      "background_context": "needs reliable service for work"
+    },
+    {
+      "turn_id": "turn_007",
+      "text": "IMEI mi? Nereden bulayım şimdi onu? Telefonu kurcalayacak halim yok yahu, hemen çözün şunu! Zaten şarjım da az, yola çıkmam lazım. Ayarlarda bir şey mi değişti acaba?",
+      "emotion": "persistent",
+      "dialect_markers": [
+        "marmara"
+      ],
+      "pace": "moderate",
+      "background_context": "needs reliable service for work"
+    },
+    {
+      "turn_id": "turn_009",
+      "text": "Hımm, tamam. Bir deniyorum hemen. Kapatıp açtım... Aa! Bağlandı galiba! Evet evet, açtı! Vay be, iyi oldu bu. Çok teşekkür ederim Ayla Hanım, Allah razı olsun. İşime yetiştim sayenizde.",
+      "emotion": "grateful",
+      "dialect_markers": [
+        "marmara"
+      ],
+      "pace": "moderate",
+      "background_context": "needs reliable service for work"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba Can Bey, Turkcell'e hoş geldiniz. Hotspot sorununuzla ilgili yardımcı olacağım. Güvenliğiniz için öncelikle kimlik doğrulama yapmamız gerekiyor. Adınızı ve soyadınızı alabilir miyim lütfen?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkürler Can Bey. Sistemde Can Yılmaz olarak kaydınız mevcut. Anlıyorum aciliyetinizi. Hotspot sorunu genellikle cihaz ayarlarından veya hattınızın teknik altyapısından kaynaklanabilir. Bu konuda size daha detaylı yardımcı olabilecek 'Teknik Destek' ekibimize aktarmam gerekiyor. Hattınızın durumunu kontrol ettim, genel bir sorun görünmüyor ama hotspot özel bir durum. Aktarıyorum, lütfen hattan ayrılmayın.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "TechAgent",
+      "text": "Merhaba Can Bey, ben Teknik Destek'ten Ayla. Hotspot sorununuzu anlıyorum. Cihazınızın IMEI numarasını rica edebilir miyim? Bu, cihazınızın teknik uyumluluğunu ve ağımızla olan bağlantısını kontrol etmemize yardımcı olacak. Ayrıca, sorunu takip edebilmek adına bir teknik destek kaydı oluşturuyorum.",
+      "tools_triggered": [
+        "check_device_imei",
+        "create_tech_ticket"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_008",
+      "agent_persona": "TechAgent",
+      "text": "Endişelenmeyin Can Bey, IMEI'nizi *#06# tuşlayarak kolayca öğrenebilirsiniz. Ancak, bu sırada ben sizin için hızlı bir kontrol yapayım. Hotspot bağlantınızın aktifleşmesi için hattınıza özel bir sinyal yenileme, yani 'hotspot aktivasyon kodu yeniden gönderimi' işlemi uygulayacağım. Bu işlem genellikle bağlantı kopukluklarında etkili olur. Lütfen telefonunuzu bir kapatıp açar mısınız bu işlem sonrası?",
+      "tools_triggered": [
+        "reissue_activation_code"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_010",
+      "agent_persona": "TechAgent",
+      "text": "Rica ederim Can Bey, sorun çözüldüğüne sevindim. İşlerinizin aksamaması bizim için önemli. Başka bir konuda yardımcı olabileceğimiz zaman tekrar arayabilirsiniz. İyi günler dilerim.",
+      "tools_triggered": [],
+      "formality_level": "medium"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "TechAgent",
+      "reason": "Hotspot issue requires deeper technical troubleshooting beyond initial routing agent's scope.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "The customer's hotspot issue was resolved by the TechAgent reissuing the hotspot activation code to the customer's line, which required the customer to restart their device.",
+    "customer_satisfaction": "grateful",
+    "follow_up_needed": false
+  },
+  "generated_at": "2025-08-14T09:22:31.305475",
+  "model": "flash",
+  "index": 122
+}

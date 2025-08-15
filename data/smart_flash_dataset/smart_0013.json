@@ -1,0 +1,44 @@
+{
+  "id": "smart_0013",
+  "scenario": "faq_search",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Merhaba, internet paketlerim hakkında genel bir bilgi alabilir miyim?",
+      "emotion": "polite"
+    },
+    {
+      "turn": 3,
+      "text": "Numaram 5XXXXXXXX."
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Elbette, yardımcı olmak isterim. Lütfen kimliğinizi doğrulamak için telefon numaranızı paylaşır mısınız?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "FAQAgent",
+      "text": "Teşekkürler. Mevcut internet paketleriniz hakkında detaylı bilgiyi SSS bölümümüzde bulabilirsiniz.  Başka sorunuz yoksa görüşmemizi sonlandırabiliriz.",
+      "tools": [
+        "search_faq",
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:57:00.213200",
+  "required_tools": [
+    "verify_user",
+    "search_faq",
+    "end_conversation"
+  ],
+  "agent_flow": [
+    "RouterAgent",
+    "FAQAgent"
+  ]
+}

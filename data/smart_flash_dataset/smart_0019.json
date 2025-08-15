@@ -1,0 +1,44 @@
+{
+  "id": "smart_0019",
+  "scenario": "bill_check",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Faturalarım neden bu kadar yüksek! Hemen öğrenmek istiyorum!",
+      "emotion": "angry"
+    },
+    {
+      "turn": 3,
+      "text": "Evet, 123456789."
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Anlıyorum. Lütfen kimliğinizi doğrulamak için T.C. kimlik numaranızı paylaşır mısınız?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "BillingAgent",
+      "text": "T.C. kimlik numaranız 123456789 ile yapılan son faturanız 350 TL'dir. Başka yardımcı olabileceğim bir konu var mı?",
+      "tools": [
+        "get_last_bill",
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:57:02.247393",
+  "required_tools": [
+    "verify_user",
+    "get_last_bill",
+    "end_conversation"
+  ],
+  "agent_flow": [
+    "RouterAgent",
+    "BillingAgent"
+  ]
+}

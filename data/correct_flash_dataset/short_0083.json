@@ -1,0 +1,100 @@
+{
+  "conversation_id": "short_0083_general_help",
+  "metadata": {
+    "scenario": "general_help",
+    "handoff_pattern": [
+      "RouterAgent",
+      "FAQAgent"
+    ]
+  },
+  "customer_profile": {
+    "persona": "normal",
+    "phone": "0555 123 45 67"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Merhaba, internetim yavaş çalışıyor.",
+      "emotion": "normal"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Evet, telefon numaram 0555 123 45 67.",
+      "emotion": "normal"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Anladım, teşekkürler.",
+      "emotion": "normal"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba, Telekom çağrı merkezine hoş geldiniz. Lütfen kimliğinizi doğrulamak için telefon numaranızı veya T.C. kimlik numaranızı paylaşır mısınız?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkürler, numaranızı doğruladım. Modeminizde veya bağlantınızda genel bir yavaşlık görünüyor. Bu konuda size yardımcı olabilecek sıkça sorulan soruları ve çözümleri içeren birimimize yönlendiriyorum.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "handoff": {
+        "to": "FAQAgent"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "FAQAgent",
+      "text": "Merhaba, internet yavaşlığı konusunda size yardımcı olabilirim. Öncelikle modeminizi yeniden başlatmayı denediniz mi? Bu, çoğu bağlantı sorununu çözebilir.",
+      "tools_triggered": [
+        "search_faq"
+      ],
+      "handoff": null
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "FAQAgent",
+      "reason": "general_help"
+    }
+  ],
+  "tool_calls": [
+    {
+      "turn_id": "turn_002",
+      "tool": "verify_user",
+      "arguments": {
+        "phone_number": "0555 123 45 67"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_004",
+      "tool": "route_to_agent",
+      "arguments": {
+        "agent_name": "FAQAgent",
+        "reason": "Internet yavaşlığı sorunu"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "search_faq",
+      "arguments": {
+        "query": "internet yavaşlığı modemi yeniden başlat"
+      },
+      "result": "Modemi yeniden başlatmak internet hızını artırabilir. Modemin güç kablosunu çıkarıp 30 saniye bekledikten sonra tekrar takın."
+    }
+  ],
+  "generated_at": "2025-08-14T08:01:52.309275",
+  "index": 83
+}

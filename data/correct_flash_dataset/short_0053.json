@@ -1,0 +1,102 @@
+{
+  "conversation_id": "short_0053_payment_issue",
+  "metadata": {
+    "scenario": "payment_issue",
+    "handoff_pattern": [
+      "RouterAgent",
+      "BillingAgent"
+    ]
+  },
+  "customer_profile": {
+    "persona": "angry",
+    "phone": "0555 123 45 67"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Hesabıma neden bu kadar yüksek bir fatura geldi anlamıyorum! Sürekli aynı sorunlar, yeter artık!",
+      "emotion": "angry"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Evet, doğru numara. Ama bu fatura mantıklı değil, daha önce hiç bu kadar gelmemişti!",
+      "emotion": "angry"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Tamam, anladım. O zaman bu konuyu faturadan sorumlu olan birine aktarın lütfen. Bu şekilde çözülmeyecek!",
+      "emotion": "angry"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Türk Telekom'a hoş geldiniz. Kimliğinizi doğrulamak için lütfen TC kimlik numaranızı veya müşteri numaranızı paylaşır mısınız?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Kimlik bilgileriniz doğrulandı. Görüyorum ki fatura ile ilgili bir sorununuz var. Bu durumu daha detaylı inceleyebilmemiz için sizi ilgili birimimize aktarıyorum. Lütfen bekleyiniz.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "handoff": {
+        "to": "BillingAgent"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "BillingAgent",
+      "text": "Merhaba, ben fatura departmanından Ayşe. Hesabınızdaki yüksek fatura tutarı ile ilgili size yardımcı olacağım. Sistemden son faturanızı kontrol ediyorum. Evet, görüyorum ki bu ayki kullanımınıza ek olarak bir kampanya indirimi uygulanmış ve bu durum fatura tutarını etkilemiş. Detayları size açıklayabilirim.",
+      "tools_triggered": [
+        "get_last_bill",
+        "end_conversation"
+      ],
+      "handoff": null
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "BillingAgent",
+      "reason": "payment_issue"
+    }
+  ],
+  "tool_calls": [
+    {
+      "turn_id": "turn_002",
+      "tool": "verify_user",
+      "arguments": {
+        "customer_id": "0555 123 45 67"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_004",
+      "tool": "route_to_agent",
+      "arguments": {
+        "agent_name": "BillingAgent"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "get_last_bill",
+      "arguments": {},
+      "result": {
+        "bill_amount": "150 TL",
+        "usage": "Normal kullanım + Kampanya indirimi",
+        "details": "Müşteri memnuniyeti için uygulanan kampanya indirimi bu ayki faturaya yansımıştır."
+      }
+    }
+  ],
+  "generated_at": "2025-08-14T08:01:31.895485",
+  "index": 53
+}

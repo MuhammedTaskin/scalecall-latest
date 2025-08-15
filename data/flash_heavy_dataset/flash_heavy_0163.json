@@ -1,0 +1,201 @@
+{
+  "id": "flash_heavy_0163",
+  "primary_issue": "billing_payments_refund",
+  "secondary_issue": "plans_changes_upgrade",
+  "customer_profile": "frequent_traveler",
+  "region": "konya",
+  "dialect_info": {
+    "dialect": "central",
+    "pace": "slow",
+    "formality": "high"
+  },
+  "conversation_dynamic": "interrupted",
+  "complexity": "complex",
+  "metadata": {
+    "context": "international roaming issues",
+    "traits": [
+      "experienced",
+      "specific_needs",
+      "impatient"
+    ],
+    "emotional_journey": [
+      "direct",
+      "frustrated",
+      "demanding",
+      "accepting"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo, iyi günler. Ben Halil İbrahim Topçu. Efendim, geçen ay yurt dışındaydım, İsviçre'de. Bir de ne göreyim, gelen fatura bin liranın üstünde. Böyle şey olur mu gari? Benim hattımda yurt dışı paketim vardı hani, emme bu neyin nesi? Bi' bakın hele şu işe, bir yanlışlık olmalı.",
+      "emotion": "direct",
+      "dialect_markers": [
+        "gari",
+        "emme",
+        "bi' bakın hele",
+        "Konya ağzı yavaş ve resmiyet"
+      ],
+      "pace": "slow",
+      "background_context": "international roaming issues"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "He, Halil İbrahim Topçu. TC kimlik numaram da 12345678910. Yani, bu ilk defa olmuyor, ben sürekli geziyorum, biliyorsunuz. Her ay bir yerlerdeyim. Bu roaming ücretleri beni bezdirdi gari. Bi' çözüm bulun artık.",
+      "emotion": "direct",
+      "dialect_markers": [
+        "He",
+        "gari",
+        "Konya ağzı yavaş ve resmiyet"
+      ],
+      "pace": "slow",
+      "background_context": "international roaming issues, frequent traveler"
+    },
+    {
+      "turn_id": "turn_006",
+      "text": "Efendim, bakın, ben geçen ay İsviçre'deydim, tamam mı? Paketi ben ona göre yaptım. Günde belki bir iki telefon görüşmesi yapmışımdır, interneti de hani acil bir işim olunca açmışımdır. Zaten çoğu yerde Wi-Fi kullandım. Emme, fatura gelmiş bin küsür lira. Bu nasıl bir iş anlamadım ki. Benim hattım o kadar kullanıma müsait değil zaten. Geçen ay da Almanya'da-",
+      "emotion": "frustrated",
+      "dialect_markers": [
+        "emme",
+        "anlamadım ki",
+        "Konya ağzı",
+        "uzatma"
+      ],
+      "pace": "slow",
+      "background_context": "international roaming issues, unexpected high bill"
+    },
+    {
+      "turn_008": "text",
+      "text": "Hayır efendim! Dinler misiniz beni bi' zahmet! Ben size diyorum ki ben her ay yurt dışına çıkıyorum. Benim bu paketimle ilgili bir sorun var demek ki. Ben paketi ona göre yapıyorum, yine de bu faturalar geliyor. Bu benim hatam değil! Ya bu faturayı düzeltin ya da ben hattımı kapatacağım gari. Böyle hizmet olmaz. Yıllardır sizinleyim ben.",
+      "emotion": "demanding",
+      "dialect_markers": [
+        "Hayır efendim!",
+        "bi' zahmet",
+        "gari",
+        "Konya ağzı",
+        "vurgulu konuşma"
+      ],
+      "pace": "normal",
+      "background_context": "demanding resolution, threatening to cancel, loyalty"
+    },
+    {
+      "turn_011": "text",
+      "text": "Evet, aynen öyle. Bakın, benim bir ay Japonya'ya gitmem gerekiyor, sonra Amerika var. Yani öyle kısa süreli paketler bana fayda etmiyor. Sürekli yurt dışı bağlantısı olan, interneti bol olan bir paket lazım bana. Hem uygun olsun, hem de bu roaming derdimi kökten çözsün. Böyle her ay fatura derdiyle uğraşmak istemiyorum artık.",
+      "emotion": "accepting",
+      "dialect_markers": [
+        "aynen öyle",
+        "bol olan bir paket lazım",
+        "artık",
+        "Konya ağzı"
+      ],
+      "pace": "slow",
+      "background_context": "specific needs for frequent international travel"
+    },
+    {
+      "turn_013": "text",
+      "text": "Tamam, efendim. Bu bayağı iyiymiş. Hem fatura da düşecekse, benim için sorun yok. Geçirin o pakete beni o zaman. Teşekkür ederim. En azından bu seferlik bir çözüm bulduk.",
+      "emotion": "accepting",
+      "dialect_markers": [
+        "bayağı iyiymiş",
+        "o zaman",
+        "en azından",
+        "Konya ağzı"
+      ],
+      "pace": "slow",
+      "background_context": "satisfied with new plan and bill resolution"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Hoş geldiniz Sayın Topçu. Talebinizi anlıyorum. Güvenliğiniz için öncelikle kimlik doğrulamanızı rica edeceğim. Adınız ve soyadınız ile birlikte, TC kimlik numaranızın son dört hanesini veya doğum tarihinizi iletebilir misiniz?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Bilgileriniz doğrulandı Sayın Topçu. Fatura ve yurt dışı kullanımınızla ilgili yaşadığınız aksaklık için özür dileriz. Bu konuda size en doğru bilgiyi ve desteği sağlamak adına, çağrınızı fatura ve finans birimimize aktarıyorum. Lütfen kısa bir süre hatta kalınız.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_005",
+      "agent_persona": "BillingAgent",
+      "text": "İyi günler Sayın Halil İbrahim Topçu. Fatura ve finans biriminden ben Ayşe Yılmaz. Az önce aktarılan görüşme notlarınıza göre yurt dışı kullanımınızla ilgili bir sorun yaşadığınızı anlıyorum. Son faturanıza bakıyorum. Lütfen sorununuzu detaylıca anlatır mısınız?",
+      "tools_triggered": [
+        "get_last_bill"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_007",
+      "agent_persona": "BillingAgent",
+      "text": "Anlıyorum Sayın Topçu. Faturanızda İsviçre'deki veri kullanımınızdan kaynaklanan bir yükseliş gözlemliyorum. Özellikle 15-17 Mart tarihleri arasında yüksek bir… (Müşteri araya girer) Evet, Almanya'daki durum da notlarınızda mevcut. Yurt dışı paketiniz olmasına rağmen bu durumun yaşanması elbette üzücü. Kullanım detaylarınızı inceleyerek size yardımcı olmak isterim. Bir saniye lütfen, detaylı inceleme yapıyorum. İsterseniz bu kullanımın bir kısmına...",
+      "tools_triggered": [
+        "get_last_bill"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_009",
+      "agent_persona": "BillingAgent",
+      "text": "Sayın Topçu, haklı serzenişinizi anlıyorum. Yıllardır müşterimiz olmanız ve sık seyahat etmeniz bizim için değerli. Mevcut paketinizin yurt dışı kullanım alışkanlıklarınıza tam olarak uygun olmadığını görüyorum. Bu ayki faturanızda, size özel bir jest olarak 300 TL'lik bir indirim tanımlayabiliriz. Ancak daha kalıcı bir çözüm için, sizin gibi sık seyahat eden müşterilerimize özel tasarlanmış daha kapsamlı yurt dışı paketlerimizi sunan tarife ve paket birimimize aktarmak isterim. Bu sayede benzer durumları tekrar yaşamazsınız. Ne dersiniz?",
+      "tools_triggered": [
+        "get_customer_plan",
+        "route_to_agent"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_010",
+      "agent_persona": "PlanAgent",
+      "text": "Merhaba Sayın Topçu. Tarife ve paket biriminden Emre Can. Faturanızdaki düzenleme ve yeni paket ihtiyacınızla ilgili bilgiyi aldım. Sık seyahat eden bir müşteri olarak, tam olarak hangi ülkelerde ve ne kadar süreyle internet ve görüşme ihtiyacınız oluyor? Mevcut paketinizin yurt dışı kapsamını ve daha uygun olabilecek alternatiflerimizi hemen inceleyelim.",
+      "tools_triggered": [
+        "get_customer_plan",
+        "list_all_plans"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_012",
+      "agent_persona": "PlanAgent",
+      "text": "Anladım Sayın Topçu. Sürekli ve farklı bölgelere seyahat ettiğiniz için, size 'Global Gezgin' paketimizi önerebilirim. Bu paket, aylık 20 GB yurt dışı internet, 500 dakika yurt dışı arama ve sınırsız yurt içi görüşme sunuyor. Ayrıca, yurt dışı paketi otomatik olarak devreye giriyor ve sürpriz faturaların önüne geçiyor. Aylık ücreti mevcut paketinizden sadece bir miktar yüksek ama sağladığı rahatlık ve kapsama alanı ile bu tür sorunları kökten çözecektir. Ne dersiniz, bu pakete geçişinizi sağlayalım mı?",
+      "tools_triggered": [
+        "list_all_plans",
+        "change_customer_plan"
+      ],
+      "formality_level": "high"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "BillingAgent",
+      "reason": "Customer's primary issue is related to billing and high roaming charges. RouterAgent identified this and routed to the specialized BillingAgent.",
+      "context_preserved": true
+    },
+    {
+      "at_turn": 9,
+      "from": "BillingAgent",
+      "to": "PlanAgent",
+      "reason": "While addressing the billing issue, BillingAgent identified that the root cause was the customer's unsuitable plan for their frequent international travel. A permanent solution involves a plan change/upgrade, requiring a PlanAgent.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "The customer received a partial refund/credit for the high roaming bill (300 TL) and was successfully transitioned to a more suitable 'Global Gezgin' plan designed for frequent international travelers, which addresses their ongoing roaming issues and specific data/call needs.",
+    "customer_satisfaction": "The customer's emotional journey concluded with acceptance, indicating satisfaction with the proposed solution for both the immediate billing issue and the long-term plan suitability.",
+    "follow_up_needed": false
+  },
+  "generated_at": "2025-08-14T09:26:20.666018",
+  "model": "flash",
+  "index": 163
+}

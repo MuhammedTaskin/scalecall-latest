@@ -1,0 +1,44 @@
+{
+  "id": "smart_0003",
+  "scenario": "faq_search",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Ya bu internetim neden bu kadar yavaş anlamıyorum! Sürekli kopuyor!",
+      "emotion": "frustrated"
+    },
+    {
+      "turn": 3,
+      "text": "Evet, numaram 5551234567."
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Merhaba, sorun yaşadığınız için üzgünüz. Lütfen kimliğinizi doğrulamak için telefon numaranızı paylaşır mısınız?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "FAQAgent",
+      "text": "Anlıyorum. Sıkça sorulan sorular arasında internet yavaşlığı ve kopmalarıyla ilgili birkaç çözüm önerisi mevcut. 'İnternet Hızlandırma Rehberi' başlıklı makaleyi incelemenizi öneririm. Orada adım adım yapabilecekleriniz açıklanmış. Başka yardımcı olabileceğim bir konu var mı?",
+      "tools": [
+        "search_faq",
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:56:57.437868",
+  "required_tools": [
+    "verify_user",
+    "search_faq",
+    "end_conversation"
+  ],
+  "agent_flow": [
+    "RouterAgent",
+    "FAQAgent"
+  ]
+}

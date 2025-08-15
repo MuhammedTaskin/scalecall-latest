@@ -1,0 +1,715 @@
+[
+  {
+    "sample_id": 1,
+    "scenario_type": "single_tool",
+    "context": "PLAN",
+    "has_noise": true,
+    "quality_tier": "intermediate",
+    "conversation_length": 4,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "eSIM kodu lazım"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"49c96a47-6244-40a7-bfc3-07980c2b4c2c\",\"name\":\"reissue_activation_code\",\"arguments\":{\"customer_id\":\"80242\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\": true, \"data\": {\"activation_code\": \"LPA:1$sm-dp-plus.example.com$793946$activation-code-80242\", \"qr_code_url\": \"/qr/80242\", \"expires_at\": \"24 saat\", \"instructions\": \"Bu kodu eSIM ayarlarından tarayın veya manuel olarak girin\"}}</tool_result>"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": 2,
+    "scenario_type": "context_switch_package_to_billing",
+    "context": "MIXED",
+    "has_noise": false,
+    "quality_tier": "expert",
+    "conversation_length": 11,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Paket seçeneklerimi görmek istiyorum"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"8e846dc9-c757-4535-8d84-124ff8cea50f\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"Kılıç\",\"msisdn\":\"905516625674\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\": true, \"data\": {\"customer_id\": \"43150\", \"name\": \"Büşra Özdemir\", \"verified\": true}}</tool_result>"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": 3,
+    "scenario_type": "multi_step_esim_setup",
+    "context": "SIM",
+    "has_noise": false,
+    "quality_tier": "advanced",
+    "conversation_length": 15,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "eSIM aktivasyonu yapmak istiyorum"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"handoff\":{\"persona\":\"TechAgent\",\"say\":\"Sizi teknik uzmanımıza yönlendiriyorum.\"}}"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"e79e914d-a109-4110-b18c-c5bab381695c\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"Şahin\",\"msisdn\":\"905528792253\"}}}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": 4,
+    "scenario_type": "multi_step_billing_dispute",
+    "context": "BILLING",
+    "has_noise": true,
+    "quality_tier": "advanced",
+    "conversation_length": 9,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Bu ay fatura yüksek geldi, neden olabilir?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"handoff\":{\"persona\":\"BillingAgent\",\"say\":\"Sizi faturalama uzmanımıza bağlıyorum.\"}}"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"2f8dff90-6ed2-4ea7-9be6-eed04b0c158e\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"Aksoy\",\"msisdn\":\"905518636653\"}}}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": 5,
+    "scenario_type": "context_switch_package_to_billing",
+    "context": "MIXED",
+    "has_noise": false,
+    "quality_tier": "expert",
+    "conversation_length": 11,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Paket seçeneklerimi görmek istiyorum"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"566f546f-d346-4f94-8b66-e05b78de47bf\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"Aktaş\",\"msisdn\":\"905534509799\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\": true, \"data\": {\"customer_id\": \"43240\", \"name\": \"Emre Güneş\", \"verified\": true}}</tool_result>"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": 6,
+    "scenario_type": "multi_step_package_change",
+    "context": "PLAN",
+    "has_noise": false,
+    "quality_tier": "advanced",
+    "conversation_length": 13,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Paketimi değiştirmek istiyorum, daha uygun seçenekler var mı?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"handoff\":{\"persona\":\"PlanAgent\",\"say\":\"Sizi tarife uzmanımıza bağlıyorum.\"}}"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"03043f5c-6656-4d48-b6c3-287c1ed8b26a\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"Kaya\",\"msisdn\":\"905535228768\"}}}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": 7,
+    "scenario_type": "single_tool",
+    "context": "PLAN",
+    "has_noise": true,
+    "quality_tier": "intermediate",
+    "conversation_length": 4,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Kendimi doğrulatmak istiyorum"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"f63a5d8c-7815-4769-94af-4aa9c7082835\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"Koç\",\"msisdn\":\"905552335359\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\": true, \"data\": {\"customer_id\": \"97713\", \"name\": \"Ahmet Yılmaz\", \"verified\": true}}</tool_result>"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": 8,
+    "scenario_type": "multi_step_package_change",
+    "context": "PLAN",
+    "has_noise": true,
+    "quality_tier": "advanced",
+    "conversation_length": 13,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Paket değişikliği yapmak istiyorum, seçenekleri görebilir miyim?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"handoff\":{\"persona\":\"PlanAgent\",\"say\":\"Sizi tarife uzmanımıza bağlıyorum.\"}}"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"02c0aac0-a462-49da-9c2f-a3418a0f9e66\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"Yıldırım\",\"msisdn\":\"905584114389\"}}}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": 9,
+    "scenario_type": "interrupted_multi_step_package_change",
+    "context": "PLAN",
+    "has_noise": false,
+    "quality_tier": "advanced",
+    "conversation_length": 15,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Mevcut tarifem pahalı geliyor, ne önerirsiniz?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"handoff\":{\"persona\":\"PlanAgent\",\"say\":\"Sizi tarife uzmanımıza bağlıyorum.\"}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Pardon, başka bir konu daha öncelikli."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": 10,
+    "scenario_type": "noise_focused",
+    "context": "COVERAGE",
+    "has_noise": true,
+    "quality_tier": "robustness",
+    "conversation_length": 4,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Ne tür planlarınız var?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"84bb3a85-4afb-42bf-a353-2523b9e45a0b\",\"name\":\"get_available_packages\",\"arguments\":{\"customer_id\":\"65673\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\": true, \"data\": {\"packages\": [{\"id\": \"premium_10gb\", \"name\": \"Premium 10GB\", \"price\": 149.99, \"data\": \"10GB\", \"features\": [\"10GB yüksek hız internet\", \"Sınırsız konuşma\", \"Sınırsız SMS\", \"5G destekli\"]}, {\"id\": \"student_3gb\", \"name\": \"Öğrenci 3GB\", \"price\": 59.99, \"data\": \"3GB\", \"features\": [\"3GB yüksek hız internet\", \"Sınırsız konuşma\", \"500 SMS\", \"Öğrenci indirimi\"]}], \"current_package\": \"İş 25GB\"}}</tool_result>"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": 11,
+    "scenario_type": "multi_step_package_change",
+    "context": "PLAN",
+    "has_noise": false,
+    "quality_tier": "advanced",
+    "conversation_length": 13,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Mevcut tarifem pahalı geliyor, ne önerirsiniz?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"handoff\":{\"persona\":\"PlanAgent\",\"say\":\"Sizi tarife uzmanımıza bağlıyorum.\"}}"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"b6248212-bf5d-4b4e-9367-36d5b47cf0fd\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"Doğan\",\"msisdn\":\"905533395199\"}}}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": 12,
+    "scenario_type": "single_tool",
+    "context": "PLAN",
+    "has_noise": false,
+    "quality_tier": "intermediate",
+    "conversation_length": 4,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Aktivasyon kodu istiyorum"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"9569592a-c030-43d6-9d2a-9b0473a6ff0d\",\"name\":\"reissue_activation_code\",\"arguments\":{\"customer_id\":\"84899\"}}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<tool_result>{\"success\": true, \"data\": {\"activation_code\": \"LPA:1$sm-dp-plus.example.com$478642$activation-code-84899\", \"qr_code_url\": \"/qr/84899\", \"expires_at\": \"24 saat\", \"instructions\": \"Bu kodu eSIM ayarlarından tarayın veya manuel olarak girin\"}}</tool_result>"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": 13,
+    "scenario_type": "simple_dialog",
+    "context": "GENERAL",
+    "has_noise": false,
+    "quality_tier": "foundation",
+    "conversation_length": 2,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba, yardım alabilir miyim?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Merhaba! eSIM hizmetlerimiz için size nasıl yardımcı olabilirim?"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": 14,
+    "scenario_type": "multi_step_esim_setup",
+    "context": "SIM",
+    "has_noise": false,
+    "quality_tier": "advanced",
+    "conversation_length": 15,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "eSIM aktivasyonu yapmak istiyorum"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"handoff\":{\"persona\":\"TechAgent\",\"say\":\"Sizi teknik uzmanımıza yönlendiriyorum.\"}}"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"2f9789f4-c0e6-45d4-bed7-274e32e28607\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"Özdemir\",\"msisdn\":\"905573368884\"}}}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": 15,
+    "scenario_type": "multi_step_esim_setup",
+    "context": "SIM",
+    "has_noise": false,
+    "quality_tier": "advanced",
+    "conversation_length": 15,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "eSIM aktivasyonu yapmak istiyorum"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"handoff\":{\"persona\":\"TechAgent\",\"say\":\"Sizi teknik uzmanımıza yönlendiriyorum.\"}}"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"fd9e584f-cf6c-4afe-aa31-6b9ec8e9093c\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"Kılıç\",\"msisdn\":\"905591868577\"}}}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": 16,
+    "scenario_type": "multi_step_billing_dispute",
+    "context": "BILLING",
+    "has_noise": false,
+    "quality_tier": "advanced",
+    "conversation_length": 9,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Ödeme konusunda sorun yaşıyorum"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"handoff\":{\"persona\":\"BillingAgent\",\"say\":\"Sizi faturalama uzmanımıza bağlıyorum.\"}}"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"ecd65436-632f-4c62-9cea-68e060e66f88\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"Aydın\",\"msisdn\":\"905598866843\"}}}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": 17,
+    "scenario_type": "multi_step_package_change_with_error",
+    "context": "PLAN",
+    "has_noise": false,
+    "quality_tier": "advanced",
+    "conversation_length": 13,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Paket değişikliği yapmak istiyorum, seçenekleri görebilir miyim?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"handoff\":{\"persona\":\"PlanAgent\",\"say\":\"Sizi tarife uzmanımıza bağlıyorum.\"}}"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"7d771d5c-7e32-4a7d-826d-af0359ea306e\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"Tuncer\",\"msisdn\":\"905524380538\"}}}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": 18,
+    "scenario_type": "multi_step_billing_dispute",
+    "context": "BILLING",
+    "has_noise": false,
+    "quality_tier": "advanced",
+    "conversation_length": 9,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Bu ay fatura yüksek geldi, neden olabilir?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"handoff\":{\"persona\":\"BillingAgent\",\"say\":\"Sizi faturalama uzmanımıza bağlıyorum.\"}}"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"tool_call\":{\"id\":\"14b75c92-02ee-4ca6-993b-59fc927690a0\",\"name\":\"verify_user\",\"arguments\":{\"maiden_name\":\"Aydın\",\"msisdn\":\"905579129525\"}}}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": 19,
+    "scenario_type": "simple_dialog",
+    "context": "GENERAL",
+    "has_noise": false,
+    "quality_tier": "foundation",
+    "conversation_length": 2,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "İptal etmek istersem ne yapmalıyım?"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "İptal işlemi için kimlik doğrulaması gerekir. Size yardımcı olayım mı?"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sample_id": 20,
+    "scenario_type": "simple_dialog",
+    "context": "GENERAL",
+    "has_noise": false,
+    "quality_tier": "foundation",
+    "conversation_length": 2,
+    "preview": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "İyi günler, bilgi almak istiyorum."
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "İyi günler! Hangi konuda bilgi almak istiyorsunuz?"
+          }
+        ]
+      }
+    ]
+  }
+]

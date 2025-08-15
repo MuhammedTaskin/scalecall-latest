@@ -1,0 +1,44 @@
+{
+  "id": "smart_0071",
+  "scenario": "esim_quick_check",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "eSIM'im ne zaman aktif olacak? Çok bekledim!",
+      "emotion": "impatient"
+    },
+    {
+      "turn": 3,
+      "text": "Evet, doğru. 1234567890."
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Anlıyorum. Kimliğinizi doğrulamak için lütfen T.C. kimlik numaranızı veya telefon numaranızı paylaşır mısınız?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "TechAgent",
+      "text": "Teşekkürler. eSIM durumunuz kontrol ediliyor... eSIM'iniz başarıyla aktif edildi. Başka bir sorunuz var mı?",
+      "tools": [
+        "check_esim_status",
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:57:16.920400",
+  "required_tools": [
+    "verify_user",
+    "check_esim_status",
+    "end_conversation"
+  ],
+  "agent_flow": [
+    "RouterAgent",
+    "TechAgent"
+  ]
+}

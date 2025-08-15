@@ -1,0 +1,109 @@
+{
+  "id": "flash_heavy_0066",
+  "primary_issue": "account_emergency_stolen_device",
+  "secondary_issue": null,
+  "customer_profile": "small_business_owner",
+  "region": "istanbul",
+  "dialect_info": {
+    "dialect": "neutral",
+    "pace": "fast",
+    "formality": "medium"
+  },
+  "conversation_dynamic": "negotiation",
+  "complexity": "medium",
+  "metadata": {
+    "context": "managing employee lines",
+    "traits": [
+      "practical",
+      "cost_focused",
+      "busy"
+    ],
+    "emotional_journey": [
+      "businesslike",
+      "questioning",
+      "negotiating",
+      "satisfied"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo, iyi günler. Bir çalışanımın telefonu çalındı, acil hattı kapatmamız lazım. Bu iş hattı, o yüzden çok önemli, hızlıca halletmeliyiz.",
+      "emotion": "businesslike",
+      "dialect_markers": [
+        "neutral"
+      ],
+      "pace": "fast",
+      "background_context": "managing employee lines"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "TC kimlik numaram şu: 12345678901. Ayrıca firma sahibiyim. Şimdi bu hattı kapatınca, yerine yeni hat veya cihaz nasıl alacağız? Yani bu bize ne kadara patlayacak? Çalışanın işi aksamamalı, hızlıca yeni bir çözüm lazım.",
+      "emotion": "questioning",
+      "dialect_markers": [
+        "neutral"
+      ],
+      "pace": "fast",
+      "background_context": "managing employee lines"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Merhaba, ben Mehmet Yılmaz. Az önce çalınan telefon hattı için bağlandım. Şimdi bu hattı acilen kapatıp, çalışanımın mağduriyetini gidermemiz lazım. Bu durumda bize özel bir teklifiniz var mı? Sonuçta kaç yıldır sizinle çalışıyoruz, tüm şirket hatları bizde. Yeni bir SIM kart veya belki uygun bir cihaz paketiyle bu durumu telafi edebilir miyiz, maliyeti düşürmek önemli.",
+      "emotion": "negotiating",
+      "dialect_markers": [
+        "neutral"
+      ],
+      "pace": "fast",
+      "background_context": "managing employee lines"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba efendim, durumunuzu anlıyorum. Güvenliğiniz için öncelikle kimlik doğrulaması yapmamız gerekiyor. Lütfen hattın kayıtlı olduğu TC kimlik numarasını veya firma vergi numarasını ve bir güvenlik bilginizi paylaşır mısınız?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Bilgilerinizi teyit ettim Mehmet Bey. Hattınızın çalındığını ve acil işlem gerektiğini anladım. Bu konuda size daha detaylı yardımcı olabilecek, hattın kapatılması ve yeni hat/cihaz seçenekleri konusunda bilgi verebilecek uzman bir ekibimize aktarıyorum. Lütfen kısa bir süre hatta kalınız.",
+      "tools_triggered": [
+        "verify_user",
+        "route_to_agent"
+      ],
+      "formality_level": "medium"
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "FAQAgent",
+      "text": "Merhaba Mehmet Bey, geçmiş olsun dileklerimizle. Durumunuzu anlıyorum, işlerinizin aksamaması için elimizden geleni yapacağız. Hattınızı şu an itibarıyla kullanıma kapattım. Yeni SIM kartınızı ücretsiz olarak adresinize gönderebiliriz. Ayrıca, çalışanınız için hattı tekrar aktif ettiğimizde, mevcut tarifenize ek olarak bir sonraki faturanıza özel %20 indirim tanımlayabiliriz veya uygun fiyatlı bir akıllı telefon paketi seçeneği sunabiliriz. Hangisi size daha uygun olur?",
+      "tools_triggered": [
+        "reissue_activation_code",
+        "get_customer_plan",
+        "list_all_plans"
+      ],
+      "formality_level": "medium"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "FAQAgent",
+      "reason": "Customer's issue (stolen device, requiring line block and potential new line/device negotiation) requires a specialized agent beyond basic routing.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "Customer's stolen device line was successfully blocked. Customer was offered a free replacement SIM card and options for a 20% discount on their next bill or a discounted smartphone package for the replacement line, addressing their cost concerns and need for business continuity.",
+    "customer_satisfaction": "satisfied",
+    "follow_up_needed": true
+  },
+  "generated_at": "2025-08-14T09:17:39.384010",
+  "model": "flash",
+  "index": 66
+}

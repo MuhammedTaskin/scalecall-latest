@@ -1,0 +1,110 @@
+{
+  "id": "flash_heavy_0196",
+  "primary_issue": "billing_issues_wrong_plan",
+  "secondary_issue": null,
+  "customer_profile": "small_business_owner",
+  "region": "konya",
+  "dialect_info": {
+    "dialect": "central",
+    "pace": "slow",
+    "formality": "high"
+  },
+  "conversation_dynamic": "interrupted",
+  "complexity": "medium",
+  "metadata": {
+    "context": "managing employee lines",
+    "traits": [
+      "practical",
+      "cost_focused",
+      "busy"
+    ],
+    "emotional_journey": [
+      "businesslike",
+      "questioning",
+      "negotiating",
+      "satisfied"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo, iyi günler efendim. Benim bir fatura sorunum vardı, ona bakacaktınız. İş yerindeki hatlarla alakalı bir durum, malum çalışanların hatları.",
+      "emotion": "businesslike",
+      "dialect_markers": [
+        "central"
+      ],
+      "pace": "slow",
+      "background_context": "managing employee lines"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Tabii, hemen veriyorum... (Kısa bir duraksama, hafif nefes sesi) Yalnız, geçen ayki faturam çok yüksek gelmiş, bizim çalışanların hatları için anlaşmalı bir paketimiz vardı, hani o sabit fiyatlı olan. Onun dışına çıkılmış gibi duruyor. Ben o paketi özellikle yaptırmıştım ki maliyetler kontrol altında olsun.",
+      "emotion": "questioning",
+      "dialect_markers": [
+        "central"
+      ],
+      "pace": "slow",
+      "background_context": "managing employee lines"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Merhaba tekrar. Şimdi efendim, ben buradaki çalışanların hatları için özellikle 'İşletme Destek Paketi'ni yaptırmıştım. Hani o aylık 50 GB internetli, sınırsız konuşmalı olan. Ama gelen faturada bakıyorum da sanki farklı bir pakete geçilmiş gibi bir durum var, ya da paket dışı kullanımlar çok fazla görünüyor. Benim maliyetleri düşürmem lazım, malum işler yoğun. Ne yapabiliriz bu durumda?",
+      "emotion": "negotiating",
+      "dialect_markers": [
+        "central"
+      ],
+      "pace": "slow",
+      "background_context": "managing employee lines"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "İyi günler efendim, Telekom Müşteri Hizmetleri'ne hoş geldiniz. Yardımcı olabilmemiz adına öncelikle kimliğinizi teyit etmemiz gerekmektedir. TC kimlik numaranızı veya abone numaranızı rica edebilir miyim?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Anladım efendim, faturanıza dair bir inceleme talebiniz bulunmaktadır. Bu konuda size daha detaylı yardımcı olabilmesi için görüşmenizi Fatura ve Tarifeler Departmanımıza aktarmam gerekiyor. Hattınızdan ayrılmayın lütfen, sizi hemen bağlıyorum. (Kısa bekleme müziği)",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "BillingAgent",
+      "text": "İyi günler efendim, ben Fatura ve Tarifeler Departmanı'ndan Ayşe Hanım. Kontrol ediyorum hemen... Evet, sistemde dört adet hattınızın olduğu ve bir tanesinin, evet, bir tanesinin yaklaşık iki ay önce 'Kurumsal Mega Paket' olarak değiştiğini görüyorum. Sanırım bir sistem hatası veya yanlış bir işlem olmuş. Diğer hatlarınız 'İşletme Destek Paketi'nde devam ediyor. Bu durumu hemen düzeltip o hattı da 'İşletme Destek Paketi'ne geri alabiliriz ve oluşan fark için de size özel bir indirim tanımlayabiliriz. Bu yeni tarife hemen devreye girecek ve gelecek faturanıza yansıyacak. Sizin için uygun mudur efendim?",
+      "tools_triggered": [
+        "get_last_bill",
+        "get_customer_plan",
+        "list_all_plans",
+        "change_customer_plan"
+      ],
+      "formality_level": "high"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "BillingAgent",
+      "reason": "Customer's primary issue is related to billing and tariff discrepancies which requires a specialized agent.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "The agent identified a system error where one of the employee lines was incorrectly switched to a more expensive 'Kurumsal Mega Paket'. The agent corrected the plan back to the agreed 'İşletme Destek Paketi' and offered a special discount to compensate for the overcharged amount from previous bills. The customer's cost-focused concern was directly addressed.",
+    "customer_satisfaction": "satisfied",
+    "follow_up_needed": false
+  },
+  "generated_at": "2025-08-14T09:28:47.933015",
+  "model": "flash",
+  "index": 196
+}

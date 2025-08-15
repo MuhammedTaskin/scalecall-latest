@@ -1,0 +1,118 @@
+{
+  "id": "flash_heavy_0030",
+  "primary_issue": "plans_migrations_prepaid_to_postpaid",
+  "secondary_issue": null,
+  "customer_profile": "student_abroad",
+  "region": "ankara",
+  "dialect_info": {
+    "dialect": "formal",
+    "pace": "moderate",
+    "formality": "high"
+  },
+  "conversation_dynamic": "escalating",
+  "complexity": "medium",
+  "metadata": {
+    "context": "studying overseas",
+    "traits": [
+      "anxious",
+      "budget_conscious",
+      "tech_savvy"
+    ],
+    "emotional_journey": [
+      "worried",
+      "concerned",
+      "relieved",
+      "thankful"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo, iyi günler dilerim. Ben yurtdışında eğitim görüyorum ve mevcut hattım, yani faturasız hattım ile ilgili ciddi bir sıkıntı yaşıyorum. Özellikle internet paketim çok hızlı bitiyor ve bu durum derslerimi, ödevlerimi olumsuz etkiliyor. Açıkçası, bu ayki faturam da epey yüksek geldi, biraz endişeliyim. Daha uygun, stabil bir tarifeye geçmek istiyorum ama ne yapacağımı bilemiyorum.",
+      "emotion": "worried",
+      "dialect_markers": [
+        "formal"
+      ],
+      "pace": "moderate",
+      "background_context": "studying overseas"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Evet, aynen öyle. Ben şu an Hollanda'da yüksek lisans yapıyorum, derslerimin çoğu çevrimiçi. Ailemi aramak, hocalarla iletişim kurmak, araştırma yapmak için sürekli internete ihtiyacım oluyor. Faturasız hatlarda tarifeler çok kısıtlı ve dakika/GB başına maliyetler inanılmaz yüksek oluyor. Yani, bir bakıyorum paketim bitmiş, sonra ekstra yüklemelerle bütçem çok sarsılıyor. Daha uzun vadeli, beni yarı yolda bırakmayacak bir çözüm arıyorum. Öğrenci olduğum için de bütçe benim için çok önemli, malum kur farkı da var...",
+      "emotion": "concerned",
+      "dialect_markers": [
+        "formal"
+      ],
+      "pace": "moderate",
+      "background_context": "studying overseas"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Teşekkür ederim, hoş buldum. Evet, durumumu RouterAgent'a da anlatmıştım. Dediğim gibi, ben bir öğrenciyim ve yurtdışında yaşıyorum. Mevcut faturasız hattımın maliyeti ve sunduğu imkanlar benim için yeterli değil. Özellikle internet kullanımı konusunda çok mağdur oluyorum. Faturalı bir hatta geçiş yapmak istiyorum ama öğrenciye özel ya da yurtdışı kullanımına uygun, ekonomik bir seçenek var mı acaba? Hani hem interneti bol olsun, hem de bütçemi çok zorlamasın.",
+      "emotion": "concerned",
+      "dialect_markers": [
+        "formal"
+      ],
+      "pace": "moderate",
+      "background_context": "studying overseas"
+    },
+    {
+      "turn_id": "turn_007",
+      "text": "Vay, gerçekten mi? Harika! Bu 'Genç Mega' paketi benim için biçilmiş kaftan gibi duruyor. Hem internet kotası çok yeterli hem de yurtdışı avantajları var anladığım kadarıyla. Sanırım bu paketi hemen aktive edebiliriz, değil mi? Gerçekten çok büyük bir yük kalktı omuzlarımdan. Çok teşekkür ederim, derslerime daha rahat odaklanabilirim artık. Ne kadar yardımcı olduğunuzu anlatamam.",
+      "emotion": "thankful",
+      "dialect_markers": [
+        "formal"
+      ],
+      "pace": "moderate",
+      "background_context": "studying overseas"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "İyi günler dilerim efendim. Talebinizi anlıyorum. Öncelikle size daha iyi yardımcı olabilmem adına, kimlik doğrulama işlemi gerçekleştirmemiz gerekmektedir. Lütfen Türkiye Cumhuriyeti kimlik numaranızı ve hattınızın kayıtlı olduğu isim soyisim bilgisini teyit edebilir misiniz?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Bilgileriniz için teşekkür ederim efendim, doğrulama işleminiz başarıyla tamamlanmıştır. Durumunuzu ve talebinizi net bir şekilde anladım. Yurtdışında eğitim görürken kesintisiz iletişim ve uygun maliyet elbette çok önemli. Faturasız hattınızdaki paketin yetersiz kalması ve faturalı bir hatta geçiş isteğiniz, tarife ve paket uzmanı arkadaşlarımızın alanına girmektedir. Sizi şimdi 'Tarife ve Paket Değişikliği' departmanımıza yönlendiriyorum. Oradaki uzmanımız size en uygun tarifeyi bulmanızda yardımcı olacaktır. Lütfen kısa bir süre hatta kalınız.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "PlanAgent",
+      "text": "Merhaba efendim, Tarife ve Paket Değişikliği departmanına hoş geldiniz. Ben [Agent Adı], size nasıl yardımcı olabilirim? Durumunuzu RouterAgent arkadaşımızdan öğrendim. Mevcut faturasız hattınızın size yetmediğini ve yurtdışında eğitim gördüğünüz için daha avantajlı, faturalı bir tarife aradığınızı anlıyorum. Şu anki güncel tarifenizi ve kullanım detaylarınızı kontrol ediyorum bir saniye lütfen... Evet, kullanımınızın oldukça yoğun olduğunu ve mevcut paketinizin yetersiz kaldığını görüyorum. Şirketimizde özellikle yurtdışında eğitim gören öğrencilere yönelik cazip faturalı tarifelerimiz mevcut. Örneğin, 'Genç Mega' adında bir paketimiz var. Bu paket, yüksek GB internet kotası, her yöne bolca dakika ve yurtdışında da avantajlı kullanım imkanları sunuyor. Ayrıca, ilk 12 ay taahhütlü olarak daha uygun fiyatlarla da sahip olabiliyorsunuz. Dilerseniz bu paketin detaylarını sizinle paylaşabilir veya diğer faturalı seçeneklerimizi de listeleyebilirim.",
+      "tools_triggered": [
+        "get_customer_plan",
+        "list_all_plans"
+      ],
+      "formality_level": "high"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "PlanAgent",
+      "reason": "Customer's request for plan migration and finding a suitable postpaid plan requires a specialist.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "Customer was directed to the PlanAgent who identified a suitable 'Genç Mega' postpaid plan tailored for students/international use, addressing their budget and data needs. The customer expressed intent to proceed with the plan change.",
+    "customer_satisfaction": "thankful",
+    "follow_up_needed": false
+  },
+  "generated_at": "2025-08-14T09:14:48.035004",
+  "model": "flash",
+  "index": 30
+}

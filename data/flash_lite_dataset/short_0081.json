@@ -1,0 +1,34 @@
+{
+  "id": "short_0081",
+  "scenario": "password_reset",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Ya yeter artık! Şifremi unuttum, giremiyorum!",
+      "emotion": "angry"
+    },
+    {
+      "turn": 3,
+      "text": "Tamam, teşekkürler."
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Merhaba, şifre sıfırlama konusunda yardımcı olabilirim. Lütfen kimliğinizi doğrulamak için T.C. kimlik numaranızı paylaşır mısınız?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "RouterAgent",
+      "text": "Şifreniz başarıyla sıfırlandı. Yeni şifrenizi SMS ile gönderdik. Başka yardımcı olabileceğim bir konu var mı?",
+      "tools": [
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:50:03.200936"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "smart_0069",
+  "scenario": "faq_search",
+  "customer_turns": [
+    {
+      "turn": 1,
+      "text": "Merhaba, internet paketlerim hakkında genel bir sorum olacaktı.",
+      "emotion": "polite"
+    },
+    {
+      "turn": 3,
+      "text": "Evet, adım Ayşe Yılmaz, müşteri numaram 123456789."
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn": 2,
+      "agent": "RouterAgent",
+      "text": "Elbette, yardımcı olmaktan memnuniyet duyarım. Lütfen kimliğinizi doğrulamak için adınızı ve müşteri numaranızı paylaşır mısınız?",
+      "tools": [
+        "verify_user"
+      ]
+    },
+    {
+      "turn": 4,
+      "agent": "FAQAgent",
+      "text": "Teşekkürler Ayşe Hanım. İnternet paketlerinizin detaylarını ve güncel kampanyaları FAQ sisteminden sizin için kontrol ettim. En uygun paketimiz şu an X GB internet ve sınırsız konuşma içeren Y TL'lik kampanyamızdır. Başka bir sorunuz yoksa görüşmeyi sonlandırabiliriz.",
+      "tools": [
+        "search_faq",
+        "end_conversation"
+      ]
+    }
+  ],
+  "generated_at": "2025-08-14T07:57:16.960416",
+  "required_tools": [
+    "verify_user",
+    "search_faq",
+    "end_conversation"
+  ],
+  "agent_flow": [
+    "RouterAgent",
+    "FAQAgent"
+  ]
+}

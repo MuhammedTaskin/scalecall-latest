@@ -1,0 +1,146 @@
+{
+  "id": "flash_heavy_0047",
+  "primary_issue": "plans_features_hotspot",
+  "secondary_issue": "account_porting_number_out",
+  "customer_profile": "parent_teenager",
+  "region": "konya",
+  "dialect_info": {
+    "dialect": "central",
+    "pace": "slow",
+    "formality": "high"
+  },
+  "conversation_dynamic": "circular",
+  "complexity": "complex",
+  "metadata": {
+    "context": "managing family plan",
+    "traits": [
+      "concerned",
+      "protective",
+      "cost_aware"
+    ],
+    "emotional_journey": [
+      "worried",
+      "questioning",
+      "firm",
+      "relieved"
+    ]
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Alo, iyi günler. Ben şimdi bu ayki faturamı kontrol ettim de... Bayağı bir yüksek gelmiş hanımefendi. Özellikle internet kullanımı... Oğlanın elinden telefon düşmüyor ki, belli ki o bitiriyor hepsini. Ne yapacaz gayrı?",
+      "emotion": "worried",
+      "dialect_markers": [
+        "central"
+      ],
+      "pace": "slow",
+      "background_context": "managing family plan"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Tabii, hemen veriyim... (Bir an duraksar, fısıltıyla oğluna döner) Oğlum, TC kimlik numaramı ezberledin mi sen? Hah, tamam... (Müşteri temsilcisine dönerek) Buyrun hanımefendi, kimlik numaram şu: XXX... XXX... XXX... Doğum tarihim de XX.XX.XXXX. Bu gençlerin interneti ne tez bitiyor, şaşıyorum vallaha.",
+      "emotion": "worried",
+      "dialect_markers": [
+        "central"
+      ],
+      "pace": "slow",
+      "background_context": "managing family plan"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Şimdi hanımefendi, bu internet neden bu kadar çabuk bitiyor? Yani bizim paket aslında fena değildi... Oğlanın dediğine göre 'hotspot' diye bir şey kullanıyormuş, o mu yiyor interneti bu kadar? Arkadaşlarına falan mı dağıtıyor evde? (Arka plandan oğlunun sesi duyulur: 'Baba ya, ne alakası var! Hotspot internet paylaşımı demek!') Sus oğlum sen, ben konuşuyorum. Yani bu hotspot nedir, nasıl işler, bir izah edebilir misiniz?",
+      "emotion": "questioning",
+      "dialect_markers": [
+        "central"
+      ],
+      "pace": "slow",
+      "background_context": "managing family plan"
+    },
+    {
+      "turn_id": "turn_007",
+      "text": "Peki hanımefendi, bu mevcut paketi değiştirsek mi o zaman? Ama öyle çok pahalı bir şey olmasın ha, malum devir ekonomi devri... Bir de geçenlerde oğlanın bir arkadaşı numarasını başka operatöre taşımış, daha ucuza gelmiş ona. Bizim de öyle bir şey yapsak acaba, daha ucuza gelir mi? Hani bu 'numara taşıma' dedikleri şey... Hem internet sorunu da hallolsa, iyi olurdu.",
+      "emotion": "firm",
+      "dialect_markers": [
+        "central"
+      ],
+      "pace": "slow",
+      "background_context": "managing family plan"
+    },
+    {
+      "turn_id": "turn_009",
+      "text": "Heh, tamamdır o zaman. Şu 30 GB'lık pakete geçelim. O 'hotspot' özelliği de içinde mi olacak şimdi, yani oğlan paylaşım yapabilecek mi sorunsuz? Taşıma işini şimdilik düşünmeyelim o zaman, haklısınız, sonra bakarız duruma göre. Yeter ki bu internet sorunu bi çözülsün de rahat edelim.",
+      "emotion": "relieved",
+      "dialect_markers": [
+        "central"
+      ],
+      "pace": "slow",
+      "background_context": "managing family plan"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "İyi günler efendim. Faturanızla ilgili endişenizi anlıyorum. Size yardımcı olabilmem için öncelikle kimlik doğrulaması yapmamız gerekmektedir. Lütfen T.C. kimlik numaranızı ve doğum tarihinizi belirtir misiniz?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Bilgileriniz için teşekkür ederim efendim, doğrulamayı başarıyla tamamladık. Faturanızdaki yüksek kullanımın özellikle internetten kaynaklandığını belirtmiştiniz. Bu konuda size daha detaylı yardımcı olabilmesi için sizi tarife ve paketler konusunda uzman olan arkadaşlarımıza aktarıyorum. Lütfen kısa bir süre hatta kalınız.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "PlanAgent",
+      "text": "Merhaba efendim, ben Plan Destek ekibinden Fatma. Konuşmanın başını dinledim. Hotspot, yani kişisel erişim noktası, telefonunuzdaki mobil interneti başka cihazlarla veya kişilerle Wi-Fi üzerinden paylaşma özelliğidir. Mevcut paketinizin detaylarını kontrol ettiğimde, aylık 15 GB internetiniz olduğunu ve hotspot kullanımının da paketinize dahil olduğunu görüyorum. Ancak, bu kullanımın kota dışına çıkması durumunda ek ücretlendirme olabileceğini belirtmek isterim. Dilerseniz size güncel paket seçeneklerimizi ve bu özelliklerin nasıl çalıştığını detaylıca anlatabilirim.",
+      "tools_triggered": [
+        "get_customer_plan"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_008",
+      "agent_persona": "PlanAgent",
+      "text": "Haklısınız efendim, ekonomiye dikkat etmek önemli. Mevcut paketinizi daha yüksek kotalı bir tarifeyle değiştirebiliriz. Örneğin, aylık 30 GB internet ve sınırsız konuşma içeren, hotspot özelliği de bulunan daha avantajlı paketlerimiz mevcut. Bu paketin aylık ücreti XX TL'dir. Numara taşıma konusuna gelirsek; numaranızı başka bir operatöre taşımanız durumunda mevcut sözleşmenizin feshi söz konusu olabilir ve cayma bedeli gibi ek ücretler doğabilir. Ayrıca, her operatörün kendi kampanyaları olduğundan, yeni bir numara taşıma kampanyası sizin için her zaman daha avantajlı olmayabilir. Mevcut paketinizi yükseltmek, genellikle daha pratik ve hızlı bir çözümdür. Ne dersiniz, 30 GB'lık paketi değerlendirelim mi?",
+      "tools_triggered": [
+        "list_all_plans"
+      ],
+      "formality_level": "high"
+    },
+    {
+      "turn_id": "turn_010",
+      "agent_persona": "PlanAgent",
+      "text": "Harika bir tercih efendim. 30 GB'lık pakete geçiş işleminizi hemen başlatıyorum. Evet, bu pakette hotspot özelliği de mevcuttur ve paketinize dahildir, ek bir ücret yansımayacaktır. Numara taşıma konusunda da endişelenmenize gerek yok, dilediğiniz zaman bu konuyu tekrar görüşebiliriz. Yeni paketiniz kısa süre içinde aktif olacaktır, bilgilendirme SMS'i de tarafınıza iletilecektir. Başka yardımcı olabileceğim bir konu var mıdır?",
+      "tools_triggered": [
+        "change_customer_plan",
+        "get_customer_plan"
+      ],
+      "formality_level": "high"
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "PlanAgent",
+      "reason": "Customer's primary issue (plans_features_hotspot) requires a specialist in tariffs and packages.",
+      "context_preserved": true
+    }
+  ],
+  "conversation_notes": {
+    "resolution": "Customer's plan was successfully changed to a higher GB package that includes hotspot, addressing the primary concern of high internet usage and cost. The secondary issue of account porting was acknowledged, explained, and deferred by the customer, who decided to stick with the current operator for now.",
+    "customer_satisfaction": "relieved",
+    "follow_up_needed": true
+  },
+  "generated_at": "2025-08-14T09:16:18.160525",
+  "model": "flash",
+  "index": 47
+}

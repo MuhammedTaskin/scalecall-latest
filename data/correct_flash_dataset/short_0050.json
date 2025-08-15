@@ -1,0 +1,100 @@
+{
+  "conversation_id": "short_0050_esim_quick_fix",
+  "metadata": {
+    "scenario": "esim_quick_fix",
+    "handoff_pattern": [
+      "RouterAgent",
+      "TechAgent"
+    ]
+  },
+  "customer_profile": {
+    "persona": "polite",
+    "phone": "0555 123 45 67"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Merhaba, e-SIM'imle ilgili bir sorun yaşıyorum. Cihazımda bir türlü aktif hale getiremedim.",
+      "emotion": "polite"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Evet, telefonumun IMEI numarasını kontrol ettim, doğru görünüyor.",
+      "emotion": "polite"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Anladım, teşekkürler. Umarım bu sorun çözülür.",
+      "emotion": "polite"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba, Telekom'a hoş geldiniz. Kimliğinizi doğrulamak için lütfen TC kimlik numaranızı veya adınıza kayıtlı telefon numaranızı paylaşır mısınız?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkürler, kimliğiniz doğrulandı. Müşteri durumunuzu kontrol ediyorum. e-SIM aktivasyonunda bir sorun görünüyor. Bu durumu daha detaylı incelemesi için sizi teknik ekibimize yönlendiriyorum.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "handoff": {
+        "to": "TechAgent"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "TechAgent",
+      "text": "Merhaba, ben TechAgent. e-SIM aktivasyon sorununuzla ilgili size yardımcı olacağım. Lütfen cihazınızın IMEI numarasını tekrar kontrol edip benimle paylaşır mısınız? Ardından e-SIM durumunuzu ve aktivasyon kodunuzu kontrol edip gerekli işlemi başlatacağım.",
+      "tools_triggered": [
+        "check_esim_status",
+        "check_device_imei"
+      ],
+      "handoff": null
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "TechAgent",
+      "reason": "esim_quick_fix"
+    }
+  ],
+  "tool_calls": [
+    {
+      "turn_id": "turn_002",
+      "tool": "verify_user",
+      "arguments": {
+        "id_number": "11111111111"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_004",
+      "tool": "route_to_agent",
+      "arguments": {
+        "agent_type": "TechAgent"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "check_device_imei",
+      "arguments": {
+        "imei": "123456789012345"
+      },
+      "result": true
+    }
+  ],
+  "generated_at": "2025-08-14T08:01:29.524335",
+  "index": 50
+}

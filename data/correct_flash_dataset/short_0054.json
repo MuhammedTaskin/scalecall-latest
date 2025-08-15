@@ -1,0 +1,98 @@
+{
+  "conversation_id": "short_0054_payment_issue",
+  "metadata": {
+    "scenario": "payment_issue",
+    "handoff_pattern": [
+      "RouterAgent",
+      "BillingAgent"
+    ]
+  },
+  "customer_profile": {
+    "persona": "polite",
+    "phone": "0555 123 45 67"
+  },
+  "customer_turns_for_tts": [
+    {
+      "turn_id": "turn_001",
+      "text": "Merhaba, son faturamla ilgili bir sorun yaşıyorum. Ödeme yapmama rağmen hala borcum görünüyor.",
+      "emotion": "polite"
+    },
+    {
+      "turn_id": "turn_003",
+      "text": "Evet, doğru numara. Ödemeyi dün internet bankacılığı üzerinden yaptım.",
+      "emotion": "polite"
+    },
+    {
+      "turn_id": "turn_005",
+      "text": "Anladım. Teşekkür ederim bilgilendirme için.",
+      "emotion": "polite"
+    }
+  ],
+  "agent_responses": [
+    {
+      "turn_id": "turn_002",
+      "agent_persona": "RouterAgent",
+      "text": "Merhaba, Türk Telekom'a hoş geldiniz. Kimliğinizi doğrulamak için lütfen telefon numaranızı veya TC kimlik numaranızı paylaşır mısınız?",
+      "tools_triggered": [
+        "verify_user"
+      ],
+      "handoff": null
+    },
+    {
+      "turn_id": "turn_004",
+      "agent_persona": "RouterAgent",
+      "text": "Teşekkürler, bilgilerinizi doğruladım. Ödeme sorununuzla ilgili olarak, bu konu doğrudan faturalandırma ekibimizin uzmanlık alanına giriyor. Sizi en kısa sürede ilgili birime aktarıyorum.",
+      "tools_triggered": [
+        "get_customer_status",
+        "route_to_agent"
+      ],
+      "handoff": {
+        "to": "BillingAgent"
+      }
+    },
+    {
+      "turn_id": "turn_006",
+      "agent_persona": "BillingAgent",
+      "text": "Merhaba, faturalandırma departmanından bağlanıyorum. Ödeme işleminizle ilgili yaşadığınız sorunu anlıyorum. Sistemlerimi kontrol ediyorum. Lütfen bir dakika bekleyebilir misiniz? ... Evet, ödemenizin sisteme yansıdığını görüyorum. Bir güncelleme yapıldı, borcunuzun sıfırlandığını görebilirsiniz. Başka yardımcı olabileceğim bir konu var mı?",
+      "tools_triggered": [
+        "get_unpaid_amount",
+        "end_conversation"
+      ],
+      "handoff": null
+    }
+  ],
+  "agent_handoffs": [
+    {
+      "at_turn": 4,
+      "from": "RouterAgent",
+      "to": "BillingAgent",
+      "reason": "payment_issue"
+    }
+  ],
+  "tool_calls": [
+    {
+      "turn_id": "turn_002",
+      "tool": "verify_user",
+      "arguments": {
+        "phone": "0555 123 45 67"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_004",
+      "tool": "route_to_agent",
+      "arguments": {
+        "agent_type": "BillingAgent"
+      },
+      "result": true
+    },
+    {
+      "turn_id": "turn_006",
+      "tool": "get_unpaid_amount",
+      "arguments": {},
+      "result": 0
+    }
+  ],
+  "generated_at": "2025-08-14T08:01:32.982902",
+  "index": 54
+}
