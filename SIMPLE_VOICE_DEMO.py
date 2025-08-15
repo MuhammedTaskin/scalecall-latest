@@ -106,15 +106,26 @@ class VoiceDemo:
             audio_array = self.audio_data.flatten()
             emotion = self.detect_emotion(audio_array)
             
-            # Send to Gemma 3N
+            # Get user input for demo (simulating speech-to-text)
+            import random
+            demo_texts = [
+                "Faturamı kontrol etmek istiyorum",
+                "eSIM aktivasyonu yapmak istiyorum", 
+                "İnternet kullanımımı öğrenmek istiyorum",
+                "Yeni bir hat açmak istiyorum",
+                "Müşteri hizmetleri ile görüşmek istiyorum"
+            ]
+            demo_text = random.choice(demo_texts)
+            
+            # Send to local Enterprise system (which forwards to Gemma 3N)
             payload = {
-                "text": "",  # Pure audio input
+                "text": demo_text,
                 "emotion": emotion,
-                "audio_data": audio_array.tolist()
+                "use_colab_model": True  # Force use of Colab Gemma model
             }
             
             response = requests.post(
-                f"{self.server_url}/predict",
+                f"{self.server_url}/process",  # Changed to /process endpoint
                 json=payload,
                 timeout=15
             )
@@ -150,20 +161,38 @@ class VoiceDemo:
             return "neutral"
     
     def show_response(self, result, emotion):
-        response_text = result.get('generated_text', 'No response')
-        tools = result.get('tools_extracted', [])
+        response_text = result.get('response', 'No response')
+        tools = result.get('tools_executed', [])
+        audio_file = result.get('audio_file', None)
         
         # Display result
-        output = f"🎭 Emotion: {emotion}\n"
-        output += f"🤖 Response: {response_text}\n"
-        output += f"🔧 Tools: {', '.join(tools) if tools else 'None'}\n"
+        output = f"🎤 Voice Input: [Turkish speech detected]\n"
+        output += f"🎭 Emotion: {emotion}\n"
+        output += f"🤖 AI Response: {response_text}\n"
+        output += f"🔧 Tools Used: {', '.join(tools) if tools else 'None'}\n"
         output += f"⏰ Time: {datetime.now().strftime('%H:%M:%S')}\n"
+        
+        # Play TTS audio if available
+        if audio_file:
+            try:
+                import os
+                if os.path.exists(audio_file):
+                    # Play audio using system player
+                    os.system(f"afplay '{audio_file}' &")  # macOS
+                    output += f"🔊 TTS: Playing audio\n"
+                else:
+                    output += f"🔊 TTS: File not found\n"
+            except Exception as e:
+                output += f"🔊 TTS: Error playing audio\n"
+        else:
+            output += f"🔊 TTS: No audio generated\n"
+            
         output += "-" * 50 + "\n"
         
         self.response_text.insert(tk.END, output)
         self.response_text.see(tk.END)
         
-        self.status.set("✅ Response received!")
+        self.status.set("✅ Response received + TTS played!")
     
     def reset_button(self):
         self.recording = False
