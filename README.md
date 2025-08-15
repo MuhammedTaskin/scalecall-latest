@@ -32,7 +32,7 @@ pip install -r requirements.txt
 - `AGENT_HANDOFF_SYSTEM.py` - Multi-agent orchestration
 - `TEKNOFEST_COLAB_SERVER.py` - Colab model server
 - `SIMPLE_VOICE_DEMO.py` - GUI voice interface
-- `tr_TR-fahrettin-medium.onnx` - Turkish TTS model (63MB)
+- `TURKISH_TTS_MODEL.onnx` - Professional Turkish TTS model (63MB)
 
 ### Training & Development Notebooks
 - `SERVE_MODEL_FROM_DRIVE.ipynb` - Model deployment from Drive

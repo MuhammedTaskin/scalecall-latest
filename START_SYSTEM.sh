@@ -25,7 +25,7 @@ python3 -c "import aiohttp, sqlite3; print(\"✅ All dependencies available\")" 
 }
 
 # Check TTS model
-if [ -f "tr_TR-fahrettin-medium.onnx" ]; then
+if [ -f "TURKISH_TTS_MODEL.onnx" ]; then
     echo "🔊 Turkish TTS model found"
 else
     echo "⚠️  Turkish TTS model not found - audio responses disabled"

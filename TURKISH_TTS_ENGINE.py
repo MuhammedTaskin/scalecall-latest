@@ -21,10 +21,10 @@ import re
 logger = logging.getLogger(__name__)
 
 class TurkishTTSEngine:
-    """High-performance Turkish TTS using Piper with your fahrettin model"""
+    """High-performance Turkish TTS using Piper with professional Turkish model"""
     
     def __init__(self, model_path: Optional[str] = None):
-        self.model_path = model_path or "tr_TR-fahrettin-medium.onnx"
+        self.model_path = model_path or "TURKISH_TTS_MODEL.onnx"
         self.config_path = f"{self.model_path}.json"
         self.audio_cache = {}
         self.temp_files = []
@@ -47,7 +47,7 @@ class TurkishTTSEngine:
             # Check if model exists
             if not os.path.exists(self.model_path):
                 logger.error(f"Model not found: {self.model_path}")
-                logger.info("Place your tr_TR-fahrettin-medium.onnx model in the current directory")
+                logger.info("Place your TURKISH_TTS_MODEL.onnx model in the current directory")
                 return False
                 
             # Check config file
@@ -355,7 +355,7 @@ async def test_turkish_tts():
     
     if not os.path.exists(tts.model_path):
         print(f"❌ Model not found: {tts.model_path}")
-        print("Please ensure tr_TR-fahrettin-medium.onnx is in the current directory")
+        print("Please ensure TURKISH_TTS_MODEL.onnx is in the current directory")
         return
     
     # Test cases
@@ -425,4 +425,4 @@ if __name__ == "__main__":
         print("Usage:")
         print("  python TURKISH_TTS_ENGINE.py --install")
         print("  python TURKISH_TTS_ENGINE.py --test")
-        print("\nMake sure tr_TR-fahrettin-medium.onnx is in the current directory")
+        print("\nMake sure TURKISH_TTS_MODEL.onnx is in the current directory")
