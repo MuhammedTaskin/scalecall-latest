@@ -25,13 +25,25 @@ pip install -r requirements.txt
 
 ## System Components
 
-### Core Files
+### Core Production Files
 - `ENTERPRISE_TELCO_PLATFORM.py` - Main AI platform
 - `database_config.py` - SQLite database with telco operations
 - `TURKISH_TTS_ENGINE.py` - Professional Turkish text-to-speech
 - `AGENT_HANDOFF_SYSTEM.py` - Multi-agent orchestration
 - `TEKNOFEST_COLAB_SERVER.py` - Colab model server
+- `SIMPLE_VOICE_DEMO.py` - GUI voice interface
 - `tr_TR-fahrettin-medium.onnx` - Turkish TTS model (63MB)
+
+### Training & Development Notebooks
+- `SERVE_MODEL_FROM_DRIVE.ipynb` - Model deployment from Drive
+- `TEKNOFEST_EMOTION_TRAINING.ipynb` - Main emotion training 
+- `TEKNOFEST_EMOTION_TRAINING_V1.ipynb` - Training variant 1
+- `TEKNOFEST_EMOTION_TRAINING_V2.ipynb` - Training variant 2
+- `TEKNOFEST_FINAL_TRAINING_V2.ipynb` - Final training pipeline
+
+### Colab Links
+- **Model Server**: https://colab.research.google.com/drive/1PGCA4PYyuH3_PP53g_nh82ZVuXw_axKw?usp=sharing
+- **Fine-tuning**: https://colab.research.google.com/drive/1OBY-DG36JJJCCM18QGG9P5iI6vWZIZBY?usp=sharing
 
 ### System Health
 ```bash
